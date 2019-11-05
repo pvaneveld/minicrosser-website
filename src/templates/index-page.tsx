@@ -1,21 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-
-const Container = styled.div`
-  margin: 3rem auto;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import Layout from '../components/Layout';
 
 interface IndexPageProps {
   data: {
     markdownRemark: {
       frontmatter: {
         title: string;
+        theme: 
       };
     };
   };
@@ -24,10 +17,22 @@ interface IndexPageProps {
 const IndexPage: React.SFC<IndexPageProps> = props => {
   const content = props.data.markdownRemark.frontmatter;
   const { title } = content;
+
+  const Container = styled.div`
+    margin: 3rem auto;
+    max-width: ${props.theme.textXs};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `;
+
   return (
-    <Container>
-      <h1>{title}</h1>
-    </Container>
+    <Layout>
+      <Container>
+        <h1>{title}</h1>
+      </Container>
+    </Layout>
   );
 };
 
