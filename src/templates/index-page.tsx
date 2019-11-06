@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import Layout from '../components/Layout';
 
 interface IndexPageProps {
@@ -8,10 +8,10 @@ interface IndexPageProps {
     markdownRemark: {
       frontmatter: {
         title: string;
-        theme: 
       };
     };
   };
+  theme: DefaultTheme;
 }
 
 const IndexPage: React.SFC<IndexPageProps> = props => {
@@ -20,7 +20,7 @@ const IndexPage: React.SFC<IndexPageProps> = props => {
 
   const Container = styled.div`
     margin: 3rem auto;
-    max-width: ${props.theme.textXs};
+    max-width: ${props.theme.textXS};
     display: flex;
     flex-direction: column;
     align-items: center;

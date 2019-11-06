@@ -1,3 +1,5 @@
+import { DefaultTheme } from 'styled-components';
+
 //www.styled-components.com/docs/api#typescript
 
 const fundamtals = {
@@ -6,7 +8,7 @@ const fundamtals = {
   textBaseSize: '1em',
 };
 
-export const theme = {
+export const theme: DefaultTheme = {
   textXS: `calc(1em / (var(${fundamtals.textScaleRatio}) * var(${fundamtals.textScaleRatio})))`,
   // textSM: calc(1em / var(text-scale-ratio));
   // textMD: calc(1em * var(text-scale-ratio));
