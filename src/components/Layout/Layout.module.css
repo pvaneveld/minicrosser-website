@@ -1,5 +1,5 @@
 .heading {
-    &:hover {
-      color: red;
-    }
+  &:hover {
+    color: red;
   }
+}

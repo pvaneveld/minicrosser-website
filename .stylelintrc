@@ -7,8 +7,9 @@
         "ignoreAtRules": ["extends", "ignores"]
       }
     ],
-    "indentation": 2,
-    "indentInsideParens": 2,
+    "indentation": [2, {
+      ignore: ["inside-parens"]
+    }],
     "unit-whitelist": ["em", "rem", "s", "%", "px"],
     "block-closing-brace-newline-after": "always"
   }
