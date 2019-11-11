@@ -2,13 +2,15 @@
 const postcssPresetEnv = require(`postcss-preset-env`)
 const postcssCustomMedia = require('postcss-custom-media');
 const postcssImport = require("postcss-import");
+const stylelint = require("stylelint")
 
 module.exports = () => ({
   plugins: [
     postcssImport(),
+    stylelint(),
     postcssPresetEnv(),
     postcssCustomMedia({
-        importFrom: './src/styles/00-variables/variables.css'
+        importFrom: './src/styles/00-breakpoints/breakpoints.css'
     })
   ],
 })
