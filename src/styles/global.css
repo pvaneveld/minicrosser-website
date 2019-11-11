@@ -1,1 +1,3 @@
-@import './01-vars/_vars.css';
+@import './00-variables/variables.css';
+@import './01-typograpghy/typograpghy.css';
+@import './02-grid/_grid.css';
