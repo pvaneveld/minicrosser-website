@@ -28,6 +28,13 @@
   --body-line-height: 1.4;
 }
 
+@media (--viewport-sm) {
+  :root {
+    --text-base-size: 1.25em;
+    --text-scale-ratio: 1.25;
+  }
+}
+
 body {
   font-size: var(--text-base-size);
   font-family: var(--font-primary);

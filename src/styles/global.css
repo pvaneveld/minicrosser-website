@@ -1,3 +1,5 @@
 @import './00-breakpoints/breakpoints.css';
 @import './01-typograpghy/typograpghy.css';
-@import './02-grid/_grid.css';
+@import './02-grid/grid.css';
+@import './03-colors/colors.css';
+@import './04-spacing/spacing.css';

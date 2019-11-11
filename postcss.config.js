@@ -6,8 +6,8 @@ const stylelint = require("stylelint")
 
 module.exports = () => ({
   plugins: [
-    postcssImport(),
     stylelint(),
+    postcssImport(),
     postcssPresetEnv(),
     postcssCustomMedia({
         importFrom: './src/styles/00-breakpoints/breakpoints.css'

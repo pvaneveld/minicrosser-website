@@ -1,5 +1,8 @@
 {
     "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+     "ignoreFiles": [
+        "./node_modules/normalize.css/normalize.css"
+    ],
     "rules": {
     "at-rule-no-unknown": [
       true,
@@ -10,7 +13,7 @@
     "indentation": [2, {
       ignore: ["inside-parens"]
     }],
-    "unit-whitelist": ["em", "rem", "s", "%", "px"],
+    "unit-whitelist": ["em", "rem", "s", "%", "px", "fr"],
     "block-closing-brace-newline-after": "always"
   }
 }

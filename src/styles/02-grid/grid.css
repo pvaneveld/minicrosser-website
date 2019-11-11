@@ -1,0 +1,9 @@
+:root {
+  --grid-gap: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: var(--grid-gap);
+}
