@@ -1,5 +1,13 @@
-.heading {
-  &:hover {
-    color: red;
+.layout {
+  display: block;
+  max-width: var(--page-width);
+  padding: var(--component-pading);
+  margin: 0 auto;
+  background-color: var(--color-primary);
+}
+
+.test {
+  & h1 {
+    padding-bottom: 200px;
   }
 }

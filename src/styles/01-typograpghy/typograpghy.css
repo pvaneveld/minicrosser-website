@@ -1,6 +1,6 @@
 :root {
-  --font-primary: sans-serif;
-  --font-secondary: serif;
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
 
   /* set base values */
 
@@ -142,10 +142,4 @@ strong {
   u {
     text-decoration: underline;
   }
-}
-
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

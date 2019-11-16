@@ -18,9 +18,7 @@ const IndexPage: React.SFC<IndexPageProps> = props => {
 
   return (
     <Layout>
-      <div>
-        <h1>{title}</h1>
-      </div>
+      <h1>{title}</h1>
     </Layout>
   );
 };
