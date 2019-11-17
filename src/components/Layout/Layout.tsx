@@ -4,7 +4,6 @@ import style from './Layout.module.css';
 import 'typeface-roboto';
 import 'reset-css';
 import '../../styles/global.css';
-
 import Header from '../Header/Header';
 
 interface LayoutProps {
@@ -13,7 +12,7 @@ interface LayoutProps {
 
 const Layout: React.SFC<LayoutProps> = props => {
   return (
-    <div id="app">
+    <div id="app" className={style.layout}>
       <Header darkTheme={true} />
       {props.children}
     </div>

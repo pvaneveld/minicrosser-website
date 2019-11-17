@@ -8,7 +8,7 @@ interface MobileMenuProps {
 
 const MobileMenu: React.SFC<MobileMenuProps> = props => {
   return (
-    <div className={`${style.mobileMenu} ${props.isActive ? style.isActive : null}`}>
+    <div className={`${style.mobileMenu} ${props.isActive ? style.isActive : ''}`}>
       <Link to="/" className={style.link}>
         Hier komt een link
       </Link>

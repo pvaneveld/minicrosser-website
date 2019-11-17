@@ -36,8 +36,8 @@ const Header: React.SFC<HeaderProps> = props => {
           vind uw dealer
         </Link>
         <Hamburger clickHandler={(): void => setMenuOpen(!menuOpen)} isActive={menuOpen} />
-        <MobileMenu isActive={menuOpen} />
       </nav>
+      <MobileMenu isActive={menuOpen} />
     </header>
   );
 };

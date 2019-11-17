@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/Layout';
+import Page from '../components/Page/Page';
 
 interface IndexPageProps {
   data: {
@@ -18,7 +19,7 @@ const IndexPage: React.SFC<IndexPageProps> = props => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
+      <Page />
     </Layout>
   );
 };

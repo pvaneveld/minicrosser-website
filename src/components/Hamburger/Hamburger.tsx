@@ -9,7 +9,7 @@ interface HamburgerProps {
 const Hamburger: React.SFC<HamburgerProps> = props => (
   <button
     onClick={props.clickHandler}
-    className={`${style.hamburger} ${style.hamburgerSpring} ${props.isActive ? style.isActive : null}`}
+    className={`${style.hamburger} ${style.hamburgerSpring} ${props.isActive ? style.isActive : ''}`}
     type="button"
   >
     <span className={style.hamburgerBox}>

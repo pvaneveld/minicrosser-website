@@ -14,7 +14,7 @@
     "indentation": [2, {
       ignore: ["inside-parens"]
     }],
-    "unit-whitelist": ["em", "rem", "s", "%", "px", "fr", "deg", "vh", "ms"],
+    "unit-whitelist": ["em", "rem", "s", "%", "px", "fr", "deg", "vh", "vw", "ms"],
     "block-closing-brace-newline-after": "always"
   }
 }
