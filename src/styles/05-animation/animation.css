@@ -1,0 +1,14 @@
+:root {
+  --transition-unit: 100ms;
+  --transition-xxs: calc(0.25 * var(--transition-unit));
+  --transition-xs: calc(0.5 * var(--transition-unit));
+  --transition-sm: calc(0.75 * var(--transition-unit));
+  --transition-md: calc(1.25 * var(--transition-unit));
+  --transition-lg: calc(2 * var(--transition-unit));
+  --transition-xl: calc(3.25 * var(--transition-unit));
+  --transition-xxl: calc(5.25 * var(--transition-unit));
+  --transition-cubic-enter: cubic-bezier(0, 0, 0.2, 1);
+  --transition-cubic-leave: cubic-bezier(0.4, 0, 1, 1);
+  --transition-enter: var(--transition-lg) var(--transition-cubic-enter);
+  --transition-leave: var(--transition-lg) var(--transition-cubic-leave);
+}

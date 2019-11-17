@@ -4,7 +4,7 @@
 
   /* set base values */
 
-  --text-base-size: 1em;
+  --text-base-size: 0.9em;
   --text-scale-ratio: 1.2;
 
   /* type scale */
@@ -26,13 +26,6 @@
 
   --heading-line-height: 1.2;
   --body-line-height: 1.4;
-}
-
-@media (--viewport-sm) {
-  :root {
-    --text-base-size: 1.25em;
-    --text-scale-ratio: 1.25;
-  }
 }
 
 body {
@@ -91,11 +84,7 @@ p {
 }
 
 a {
-  color: var(--color-link);
-
-  &:visited {
-    color: var(--color-link-visited);
-  }
+  text-decoration: none;
 }
 
 b,

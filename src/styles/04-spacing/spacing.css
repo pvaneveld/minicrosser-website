@@ -13,10 +13,19 @@
   --component-padding: var(--space-sm);
 }
 
-@media (--viewport-sm) {
-  :root {
-    --space-unit: 1.25em;
-  }
+body,
+html {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /* utility classes */

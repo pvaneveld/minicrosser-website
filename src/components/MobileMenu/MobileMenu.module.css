@@ -1,0 +1,32 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  background-color: var(--color-white);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform var(--transition-leave), opacity var(--transition-leave);
+  padding: var(--space-xxl) var(--space-md);
+}
+
+.mobile-menu.is-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform var(--transition-enter), opacity var(--transition-enter);
+}
+
+.link {
+  display: block;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--gray-2);
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+@media (--viewport-sm) {
+  .mobile-menu {
+    width: 100%;
+  }
+}
