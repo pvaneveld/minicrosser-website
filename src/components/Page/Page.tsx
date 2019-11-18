@@ -24,8 +24,6 @@ const Page: React.SFC<PageProps> = props => {
     query {
       file(absolutePath: { regex: "/mock-image/" }) {
         childImageSharp {
-          # Specify a fluid image and fragment
-          # The default maxWidth is 800 pixels
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
