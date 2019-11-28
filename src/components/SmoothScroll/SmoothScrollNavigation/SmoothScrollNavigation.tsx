@@ -6,7 +6,6 @@ interface SmoothScrollNavigationProps {
 }
 
 const SmoothScrollNavigation: React.SFC<SmoothScrollNavigationProps> = props => {
-  console.log(props.pages);
   return (
     <div className={styles.container}>
       {props.pages.map(item => (
