@@ -8,9 +8,7 @@ interface SmoothScrollContainerProps {
   pages: { id: string; title: string }[];
 }
 
-interface Pages {
-  pages: { id: string; title: string; inView: boolean }[];
-}
+type pages = { inView: boolean; id: string; title: string }[];
 
 const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = props => {
   const [pages, setPages] = useState(
@@ -19,8 +17,11 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
 
   const currentActiveID = useRef('');
 
+  const pageElements = useRef(null);
+
   const getPages = ({ pages }: Partial<SmoothScrollContainerProps>): HTMLElement[] => {
-    return pages.map(page => document.querySelector(`#${page.id}`));
+    pageElements.current = pages.map(page => document.querySelector(`#${page.id}`));
+    return pageElements.current;
   };
 
   const checkNoInitialLoad = (intersectionRatio: number): boolean => intersectionRatio > 0 && intersectionRatio < 1;
@@ -29,16 +30,20 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
     return id !== currentActiveID;
   };
 
+  const setActivePagesByID = (pages: pages, id: string): void => {
+    setPages(
+      pages
+        .map(page => ({ ...page, inView: false }))
+        .map(page => (page.id === id ? { ...page, inView: true } : { ...page, inView: false })),
+    );
+  };
+
   const pagesHandler = (entry: IntersectionObserverEntry): void => {
     const { target, intersectionRatio } = entry;
     const id = target.id;
 
     if (checkNoInitialLoad(intersectionRatio) && checkTargetNotInview(id, currentActiveID.current)) {
-      setPages(
-        pages
-          .map(page => ({ ...page, inView: false }))
-          .map(page => (page.id === id ? { ...page, inView: true } : { ...page, inView: false })),
-      );
+      setActivePagesByID(pages, id);
     }
   };
 
@@ -55,8 +60,14 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
     return observer;
   }, []);
 
-  const updatActiveID = ({ pages }: Pages): void => {
+  const updatActiveID = (pages: pages): void => {
     currentActiveID.current = pages.find(page => page.inView === true).id;
+  };
+
+  const navButtonClickHandler = (clickedId: string): void => {
+    const { current: pageDOMElements } = pageElements;
+    pageDOMElements.find((el: HTMLElement) => el.id === clickedId).scrollIntoView({ behavior: 'smooth' });
+    setActivePagesByID(pages, clickedId);
   };
 
   useEffect(() => {
@@ -66,12 +77,12 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
   }, [InitIntersectionObserver]);
 
   useEffect(() => {
-    updatActiveID({ pages });
+    updatActiveID(pages);
   }, [pages]);
 
   return (
     <div className={style.container}>
-      <SmoothScrollNavigation pages={pages} />
+      <SmoothScrollNavigation clickHandler={(id: string): void => navButtonClickHandler(id)} pages={pages} />
       {props.children}
     </div>
   );

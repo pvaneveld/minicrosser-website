@@ -3,6 +3,7 @@ import styles from './SmoothScrollNavigation.module.css';
 
 interface SmoothScrollNavigationProps {
   pages: { id: string; title: string; inView: boolean }[];
+  clickHandler: (item: string) => void;
 }
 
 const SmoothScrollNavigation: React.SFC<SmoothScrollNavigationProps> = props => {
@@ -19,7 +20,11 @@ const SmoothScrollNavigation: React.SFC<SmoothScrollNavigationProps> = props => 
         }, [item]);
 
         return (
-          <button key={item.id} className={`${styles.item}${item.inView ? ` ${styles.active}` : ''}`}>
+          <button
+            onClick={(): void => props.clickHandler(item.id)}
+            key={item.id}
+            className={`${styles.item}${item.inView ? ` ${styles.active}` : ''}`}
+          >
             <span className={item.inView ? flashClass : ''}>{item.title}</span>
           </button>
         );

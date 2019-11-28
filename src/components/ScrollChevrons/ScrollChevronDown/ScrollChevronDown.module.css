@@ -1,0 +1,12 @@
+.icon {
+  position: absolute;
+  bottom: var(--component-padding);
+  left: 50%;
+  transform: translateX(-50%);
+
+  & svg {
+    width: calc(var(--space-lg) * 1.5);
+    height: calc(var(--space-lg) * 1.5);
+    fill: var(--color-white);
+  }
+}
