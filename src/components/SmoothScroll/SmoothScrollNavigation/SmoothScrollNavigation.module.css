@@ -19,6 +19,13 @@ button.item {
     opacity: 0;
     transition: opacity var(--transition-standard);
   }
+  & span.flash {
+    opacity: 1;
+  }
+}
+
+button.active {
+  border-left-color: var(--color-white);
 }
 
 button.item:hover {

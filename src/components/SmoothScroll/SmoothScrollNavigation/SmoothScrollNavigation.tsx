@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './SmoothScrollNavigation.module.css';
 
 interface SmoothScrollNavigationProps {
@@ -8,13 +8,22 @@ interface SmoothScrollNavigationProps {
 const SmoothScrollNavigation: React.SFC<SmoothScrollNavigationProps> = props => {
   return (
     <div className={styles.container}>
-      {props.pages.map(item => (
-        <button key={item.id} className={styles.item}>
-          <span>
-            {item.title} | {item.inView ? 'in beeld' : 'niet in beeld'}
-          </span>
-        </button>
-      ))}
+      {props.pages.map(item => {
+        const [flashClass, setFlashClass] = useState('');
+
+        useEffect(() => {
+          setFlashClass(styles.flash);
+          setTimeout(() => {
+            setFlashClass('');
+          }, 2000);
+        }, [item]);
+
+        return (
+          <button key={item.id} className={`${styles.item}${item.inView ? ` ${styles.active}` : ''}`}>
+            <span className={item.inView ? flashClass : ''}>{item.title}</span>
+          </button>
+        );
+      })}
     </div>
   );
 };
