@@ -1,0 +1,32 @@
+.container {
+  position: fixed;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+button.item {
+  display: block;
+  height: var(--space-xl);
+  padding-left: var(--space-md);
+  background-color: transparent;
+  margin-bottom: var(--space-xs);
+  border-left: 2px solid var(--gray-6);
+
+  & span {
+    color: var(--color-white);
+    opacity: 0;
+    transition: opacity var(--transition-standard);
+  }
+}
+
+button.item:hover {
+  & span {
+    opacity: 1;
+  }
+}
+
+.item:last-of-type {
+  margin-bottom: 0;
+}

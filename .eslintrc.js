@@ -16,7 +16,8 @@ module.exports =  {
     rules:  {
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
-        "@typescript-eslint/member-delimiter-style": "off"
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/no-non-null-assertion": "off"
       // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
       // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     },

@@ -9,6 +9,8 @@
   --transition-xxl: calc(5.25 * var(--transition-unit));
   --transition-cubic-enter: cubic-bezier(0, 0, 0.2, 1);
   --transition-cubic-leave: cubic-bezier(0.4, 0, 1, 1);
+  --transition-cubic-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-enter: var(--transition-lg) var(--transition-cubic-enter);
   --transition-leave: var(--transition-lg) var(--transition-cubic-leave);
+  --transition-standard: var(--transition-lg) var(--transition-cubic-standard);
 }

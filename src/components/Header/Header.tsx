@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import style from './Header.module.css';
 import Polymer from '../../icons/polymer.svg';
-import Hamburger from '../Hamburger/Hamburger';
-import MobileMenu from '../MobileMenu/MobileMenu';
+import Hamburger from './Hamburger/Hamburger';
+import MobileMenu from './MobileMenu/MobileMenu';
 import { Link } from 'gatsby';
 
 interface HeaderProps {
@@ -13,7 +13,7 @@ const Header: React.SFC<HeaderProps> = props => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className={`${style.header} ${props.darkTheme ? style.headerDark : null}`}>
+    <header className={`${style.header}${props.darkTheme ? ` ${style.headerDark}` : ''}`}>
       <Link to="/" className={style.logoContainer}>
         <figure>
           <Polymer className={style.logo} />
@@ -35,7 +35,10 @@ const Header: React.SFC<HeaderProps> = props => {
         <Link to="/" className={style.link}>
           vind uw dealer
         </Link>
-        <Hamburger clickHandler={(): void => setMenuOpen(!menuOpen)} isActive={menuOpen} />
+        <Hamburger
+          clickHandler={useCallback(() => setMenuOpen(menuOpen => (menuOpen = !menuOpen)), [setMenuOpen])}
+          isActive={menuOpen}
+        />
       </nav>
       <MobileMenu isActive={menuOpen} />
     </header>

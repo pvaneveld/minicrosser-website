@@ -1,0 +1,9 @@
+.content {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;
+  padding: 0 var(--component-padding);
+  max-width: var(--page-width);
+  color: var(--color-white);
+}

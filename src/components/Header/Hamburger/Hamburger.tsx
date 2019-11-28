@@ -9,7 +9,7 @@ interface HamburgerProps {
 const Hamburger: React.SFC<HamburgerProps> = props => (
   <button
     onClick={props.clickHandler}
-    className={`${style.hamburger} ${style.hamburgerSpring} ${props.isActive ? style.isActive : ''}`}
+    className={`${style.hamburger} ${style.hamburgerSpring}${props.isActive ? ` ${style.isActive}` : ''}`}
     type="button"
   >
     <span className={style.hamburgerBox}>
@@ -18,4 +18,4 @@ const Hamburger: React.SFC<HamburgerProps> = props => (
   </button>
 );
 
-export default Hamburger;
+export default React.memo(Hamburger);
