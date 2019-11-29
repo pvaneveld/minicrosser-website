@@ -10,3 +10,24 @@
     fill: var(--color-white);
   }
 }
+
+.animated {
+  animation-name: bounce;
+  animation-duration: calc(var(--transition-xxl) * 2);
+  animation-iteration-count: 3;
+  animation-timing-function: var(--transition--standard);
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--space-sm)));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
