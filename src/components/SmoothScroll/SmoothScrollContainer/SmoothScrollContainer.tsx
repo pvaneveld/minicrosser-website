@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useState, useCallback, useRef } fr
 import { ReactNode } from 'react';
 import SmoothScrollNavigation from '../SmoothScrollNavigation/SmoothScrollNavigation';
 import style from './SmoothScrollContainer.module.css';
+import { useDispatch } from 'react-redux';
 
 interface SmoothScrollContainerProps {
   children: ReactNode;
@@ -14,6 +15,8 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
   const [pages, setPages] = useState(
     props.pages.map((page, index) => (index === 0 ? { ...page, inView: true } : { ...page, inView: false })),
   );
+
+  const dispatch = useDispatch();
 
   const currentActiveID = useRef('');
 
@@ -67,7 +70,6 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
   const navButtonClickHandler = (clickedId: string): void => {
     const { current: pageDOMElements } = pageElements;
     pageDOMElements.find((el: HTMLElement) => el.id === clickedId).scrollIntoView({ behavior: 'smooth' });
-    setActivePagesByID(pages, clickedId);
   };
 
   useEffect(() => {
@@ -78,6 +80,10 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
 
   useEffect(() => {
     updatActiveID(pages);
+    dispatch({
+      type: 'UPDATE_PAGES',
+      payload: pages,
+    });
   }, [pages]);
 
   return (
