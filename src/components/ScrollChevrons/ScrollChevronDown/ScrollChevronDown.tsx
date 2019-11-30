@@ -10,22 +10,37 @@ interface ScrollChevronDownProps {
 
 const ScrollChevronDown: React.SFC<ScrollChevronDownProps> = props => {
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [classes, setClasses] = useState(`${style.icon}`);
   const pages = useSelector((state: RootState) => state.app.pages);
   const dispatch = useDispatch();
 
   const animAtionHandler = (id: string, pages: Page): void => {
-    if (pages.length) {
-      const activeIndex = pages.reduce((acc, page, index) => (page.inView ? (acc += index) : (acc += 0)), 0);
-      console.log(activeIndex);
+    if (pages.length && pages.find(page => page.inView).id === props.id) {
+      setHasAnimated(true);
+      setClasses(classes => `${classes} ${style.animated}`);
+    }
+  };
+
+  const handleClick = (): void => {
+    const newIndex = pages.reduce((acc, page, index) => (page.inView ? (acc += index) : (acc += 0)), 0) + 1;
+    if (newIndex < pages.length) {
+      dispatch({
+        type: 'UPDATE_PAGES',
+        payload: pages.map((page, index) =>
+          index === newIndex ? { ...page, inView: true } : { ...page, inView: false },
+        ),
+      });
     }
   };
 
   useEffect(() => {
-    animAtionHandler(props.id, pages);
+    if (!hasAnimated) {
+      animAtionHandler(props.id, pages);
+    }
   }, [pages]);
 
   return (
-    <button className={`${style.icon} ${style.animated}`}>
+    <button className={classes} onClick={handleClick}>
       <ChevronDown />
     </button>
   );

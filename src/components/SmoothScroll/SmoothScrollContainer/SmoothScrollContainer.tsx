@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect, useState, useCallback, useRef } fr
 import { ReactNode } from 'react';
 import SmoothScrollNavigation from '../SmoothScrollNavigation/SmoothScrollNavigation';
 import style from './SmoothScrollContainer.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 interface SmoothScrollContainerProps {
   children: ReactNode;
@@ -15,6 +15,8 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
   const [pages, setPages] = useState(
     props.pages.map((page, index) => (index === 0 ? { ...page, inView: true } : { ...page, inView: false })),
   );
+
+  const statePages = useSelector((state: RootState) => state.app.pages);
 
   const dispatch = useDispatch();
 
@@ -85,6 +87,15 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
       payload: pages,
     });
   }, [pages]);
+
+  useEffect(() => {
+    if (statePages.length) {
+      const activeId = statePages.find(page => page.inView).id;
+      if (currentActiveID.current !== activeId) {
+        navButtonClickHandler(activeId);
+      }
+    }
+  }, [statePages]);
 
   return (
     <div className={style.container}>

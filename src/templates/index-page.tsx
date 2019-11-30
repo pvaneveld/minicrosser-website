@@ -77,7 +77,6 @@ const IndexPage: React.SFC<IndexPageProps> = props => {
         </Page>
         <Page id="home-3">
           <LayoutFullHero fluid={query.imageThree.childImageSharp.fluid}></LayoutFullHero>
-          <ScrollChevronDown id="home-3" />
         </Page>
       </SmoothScrollContainer>
     </Layout>
