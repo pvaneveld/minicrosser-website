@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ChevronDown from '../../../icons/chevron-down-circle.svg';
 import style from './ScrollChevronDown.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { Page } from '../../../state/types';
+import { Page, UPDATE_PAGES } from '../../../state/types';
 
 interface ScrollChevronDownProps {
   id: string;
@@ -25,7 +25,7 @@ const ScrollChevronDown: React.SFC<ScrollChevronDownProps> = props => {
     const newIndex = pages.reduce((acc, page, index) => (page.inView ? (acc += index) : (acc += 0)), 0) + 1;
     if (newIndex < pages.length) {
       dispatch({
-        type: 'UPDATE_PAGES',
+        type: UPDATE_PAGES,
         payload: pages.map((page, index) =>
           index === newIndex ? { ...page, inView: true } : { ...page, inView: false },
         ),

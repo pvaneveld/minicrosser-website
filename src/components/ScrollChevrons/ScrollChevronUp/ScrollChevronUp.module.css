@@ -1,0 +1,19 @@
+.icon {
+  position: fixed;
+  top: calc(var(--space-xl) * 2);
+  right: var(--space-xl);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity var(--transition-xxl) var(--transition-cubic-leave);
+
+  & svg {
+    width: calc(var(--space-lg) * 1.5);
+    height: calc(var(--space-lg) * 1.5);
+    fill: var(--color-white);
+  }
+}
+
+.visible {
+  transition: opacity var(--transition-xxl) var(--transition-cubic-enter);
+  opacity: 1;
+}

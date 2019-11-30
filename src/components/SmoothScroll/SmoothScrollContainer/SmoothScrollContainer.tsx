@@ -1,15 +1,15 @@
 import React, { FunctionComponent, useEffect, useState, useCallback, useRef } from 'react';
 import { ReactNode } from 'react';
 import SmoothScrollNavigation from '../SmoothScrollNavigation/SmoothScrollNavigation';
+import ScrollChevronUp from '../../ScrollChevrons/ScrollChevronUp/ScrollChevronUp';
 import style from './SmoothScrollContainer.module.css';
 import { useDispatch, useSelector } from 'react-redux';
+import { Page, UPDATE_PAGES } from '../../../state/types';
 
 interface SmoothScrollContainerProps {
   children: ReactNode;
   pages: { id: string; title: string }[];
 }
-
-type pages = { inView: boolean; id: string; title: string }[];
 
 const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = props => {
   const [pages, setPages] = useState(
@@ -35,7 +35,7 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
     return id !== currentActiveID;
   };
 
-  const setActivePagesByID = (pages: pages, id: string): void => {
+  const setActivePagesByID = (pages: Page, id: string): void => {
     setPages(
       pages
         .map(page => ({ ...page, inView: false }))
@@ -65,7 +65,7 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
     return observer;
   }, []);
 
-  const updatActiveID = (pages: pages): void => {
+  const updatActiveID = (pages: Page): void => {
     currentActiveID.current = pages.find(page => page.inView === true).id;
   };
 
@@ -83,7 +83,7 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
   useEffect(() => {
     updatActiveID(pages);
     dispatch({
-      type: 'UPDATE_PAGES',
+      type: UPDATE_PAGES,
       payload: pages,
     });
   }, [pages]);
@@ -99,6 +99,7 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
 
   return (
     <div className={style.container}>
+      <ScrollChevronUp />
       <SmoothScrollNavigation clickHandler={(id: string): void => navButtonClickHandler(id)} pages={pages} />
       {props.children}
     </div>
