@@ -1,6 +1,6 @@
 .icon {
   position: fixed;
-  top: calc(var(--space-xl) * 2);
+  top: var(--space-lg);
   right: var(--space-xl);
   z-index: 2;
   opacity: 0;
