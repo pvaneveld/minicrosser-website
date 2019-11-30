@@ -69,7 +69,9 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
       <Layout theme={{ headerDark: true, footerDark: true }}>
         <Page id="home-1">
           <LayoutFullHero fluid={query.imageOne.childImageSharp.fluid}>
-            <Button clickHandler={() => ({})}>klik op mij</Button>
+            <Button type="cta" clickHandler={() => ({})}>
+              klik op mij
+            </Button>
           </LayoutFullHero>
           <ScrollChevronDown id="home-1" />
         </Page>

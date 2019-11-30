@@ -6,10 +6,12 @@ import rootReducer from './index';
 /* eslint-disable */
 
 const createStore = () => {
-  if (window) {
-    return reduxCreateStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-  }   
-  return reduxCreateStore(rootReducer);
+    try {
+        return reduxCreateStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+    } catch (error) {
+        return reduxCreateStore(rootReducer);
+        
+    }
 }
 
 export default ({ element }) => <Provider store={createStore()}>{element}</Provider>;
