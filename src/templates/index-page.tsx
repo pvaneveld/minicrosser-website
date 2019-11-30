@@ -4,7 +4,6 @@ import Layout from '../components/Layouts/Layout/Layout';
 import SmoothScrollContainer from '../components/SmoothScroll/SmoothScrollContainer/SmoothScrollContainer';
 import Page from '../components/SmoothScroll/Page/Page';
 import LayoutFullHero from '../components/Layouts/LayoutFullHero/LayoutFullHero';
-import ChevronDown from '../components/ScrollChevrons/ScrollChevronDown';
 import ScrollChevronDown from '../components/ScrollChevrons/ScrollChevronDown/ScrollChevronDown';
 
 interface IndexPageProps {
@@ -17,7 +16,7 @@ interface IndexPageProps {
   };
 }
 
-const IndexPage: React.SFC<IndexPageProps> = props => {
+const IndexPage: React.SFC<IndexPageProps> = () => {
   const pagesMock = [
     {
       id: 'home-1',
