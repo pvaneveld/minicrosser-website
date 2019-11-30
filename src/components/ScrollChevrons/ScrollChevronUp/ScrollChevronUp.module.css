@@ -17,3 +17,9 @@
   transition: opacity var(--transition-xxl) var(--transition-cubic-enter);
   opacity: 1;
 }
+
+@media (--viewport-sm) {
+  .icon {
+    display: none;
+  }
+}

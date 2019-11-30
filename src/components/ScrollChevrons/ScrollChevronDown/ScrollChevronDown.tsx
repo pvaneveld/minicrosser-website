@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ChevronDown from '../../../icons/chevron-down-circle.svg';
 import style from './ScrollChevronDown.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { Page, UPDATE_PAGES } from '../../../state/types';
+import { useSelector } from 'react-redux';
+import { Page } from '../../../state/types';
 
 interface ScrollChevronDownProps {
   id: string;
@@ -12,7 +12,6 @@ const ScrollChevronDown: React.SFC<ScrollChevronDownProps> = props => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const [classes, setClasses] = useState(`${style.icon}`);
   const pages = useSelector((state: RootState) => state.app.pages);
-  const dispatch = useDispatch();
 
   const animAtionHandler = (id: string, pages: Page): void => {
     if (pages.length && pages.find(page => page.inView).id === props.id) {
@@ -21,15 +20,10 @@ const ScrollChevronDown: React.SFC<ScrollChevronDownProps> = props => {
     }
   };
 
-  const handleClick = (): void => {
-    const newIndex = pages.reduce((acc, page, index) => (page.inView ? (acc += index) : (acc += 0)), 0) + 1;
+  const handleClick = (id: string): void => {
+    const newIndex = pages.reduce((acc, page, index) => (page.id === id ? (acc += index) : (acc += 0)), 0) + 1;
     if (newIndex < pages.length) {
-      dispatch({
-        type: UPDATE_PAGES,
-        payload: pages.map((page, index) =>
-          index === newIndex ? { ...page, inView: true } : { ...page, inView: false },
-        ),
-      });
+      document.querySelector(`#${pages[newIndex].id}`).scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -40,7 +34,7 @@ const ScrollChevronDown: React.SFC<ScrollChevronDownProps> = props => {
   }, [pages]);
 
   return (
-    <button className={classes} onClick={handleClick}>
+    <button className={classes} onClick={(): void => handleClick(props.id)}>
       <ChevronDown />
     </button>
   );

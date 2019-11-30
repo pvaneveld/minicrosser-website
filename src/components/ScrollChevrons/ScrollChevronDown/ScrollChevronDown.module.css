@@ -11,6 +11,12 @@
   }
 }
 
+@media (--viewport-sm) {
+  .icon {
+    display: none;
+  }
+}
+
 .animated {
   animation-name: bounce;
   animation-duration: calc(var(--transition-xxl) * 2);

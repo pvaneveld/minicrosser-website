@@ -6,6 +6,12 @@
   z-index: 2;
 }
 
+@media (--viewport-sm) {
+  .container {
+    display: none;
+  }
+}
+
 button.item {
   display: block;
   height: var(--space-xl);
