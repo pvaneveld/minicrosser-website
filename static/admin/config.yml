@@ -6,12 +6,19 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/index.md"
-        label: "Landing Page"
-        name: "index"
+      - file: 'src/pages/index.md'
+        label: 'Home Page'
+        name: 'index'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'index-page' }
+        label: "Home scherm 1",
+        name: "home-1",
+        required: true,
+        widget: "object",
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - {label: "Button tekst primary", name: "button-text-primary", widget: "string"}
+          - {label: "Button tekst secondary", name: "button-text-secondary", widget: "string"}
