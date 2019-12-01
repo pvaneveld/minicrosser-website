@@ -20,26 +20,12 @@ interface IndexPageProps {
 }
 
 const IndexPage: React.SFC<IndexPageProps> = () => {
-  const pagesMock = [
-    {
-      id: 'home-1',
-      title: 'screen 1',
-    },
-    {
-      id: 'home-2',
-      title: 'screen 2',
-    },
-    {
-      id: 'home-3',
-      title: 'screen 3',
-    },
-  ];
-
   const query = useStaticQuery(graphql`
     query {
-      imageOne: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      data: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
         frontmatter {
           homeOne {
+            title
             backgroundImage {
               childImageSharp {
                 fluid(maxWidth: 1200) {
@@ -49,6 +35,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
             }
           }
           homeTwo {
+            title
             backgroundImage {
               childImageSharp {
                 fluid(maxWidth: 1200) {
@@ -58,6 +45,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
             }
           }
           homeThree {
+            title
             backgroundImage {
               childImageSharp {
                 fluid(maxWidth: 1200) {
@@ -71,23 +59,38 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
     }
   `);
 
+  const pages = [
+    {
+      id: 'home-1',
+      title: query.data.frontmatter.homeOne.title,
+    },
+    {
+      id: 'home-2',
+      title: query.data.frontmatter.homeTwo.title,
+    },
+    {
+      id: 'home-3',
+      title: query.data.frontmatter.homeThree.title,
+    },
+  ];
+
   return (
-    <SmoothScrollContainer pages={pagesMock}>
+    <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: true, footerDark: true }}>
-        <Page id="home-1">
-          <LayoutFullHero fluid={query.imageOne.frontmatter.homeOne.backgroundImage.childImageSharp.fluid}>
+        <Page id={pages[0].id}>
+          <LayoutFullHero fluid={query.data.frontmatter.homeOne.backgroundImage.childImageSharp.fluid}>
             <PageOne />
           </LayoutFullHero>
-          <ScrollChevronDown id="home-1" />
+          <ScrollChevronDown id={pages[0].id} />
         </Page>
-        <Page id="home-2">
-          <LayoutFullHero fluid={query.imageOne.frontmatter.homeTwo.backgroundImage.childImageSharp.fluid}>
+        <Page id={pages[1].id}>
+          <LayoutFullHero fluid={query.data.frontmatter.homeTwo.backgroundImage.childImageSharp.fluid}>
             <PageTwo />
           </LayoutFullHero>
-          <ScrollChevronDown id="home-2" />
+          <ScrollChevronDown id={pages[1].id} />
         </Page>
-        <Page id="home-3">
-          <LayoutFullHero fluid={query.imageOne.frontmatter.homeThree.backgroundImage.childImageSharp.fluid}>
+        <Page id={pages[2].id}>
+          <LayoutFullHero fluid={query.data.frontmatter.homeThree.backgroundImage.childImageSharp.fluid}>
             <PageThree />
           </LayoutFullHero>
         </Page>

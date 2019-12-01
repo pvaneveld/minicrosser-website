@@ -21,7 +21,6 @@ collections:
               widget: 'object',
               fields:
                 [
-                  { label: 'id', name: 'id', widget: 'hidden', default: 'home-1' },
                   { label: 'Titel', name: 'title', widget: 'string' },
                   { label: 'Button tekst primary', name: 'buttonTextPrimary', widget: 'string' },
                   { label: 'Button tekst secondary', name: 'buttonTextSecondary', widget: 'string' },
@@ -35,7 +34,6 @@ collections:
               widget: 'object',
               fields:
                 [
-                  { label: 'id', name: 'id', widget: 'hidden', default: 'home-2' },
                   { label: 'Titel', name: 'title', widget: 'string' },
                   { label: 'Button tekst primary', name: 'buttonTextPrimary', widget: 'string' },
                   { label: 'Button tekst secondary', name: 'buttonTextSecondary', widget: 'string' },
@@ -49,7 +47,6 @@ collections:
               widget: 'object',
               fields:
                 [
-                  { label: 'id', name: 'id', widget: 'hidden', default: 'home-3' },
                   { label: 'Titel', name: 'title', widget: 'string' },
                   { label: 'Button tekst', name: 'buttonText', widget: 'string' },
                   { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
