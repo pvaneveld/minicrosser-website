@@ -20,7 +20,7 @@ collections:
               required: true,
               name: "home-1",
               fields:
-                - { label: "Titel", name: "title", widget: "string" }
-                - {label: "Button tekst primary", name: "button-text-primary", widget: "string"}
-                - {label: "Button tekst secondary", name: "button-text-secondary", widget: "string"}
+                - {label: "Titel", name: "title", widget: "string" },
+                - {label: "Button tekst primary", name: "button-text-primary", widget: "string"},
+                - {label: "Button tekst secondary", name: "button-text-secondary", widget: "string"},
           }
