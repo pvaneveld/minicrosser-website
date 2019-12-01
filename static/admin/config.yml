@@ -24,5 +24,6 @@ collections:
                   { label: 'Titel', name: 'title', widget: 'string' },
                   { label: 'Button tekst primary', name: 'button-text-primary', widget: 'string' },
                   { label: 'Button tekst secondary', name: 'button-text-secondary', widget: 'string' },
+                  { label: 'Achtergrond afbeelding', name: 'background-image', widget: 'image' },
                 ],
             }
