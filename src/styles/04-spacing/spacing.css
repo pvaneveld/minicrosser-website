@@ -14,7 +14,8 @@
 
   /* page spacing */
 
-  --page-spacing-top: calc(var(--space-xxl) * 2);
+  --page-spacing-md: var(--space-xxl);
+  --page-spacing-lg: calc(var(--space-xxl) * 1.5);
 }
 
 html {

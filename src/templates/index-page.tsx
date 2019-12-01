@@ -6,6 +6,8 @@ import Page from '../components/SmoothScroll/Page/Page';
 import LayoutFullHero from '../components/Layouts/LayoutFullHero/LayoutFullHero';
 import ScrollChevronDown from '../components/ScrollChevrons/ScrollChevronDown/ScrollChevronDown';
 import PageOne from '../views/home/page-1/page-1';
+import PageTwo from '../views/home/page-2/page-2';
+import PageThree from '../views/home/page-3/page-3';
 
 interface IndexPageProps {
   data: {
@@ -74,11 +76,15 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
           <ScrollChevronDown id="home-1" />
         </Page>
         <Page id="home-2">
-          <LayoutFullHero fluid={query.imageTwo.childImageSharp.fluid}></LayoutFullHero>
+          <LayoutFullHero fluid={query.imageTwo.childImageSharp.fluid}>
+            <PageTwo />
+          </LayoutFullHero>
           <ScrollChevronDown id="home-2" />
         </Page>
         <Page id="home-3">
-          <LayoutFullHero fluid={query.imageThree.childImageSharp.fluid}></LayoutFullHero>
+          <LayoutFullHero fluid={query.imageThree.childImageSharp.fluid}>
+            <PageThree />
+          </LayoutFullHero>
         </Page>
       </Layout>
     </SmoothScrollContainer>
