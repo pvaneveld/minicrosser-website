@@ -37,13 +37,6 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
 
   const query = useStaticQuery(graphql`
     query {
-      imageOne: file(absolutePath: { regex: "/mock-image-1/" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       imageTwo: file(absolutePath: { regex: "/mock-image-2/" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
@@ -58,24 +51,27 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
           }
         }
       }
-      content: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-        html
+      imageOne: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
         frontmatter {
           homeOne {
-            backgroundImage
+            backgroundImage {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
     }
   `);
 
-  console.log(query.content);
-
   return (
     <SmoothScrollContainer pages={pagesMock}>
       <Layout theme={{ headerDark: true, footerDark: true }}>
         <Page id="home-1">
-          <LayoutFullHero fluid={query.imageOne.childImageSharp.fluid}>
+          <LayoutFullHero fluid={query.imageOne.frontmatter.homeOne.backgroundImage.childImageSharp.fluid}>
             <PageOne />
           </LayoutFullHero>
           <ScrollChevronDown id="home-1" />
