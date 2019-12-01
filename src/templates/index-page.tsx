@@ -62,7 +62,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
         html
         frontmatter {
           homeOne {
-            'background-image'
+            backgroundImage
           }
         }
       }
