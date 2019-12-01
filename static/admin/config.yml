@@ -15,12 +15,14 @@ collections:
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'index-page' }
           - {
-              widget: "object",
-              label: "Home scherm 1",
+              label: 'Home scherm 1',
               required: true,
-              name: "home-1",
+              name: 'home-1',
+              widget: 'object',
               fields:
-                - {label: "Titel", name: "title", widget: "string" },
-                - {label: "Button tekst primary", name: "button-text-primary", widget: "string"},
-                - {label: "Button tekst secondary", name: "button-text-secondary", widget: "string"},
-          }
+                [
+                  { label: 'Titel', name: 'title', widget: 'string' },
+                  { label: 'Button tekst primary', name: 'button-text-primary', widget: 'string' },
+                  { label: 'Button tekst secondary', name: 'button-text-secondary', widget: 'string' },
+                ],
+            }
