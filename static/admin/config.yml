@@ -35,7 +35,8 @@ collections:
               fields:
                 [
                   { label: 'Titel', name: 'title', widget: 'string' },
-                  { label: 'Button tekst', name: 'buttonText', widget: 'string' },
+                  { label: 'Button tekst primary', name: 'buttonTextPrimary', widget: 'string' },
+                  { label: 'Button tekst secondary', name: 'buttonTextSecondary', widget: 'string' },
                   { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
                 ],
             }
