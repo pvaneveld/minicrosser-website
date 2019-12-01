@@ -37,23 +37,27 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
 
   const query = useStaticQuery(graphql`
     query {
-      imageTwo: file(absolutePath: { regex: "/mock-image-2/" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      imageThree: file(absolutePath: { regex: "/mock-image-3/" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       imageOne: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
         frontmatter {
           homeOne {
+            backgroundImage {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          homeTwo {
+            backgroundImage {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          homeThree {
             backgroundImage {
               childImageSharp {
                 fluid(maxWidth: 1200) {
@@ -77,13 +81,13 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
           <ScrollChevronDown id="home-1" />
         </Page>
         <Page id="home-2">
-          <LayoutFullHero fluid={query.imageTwo.childImageSharp.fluid}>
+          <LayoutFullHero fluid={query.imageOne.frontmatter.homeTwo.backgroundImage.childImageSharp.fluid}>
             <PageTwo />
           </LayoutFullHero>
           <ScrollChevronDown id="home-2" />
         </Page>
         <Page id="home-3">
-          <LayoutFullHero fluid={query.imageThree.childImageSharp.fluid}>
+          <LayoutFullHero fluid={query.imageOne.frontmatter.homeThree.backgroundImage.childImageSharp.fluid}>
             <PageThree />
           </LayoutFullHero>
         </Page>
