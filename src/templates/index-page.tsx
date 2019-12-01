@@ -59,8 +59,11 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
         }
       }
       content: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+        html
         frontmatter {
-          home-1
+          homeOne {
+            'background-image'
+          }
         }
       }
     }
