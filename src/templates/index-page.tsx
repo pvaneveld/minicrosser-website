@@ -5,7 +5,7 @@ import SmoothScrollContainer from '../components/SmoothScroll/SmoothScrollContai
 import Page from '../components/SmoothScroll/Page/Page';
 import LayoutFullHero from '../components/Layouts/LayoutFullHero/LayoutFullHero';
 import ScrollChevronDown from '../components/ScrollChevrons/ScrollChevronDown/ScrollChevronDown';
-import Button from '../components/Button/Button';
+import PageOne from '../views/home/page-1/page-1';
 
 interface IndexPageProps {
   data: {
@@ -69,9 +69,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
       <Layout theme={{ headerDark: true, footerDark: true }}>
         <Page id="home-1">
           <LayoutFullHero fluid={query.imageOne.childImageSharp.fluid}>
-            <Button type="cta" clickHandler={() => ({})}>
-              klik op mij
-            </Button>
+            <PageOne />
           </LayoutFullHero>
           <ScrollChevronDown id="home-1" />
         </Page>

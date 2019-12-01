@@ -1,8 +1,7 @@
 .button {
-  margin-top: 200px;
   padding: var(--space-sm);
   border-radius: 20px;
-  min-width: calc(var(--space-xxl) * 3);
+  width: calc(var(--space-xxl) * 3);
   text-transform: uppercase;
 }
 
