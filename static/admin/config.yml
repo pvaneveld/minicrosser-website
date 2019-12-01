@@ -17,7 +17,7 @@ collections:
           - {
               label: 'Home scherm 1',
               required: true,
-              name: 'home-1',
+              name: 'homeOne',
               widget: 'object',
               fields:
                 [

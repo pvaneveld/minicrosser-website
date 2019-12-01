@@ -60,11 +60,13 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
       }
       content: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
         frontmatter {
-          title
+          home-1
         }
       }
     }
   `);
+
+  console.log(query.content);
 
   return (
     <SmoothScrollContainer pages={pagesMock}>
