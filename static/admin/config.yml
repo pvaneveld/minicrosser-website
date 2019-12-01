@@ -27,3 +27,27 @@ collections:
                   { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
                 ],
             }
+          - {
+              label: 'Home scherm 2',
+              required: true,
+              name: 'homeTwo',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Titel', name: 'title', widget: 'string' },
+                  { label: 'Button tekst', name: 'buttonText', widget: 'string' },
+                  { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
+                ],
+            }
+          - {
+              label: 'Home scherm 3',
+              required: true,
+              name: 'homeThree',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Titel', name: 'title', widget: 'string' },
+                  { label: 'Button tekst', name: 'buttonText', widget: 'string' },
+                  { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
+                ],
+            }
