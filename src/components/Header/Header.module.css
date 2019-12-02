@@ -15,8 +15,6 @@
 }
 
 .logo {
-  width: var(--space-lg);
-  height: var(--space-lg);
   fill: var(--color-white);
 }
 
