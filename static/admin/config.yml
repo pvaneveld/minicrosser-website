@@ -6,12 +6,49 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/index.md"
-        label: "Landing Page"
-        name: "index"
+      - file: 'src/pages/index.md'
+        label: 'Home Page'
+        name: 'index'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'index-page' }
+          - {
+              label: 'Home scherm 1',
+              required: true,
+              name: 'homeOne',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Titel', name: 'title', widget: 'string' },
+                  { label: 'Button tekst primary', name: 'buttonTextPrimary', widget: 'string' },
+                  { label: 'Button tekst secondary', name: 'buttonTextSecondary', widget: 'string' },
+                  { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
+                ],
+            }
+          - {
+              label: 'Home scherm 2',
+              required: true,
+              name: 'homeTwo',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Titel', name: 'title', widget: 'string' },
+                  { label: 'Button tekst primary', name: 'buttonTextPrimary', widget: 'string' },
+                  { label: 'Button tekst secondary', name: 'buttonTextSecondary', widget: 'string' },
+                  { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
+                ],
+            }
+          - {
+              label: 'Home scherm 3',
+              required: true,
+              name: 'homeThree',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Titel', name: 'title', widget: 'string' },
+                  { label: 'Button tekst', name: 'buttonText', widget: 'string' },
+                  { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
+                ],
+            }

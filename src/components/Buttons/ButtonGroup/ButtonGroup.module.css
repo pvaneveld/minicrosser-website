@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  margin-bottom: var(--space-md);
+
+  & button:first-of-type {
+    margin-right: var(--space-md);
+  }
+}
+
+@media (--viewport-sm) {
+  .container {
+    flex-direction: column;
+
+    & button:first-of-type {
+      margin-right: 0;
+    }
+
+    & button:first-of-type {
+      margin-bottom: var(--space-md);
+    }
+  }
+}

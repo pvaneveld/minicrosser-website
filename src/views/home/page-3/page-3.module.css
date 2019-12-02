@@ -1,0 +1,12 @@
+.container {
+  padding-top: var(--page-spacing-md);
+
+  & h1 {
+    color: var(--color-white);
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}

@@ -2,7 +2,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  right: 0;
   overflow: hidden;
   padding: var(--space-md) var(--space-md) 0 var(--space-md);
   display: flex;

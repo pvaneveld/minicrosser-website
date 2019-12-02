@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
 import style from './Button.module.css';
 
-interface ButtonProps {
+export interface ButtonProps {
   type?: 'secondary' | 'cta';
-  clickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  clickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
 }
 

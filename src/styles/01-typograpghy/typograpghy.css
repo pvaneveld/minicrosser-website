@@ -21,11 +21,16 @@
     1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
       var(--text-scale-ratio)
   );
+  --text-jumbo: calc(var(--text-xxxl) * 1.5);
 
   /* line-height */
 
   --heading-line-height: 1.2;
   --body-line-height: 1.4;
+
+  /* font-weight */
+
+  --font-weight-bold: 600;
 }
 
 body {
@@ -50,9 +55,23 @@ form legend {
   font-size: var(--text-xxxl);
 }
 
+.jumbo {
+  font-size: var(--text-jumbo);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+@media (--viewport-sm) {
+  .jumbo {
+    font-size: calc(var(--text-jumbo) * 0.9);
+  }
+}
+
 h1,
 .text--xxl {
-  font-size: var(--text-xxl);
+  font-size: var(--text-xxxl);
 }
 
 h2,

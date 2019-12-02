@@ -5,7 +5,9 @@ import SmoothScrollContainer from '../components/SmoothScroll/SmoothScrollContai
 import Page from '../components/SmoothScroll/Page/Page';
 import LayoutFullHero from '../components/Layouts/LayoutFullHero/LayoutFullHero';
 import ScrollChevronDown from '../components/ScrollChevrons/ScrollChevronDown/ScrollChevronDown';
-import Button from '../components/Button/Button';
+import PageOne from '../views/home/page-1/page-1';
+import PageTwo from '../views/home/page-2/page-2';
+import PageThree from '../views/home/page-3/page-3';
 
 interface IndexPageProps {
   data: {
@@ -18,69 +20,79 @@ interface IndexPageProps {
 }
 
 const IndexPage: React.SFC<IndexPageProps> = () => {
-  const pagesMock = [
-    {
-      id: 'home-1',
-      title: 'screen 1',
-    },
-    {
-      id: 'home-2',
-      title: 'screen 2',
-    },
-    {
-      id: 'home-3',
-      title: 'screen 3',
-    },
-  ];
-
   const query = useStaticQuery(graphql`
     query {
-      imageOne: file(absolutePath: { regex: "/mock-image-1/" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      imageTwo: file(absolutePath: { regex: "/mock-image-2/" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      imageThree: file(absolutePath: { regex: "/mock-image-3/" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      content: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      data: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
         frontmatter {
-          title
+          homeOne {
+            title
+            backgroundImage {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          homeTwo {
+            title
+            backgroundImage {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          homeThree {
+            title
+            backgroundImage {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }
   `);
 
+  const pages = [
+    {
+      id: 'home-1',
+      title: query.data.frontmatter.homeOne.title,
+    },
+    {
+      id: 'home-2',
+      title: query.data.frontmatter.homeTwo.title,
+    },
+    {
+      id: 'home-3',
+      title: query.data.frontmatter.homeThree.title,
+    },
+  ];
+
   return (
-    <SmoothScrollContainer pages={pagesMock}>
+    <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: true, footerDark: true }}>
-        <Page id="home-1">
-          <LayoutFullHero fluid={query.imageOne.childImageSharp.fluid}>
-            <Button type="cta" clickHandler={() => ({})}>
-              klik op mij
-            </Button>
+        <Page id={pages[0].id}>
+          <LayoutFullHero fluid={query.data.frontmatter.homeOne.backgroundImage.childImageSharp.fluid}>
+            <PageOne />
           </LayoutFullHero>
-          <ScrollChevronDown id="home-1" />
+          <ScrollChevronDown id={pages[0].id} />
         </Page>
-        <Page id="home-2">
-          <LayoutFullHero fluid={query.imageTwo.childImageSharp.fluid}></LayoutFullHero>
-          <ScrollChevronDown id="home-2" />
+        <Page id={pages[1].id}>
+          <LayoutFullHero fluid={query.data.frontmatter.homeTwo.backgroundImage.childImageSharp.fluid}>
+            <PageTwo />
+          </LayoutFullHero>
+          <ScrollChevronDown id={pages[1].id} />
         </Page>
-        <Page id="home-3">
-          <LayoutFullHero fluid={query.imageThree.childImageSharp.fluid}></LayoutFullHero>
+        <Page id={pages[2].id}>
+          <LayoutFullHero fluid={query.data.frontmatter.homeThree.backgroundImage.childImageSharp.fluid}>
+            <PageThree />
+          </LayoutFullHero>
         </Page>
       </Layout>
     </SmoothScrollContainer>

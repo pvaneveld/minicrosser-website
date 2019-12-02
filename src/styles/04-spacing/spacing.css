@@ -11,6 +11,11 @@
   /* components padding */
 
   --component-padding: var(--space-sm);
+
+  /* page spacing */
+
+  --page-spacing-md: var(--space-xxl);
+  --page-spacing-lg: calc(var(--space-xxl) * 1.5);
 }
 
 html {
