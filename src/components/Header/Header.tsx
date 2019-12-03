@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import style from './Header.module.css';
-import Logo from '../../icons/logo.svg';
+import Polymer from '../../icons/polymer.svg';
 import Hamburger from './Hamburger/Hamburger';
 import MobileMenu from './MobileMenu/MobileMenu';
 import { Link } from 'gatsby';
@@ -16,7 +16,7 @@ const Header: React.SFC<HeaderProps> = props => {
     <header className={`${style.header}${props.darkTheme ? ` ${style.headerDark}` : ''}`}>
       <Link to="/" className={style.logoContainer}>
         <figure>
-          <Logo className={style.logo} />
+          <Polymer className={style.logo} />
         </figure>
       </Link>
       <nav className={style.linkContainer}>

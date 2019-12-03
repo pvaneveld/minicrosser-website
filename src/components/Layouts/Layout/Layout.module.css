@@ -1,0 +1,14 @@
+.flag {
+  width: var(--space-xl);
+  height: var(--space-xl);
+  position: fixed;
+  right: var(--space-lg);
+  top: calc(var(--space-xxl) * 1.5);
+  z-index: 10;
+}
+
+@media (--viewport-sm) {
+  .flag {
+    display: none;
+  }
+}

@@ -14,10 +14,6 @@
   background-color: var(--color-gray-dark);
 }
 
-.logo {
-  fill: var(--color-white);
-}
-
 .link {
   text-transform: uppercase;
   color: var(--color-white);
