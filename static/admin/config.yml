@@ -69,8 +69,8 @@ collections:
                 name: 'keyFeatures',
                 widgit: 'list',
                 fields:
-                  - {label: 'Titel', name: 'title', widget: 'string'}
-                  - {label: 'Beschrijving', name: 'description', widget: 'string'}
+                  - {label: 'Titel', name: 'title', widget: 'string'},
+                  - {label: 'Beschrijving', name: 'description', widget: 'string'},
               },
               { label: 'Titel', name: 'title', widget: 'string'},
               { label: 'Tekst', name: 'text', widget: 'markdown'},

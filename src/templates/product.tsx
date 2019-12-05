@@ -5,6 +5,7 @@ import SmoothScrollContainer from '../components/SmoothScroll/SmoothScrollContai
 import Page from '../components/SmoothScroll/Page/Page';
 import ScrollChevronDown from '../components/ScrollChevrons/ScrollChevronDown/ScrollChevronDown';
 import LayoutHalfHero from '../components/Layouts/LayoutHalfHero/LayoutHalfHero';
+import { graphql } from 'gatsby';
 
 const pages = [
   {
@@ -13,11 +14,23 @@ const pages = [
   },
 ];
 
-const IndexPage: React.SFC = () => {
+interface ProductPropTypes {
+  data: {
+    markdownRemark: {
+      frontmatter: {
+        productName: string;
+      };
+    };
+  };
+}
+
+const Product: React.SFC<ProductPropTypes> = ({ data }) => {
+  const { markdownRemark: product } = data;
   return (
     <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: true, footerDark: true }}>
         <Page id={pages[0].id}>
+          <h1>{product.frontmatter.productName}</h1>
           <ScrollChevronDown id={pages[0].id} />
         </Page>
       </Layout>
@@ -25,4 +38,14 @@ const IndexPage: React.SFC = () => {
   );
 };
 
-export default IndexPage;
+export default Product;
+
+export const pageQuery = graphql`
+  query ProductByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        productName
+      }
+    }
+  }
+`;
