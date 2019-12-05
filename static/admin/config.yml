@@ -56,7 +56,7 @@ collections:
     label: 'Producten'
     folder: 'src/pages/products'
     fields:
-      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'product-page' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'product' }
       - { label: 'Productnaam', name: 'productName', widget: 'string' }
       - {
           label: 'Product scherm 1',
