@@ -52,3 +52,27 @@ collections:
                   { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
                 ],
             }
+  - name: 'products'
+    label: 'Producten'
+    folder: 'src/pages/products'
+    fields:
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'product-page' }
+      - { label: 'Productnaam', name: 'productName', widget: 'string' }
+      - {
+          label: 'Product scherm 1',
+          name: 'productOne',
+          widget: 'object',
+          fields: [
+              { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
+              {
+                label: 'Key features',
+                name: 'keyFeatures',
+                widgit: 'list',
+                fields:
+                  - {label: 'Titel', name: 'title', widget: 'string'}
+                  - {label: 'Beschrijving', name: 'description', widget: 'string'}
+              },
+              { label: 'Titel', name: 'title', widget: 'string'},
+              { label: 'Tekst', name: 'text', widget: 'markdown'},
+          ]
+      }

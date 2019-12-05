@@ -4,6 +4,7 @@ import Layout from '../components/Layouts/Layout/Layout';
 import SmoothScrollContainer from '../components/SmoothScroll/SmoothScrollContainer/SmoothScrollContainer';
 import Page from '../components/SmoothScroll/Page/Page';
 import ScrollChevronDown from '../components/ScrollChevrons/ScrollChevronDown/ScrollChevronDown';
+import LayoutHalfHero from '../components/Layouts/LayoutHalfHero/LayoutHalfHero';
 
 const pages = [
   {
@@ -17,7 +18,6 @@ const IndexPage: React.SFC = () => {
     <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: true, footerDark: true }}>
         <Page id={pages[0].id}>
-          <h1>product page</h1>
           <ScrollChevronDown id={pages[0].id} />
         </Page>
       </Layout>
