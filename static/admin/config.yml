@@ -62,17 +62,20 @@ collections:
           label: 'Product scherm 1',
           name: 'productOne',
           widget: 'object',
-          fields: [
+          fields:
+            [
               { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
               {
                 label: 'Key features',
                 name: 'keyFeatures',
                 widgit: 'list',
                 fields:
-                  - {label: 'Titel', name: 'title', widget: 'string'},
-                  - {label: 'Beschrijving', name: 'description', widget: 'string'},
+                  [
+                    { label: 'Titel', name: 'title', widget: 'string' },
+                    { label: 'Beschrijving', name: 'description', widget: 'string' },
+                  ],
               },
-              { label: 'Titel', name: 'title', widget: 'string'},
-              { label: 'Tekst', name: 'text', widget: 'markdown'},
-          ]
-      }
+              { label: 'Titel', name: 'title', widget: 'string' },
+              { label: 'Tekst', name: 'text', widget: 'markdown' },
+            ],
+        }
