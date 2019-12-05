@@ -68,7 +68,7 @@ collections:
               {
                 label: 'Key features',
                 name: 'keyFeatures',
-                widgit: 'list',
+                widget: 'list',
                 fields:
                   [
                     { label: 'Titel', name: 'title', widget: 'string' },
