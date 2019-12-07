@@ -1,0 +1,13 @@
+.container {
+  padding-top: var(--space-xl);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+}
+
+.header-container {
+}
+
+.text {
+  color: var(--color-text);
+}
