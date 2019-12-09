@@ -20,18 +20,36 @@
   color: var(--color-white);
 }
 
-.secondary {
-  background-color: transparent;
-  box-shadow: inset 0 0 0 2px var(--color-white);
+.secondary,
+.secondary-dark {
   transition: box-shadow var(--transition-lg) var(--transition-cubic-standard) var(--transition-lg),
     color var(--transition-standard);
 }
 
-.secondary:hover {
-  color: var(--color-gray-dark);
-  box-shadow: inset 0 0 0 20px var(--color-white);
+.secondary:hover,
+.secondary-dark:hover {
   transition: box-shadow var(--transition-lg) var(--transition-cubic-standard),
     color var(--transition-standard) var(--transition-lg);
+}
+
+.secondary {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--color-white);
+}
+
+.secondary:hover {
+  color: var(--color-gray-dark);
+  box-shadow: inset 0 0 0 25px var(--color-white);
+}
+
+.secondary-dark {
+  color: var(--color-gray-dark);
+  box-shadow: inset 0 0 0 2px var(--color-gray-dark);
+}
+
+.secondary-dark:hover {
+  color: var(--color-white);
+  box-shadow: inset 0 0 0 25px var(--color-gray-dark);
 }
 
 .cta {

@@ -18,7 +18,7 @@
   opacity: 1;
 }
 
-@media (--viewport-sm) {
+@media (--viewport-md) {
   .icon {
     display: none;
   }

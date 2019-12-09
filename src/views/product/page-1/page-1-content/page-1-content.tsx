@@ -10,8 +10,10 @@ const ProductPageOneContent: React.SFC<ProductpageOneContentProps> = () => {
       <div className={style.headerContainer}>
         <h2>Performance</h2>
         <h1>De sterkste motor in de markt</h1>
-        <Button type="secondary">Ik ben een button</Button>
       </div>
+      <a href="/" className={style.button}>
+        <Button type="secondary-dark">Ik ben een button</Button>
+      </a>
 
       <p className={style.text}>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis voluptatibus unde corporis officia

@@ -4,7 +4,7 @@
 
   /* set base values */
 
-  --text-base-size: 1.1em;
+  --text-base-size: 1em;
   --text-scale-ratio: 1.2;
 
   /* type scale */
@@ -58,7 +58,7 @@ form legend {
 
 .jumbo {
   font-size: var(--text-jumbo);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bolder);
   margin-bottom: var(--space-sm);
   text-align: center;
   letter-spacing: 0.03em;
@@ -73,25 +73,21 @@ form legend {
 h1,
 .text--xxl {
   font-size: var(--text-xxxl);
-  font-weight: var(--font-weight-bolder);
 }
 
 h2,
 .text--xl {
   font-size: var(--text-xl);
-  font-weight: var(--font-weight-bolder);
 }
 
 h3,
 .text--lg {
   font-size: var(--text-lg);
-  font-weight: var(--font-weight-bolder);
 }
 
 h4,
 .text--md {
   font-size: var(--text-md);
-  font-weight: var(--font-weight-bolder);
 }
 
 .text--sm,

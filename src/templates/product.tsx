@@ -38,7 +38,7 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
   const { frontmatter: product } = data.markdownRemark;
   return (
     <SmoothScrollContainer pages={pages}>
-      <Layout theme={{ headerDark: true, footerDark: true }}>
+      <Layout theme={{ headerDark: false, footerDark: true }}>
         <Page id={pages[0].id}>
           <LayoutHalfHero
             fluid={product.productOne.backgroundImage.childImageSharp.fluid}
