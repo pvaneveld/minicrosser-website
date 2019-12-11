@@ -77,5 +77,6 @@ collections:
               },
               { label: 'Titel', name: 'title', widget: 'string' },
               { label: 'Tekst', name: 'text', widget: 'markdown' },
+              { label: 'Button tekst', name: 'buttonText', widget: 'string', default: 'Configureren' },
             ],
         }

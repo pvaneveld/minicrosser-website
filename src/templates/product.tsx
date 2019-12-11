@@ -17,6 +17,8 @@ const pages = [
   },
 ];
 
+export type keyFeatures = { title: string; description: string }[];
+
 interface ProductPropTypes {
   data: {
     markdownRemark: {
@@ -28,6 +30,9 @@ interface ProductPropTypes {
               fluid: FluidObject;
             };
           };
+          keyFeatures: keyFeatures;
+          title: string;
+          text: string;
         };
       };
     };
@@ -36,13 +41,16 @@ interface ProductPropTypes {
 
 const Product: React.SFC<ProductPropTypes> = ({ data }) => {
   const { frontmatter: product } = data.markdownRemark;
+  console.log(product);
   return (
     <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: false, footerDark: true }}>
         <Page id={pages[0].id}>
           <LayoutHalfHero
             fluid={product.productOne.backgroundImage.childImageSharp.fluid}
-            imageContent={<PageOneImage />}
+            imageContent={
+              <PageOneImage keyFeatures={product.productOne.keyFeatures} buttonText={product.productOne.buttonText} />
+            }
           >
             <PageOneContent />
           </LayoutHalfHero>
@@ -68,6 +76,13 @@ export const pageQuery = graphql`
               }
             }
           }
+          keyFeatures {
+            title
+            description
+          }
+          title
+          text
+          buttonText
         }
       }
     }

@@ -1,37 +1,28 @@
 import React from 'react';
 import style from './page-1-image.module.css';
 import Button from '../../../../components/Buttons/Button/Button';
+import { keyFeatures } from '../../../../templates/product';
 
-interface ProductpageOneImageProps {}
+interface ProductpageOneImageProps {
+  keyFeatures: keyFeatures;
+  buttonText: string;
+}
 
-const ProductPageOneImage: React.SFC<ProductpageOneImageProps> = () => {
+const ProductPageOneImage: React.SFC<ProductpageOneImageProps> = props => {
+  const { keyFeatures, buttonText } = props;
   return (
     <div className={style.container}>
-      <header className={style.header}>
-        <span className="jumbo">Model x4</span>
-      </header>
+      <h1 className={`${style.header} jumbo`}>Model x4</h1>
 
       <ul className={style.keyFeatures}>
-        <li className={style.feature}>
-          <h2 className={style.featureHeading}>feature</h2>
-          <p className={style.featureText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. explicabo magnam optio
-          </p>
-        </li>
-        <li className={style.feature}>
-          <h2 className={style.featureHeading}>feature</h2>
-          <p className={style.featureText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. explicabo magnam optio
-          </p>
-        </li>
-        <li className={style.feature}>
-          <h2 className={style.featureHeading}>feature</h2>
-          <p className={style.featureText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. explicabo magnam optio
-          </p>
-        </li>
+        {keyFeatures.map((feature, index) => (
+          <li key={`feature-${index}`} className={style.feature}>
+            <h2 className={style.featureHeading}>{feature.title}</h2>
+            <p className={style.featureText}>{feature.description}</p>
+          </li>
+        ))}
         <li className={style.ctaButton}>
-          <Button>Configureren</Button>
+          <Button>{buttonText}</Button>
         </li>
       </ul>
     </div>
