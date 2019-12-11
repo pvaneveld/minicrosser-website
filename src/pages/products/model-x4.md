@@ -3,6 +3,7 @@ templateKey: product
 productName: Model X4
 productOne:
   backgroundImage: /img/harley-davidson-wc95vfqvrys-unsplash.jpg
+  buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
       title: Key feature 1
