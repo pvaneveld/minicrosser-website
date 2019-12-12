@@ -33,6 +33,7 @@ interface ProductPropTypes {
           keyFeatures: keyFeatures;
           title: string;
           text: string;
+          buttonText: string;
         };
       };
     };
@@ -41,7 +42,6 @@ interface ProductPropTypes {
 
 const Product: React.SFC<ProductPropTypes> = ({ data }) => {
   const { frontmatter: product } = data.markdownRemark;
-  console.log(product);
   return (
     <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: false, footerDark: true }}>
@@ -52,7 +52,11 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
               <PageOneImage keyFeatures={product.productOne.keyFeatures} buttonText={product.productOne.buttonText} />
             }
           >
-            <PageOneContent />
+            <PageOneContent
+              title={product.productOne.title}
+              text={product.productOne.text}
+              buttonText={product.productOne.buttonText}
+            />
           </LayoutHalfHero>
           <ScrollChevronDown id={pages[0].id} />
         </Page>
@@ -82,6 +86,7 @@ export const pageQuery = graphql`
           }
           title
           text
+          buttonText
         }
       }
     }

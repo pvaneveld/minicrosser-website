@@ -2,24 +2,24 @@ import React from 'react';
 import style from './page-1-content.module.css';
 import Button from '../../../../components/Buttons/Button/Button';
 
-interface ProductpageOneContentProps {}
+interface ProductpageOneContentProps {
+  title: string;
+  text: string;
+  buttonText: string;
+}
 
-const ProductPageOneContent: React.SFC<ProductpageOneContentProps> = () => {
+const ProductPageOneContent: React.SFC<ProductpageOneContentProps> = props => {
+  const { title, text, buttonText } = props;
   return (
     <div className={style.container}>
       <div className={style.headerContainer}>
-        <h2>Performance</h2>
-        <h1>De sterkste motor in de markt</h1>
+        <h1>{title}</h1>
       </div>
       <a href="/" className={style.button}>
-        <Button type="secondary-dark">Ik ben een button</Button>
+        <Button type="secondary-dark">{buttonText}</Button>
       </a>
 
-      <p className={style.text}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis voluptatibus unde corporis officia
-        aperiam, ipsam animi corrupti quos suscipit, provident voluptatum aspernatur laboriosam, a quas possimus
-        doloribus sequi odio. Praesentium!
-      </p>
+      <p className={style.text}>{text}</p>
     </div>
   );
 };
