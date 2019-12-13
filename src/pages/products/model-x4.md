@@ -21,5 +21,31 @@ productOne:
   title:
     mainTitle: De sterkste motor in de markt
     subtitle: Performance
+productTwo:
+  backgroundImage: /img/mock-image-1.jpg
+  specifications:
+    - description: 175 kg
+      title: Max gebruikersgewicht
+    - description: 30-70 km
+      title: Actieradius
+    - description: 3 meter
+      title: Totale lengte
+    - description: 109 cm
+      title: Totale hoogte
+    - description: '132,5 cm'
+      title: Draaicirkel
+    - description: 120 km/u
+      title: Max snelheid
+    - description: 700 Watt
+      title: Motor
+    - description: 68cm
+      title: Totale breedte
+    - description: 151 kg
+      title: Gewicht
+    - description: 11 cm
+      title: Hoogte voetplateau
+  title:
+    mainTitle: Model X4
+    subtitle: Specificaties
 ---
 
