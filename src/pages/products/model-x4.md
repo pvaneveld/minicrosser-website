@@ -17,9 +17,7 @@ productOne:
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con-
     **sequat**. Duis aute irure dolor in dolore magna aliqua. Ut enim ad minim
     veniam, quis nostrud exercitation ullamco dolore magna aliqua. Ut enim ad
-    minim veniam, quis nostrud exercitation ullamco l title:
-      subTitle: 'Performance',
-      mainTitle: 'De sterkste motor in de markt'
+    minim veniam, quis nostrud exercitation ullamco
   title:
     mainTitle: De sterkste motor in de markt
     subtitle: Performance
