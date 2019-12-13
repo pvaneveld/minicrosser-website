@@ -5,16 +5,21 @@
   grid-template-columns: 40vw 60vw;
 }
 
+.image-container {
+  background: var(--color-gray-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 80%;
+  height: 80%;
+}
+
 @media (--viewport-md) {
   .container {
     grid-template-columns: 100vw;
+    grid-template-rows: 40vh auto;
   }
-}
-
-.image-container {
-  background: red;
-}
-
-.content-container {
-  background: pink;
 }

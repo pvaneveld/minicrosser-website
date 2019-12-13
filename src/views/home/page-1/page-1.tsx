@@ -3,7 +3,7 @@ import style from './page-1.module.css';
 import ButtonGroup from '../../../components/Buttons/ButtonGroup/ButtonGroup';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const pageOne: React.SFC = () => {
+const HomepageOne: React.SFC = () => {
   const query = useStaticQuery(graphql`
     query Content {
       markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
@@ -40,4 +40,4 @@ const pageOne: React.SFC = () => {
   );
 };
 
-export default pageOne;
+export default HomepageOne;

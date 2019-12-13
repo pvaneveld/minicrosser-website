@@ -2,7 +2,7 @@ import React from 'react';
 import style from './page-2.module.css';
 import ButtonGroup from '../../../components/Buttons/ButtonGroup/ButtonGroup';
 
-const PageTwo: React.SFC = () => {
+const HomePageTwo: React.SFC = () => {
   const buttonGroup = [
     {
       children: 'Proefrit' as const,
@@ -23,4 +23,4 @@ const PageTwo: React.SFC = () => {
   );
 };
 
-export default PageTwo;
+export default HomePageTwo;

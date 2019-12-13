@@ -97,16 +97,6 @@ collections:
             [
               { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
               {
-                label: 'Specificaties',
-                name: 'specifications',
-                widget: 'list',
-                fields:
-                  [
-                    { label: 'Titel', name: 'title', widget: 'string' },
-                    { label: 'Beschrijving', name: 'description', widget: 'string' },
-                  ],
-              },
-              {
                 label: ' Titel',
                 name: 'title',
                 widget: 'object',
@@ -114,6 +104,16 @@ collections:
                   [
                     { label: 'Subtitel (dungedrukt)', name: 'subtitle', widget: 'string' },
                     { label: 'Titel', name: 'mainTitle', widget: 'string' },
+                  ],
+              },
+              {
+                label: 'Specificaties',
+                name: 'specifications',
+                widget: 'list',
+                fields:
+                  [
+                    { label: 'Titel', name: 'title', widget: 'string' },
+                    { label: 'Beschrijving', name: 'description', widget: 'string' },
                   ],
               },
             ],

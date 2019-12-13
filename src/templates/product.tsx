@@ -8,6 +8,7 @@ import LayoutHalfHero from '../components/Layouts/LayoutHalfHero/LayoutHalfHero'
 import LayoutTwoColumnHero from '../components/Layouts/LayoutTwoColumnHero/LayoutTwoColumnHero';
 import PageOneImage from '../views/product/page-1/page-1-image/page-1-image';
 import PageOneContent from '../views/product/page-1/page-1-content/page-1-content';
+import PageTwo from '../views/product/page-2/page-2';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 
@@ -23,6 +24,7 @@ const pages = [
 ];
 
 export type keyFeatures = { title: string; description: string }[];
+export type specifications = { title: string; description: string }[];
 export type title = { subtitle: string; mainTitle: string };
 
 interface ProductPropTypes {
@@ -40,6 +42,16 @@ interface ProductPropTypes {
           title: title;
           text: string;
           buttonText: string;
+        };
+
+        productTwo: {
+          backgroundImage: {
+            childImageSharp: {
+              fluid: FluidObject;
+            };
+          };
+          title: title;
+          specifications: specifications;
         };
       };
     };
@@ -67,9 +79,8 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
           <ScrollChevronDown id={pages[0].id} />
         </Page>
         <Page id={pages[1].id}>
-          <LayoutTwoColumnHero fluid={product.productOne.backgroundImage.childImageSharp.fluid}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, assumenda. Reiciendis saepe obcaecati placeat
-            id illo ex eius corporis porro nisi doloremque, illum dolores optio dolorem doloribus, ipsam quis error?
+          <LayoutTwoColumnHero fluid={product.productTwo.backgroundImage.childImageSharp.fluid}>
+            <PageTwo title={product.productTwo.title} specifications={product.productTwo.specifications} />
           </LayoutTwoColumnHero>
         </Page>
       </Layout>
@@ -102,6 +113,23 @@ export const pageQuery = graphql`
           }
           text
           buttonText
+        }
+        productTwo {
+          backgroundImage {
+            childImageSharp {
+              fluid(maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          title {
+            subtitle
+            mainTitle
+          }
+          specifications {
+            title
+            description
+          }
         }
       }
     }

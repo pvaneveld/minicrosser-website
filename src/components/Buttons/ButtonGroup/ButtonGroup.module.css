@@ -12,11 +12,7 @@
     flex-direction: column;
 
     & button:first-of-type {
-      margin-right: 0;
-    }
-
-    & button:first-of-type {
-      margin-bottom: var(--space-md);
+      margin: 0 0 var(--space-md) 0;
     }
   }
 }
