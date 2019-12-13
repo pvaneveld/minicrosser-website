@@ -47,5 +47,10 @@ productTwo:
   title:
     mainTitle: Model X4
     subtitle: Specificaties
+productThree:
+  buttons:
+    buttonPrimary: Configureren
+    buttonSecondary: Proefrit
+  title: Ervaar Model-X4
 ---
 
