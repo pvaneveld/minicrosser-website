@@ -18,6 +18,7 @@ productOne:
     sequat. Duis aute irure dolor in dolore magna aliqua. Ut enim ad minim
     veniam, quis nostrud exercitation ullamco dolore magna aliqua. Ut enim ad
     minim veniam, quis nostrud exercitation ullamco l
-  title: De sterkste motor in de markt
+    title:
+      subTitle: 'Performance',
+      mainTitle: 'De sterkste motor in de markt'
 ---
-
