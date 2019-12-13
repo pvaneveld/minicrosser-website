@@ -23,6 +23,7 @@ const pages = [
 ];
 
 export type keyFeatures = { title: string; description: string }[];
+export type title = { subtitle: string; mainTitle: string };
 
 interface ProductPropTypes {
   data: {
@@ -36,7 +37,7 @@ interface ProductPropTypes {
             };
           };
           keyFeatures: keyFeatures;
-          title: string;
+          title: title;
           text: string;
           buttonText: string;
         };
@@ -94,6 +95,10 @@ export const pageQuery = graphql`
           keyFeatures {
             title
             description
+          }
+          title {
+            subtitle
+            mainTitle
           }
           text
           buttonText

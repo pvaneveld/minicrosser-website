@@ -20,6 +20,11 @@
 
 .header-container {
   grid-area: header;
+
+  & .subtitle {
+    display: block;
+    font-size: var(--text-xs);
+  }
 }
 
 @media (--viewport-md) {
