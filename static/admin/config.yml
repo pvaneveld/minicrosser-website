@@ -118,3 +118,22 @@ collections:
               },
             ],
         }
+      - {
+          label: 'Product scherm 3',
+          name: 'productThree',
+          widget: 'object',
+          fields:
+            [
+              { label: 'Titel', name: 'title', widget: 'string' },
+              {
+                label: ' Buttons',
+                name: 'buttons',
+                widget: 'object',
+                fields:
+                  [
+                    { label: 'Button primary tekst (links)', name: 'buttonPrimary', widget: 'string' },
+                    { label: 'Button secondary tekst (rechts)', name: 'buttonSecondary', widget: 'string' },
+                  ],
+              },
+            ],
+        }

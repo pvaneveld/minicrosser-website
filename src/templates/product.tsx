@@ -9,6 +9,7 @@ import LayoutTwoColumnHero from '../components/Layouts/LayoutTwoColumnHero/Layou
 import PageOneImage from '../views/product/page-1/page-1-image/page-1-image';
 import PageOneContent from '../views/product/page-1/page-1-content/page-1-content';
 import PageTwo from '../views/product/page-2/page-2';
+import PageThree from '../views/product/page-3/page-3';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 
@@ -20,6 +21,10 @@ const pages = [
   {
     id: 'product-2',
     title: 'product-2',
+  },
+  {
+    id: 'product-3',
+    title: 'product-3',
   },
 ];
 
@@ -82,6 +87,9 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
           <LayoutTwoColumnHero fluid={product.productTwo.backgroundImage.childImageSharp.fluid}>
             <PageTwo title={product.productTwo.title} specifications={product.productTwo.specifications} />
           </LayoutTwoColumnHero>
+        </Page>
+        <Page id={pages[2].id}>
+          <PageThree />
         </Page>
       </Layout>
     </SmoothScrollContainer>
