@@ -1,0 +1,20 @@
+.container {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+}
+
+@media (--viewport-md) {
+  .container {
+    grid-template-columns: 100vw;
+  }
+}
+
+.image-container {
+  background: red;
+}
+
+.content-container {
+  background: pink;
+}

@@ -8,6 +8,7 @@
 @media (--viewport-md) {
   .half-hero-container {
     grid-template-rows: 100vh auto;
+    max-height: inherit;
   }
 }
 

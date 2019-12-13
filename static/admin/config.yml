@@ -75,7 +75,16 @@ collections:
                     { label: 'Beschrijving', name: 'description', widget: 'string' },
                   ],
               },
-              { label: 'Titel', name: 'title', widget: 'string' },
+              {
+                label: ' Titel',
+                name: 'title',
+                widget: 'object',
+                fields:
+                  [
+                    { label: 'Subtitel (dungedrukt)', name: 'subtitle', widget: 'string' },
+                    { label: 'Titel', name: 'mainTitle', widget: 'string' },
+                  ],
+              },
               { label: 'Tekst', name: 'text', widget: 'markdown' },
               { label: 'Button tekst', name: 'buttonText', widget: 'string', default: 'Configureren' },
             ],
