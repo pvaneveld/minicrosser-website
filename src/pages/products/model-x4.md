@@ -22,7 +22,7 @@ productOne:
     mainTitle: De sterkste motor in de markt
     subtitle: Performance
 productTwo:
-  backgroundImage: /img/mock-image-1.jpg
+  backgroundImage: /img/x2-4w-zijkant.png
   specifications:
     - description: 175 kg
       title: Max gebruikersgewicht
