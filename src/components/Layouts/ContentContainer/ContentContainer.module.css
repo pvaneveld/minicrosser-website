@@ -4,6 +4,12 @@
   display: block;
   margin: 0 auto;
   padding: 0 var(--component-padding);
-  max-width: var(--page-width);
+  width: var(--page-width);
   color: var(--color-white);
+}
+
+@media (--page-width) {
+  .content {
+    width: 100%;
+  }
 }

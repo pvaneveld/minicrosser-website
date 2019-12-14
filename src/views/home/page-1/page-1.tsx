@@ -10,23 +10,27 @@ const HomepageOne: React.SFC = () => {
         frontmatter {
           homeOne {
             title
-            buttonTextPrimary
-            buttonTextSecondary
+            buttons {
+              buttonPrimary
+              buttonSecondary
+            }
           }
         }
       }
     }
   `);
 
-  const { title, buttonTextPrimary, buttonTextSecondary } = query.markdownRemark.frontmatter.homeOne;
+  const { title, buttonPrimary, buttonSecondary } = query.markdownRemark.frontmatter.homeOne;
 
   const buttonGroup = [
     {
-      children: buttonTextPrimary,
+      children: buttonPrimary,
+      link: true,
     },
     {
       type: 'secondary' as const,
-      children: buttonTextSecondary,
+      link: true,
+      children: buttonSecondary,
     },
   ];
 

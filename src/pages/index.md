@@ -2,17 +2,18 @@
 templateKey: index-page
 homeOne:
   backgroundImage: /img/mock-image-2.jpg
-  buttonTextPrimary: Configureren
-  buttonTextSecondary: Proefrit
+  buttons:
+    buttonPrimary: Configureren
+    buttonSecondary: Proefrit
   title: Minicrosser X
 homeTwo:
   backgroundImage: /img/mock-image-1.jpg
-  buttonTextPrimary: Proefrit
-  buttonTextSecondary: Configureren
+  buttons:
+    buttonPrimary: Proefrit
+    buttonSecondary: Vind uw dealer
   title: Ontdek Minicrosser
 homeThree:
   backgroundImage: /img/mock-image-3.jpg
-  buttonText: Lees meer
+  buttonPrimary: Lees meer
   title: Dit is minicrosser
 ---
-

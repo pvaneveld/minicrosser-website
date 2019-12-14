@@ -23,7 +23,7 @@ const Layout: React.SFC<LayoutProps> = props => {
       <Header darkTheme={headerDark} />
       <Flag className={style.flag} />
       {props.children}
-      {/* <Footer darkTheme={footerDark} /> */}
+      <Footer darkTheme={footerDark} />
     </div>
   );
 };
