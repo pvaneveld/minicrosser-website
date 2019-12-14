@@ -14,6 +14,7 @@ const Button: React.SFC<ButtonGroupProps> = props => {
           key={`button-${index}`}
           type={button.type}
           link={button.link}
+          target={button.target}
           clickHandler={button.clickHandler}
         >
           {button.children}

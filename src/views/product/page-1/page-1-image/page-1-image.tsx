@@ -4,15 +4,16 @@ import Button from '../../../../components/Buttons/Button/Button';
 import { keyFeatures } from '../../../../templates/product';
 
 interface ProductpageOneImageProps {
+  title: string;
   keyFeatures: keyFeatures;
   buttonText: string;
 }
 
 const ProductPageOneImage: React.SFC<ProductpageOneImageProps> = props => {
-  const { keyFeatures, buttonText } = props;
+  const { keyFeatures, buttonText, title } = props;
   return (
     <div className={style.container}>
-      <h1 className={`${style.header} jumbo`}>Model x4</h1>
+      <h1 className={`${style.header} jumbo`}>{title}</h1>
 
       <ul className={style.keyFeatures}>
         {keyFeatures.map((feature, index) => (

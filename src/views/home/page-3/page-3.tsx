@@ -23,7 +23,7 @@ const HomePageThree: React.SFC = () => {
     <div className={style.container}>
       <h1 className={'jumbo'}>{title}</h1>
       <div className={style.buttonContainer}>
-        <Button type="secondary" link={true}>
+        <Button type="secondary" link={true} target="/">
           {buttonPrimary}
         </Button>
       </div>

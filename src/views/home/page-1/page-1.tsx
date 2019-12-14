@@ -27,11 +27,13 @@ const HomepageOne: React.SFC = () => {
     {
       children: buttonPrimary,
       link: true,
+      target: '/',
     },
     {
       type: 'secondary' as const,
       link: true,
       children: buttonSecondary,
+      target: '/',
     },
   ];
 

@@ -81,7 +81,11 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
           <LayoutHalfHero
             fluid={product.productOne.backgroundImage.childImageSharp.fluid}
             imageContent={
-              <PageOneImage keyFeatures={product.productOne.keyFeatures} buttonText={product.productOne.buttonText} />
+              <PageOneImage
+                title={product.productName}
+                keyFeatures={product.productOne.keyFeatures}
+                buttonText={product.productOne.buttonText}
+              />
             }
           >
             <PageOneContent

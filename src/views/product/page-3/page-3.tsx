@@ -8,8 +8,8 @@ const ProductPageThree: React.SFC<ProductPageThreeProps> = props => {
   const { title, buttons } = props;
   const { buttonPrimary: buttonTextPrimary, buttonSecondary: buttonTextSecondary } = buttons;
   const buttonProps = [
-    { children: buttonTextPrimary, link: true },
-    { children: buttonTextSecondary, type: 'secondary' as const, link: true },
+    { children: buttonTextPrimary, link: true, target: '/' },
+    { children: buttonTextSecondary, type: 'secondary' as const, link: true, target: '/' },
   ];
   return (
     <div className={style.contentContainer}>

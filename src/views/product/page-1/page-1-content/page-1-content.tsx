@@ -21,9 +21,10 @@ const ProductPageOneContent: React.SFC<ProductpageOneContentProps> = props => {
           {mainTitle}
         </h1>
       </div>
-      <a href="/" className={style.button}>
-        <Button type="secondary-dark">{buttonText}</Button>
-      </a>
+
+      <Button type="secondary-dark" link={true} target="/">
+        {buttonText}
+      </Button>
 
       <p className={style.text}>
         <Markdown>{text}</Markdown>
