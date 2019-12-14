@@ -26,6 +26,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
         frontmatter {
           homeOne {
             title
+            navigationTitle
             backgroundImage {
               childImageSharp {
                 fluid(maxWidth: 1200) {
@@ -36,6 +37,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
           }
           homeTwo {
             title
+            navigationTitle
             backgroundImage {
               childImageSharp {
                 fluid(maxWidth: 1200) {
@@ -46,6 +48,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
           }
           homeThree {
             title
+            navigationTitle
             backgroundImage {
               childImageSharp {
                 fluid(maxWidth: 1200) {
@@ -62,15 +65,15 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
   const pages = [
     {
       id: 'home-1',
-      title: query.data.frontmatter.homeOne.title,
+      title: query.data.frontmatter.homeOne.navigationTitle,
     },
     {
       id: 'home-2',
-      title: query.data.frontmatter.homeTwo.title,
+      title: query.data.frontmatter.homeTwo.navigationTitle,
     },
     {
       id: 'home-3',
-      title: query.data.frontmatter.homeThree.title,
+      title: query.data.frontmatter.homeThree.navigationTitle,
     },
   ];
 

@@ -20,4 +20,3 @@ homeThree:
   navigationTitle: Dit is minicrosser
   title: Dit is minicrosser
 ---
-

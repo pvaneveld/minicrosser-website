@@ -71,7 +71,11 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
 
   const navButtonClickHandler = (clickedId: string): void => {
     const { current: pageDOMElements } = pageElements;
-    pageDOMElements.find((el: HTMLElement) => el.id === clickedId).scrollIntoView({ behavior: 'smooth' });
+    const target = pageDOMElements.find((el: HTMLElement) => el.id === clickedId);
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   useEffect(() => {

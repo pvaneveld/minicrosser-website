@@ -13,26 +13,12 @@ import PageThree from '../views/product/page-3/page-3';
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 
-const pages = [
-  {
-    id: 'product-1',
-    title: 'product-1',
-  },
-  {
-    id: 'product-2',
-    title: 'product-2',
-  },
-  {
-    id: 'product-3',
-    title: 'product-3',
-  },
-];
-
 export type keyFeatures = { title: string; description: string }[];
 export type specifications = { title: string; description: string }[];
 export type title = { subtitle: string; mainTitle: string };
 export interface ProductThree {
   title: string;
+  navigationTitle: string;
   buttons: { buttonPrimary: string; buttonSecondary: string };
 }
 
@@ -42,6 +28,7 @@ interface ProductPropTypes {
       frontmatter: {
         productName: string;
         productOne: {
+          navigationTitle: string;
           backgroundImage: {
             childImageSharp: {
               fluid: FluidObject;
@@ -54,6 +41,7 @@ interface ProductPropTypes {
         };
 
         productTwo: {
+          navigationTitle: string;
           backgroundImage: {
             childImageSharp: {
               fluid: FluidObject;
@@ -70,6 +58,22 @@ interface ProductPropTypes {
 
 const Product: React.SFC<ProductPropTypes> = ({ data }) => {
   const { frontmatter: product } = data.markdownRemark;
+
+  const pages = [
+    {
+      id: 'product-1',
+      title: product.productOne.navigationTitle,
+    },
+    {
+      id: 'product-2',
+      title: product.productTwo.navigationTitle,
+    },
+    {
+      id: 'product-3',
+      title: product.productThree.navigationTitle,
+    },
+  ];
+
   return (
     <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: false, footerDark: true }}>
@@ -124,6 +128,7 @@ export const pageQuery = graphql`
             subtitle
             mainTitle
           }
+          navigationTitle
           text
           buttonText
         }
@@ -139,6 +144,7 @@ export const pageQuery = graphql`
             subtitle
             mainTitle
           }
+          navigationTitle
           specifications {
             title
             description
@@ -146,6 +152,7 @@ export const pageQuery = graphql`
         }
         productThree {
           title
+          navigationTitle
           buttons {
             buttonPrimary
             buttonSecondary

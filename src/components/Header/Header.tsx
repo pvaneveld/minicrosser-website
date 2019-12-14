@@ -20,8 +20,8 @@ const Header: React.SFC<HeaderProps> = props => {
         </figure>
       </Link>
       <nav className={style.linkContainer}>
-        <Link to="/" className={style.link}>
-          modelnaam
+        <Link to="/products/model-x3" className={style.link}>
+          Model X4
         </Link>
         <Link to="/" className={style.link}>
           modelnaam
