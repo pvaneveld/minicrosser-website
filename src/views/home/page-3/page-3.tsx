@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const HomePageThree: React.SFC = () => {
   const query = useStaticQuery(graphql`
-    query Content {
+    query {
       markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
         frontmatter {
           homeThree {
