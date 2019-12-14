@@ -20,7 +20,7 @@
 @media (--viewport-md) {
   .container {
     grid-template-columns: 100vw;
-    grid-template-rows: 40vh auto;
+    grid-template-rows: auto auto;
     max-height: inherit;
   }
 }

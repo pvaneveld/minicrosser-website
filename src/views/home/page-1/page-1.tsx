@@ -20,7 +20,8 @@ const HomepageOne: React.SFC = () => {
     }
   `);
 
-  const { title, buttonPrimary, buttonSecondary } = query.markdownRemark.frontmatter.homeOne;
+  const { title, buttons } = query.markdownRemark.frontmatter.homeOne;
+  const { buttonPrimary, buttonSecondary } = buttons;
 
   const buttonGroup = [
     {

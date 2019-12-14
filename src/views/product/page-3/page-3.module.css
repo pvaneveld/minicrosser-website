@@ -1,4 +1,4 @@
-.container {
+.content-container {
   background-color: var(--color-gray-dark);
   min-height: 100vh;
   max-height: 100vh;
@@ -12,9 +12,14 @@
 }
 
 @media (--viewport-md) {
-  .container {
-    flex-direction: column;
+  .content-container {
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .button-container {
+    display: flex;
     justify-content: center;
   }
 

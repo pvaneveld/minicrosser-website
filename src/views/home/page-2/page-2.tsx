@@ -20,7 +20,8 @@ const HomePageTwo: React.SFC = () => {
     }
   `);
 
-  const { title, buttonPrimary, buttonSecondary } = query.markdownRemark.frontmatter.homeTwo;
+  const { title, buttons } = query.markdownRemark.frontmatter.homeTwo;
+  const { buttonPrimary, buttonSecondary } = buttons;
 
   const buttonGroup = [
     {

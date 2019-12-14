@@ -12,11 +12,13 @@ const ProductPageThree: React.SFC<ProductPageThreeProps> = props => {
     { children: buttonTextSecondary, type: 'secondary' as const, link: true },
   ];
   return (
-    <div className={style.container}>
+    <div className={style.contentContainer}>
       <ContentContainer>
         <div className={style.content}>
           <h1 className={style.header}>{title}</h1>
-          <ButtonGroup buttons={buttonProps} />
+          <div className={style.buttonContainer}>
+            <ButtonGroup buttons={buttonProps} />
+          </div>
         </div>
       </ContentContainer>
     </div>
