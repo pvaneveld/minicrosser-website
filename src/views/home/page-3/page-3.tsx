@@ -17,7 +17,7 @@ const HomePageThree: React.SFC = () => {
     }
   `);
 
-  const { title, buttonPrimary } = query.markdownRemark.frontmatter.homeOne;
+  const { title, buttonPrimary } = query.markdownRemark.frontmatter.homeThree;
 
   return (
     <div className={style.container}>
