@@ -11,6 +11,7 @@ productOne:
       title: Key feature 2
     - description: kogelvrij glas
       title: Key feature 3
+  navigationTitle: Model X4
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
     por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -23,6 +24,7 @@ productOne:
     subtitle: Performance
 productTwo:
   backgroundImage: /img/x2-4w-zijkant.png
+  navigationTitle: Specificaties
   specifications:
     - description: 175 kg
       title: Max gebruikersgewicht
@@ -51,6 +53,7 @@ productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
+  navigationTitle: Ervaar Model X4
   title: Ervaar Model-X4
 ---
 
