@@ -10,7 +10,12 @@ const Button: React.SFC<ButtonGroupProps> = props => {
   return (
     <div className={style.container}>
       {props.buttons.map((button, index) => (
-        <ButtonComponent key={`button-${index}`} type={button.type} clickHandler={button.clickHandler}>
+        <ButtonComponent
+          key={`button-${index}`}
+          type={button.type}
+          link={button.link}
+          clickHandler={button.clickHandler}
+        >
           {button.children}
         </ButtonComponent>
       ))}

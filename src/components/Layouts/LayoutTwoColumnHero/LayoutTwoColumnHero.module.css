@@ -21,5 +21,6 @@
   .container {
     grid-template-columns: 100vw;
     grid-template-rows: 40vh auto;
+    max-height: inherit;
   }
 }

@@ -19,11 +19,11 @@ const ProductPageTwo: React.SFC<ProductPageTwoProps> = props => {
           </h1>
         </header>
         <dl className={style.speficications}>
-          {specifications.map(specification => (
-            <>
+          {specifications.map((specification, index) => (
+            <React.Fragment key={`title-${index}`}>
               <dt className={style.specificationTitle}>{specification.title}</dt>
               <dd className={style.specificationDescription}>{specification.description}</dd>
-            </>
+            </React.Fragment>
           ))}
         </dl>
       </div>

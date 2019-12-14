@@ -31,6 +31,10 @@ const pages = [
 export type keyFeatures = { title: string; description: string }[];
 export type specifications = { title: string; description: string }[];
 export type title = { subtitle: string; mainTitle: string };
+export interface ProductThree {
+  title: string;
+  buttons: { buttonPrimary: string; buttonSecondary: string };
+}
 
 interface ProductPropTypes {
   data: {
@@ -58,6 +62,7 @@ interface ProductPropTypes {
           title: title;
           specifications: specifications;
         };
+        productThree: ProductThree;
       };
     };
   };
@@ -89,7 +94,7 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
           </LayoutTwoColumnHero>
         </Page>
         <Page id={pages[2].id}>
-          <PageThree />
+          <PageThree title={product.productThree.title} buttons={product.productThree.buttons} />
         </Page>
       </Layout>
     </SmoothScrollContainer>
@@ -137,6 +142,13 @@ export const pageQuery = graphql`
           specifications {
             title
             description
+          }
+        }
+        productThree {
+          title
+          buttons {
+            buttonPrimary
+            buttonSecondary
           }
         }
       }

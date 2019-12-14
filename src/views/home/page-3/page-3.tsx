@@ -7,7 +7,9 @@ const HomePageThree: React.SFC = () => {
     <div className={style.container}>
       <h1 className={'jumbo'}>Dit is minicrosser</h1>
       <div className={style.buttonContainer}>
-        <Button type="secondary">Lees meer</Button>
+        <Button type="secondary" data-dm="abc">
+          Lees meer
+        </Button>
       </div>
     </div>
   );

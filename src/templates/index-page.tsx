@@ -76,7 +76,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
 
   return (
     <SmoothScrollContainer pages={pages}>
-      <Layout theme={{ headerDark: true, footerDark: true }}>
+      <Layout theme={{ headerDark: false, footerDark: true }}>
         <Page id={pages[0].id}>
           <LayoutFullHero fluid={query.data.frontmatter.homeOne.backgroundImage.childImageSharp.fluid}>
             <PageOne />

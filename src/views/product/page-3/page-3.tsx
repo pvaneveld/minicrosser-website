@@ -1,14 +1,22 @@
 import React from 'react';
 import style from './page-3.module.css';
-
-interface ProductPageThreeProps {}
+import ButtonGroup from '../../../components/Buttons/ButtonGroup/ButtonGroup';
+import ContentContainer from '../../../components/Layouts/ContentContainer/ContentContainer';
+import { ProductThree as ProductPageThreeProps } from '../../../views/product/page-3';
 
 const ProductPageThree: React.SFC<ProductPageThreeProps> = props => {
+  const { title, buttons } = props;
+  const { buttonPrimary: buttonTextPrimary, buttonSecondary: buttonTextSecondary } = buttons;
+  const buttonProps = [
+    { children: buttonTextPrimary, link: true },
+    { children: buttonTextSecondary, type: 'secondary' as const, link: true },
+  ];
   return (
     <div className={style.container}>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, eos rem! Quod perspiciatis provident, quidem error
-      ea dignissimos veritatis nihil rerum? Ut quibusdam earum reiciendis voluptatibus aut deleniti obcaecati
-      voluptates.
+      <ContentContainer>
+        <h1 className={style.header}>{title}</h1>
+        <ButtonGroup buttons={buttonProps} />
+      </ContentContainer>
     </div>
   );
 };

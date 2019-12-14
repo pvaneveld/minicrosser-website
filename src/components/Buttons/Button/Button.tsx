@@ -1,23 +1,33 @@
 import React, { ReactNode } from 'react';
 import style from './Button.module.css';
+import { Link } from 'gatsby';
 
 export interface ButtonProps {
   type?: 'secondary' | 'cta' | 'secondary-dark';
   clickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
+  link?: boolean;
+  target?: string;
 }
 
 const Button: React.SFC<ButtonProps> = props => {
-  const { clickHandler, children } = props;
+  const { clickHandler, children, link, target } = props;
+  const classNames = `${style.button} ${props.type && props.type === 'secondary' ? style.secondary : ''} ${
+    props.type && props.type === 'cta' ? style.cta : ''
+  } ${!props.type ? style.primary : ''} ${props.type === 'secondary-dark' ? style.secondaryDark : ''}`;
+
   return (
-    <button
-      className={`${style.button} ${props.type && props.type === 'secondary' ? style.secondary : ''} ${
-        props.type && props.type === 'cta' ? style.cta : ''
-      } ${!props.type ? style.primary : ''} ${props.type === 'secondary-dark' ? style.secondaryDark : ''}`}
-      onClick={clickHandler}
-    >
-      {children}
-    </button>
+    <React.Fragment>
+      {link ? (
+        <Link className={`${classNames} link-button`} to={target}>
+          {children}
+        </Link>
+      ) : (
+        <button className={classNames} onClick={clickHandler}>
+          {children}
+        </button>
+      )}
+    </React.Fragment>
   );
 };
 

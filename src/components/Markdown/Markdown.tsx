@@ -7,7 +7,7 @@ interface MarkdownProps {
 
 const Markdown: React.SFC<MarkdownProps> = props => {
   const markdown = marked(props.children);
-  return <div dangerouslySetInnerHTML={{ __html: markdown }} />;
+  return <span dangerouslySetInnerHTML={{ __html: markdown }} />;
 };
 
 export default Markdown;

@@ -2,7 +2,8 @@
   display: flex;
   margin-bottom: var(--space-md);
 
-  & button:first-of-type {
+  & a:first-child,
+  & button:first-child {
     margin-right: var(--space-md);
   }
 }
@@ -11,7 +12,8 @@
   .container {
     flex-direction: column;
 
-    & button:first-of-type {
+    & a:first-child,
+    & button:first-child {
       margin: 0 0 var(--space-md) 0;
     }
   }

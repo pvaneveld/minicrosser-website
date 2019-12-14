@@ -10,7 +10,7 @@ interface PageProps {
 const Page: React.SFC<PageProps> = props => {
   return (
     <section id={props.id} className={style.page}>
-      <div className={style.pageContent}>{props.children}</div>
+      {props.children}
     </section>
   );
 };

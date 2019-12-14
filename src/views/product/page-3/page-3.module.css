@@ -1,0 +1,10 @@
+.container {
+  background-color: var(--color-gray-dark);
+  min-height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  color: var(--color-white);
+}
