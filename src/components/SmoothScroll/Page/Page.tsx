@@ -4,7 +4,7 @@ import style from './Page.module.css';
 
 interface PageProps {
   children: ReactNode;
-  id: string;
+  id?: string;
 }
 
 const Page: React.SFC<PageProps> = props => {

@@ -71,6 +71,29 @@ collections:
                   { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
                 ],
             }
+      - file: 'src/pages/vind-uw-dealer/dealer-form.md'
+        label: 'Dealer formulier'
+        name: 'dealer-form'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'dealer-form' }
+          - { label: 'Titel', name: 'title', widget: 'string' }
+          - { label: 'Tekst verzendknop', name: 'buttonText', widget: 'string', default: 'verzeneden' }
+          - {
+              label: 'Labels inputvelden',
+              required: true,
+              name: 'formLabels',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Voornaam', name: 'firstName', widget: 'string', default: 'Voornaam' },
+                  { label: 'Tussenvoegsel', name: 'prefix', widget: 'string', default: 'Tussenvoegsel' },
+                  { label: 'Achternaam', name: 'surname', widget: 'string', default: 'Achternaam' },
+                  { label: 'E-mail', name: 'mail', widget: 'string', default: 'E-mail' },
+                  { label: 'Telefoonnummer', name: 'phone', widget: 'string', default: 'Telefoonnummer' },
+                  { label: 'Opmerkingen', name: 'remarks', widget: 'string', default: 'Opmerkingen' },
+                ],
+            }
+
   - name: 'products'
     label: 'Producten'
     folder: 'src/pages/products'
