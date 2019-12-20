@@ -3,13 +3,18 @@ import { ReactNode } from 'react';
 import style from './Input.module.css';
 
 interface InputProps {
-  children: ReactNode;
-  id?: string;
+  type: 'text | email | tel';
+  id: string;
+  label: string;
 }
 
 const Input: React.SFC<InputProps> = props => {
+  const { id, type, label } = props;
   return (
-    
+    <>
+      <label htmlFor={id}>{label}</label>
+      <input id={id} type={type} />
+    </>
   );
 };
 
