@@ -14,23 +14,19 @@ interface DealerFormProps {
 }
 
 const DealerForm: React.SFC<DealerFormProps> = () => {
-  //   const query = useStaticQuery(graphql`
-  //     query {
-  //       data: markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
-  //         frontmatter {
-
-  //           }
-  //         }
-  //       }
-  //   `);
+  const query = useStaticQuery(graphql`
+    query {
+      data: markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
+        frontmatter {
+          title
+        }
+      }
+    }
+  `);
   return (
     <Layout theme={{ headerDark: false, footerDark: true }}>
       <Page>
-        <h1>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facilis consectetur corrupti mollitia
-          ipsa, aut similique et dignissimos pariatur voluptatibus numquam temporibus labore. Voluptatum incidunt est
-          quo, earum provident ex?
-        </h1>
+        <h1>{query.title}</h1>
       </Page>
     </Layout>
   );
