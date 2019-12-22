@@ -1,15 +1,12 @@
 import React from 'react';
 import style from './FormInput.module.css';
-import { Ref } from 'react-hook-form/dist/types';
 import { useFormContext } from 'react-hook-form';
 
 interface InputProps {
   type: 'text' | 'email' | 'tel';
   id: string;
   label: string;
-  register?: Ref;
   name: string;
-  error?: boolean;
   errorMessage?: string;
 }
 
