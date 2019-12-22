@@ -1,0 +1,6 @@
+.form {
+  padding-top: var(--page-spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

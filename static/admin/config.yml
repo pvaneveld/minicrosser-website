@@ -71,7 +71,7 @@ collections:
                   { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
                 ],
             }
-      - file: 'src/pages/vind-uw-dealer/dealer-form.md'
+      - file: 'src/pages/vind-uw-dealer.md'
         label: 'Dealer formulier'
         name: 'dealer-form'
         fields:

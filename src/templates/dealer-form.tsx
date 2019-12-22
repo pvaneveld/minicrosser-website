@@ -1,35 +1,21 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import FormInput from '../components/Form/FormInput/FormInput';
+import ContentContainer from '../components/Layouts/ContentContainer/ContentContainer';
 import Layout from '../components/Layouts/Layout/Layout';
 import Page from '../components/SmoothScroll/Page/Page';
+import DealerForm from '../views/dealer-form/dealer-form';
 
-interface DealerFormProps {
-  data: {
-    markdownRemark: {
-      frontmatter: {
-        title: string;
-      };
-    };
-  };
-}
-
-const DealerForm: React.SFC<DealerFormProps> = () => {
-  const query = useStaticQuery(graphql`
-    query {
-      data: markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
-        frontmatter {
-          title
-        }
-      }
-    }
-  `);
+const DealerFormPage: React.SFC = () => {
   return (
-    <Layout theme={{ headerDark: false, footerDark: true }}>
-      <Page>
-        <h1>{query.title}</h1>
+    <Layout theme={{ headerDark: true, footerDark: true }}>
+      <Page background="gray">
+        <ContentContainer>
+          <DealerForm />
+        </ContentContainer>
       </Page>
     </Layout>
   );
 };
 
-export default DealerForm;
+export default DealerFormPage;
