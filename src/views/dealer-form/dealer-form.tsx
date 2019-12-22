@@ -21,13 +21,20 @@ const DealerForm: React.SFC = () => {
       markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
         frontmatter {
           title
+          formFields {
+            firstName {
+              label
+              required
+              errorMessage
+            }
+          }
         }
       }
     }
   `);
 
   const { frontmatter: content } = query.markdownRemark;
-  const { firstName, prefix, surname, mail, phone, remarks } = content.formFields;
+  //   const { firstName, prefix, surname, mail, phone, remarks } = content.formFields;
 
   const encode = data => {
     return Object.keys(data)
