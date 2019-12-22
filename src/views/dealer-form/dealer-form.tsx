@@ -27,7 +27,7 @@ const DealerForm: React.SFC = () => {
   `);
 
   const { frontmatter: content } = query.markdownRemark;
-  const { firstName, prefix, surname, mail, phone, remarks } = content.formFields;
+  //   const { firstName, prefix, surname, mail, phone, remarks } = content.formFields;
 
   const encode = data => {
     return Object.keys(data)
