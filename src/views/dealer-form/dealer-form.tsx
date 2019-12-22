@@ -63,10 +63,10 @@ const DealerForm: React.SFC = () => {
         name={keys.firstName}
         type="text"
         id={keys.firstName}
-        label={firstName.label}
-        register={register({ required: firstName.required, pattern: /[A-Za-z]/ })}
+        label="hardcoded"
+        register={register({ required: true, pattern: /[A-Za-z]/ })}
         error={errors[keys.firstName]}
-        errorMessage={firstName.errorMessage}
+        errorMessage={'foutmelding'}
       />
 
       <input type="submit" />
