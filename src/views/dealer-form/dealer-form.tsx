@@ -1,8 +1,8 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import FormWrapper from '../../components/Form/FormWrapper/FormWrapper';
 import FormInput from '../../components/Form/FormInput/FormInput';
 import style from './dealer-form.module.css';
-import useForm from 'react-hook-form';
 
 interface DealerForm {
   firstName: string;
@@ -14,38 +14,25 @@ interface DealerForm {
 }
 
 const DealerForm: React.SFC = () => {
-  const formName = 'dealer-form';
-
   const query = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
         frontmatter {
           title
+          formFields {
+            firstName {
+              label
+              required
+              errorMessage
+            }
+          }
         }
       }
     }
   `);
 
   const { frontmatter: content } = query.markdownRemark;
-  //   const { firstName, prefix, surname, mail, phone, remarks } = content.formFields;
-
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-  };
-
-  const onSubmit = (data: DealerForm): void => {
-    fetch(window.location.pathname, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': formName, ...data }),
-    })
-      .then(() => alert('Success!'))
-      .catch(error => alert(error));
-  };
-
-  const { register, errors, handleSubmit } = useForm<DealerForm>();
+  const { firstName, prefix, surname, mail, phone, remarks } = content.formFields;
 
   const keys: DealerForm = {
     firstName: 'firstName',
@@ -57,20 +44,18 @@ const DealerForm: React.SFC = () => {
   };
 
   return (
-    <form name={formName} method="post" data-netlify="true" onSubmit={handleSubmit(onSubmit)} className={style.form}>
-      <h1>{content.title}</h1>
-      <FormInput
-        name={keys.firstName}
-        type="text"
-        id={keys.firstName}
-        label="hardcoded"
-        register={register({ required: true, pattern: /[A-Za-z]/ })}
-        error={errors[keys.firstName]}
-        errorMessage={'foutmelding'}
-      />
-
-      <input type="submit" />
-    </form>
+    <div className={style.form}>
+      <FormWrapper formName="dealer-form">
+        <h1>{content.title}</h1>
+        <FormInput
+          name={keys.firstName}
+          type="text"
+          id={keys.firstName}
+          label={firstName.label}
+          errorMessage={firstName.errorMessage}
+        />
+      </FormWrapper>
+    </div>
   );
 };
 
