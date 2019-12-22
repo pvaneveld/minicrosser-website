@@ -21,7 +21,7 @@ const DealerForm: React.SFC = () => {
       markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
         frontmatter {
           title
-          formLabels {
+          formFields {
             firstName {
               label
               required
