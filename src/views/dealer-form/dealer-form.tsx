@@ -52,6 +52,8 @@ const DealerForm: React.SFC = () => {
           type="text"
           id={keys.firstName}
           label={firstName.label}
+          required={firstName.required}
+          regex={/[A-Za-z]/}
           errorMessage={firstName.errorMessage}
         />
       </FormWrapper>

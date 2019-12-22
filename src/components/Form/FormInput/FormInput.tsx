@@ -8,17 +8,25 @@ interface InputProps {
   label: string;
   name: string;
   errorMessage?: string;
+  regex?: RegExp;
+  required: boolean;
 }
 
 const Input: React.SFC<InputProps> = props => {
-  const { id, type, label, name, errorMessage } = props;
+  const { id, type, label, name, errorMessage, required, regex } = props;
   const { register, errors } = useFormContext();
 
   return (
     <div>
       <label htmlFor={id}>
         <span className={style.label}>{label}</span>
-        <input name={name} id={id} type={type} className={style.input} ref={register} />
+        <input
+          name={name}
+          id={id}
+          type={type}
+          className={style.input}
+          ref={register({ required, pattern: regex || /.*/ })}
+        />
       </label>
       {errorMessage && <span className={`${style.error} ${errors[name] ? style.showError : ''}`}>{errorMessage}</span>}
     </div>
