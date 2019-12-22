@@ -14,6 +14,8 @@ interface DealerForm {
 }
 
 const DealerForm: React.SFC = () => {
+  const formName = 'dealer-form';
+
   const query = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
@@ -45,7 +47,7 @@ const DealerForm: React.SFC = () => {
     fetch(window.location.pathname, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'dealer-form', ...data }),
+      body: encode({ 'form-name': formName, ...data }),
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
@@ -63,7 +65,7 @@ const DealerForm: React.SFC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
+    <form name={formName} method="post" data-netlify="true" onSubmit={handleSubmit(onSubmit)} className={style.form}>
       <h1>{content.title}</h1>
       <FormInput
         name={keys.firstName}
