@@ -22,12 +22,11 @@ const DealerForm: React.SFC = () => {
         frontmatter {
           title
           formLabels {
-            firstName
-            prefix
-            surname
-            mail
-            phone
-            remarks
+            firstName {
+              label
+              required
+              errorMessage
+            }
           }
         }
       }

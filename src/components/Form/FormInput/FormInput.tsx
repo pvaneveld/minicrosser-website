@@ -15,13 +15,13 @@ interface InputProps {
 const Input: React.SFC<InputProps> = props => {
   const { id, type, label, name, register, error, errorMessage } = props;
   return (
-    <>
+    <div>
       <label htmlFor={id}>
         <span className={style.label}>{label}</span>
         <input name={name} id={id} type={type} className={style.input} ref={register} />
-        {errorMessage && <span className={`${style.error} ${error ? style.showError : ''}`}>{errorMessage}</span>}
       </label>
-    </>
+      {errorMessage && <span className={`${style.error} ${error ? style.showError : ''}`}>{errorMessage}</span>}
+    </div>
   );
 };
 

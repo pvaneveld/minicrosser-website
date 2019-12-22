@@ -79,18 +79,78 @@ collections:
           - { label: 'Titel', name: 'title', widget: 'string' }
           - { label: 'Tekst verzendknop', name: 'buttonText', widget: 'string', default: 'verzeneden' }
           - {
-              label: 'Labels inputvelden',
+              label: 'Formuliervelden',
               required: true,
-              name: 'formLabels',
+              name: 'formFields',
               widget: 'object',
               fields:
                 [
-                  { label: 'Voornaam', name: 'firstName', widget: 'string', default: 'Voornaam' },
-                  { label: 'Tussenvoegsel', name: 'prefix', widget: 'string', default: 'Tussenvoegsel' },
-                  { label: 'Achternaam', name: 'surname', widget: 'string', default: 'Achternaam' },
-                  { label: 'E-mail', name: 'mail', widget: 'string', default: 'E-mail' },
-                  { label: 'Telefoonnummer', name: 'phone', widget: 'string', default: 'Telefoonnummer' },
-                  { label: 'Opmerkingen', name: 'remarks', widget: 'string', default: 'Opmerkingen' },
+                  {
+                    label: 'Voornaam',
+                    name: 'firstName',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                      ],
+                  },
+                  {
+                    label: 'Achteraam',
+                    name: 'surname',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                      ],
+                  },
+                  {
+                    label: 'Tussenvoegsel',
+                    name: 'prefix',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                      ],
+                  },
+                  {
+                    label: 'E-mail',
+                    name: 'mail',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                      ],
+                  },
+                  {
+                    label: 'Telefoonnummer',
+                    name: 'phone',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                      ],
+                  },
+                  {
+                    label: 'Opmerkingen',
+                    name: 'remarks',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                      ],
+                  },
                 ],
             }
 
