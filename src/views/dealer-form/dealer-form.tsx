@@ -42,7 +42,7 @@ const DealerForm: React.SFC = () => {
   };
 
   const onSubmit = (data: DealerForm): void => {
-    fetch(window.location.href, {
+    fetch(window.location.pathname, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'dealer-form', ...data }),
