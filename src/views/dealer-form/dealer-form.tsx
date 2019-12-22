@@ -21,8 +21,8 @@ const DealerForm: React.SFC = () => {
       markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
         frontmatter {
           title
-          formFields {
-            firstName {
+          firstName {
+            formFields {
               label
               required
               errorMessage
@@ -34,7 +34,7 @@ const DealerForm: React.SFC = () => {
   `);
 
   const { frontmatter: content } = query.markdownRemark;
-  const { firstName, prefix, surname, mail, phone, remarks } = content.formLabels;
+  const { firstName, prefix, surname, mail, phone, remarks } = content.formFields;
 
   const encode = data => {
     return Object.keys(data)
@@ -70,10 +70,10 @@ const DealerForm: React.SFC = () => {
         name={keys.firstName}
         type="text"
         id={keys.firstName}
-        label={firstName}
-        register={register({ required: true, pattern: /[A-Za-z]/ })}
+        label={firstName.label}
+        register={register({ required: firstName.required, pattern: /[A-Za-z]/ })}
         error={errors[keys.firstName]}
-        errorMessage="ik ben een foutje"
+        errorMessage={firstName.errorMessage}
       />
 
       <input type="submit" />
