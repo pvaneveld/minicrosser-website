@@ -60,7 +60,6 @@
 
   .feature {
     width: 100%;
-    box-sizing: border-box;
     padding: var(--space-l);
     border-left: 0;
     border-top: 2px solid var(--color-white);

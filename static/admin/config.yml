@@ -93,7 +93,7 @@ collections:
                       [
                         { label: 'Label', name: 'label', widget: 'string' },
                         { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
-                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
                       ],
                   },
                   {
@@ -104,7 +104,7 @@ collections:
                       [
                         { label: 'Label', name: 'label', widget: 'string' },
                         { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
-                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
                       ],
                   },
                   {
@@ -115,7 +115,7 @@ collections:
                       [
                         { label: 'Label', name: 'label', widget: 'string' },
                         { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
-                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
                       ],
                   },
                   {
@@ -126,7 +126,7 @@ collections:
                       [
                         { label: 'Label', name: 'label', widget: 'string' },
                         { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
-                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
                       ],
                   },
                   {
@@ -137,7 +137,7 @@ collections:
                       [
                         { label: 'Label', name: 'label', widget: 'string' },
                         { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
-                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
                       ],
                   },
                   {
@@ -148,7 +148,7 @@ collections:
                       [
                         { label: 'Label', name: 'label', widget: 'string' },
                         { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
-                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string', required: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
                       ],
                   },
                 ],

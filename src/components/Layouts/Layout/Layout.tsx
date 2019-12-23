@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { ReactNode } from 'react';
 import 'typeface-roboto';
 import 'reset-css';
@@ -18,12 +18,25 @@ interface LayoutProps {
 
 const Layout: React.SFC<LayoutProps> = props => {
   const { headerDark, footerDark } = props.theme;
+  const [footerStyle, setFooterStyle] = useState({
+    paddingTop: '0px',
+  });
+  const [headerStyle, setheaderStyle] = useState({
+    height: '0px',
+  });
+
   return (
-    <div>
+    <div className={style.layout}>
+      <div style={headerStyle}></div>
       <Header darkTheme={headerDark} />
       <Flag className={style.flag} />
       {props.children}
-      <Footer darkTheme={footerDark} />
+
+      <div style={footerStyle}></div>
+      <Footer
+        darkTheme={footerDark}
+        onFooterHeightChange={(newHeight: number): void => setFooterStyle({ paddingTop: `${newHeight}px` })}
+      />
     </div>
   );
 };

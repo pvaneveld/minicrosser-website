@@ -12,3 +12,8 @@
     display: none;
   }
 }
+
+.layout {
+  position: relative;
+  overflow: hidden;
+}

@@ -30,7 +30,6 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
     <FormContext {...methods}>
       <form name={formName} method="post" data-netlify="true" onSubmit={methods.handleSubmit(onSubmit)}>
         {children}
-        <input type="submit" />
       </form>
     </FormContext>
   );

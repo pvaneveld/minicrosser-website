@@ -1,10 +1,5 @@
 :root {
   --page-width: 70rem;
+  --form-width: 45rem;
   --grid-gap: 10px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: var(--grid-gap);
 }

@@ -8,13 +8,17 @@ export interface ButtonProps {
   children?: ReactNode;
   link?: boolean;
   target?: string;
+  submit?: boolean;
+  classString?: string;
 }
 
 const Button: React.SFC<ButtonProps> = props => {
-  const { clickHandler, children, link, target } = props;
+  const { clickHandler, children, link, target, submit, classString } = props;
   const classNames = `${style.button} ${props.type && props.type === 'secondary' ? style.secondary : ''} ${
     props.type && props.type === 'cta' ? style.cta : ''
-  } ${!props.type ? style.primary : ''} ${props.type === 'secondary-dark' ? style.secondaryDark : ''}`;
+  } ${!props.type ? style.primary : ''} ${props.type === 'secondary-dark' ? style.secondaryDark : ''} ${
+    classString ? classString : ''
+  }`;
 
   return (
     <React.Fragment>
@@ -23,7 +27,7 @@ const Button: React.SFC<ButtonProps> = props => {
           {children}
         </Link>
       ) : (
-        <button className={classNames} onClick={clickHandler}>
+        <button className={classNames} onClick={clickHandler} type={submit ? 'submit' : 'button'}>
           {children}
         </button>
       )}
