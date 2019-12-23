@@ -16,9 +16,11 @@ formFields:
     label: Telefoonnummer
     required: true
   prefix:
+    errorMessage: Voer alsjeblieft een geldig tussenvoegsel in
     label: Tussenvoegsel
     required: false
   remarks:
+    errorMessage: Voer alsjeblieft een geldige waarde in
     label: Opmerkingen
     required: false
   surname:
