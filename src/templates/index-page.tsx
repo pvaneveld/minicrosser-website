@@ -80,7 +80,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
   return (
     <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: false, footerDark: true }}>
-        <Page id={pages[0].id}>
+        <Page id={pages[0].id} headerSpacing={true}>
           <LayoutFullHero fluid={query.data.frontmatter.homeOne.backgroundImage.childImageSharp.fluid}>
             <PageOne />
           </LayoutFullHero>
@@ -92,7 +92,7 @@ const IndexPage: React.SFC<IndexPageProps> = () => {
           </LayoutFullHero>
           <ScrollChevronDown id={pages[1].id} />
         </Page>
-        <Page id={pages[2].id}>
+        <Page id={pages[2].id} footerSpacing={true}>
           <LayoutFullHero fluid={query.data.frontmatter.homeThree.backgroundImage.childImageSharp.fluid}>
             <PageThree />
           </LayoutFullHero>

@@ -1,10 +1,12 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import style from './Header.module.css';
 import Polymer from '../../icons/polymer.svg';
 import Hamburger from './Hamburger/Hamburger';
 import MobileMenu from './MobileMenu/MobileMenu';
 import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
+import { useDispatch } from 'react-redux';
+import { UPDATE_HEADER_MARGIN } from '../../state/types';
 
 interface HeaderProps {
   darkTheme?: boolean;
@@ -56,8 +58,26 @@ const Header: React.SFC<HeaderProps> = props => {
     },
   ];
 
+  const header = useRef(null);
+  const dispatch = useDispatch();
+  const headerHeightHandler = (): void => {
+    const { current: currentHeader } = header;
+    if (currentHeader) {
+      dispatch({
+        type: UPDATE_HEADER_MARGIN,
+        payload: currentHeader.getBoundingClientRect().height,
+      });
+    }
+  };
+
+  useEffect(() => {
+    headerHeightHandler();
+    window.addEventListener('resize', headerHeightHandler, false);
+    return (): void => window.removeEventListener('resize', headerHeightHandler, false);
+  }, [header]);
+
   return (
-    <header className={`${style.header}${props.darkTheme ? ` ${style.headerDark}` : ''}`}>
+    <header ref={header} className={`${style.header}${props.darkTheme ? ` ${style.headerDark}` : ''}`}>
       <Link to="/" className={style.logoContainer}>
         <figure>
           <Polymer className={style.logo} />

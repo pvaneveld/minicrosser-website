@@ -7,7 +7,7 @@ import DealerForm from '../views/dealer-form/dealer-form';
 const DealerFormPage: React.SFC = () => {
   return (
     <Layout theme={{ headerDark: true, footerDark: true }}>
-      <Page background="gray">
+      <Page background="gray" footerSpacing={true} headerSpacing={true}>
         <ContentContainer>
           <DealerForm />
         </ContentContainer>

@@ -12,7 +12,7 @@ interface ProductpageOneImageProps {
 const ProductPageOneImage: React.SFC<ProductpageOneImageProps> = props => {
   const { keyFeatures, buttonText, title } = props;
   return (
-    <div className={style.container}>
+    <>
       <h1 className={`${style.header} jumbo`}>{title}</h1>
 
       <ul className={style.keyFeatures}>
@@ -26,7 +26,7 @@ const ProductPageOneImage: React.SFC<ProductpageOneImageProps> = props => {
           <Button>{buttonText}</Button>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

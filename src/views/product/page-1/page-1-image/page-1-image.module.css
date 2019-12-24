@@ -1,7 +1,3 @@
-.container {
-  padding-top: var(--page-spacing-md);
-}
-
 .key-features {
   position: absolute;
   bottom: var(--space-xl);
