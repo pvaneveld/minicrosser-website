@@ -11,10 +11,12 @@ interface InputProps {
   regex?: RegExp;
   required: boolean;
   classString?: string;
+  selectBoxOptions?: { value: string; text: string }[];
+  placeholder?: string;
 }
 
 const Input: React.SFC<InputProps> = props => {
-  const { id, type, label, name, errorMessage, required, regex, classString } = props;
+  const { id, type, label, name, errorMessage, required, regex, classString, selectBoxOptions, placeholder } = props;
   const { register, errors } = useFormContext();
 
   return (
@@ -27,7 +29,7 @@ const Input: React.SFC<InputProps> = props => {
             className={style.textarea}
             name={name}
             ref={register({ required, pattern: regex || /.*/ })}
-            id={name}
+            id={id}
             cols={30}
             rows={5}
           ></textarea>
@@ -41,6 +43,21 @@ const Input: React.SFC<InputProps> = props => {
             className={style.input}
             ref={register({ required, pattern: regex || /.*/ })}
           />
+        )}
+
+        {type === 'selectbox' && selectBoxOptions && (
+          <select name={name} id={id} className={style.selectBox} ref={register({ required, pattern: regex || /.*/ })}>
+            {placeholder && (
+              <option value="" disabled selected>
+                {placeholder}
+              </option>
+            )}
+            {selectBoxOptions.map((option, index) => (
+              <option key={`dealer-${index}`} value={option.value}>
+                {option.text}
+              </option>
+            ))}
+          </select>
         )}
       </label>
       {errorMessage && <span className={`${style.error} ${errors[name] ? style.showError : ''}`}>{errorMessage}</span>}

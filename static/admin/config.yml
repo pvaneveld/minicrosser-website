@@ -151,6 +151,18 @@ collections:
                         { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
                       ],
                   },
+                  {
+                    label: 'Dealers',
+                    name: 'dealer',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Placeholdertekst', name: 'placeholder', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
                 ],
             }
 
@@ -252,7 +264,7 @@ collections:
       - { label: 'Bedrijfsnaam', name: 'companyName', widget: 'string' }
       - { label: 'Adres', name: 'address', widget: 'string' }
       - { label: 'Postcode', name: 'zipCode', widget: 'string' }
-      - { label: 'Plaats', name: 'City', widget: 'string' }
+      - { label: 'Plaats', name: 'city', widget: 'string' }
       - { label: 'Telefoon', name: 'phone', widget: 'string' }
       - { label: 'E-mailadres', name: 'mail', widget: 'string' }
       - { label: 'Website', name: 'site', widget: 'string' }

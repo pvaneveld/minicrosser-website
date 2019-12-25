@@ -27,5 +27,9 @@ formFields:
     errorMessage: Voer alsjeblieft een geldige achternaam in
     label: Achternaam
     required: true
+  dealer:
+    errorMessage: Selecteer alstublieft een dealer
+    placeholder: Selecteer een dealer
+    label: Dealer
+    required: true
 ---
-

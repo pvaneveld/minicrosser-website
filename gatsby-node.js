@@ -9,7 +9,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(filter: { frontmatter: { templateKey: { regex: "/^(?!dealers$)/" } } }) {
         edges {
           node {
             id

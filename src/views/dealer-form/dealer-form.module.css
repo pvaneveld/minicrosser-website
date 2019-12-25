@@ -19,6 +19,7 @@
 }
 
 .form-field {
+  position: relative;
   padding: var(--space-xs);
 }
 
@@ -36,7 +37,8 @@
   width: 50%;
 }
 
-.remarks {
+.remarks,
+.select {
   width: 100%;
 }
 

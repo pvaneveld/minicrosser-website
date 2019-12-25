@@ -1,5 +1,6 @@
 .input,
-.textarea {
+.textarea,
+.select-box {
   width: 100%;
   display: block;
   margin: var(--space-xxs) 0;
@@ -26,13 +27,13 @@
 
 .show-error,
 .error {
-  transition: opacity var(--transition-standard), var(--transition-standard);
+  transition: opacity var(--transition-standard), transform var(--transition-standard);
+  padding-left: var(--space-xs);
 }
 
 .error {
-  left: var(--space-xs);
   font-size: var(--text-sm);
-  color: red;
+  color: var(--color-error);
   display: block;
   transform: rotateX(90deg);
   transform-origin: top;

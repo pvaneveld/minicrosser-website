@@ -4,7 +4,7 @@ import FormWrapper from '../../components/Form/FormWrapper/FormWrapper';
 import FormInput from '../../components/Form/FormInput/FormInput';
 import Button from '../../components/Buttons/Button/Button';
 import style from './dealer-form.module.css';
-import { regexLibrary } from '../../data/regex';
+import { regexLibrary } from '../../../utils/regex';
 
 interface DealerForm {
   firstName: string;
@@ -13,12 +13,13 @@ interface DealerForm {
   mail: string;
   phone: string;
   remarks: string;
+  dealer: string;
 }
 
 const DealerForm: React.SFC = () => {
   const query = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
+      formData: markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
         frontmatter {
           title
           buttonText
@@ -53,15 +54,46 @@ const DealerForm: React.SFC = () => {
               required
               errorMessage
             }
+            dealer {
+              label
+              placeholder
+              required
+              errorMessage
+            }
+          }
+        }
+      }
+      dealers: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "dealers" } } }) {
+        edges {
+          node {
+            frontmatter {
+              companyName
+              city
+            }
           }
         }
       }
     }
   `);
 
-  const { frontmatter: content } = query.markdownRemark;
-  const { firstName, prefix, surname, mail, phone, remarks } = content.formFields;
+  const { frontmatter: formContent } = query.formData;
+  const { firstName, prefix, surname, mail, phone, remarks, dealer } = formContent.formFields;
   const { textOnly: textOnlyRegex, mail: mailRegex, phone: phoneRegex } = regexLibrary;
+  const { edges: dealerData } = query.dealers;
+  interface DealerData {
+    node: {
+      frontmatter: {
+        companyName: string;
+        city: string;
+      };
+    };
+  }
+
+  const getDealerOptionsData = (dealerData: DealerData[]): { value: string; text: string }[] =>
+    dealerData.reduce((acc, curr) => {
+      const { city, companyName } = curr.node.frontmatter;
+      return acc.concat({ value: companyName, text: `${companyName} | ${city}` });
+    }, []);
 
   const keys: DealerForm = {
     firstName: 'firstName',
@@ -70,12 +102,13 @@ const DealerForm: React.SFC = () => {
     mail: 'mail',
     phone: 'phone',
     remarks: 'remarks',
+    dealer: 'dealer',
   };
 
   return (
     <div className={style.form}>
       <FormWrapper formName="dealer-form">
-        <h1 className={style.header}>{content.title}</h1>
+        <h1 className={style.header}>{formContent.title}</h1>
         <div className={style.formFieldsContainer}>
           <FormInput
             name={keys.firstName}
@@ -137,8 +170,19 @@ const DealerForm: React.SFC = () => {
             classString={`${style.remarks} ${style.formField}`}
             errorMessage={remarks.errorMessage}
           />
+          <FormInput
+            name={keys.dealer}
+            type="selectbox"
+            id={keys.dealer}
+            label={dealer.label}
+            required={dealer.required}
+            selectBoxOptions={getDealerOptionsData(dealerData)}
+            placeholder={dealer.placeholder}
+            classString={`${style.select} ${style.formField}`}
+            errorMessage="selecteer een dealer"
+          />
           <Button type="cta" link={false} submit={true} classString={`${style.submit} ${style.formField}}`}>
-            {content.buttonText}
+            {formContent.buttonText}
           </Button>
         </div>
       </FormWrapper>
