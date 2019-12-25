@@ -242,3 +242,17 @@ collections:
               },
             ],
         }
+  - name: 'dealer'
+    label: 'Dealers'
+    folder: 'src/data/dealers'
+    create: true
+    identifier_field: companyName
+    fields:
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'dealers' }
+      - { label: 'Bedrijfsnaam', name: 'companyName', widget: 'string' }
+      - { label: 'Adres', name: 'address', widget: 'string' }
+      - { label: 'Postcode', name: 'zipCode', widget: 'string' }
+      - { label: 'Plaats', name: 'City', widget: 'string' }
+      - { label: 'Telefoon', name: 'phone', widget: 'string' }
+      - { label: 'E-mailadres', name: 'mail', widget: 'string' }
+      - { label: 'Website', name: 'site', widget: 'string' }
