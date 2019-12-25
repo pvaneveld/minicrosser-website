@@ -6,6 +6,7 @@
   padding: 0 var(--component-padding);
   width: var(--page-width);
   color: var(--color-white);
+  height: 100%;
 }
 
 @media (--page-width) {

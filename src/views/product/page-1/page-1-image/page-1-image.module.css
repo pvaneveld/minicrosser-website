@@ -12,6 +12,7 @@
 }
 
 .header {
+  margin-top: var(--space-md);
   color: var(--color-white);
   text-align: center;
 }

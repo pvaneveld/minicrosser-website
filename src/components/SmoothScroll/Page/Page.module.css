@@ -6,10 +6,3 @@
 .gray {
   background-color: var(--gray-3);
 }
-
-.hidden {
-  position: relative !important;
-  width: 1px;
-  overflow: hidden;
-  white-space: nowrap; /* added line */
-}

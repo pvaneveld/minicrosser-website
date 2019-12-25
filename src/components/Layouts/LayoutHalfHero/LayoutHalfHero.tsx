@@ -9,6 +9,7 @@ interface LayoutFullHeroProps {
   children?: ReactNode;
   imageContent?: ReactNode;
   alt?: string;
+  headerSpacing?: boolean;
 }
 
 const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
@@ -16,7 +17,9 @@ const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
     <div className={style.halfHeroContainer}>
       <div className={style.imageContainer}>
         <FluidImage fluid={props.fluid} alt={props.alt} positionAbsolute={false} />
-        <div className={style.imageContent}>{props.imageContent}</div>
+        <div className={style.imageContent}>
+          <ContentContainer headerSpacing={props.headerSpacing}>{props.imageContent}</ContentContainer>
+        </div>
       </div>
       <ContentContainer>{props.children}</ContentContainer>
     </div>

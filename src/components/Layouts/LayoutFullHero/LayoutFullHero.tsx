@@ -6,13 +6,17 @@ import { FluidObject } from 'gatsby-image';
 interface LayoutFullHeroProps {
   fluid: FluidObject;
   alt?: string;
+  headerSpacing?: boolean;
+  footerSpacing?: boolean;
 }
 
 const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
   return (
     <div>
       <FluidImage fluid={props.fluid} alt={props.alt} />
-      <ContentContainer>{props.children}</ContentContainer>
+      <ContentContainer footerSpacing={props.footerSpacing} headerSpacing={props.headerSpacing}>
+        {props.children}
+      </ContentContainer>
     </div>
   );
 };

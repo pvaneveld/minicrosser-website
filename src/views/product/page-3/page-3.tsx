@@ -13,7 +13,7 @@ const ProductPageThree: React.SFC<ProductPageThreeProps> = props => {
   ];
   return (
     <div className={style.contentContainer}>
-      <ContentContainer>
+      <ContentContainer footerSpacing={true}>
         <div className={style.content}>
           <h1 className={style.header}>{title}</h1>
           <div className={style.buttonContainer}>

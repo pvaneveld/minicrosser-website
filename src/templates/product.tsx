@@ -77,8 +77,9 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
   return (
     <SmoothScrollContainer pages={pages}>
       <Layout theme={{ headerDark: false, footerDark: true }}>
-        <Page id={pages[0].id} headerSpacing={true}>
+        <Page id={pages[0].id}>
           <LayoutHalfHero
+            headerSpacing={true}
             fluid={product.productOne.backgroundImage.childImageSharp.fluid}
             imageContent={
               <PageOneImage
