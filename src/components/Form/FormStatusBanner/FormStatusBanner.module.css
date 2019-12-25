@@ -1,0 +1,11 @@
+.valid {
+  background-color: var(--color-success) !important;
+}
+
+.invalid {
+  background-color: var(--color-error) !important;
+}
+
+.neutral {
+  background-color: inherit;
+}

@@ -60,6 +60,10 @@ const DealerForm: React.SFC = () => {
               required
               errorMessage
             }
+            popups {
+              errorPopup
+              successPopup
+            }
           }
         }
       }
@@ -77,7 +81,7 @@ const DealerForm: React.SFC = () => {
   `);
 
   const { frontmatter: formContent } = query.formData;
-  const { firstName, prefix, surname, mail, phone, remarks, dealer } = formContent.formFields;
+  const { firstName, prefix, surname, mail, phone, remarks, dealer, popups } = formContent.formFields;
   const { textOnly: textOnlyRegex, mail: mailRegex, phone: phoneRegex } = regexLibrary;
   const { edges: dealerData } = query.dealers;
   interface DealerData {
@@ -107,7 +111,7 @@ const DealerForm: React.SFC = () => {
 
   return (
     <div className={style.form}>
-      <FormWrapper formName="dealer-form">
+      <FormWrapper formName="dealer-form" submitSuccessText={popups.successPopup} submitFailText={popups.errorPopup}>
         <h1 className={style.header}>{formContent.title}</h1>
         <div className={style.formFieldsContainer}>
           <FormInput

@@ -32,4 +32,7 @@ formFields:
     placeholder: Selecteer een dealer
     label: Dealer
     required: true
+  popups:
+    errorPopup: Sorry, er ging iets mis bij het versturen van het formulier. Probeer het later nog eens.
+    successPopup: Dankuwel, het formulier is verzonden en de dealer neemt zo snel mogelijk contact met u op.
 ---

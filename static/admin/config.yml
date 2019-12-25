@@ -77,7 +77,7 @@ collections:
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'dealer-form' }
           - { label: 'Titel', name: 'title', widget: 'string' }
-          - { label: 'Tekst verzendknop', name: 'buttonText', widget: 'string', default: 'verzeneden' }
+          - { label: 'Tekst verzendknop', name: 'buttonText', widget: 'string', default: 'verzenden' }
           - {
               label: 'Formuliervelden',
               required: true,
@@ -161,6 +161,16 @@ collections:
                         { label: 'Placeholdertekst', name: 'placeholder', widget: 'string' },
                         { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
                         { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Pop up meldingen',
+                    name: 'popups',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Formulier verzonden pop up', name: 'successPopup', widget: 'string' },
+                        { label: 'Fout bij verzenden pop up', name: 'errorPopup', widget: 'string' },
                       ],
                   },
                 ],
