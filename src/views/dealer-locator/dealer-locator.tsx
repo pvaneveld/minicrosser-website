@@ -29,6 +29,8 @@ const DealerLocator: React.SFC = () => {
     }
   `);
 
+  console.log(process.env.MAPS_API_KEY);
+
   interface InnerDealerData {
     companyName: string;
     zipCode: string;
