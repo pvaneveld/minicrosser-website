@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+}
+
+.dealer-container {
+  flex: 0 0 calc(100% / 3);
+}
+
+.dealer-information {
+  padding: var(--space-sm);
+}
+
+.dealer-info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.dealer-info-row:last-of-type {
+  margin-bottom: var(--space-md);
+}
+
+.dealer-icon {
+  margin-right: var(--space-xs);
+}
