@@ -1,0 +1,13 @@
+.marker {
+  width: var(--space-lg);
+  height: var(--space-lg);
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: var(--color-gray-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bolder);
+  text-transform: capitalize;
+}

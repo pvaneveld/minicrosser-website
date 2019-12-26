@@ -1,9 +1,43 @@
 .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container {
+  flex: 1 1 auto;
+  height: auto;
   display: flex;
 }
 
 .dealer-container {
+  width: 100%;
+  min-height: 100%;
+  overflow-y: scroll;
+  position: relative;
   flex: 0 0 calc(100% / 3);
+}
+
+.dealer-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.map-container {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .dealer-information {
@@ -22,4 +56,23 @@
 
 .dealer-icon {
   margin-right: var(--space-xs);
+}
+
+@media (--viewport-md) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .map-container {
+    min-height: calc(var(--space-xxl) * 5);
+    order: 1;
+  }
+
+  .dealer-container {
+    order: 2;
+  }
+
+  .dealer-list {
+    position: relative;
+  }
 }
