@@ -27,7 +27,7 @@ const HomePageTwo: React.SFC = () => {
     {
       children: buttonPrimary,
       link: true,
-      target: '/',
+      target: '/proefrit',
     },
     {
       type: 'secondary' as const,

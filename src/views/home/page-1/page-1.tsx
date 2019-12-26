@@ -33,7 +33,7 @@ const HomepageOne: React.SFC = () => {
       type: 'secondary' as const,
       link: true,
       children: buttonSecondary,
-      target: '/',
+      target: '/proefrit',
     },
   ];
 
