@@ -3,10 +3,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 import FormWrapper from '../../components/Form/FormWrapper/FormWrapper';
 import FormInput from '../../components/Form/FormInput/FormInput';
 import Button from '../../components/Buttons/Button/Button';
-import style from './dealer-form.module.css';
+import style from './test-drive-form.module.css';
 import { regexLibrary } from '../../../utils/regex';
 
-interface DealerForm {
+interface TestDriveForm {
   firstName: string;
   prefix: string;
   surname: string;
@@ -16,10 +16,10 @@ interface DealerForm {
   dealer: string;
 }
 
-const DealerForm: React.SFC = () => {
+const TestDriveForm: React.SFC = () => {
   const query = useStaticQuery(graphql`
     query {
-      formData: markdownRemark(frontmatter: { templateKey: { eq: "dealer-form" } }) {
+      formData: markdownRemark(frontmatter: { templateKey: { eq: "test-drive-form" } }) {
         frontmatter {
           title
           buttonText
@@ -99,7 +99,7 @@ const DealerForm: React.SFC = () => {
       return acc.concat({ value: companyName, text: `${companyName} | ${city}` });
     }, []);
 
-  const keys: DealerForm = {
+  const keys: TestDriveForm = {
     firstName: 'firstName',
     prefix: 'prefix',
     surname: 'surname',
@@ -111,7 +111,11 @@ const DealerForm: React.SFC = () => {
 
   return (
     <div className={style.form}>
-      <FormWrapper formName="dealer-form" submitSuccessText={popups.successPopup} submitFailText={popups.errorPopup}>
+      <FormWrapper
+        formName="proefrit-formulier"
+        submitSuccessText={popups.successPopup}
+        submitFailText={popups.errorPopup}
+      >
         <h1 className={style.header}>{formContent.title}</h1>
         <div className={style.formFieldsContainer}>
           <FormInput
@@ -194,4 +198,4 @@ const DealerForm: React.SFC = () => {
   );
 };
 
-export default DealerForm;
+export default TestDriveForm;

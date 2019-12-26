@@ -2,9 +2,9 @@ import React from 'react';
 import ContentContainer from '../components/Layouts/ContentContainer/ContentContainer';
 import Layout from '../components/Layouts/Layout/Layout';
 import Page from '../components/SmoothScroll/Page/Page';
-import DealerForm from '../views/dealer-form/dealer-form';
+import DealerForm from '../views/test-drive-form/test-drive-form';
 
-const DealerFormPage: React.SFC = () => {
+const TestDriveFormPage: React.SFC = () => {
   return (
     <Layout theme={{ headerDark: true, footerDark: true }}>
       <Page background="gray">
@@ -16,4 +16,4 @@ const DealerFormPage: React.SFC = () => {
   );
 };
 
-export default DealerFormPage;
+export default TestDriveFormPage;

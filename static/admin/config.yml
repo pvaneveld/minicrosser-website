@@ -71,11 +71,11 @@ collections:
                   { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
                 ],
             }
-      - file: 'src/pages/vind-uw-dealer.md'
+      - file: 'src/pages/proefrit.md'
         label: 'Dealer formulier'
         name: 'dealer-form'
         fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'dealer-form' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'test-drive-form' }
           - { label: 'Titel', name: 'title', widget: 'string' }
           - { label: 'Tekst verzendknop', name: 'buttonText', widget: 'string', default: 'verzenden' }
           - {
