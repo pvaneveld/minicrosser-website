@@ -9,6 +9,11 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
+      - file: 'src/pages/vind-uw-dealer.md'
+        label: 'Vind uw dealer'
+        name: 'dealerLocator'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'dealer-locator' }
       - file: 'src/pages/index.md'
         label: 'Home Page'
         name: 'index'
