@@ -10,10 +10,10 @@ import Button from '../../components/Buttons/Button/Button';
 import GoogleMapReact from 'google-map-react';
 import HeaderFooterSpacing from '../../components/Layouts/HeaderFooterSpacing/HeaderFooterSpacing';
 import Marker from '../../components/Marker/Marker';
-import { fitBounds } from 'google-map-react/utils';
 
 const DealerLocator: React.SFC = () => {
   const [dealerData, setdealerData] = useState<DealerData[] | null>(null);
+  const [selectedDealer, setSelectedDealer] = useState('');
   const center = { lat: 52.092876, lng: 5.10448 };
   const zoom = 7;
   const map = useRef(null);
@@ -50,7 +50,7 @@ const DealerLocator: React.SFC = () => {
     site: string;
     lat: number;
     lng: number;
-    letter?: string;
+    letter: string;
   }
 
   interface RawDealerData {
@@ -85,6 +85,10 @@ const DealerLocator: React.SFC = () => {
     setdealerData(withLetter);
   };
 
+  const handleMarkerClick = (companyName: string): void => {
+    setSelectedDealer(companyName);
+  };
+
   useEffect(() => {
     enrichDealerHandler();
   }, []);
@@ -95,11 +99,48 @@ const DealerLocator: React.SFC = () => {
       <div className={style.flexContainer}>
         <div className={style.dealerContainer}>
           <div className={style.dealerList}>
+            <Accordion title="test">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
+              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
+              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
+              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
+              magni aperiam ducimus a nulla tempore! Ipsum.
+            </Accordion>
+            <Accordion title="test">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
+              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
+              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
+              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
+              magni aperiam ducimus a nulla tempore! Ipsum.
+            </Accordion>
+            <Accordion title="test">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
+              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
+              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
+              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
+              magni aperiam ducimus a nulla tempore! Ipsum.
+            </Accordion>
+            <Accordion title="test">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
+              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
+              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
+              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
+              magni aperiam ducimus a nulla tempore! Ipsum.
+            </Accordion>
             {dealerData &&
               dealerData.map((dealer, index) => {
-                const { companyName, zipCode, address, city, phone, mail, site } = dealer;
+                const { companyName, zipCode, address, city, phone, mail, site, letter } = dealer;
                 return (
-                  <Accordion key={`dealer-${index}`} title={companyName}>
+                  <Accordion
+                    opened={companyName === selectedDealer}
+                    key={`dealer-${index}`}
+                    title={
+                      <div className={style.accordionTitle}>
+                        <Marker classString={style.accordionMarker} children={letter} />
+                        {companyName}
+                      </div>
+                    }
+                  >
                     <div className={style.dealerInformation}>
                       <div className={style.dealerInfoRow}>
                         <Address className={style.dealerIcon} />
@@ -123,25 +164,12 @@ const DealerLocator: React.SFC = () => {
                   </Accordion>
                 );
               })}
-            <Accordion title="test">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
-              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
-              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
-              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
-              magni aperiam ducimus a nulla tempore! Ipsum.
-            </Accordion>
-            <Accordion title="test">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
-              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
-              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
-              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
-              magni aperiam ducimus a nulla tempore! Ipsum.
-            </Accordion>
           </div>
         </div>
         <div className={style.mapContainer}>
           <div className={style.map} ref={map}>
             <GoogleMapReact
+              onChildClick={handleMarkerClick}
               bootstrapURLKeys={{ key: process.env.GATSBY_MAPS_API_KEY }}
               defaultCenter={center}
               defaultZoom={zoom}
@@ -149,7 +177,7 @@ const DealerLocator: React.SFC = () => {
             >
               {dealerData &&
                 dealerData.map((dealer, index) => (
-                  <Marker key={`marker-${index}`} lat={dealer.lat} lng={dealer.lng}>
+                  <Marker key={dealer.companyName} lat={dealer.lat} lng={dealer.lng}>
                     {dealer.letter}
                   </Marker>
                 ))}

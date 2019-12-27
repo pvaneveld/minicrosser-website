@@ -58,6 +58,18 @@
   margin-right: var(--space-xs);
 }
 
+.accordion-title {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-marker {
+  width: calc(var(--space-lg) / 1.4) !important;
+  height: calc(var(--space-lg) / 1.4) !important;
+  font-size: var(--text-md) !important;
+  margin-right: var(--space-md);
+}
+
 @media (--viewport-md) {
   .flex-container {
     flex-direction: column;
