@@ -10,6 +10,9 @@ import Button from '../../components/Buttons/Button/Button';
 import GoogleMapReact from 'google-map-react';
 import HeaderFooterSpacing from '../../components/Layouts/HeaderFooterSpacing/HeaderFooterSpacing';
 import Marker from '../../components/Marker/Marker';
+import { setPreselectedDealer } from '../../state/actions';
+import { useDispatch } from 'react-redux';
+import { navigate } from 'gatsby';
 
 const DealerLocator: React.SFC = () => {
   const [dealerData, setdealerData] = useState<DealerData[] | null>(null);
@@ -17,6 +20,7 @@ const DealerLocator: React.SFC = () => {
   const center = { lat: 52.092876, lng: 5.10448 };
   const zoom = 7;
   const map = useRef(null);
+  const dispatch = useDispatch();
 
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
@@ -85,6 +89,13 @@ const DealerLocator: React.SFC = () => {
     setdealerData(withLetter);
   };
 
+  const selectDealer = (companyName: string): void => {
+    // dispatch(setPreselectedDealer(companyName));
+    navigate('/proefrit', {
+      state: { companyName },
+    });
+  };
+
   const handleMarkerClick = (companyName: string): void => {
     setSelectedDealer(companyName);
   };
@@ -132,7 +143,9 @@ const DealerLocator: React.SFC = () => {
                         {site}
                       </div>
 
-                      <Button type="cta">Plan een proefrit</Button>
+                      <Button type="cta" clickHandler={() => selectDealer(companyName)}>
+                        Plan een proefrit
+                      </Button>
                     </div>
                   </Accordion>
                 );

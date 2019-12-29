@@ -1,6 +1,7 @@
 ---
 templateKey: test-drive-form
 title: Plan uw proefrit
+titleDealerPreselected: Plan uw proefrit bij $dealer$
 buttonText: Verzenden
 formFields:
   firstName:

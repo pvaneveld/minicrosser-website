@@ -82,6 +82,7 @@ collections:
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'test-drive-form' }
           - { label: 'Titel', name: 'title', widget: 'string' }
+          - { label: 'Titel dealer voorgeselecteerd', name: 'titleDealerPreselected', widget: 'string' }
           - { label: 'Tekst verzendknop', name: 'buttonText', widget: 'string', default: 'verzenden' }
           - {
               label: 'Formuliervelden',

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import FormWrapper from '../../components/Form/FormWrapper/FormWrapper';
 import FormInput from '../../components/Form/FormInput/FormInput';
@@ -16,12 +16,18 @@ interface TestDriveForm {
   dealer: string;
 }
 
-const TestDriveForm: React.SFC = () => {
+interface TestDriveFormProps {
+  preselectedDealer: string;
+}
+
+const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
+  const { preselectedDealer } = props;
   const query = useStaticQuery(graphql`
     query {
       formData: markdownRemark(frontmatter: { templateKey: { eq: "test-drive-form" } }) {
         frontmatter {
           title
+          titleDealerPreselected
           buttonText
           formFields {
             firstName {
@@ -109,6 +115,9 @@ const TestDriveForm: React.SFC = () => {
     dealer: 'dealer',
   };
 
+  const getTitle = (preselectedDealer: string): string =>
+    preselectedDealer ? formContent.titleDealerPreselected.replace('$dealer$', preselectedDealer) : formContent.title;
+
   return (
     <div className={style.form}>
       <FormWrapper
@@ -116,7 +125,7 @@ const TestDriveForm: React.SFC = () => {
         submitSuccessText={popups.successPopup}
         submitFailText={popups.errorPopup}
       >
-        <h1 className={style.header}>{formContent.title}</h1>
+        <h1 className={style.header}>{getTitle(preselectedDealer)}</h1>
         <div className={style.formFieldsContainer}>
           <FormInput
             name={keys.firstName}
@@ -179,6 +188,8 @@ const TestDriveForm: React.SFC = () => {
             errorMessage={remarks.errorMessage}
           />
           <FormInput
+            autoSelect={preselectedDealer ? { key: keys.dealer, value: preselectedDealer } : false}
+            disabled={preselectedDealer ? true : false}
             name={keys.dealer}
             type="selectbox"
             id={keys.dealer}

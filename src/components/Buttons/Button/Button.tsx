@@ -13,7 +13,7 @@ export interface ButtonProps {
 }
 
 const Button: React.SFC<ButtonProps> = props => {
-  const { clickHandler, children, link, target, submit, classString } = props;
+  const { clickHandler, children, link, target, submit, classString, dataId } = props;
   const classNames = `${style.button} ${props.type && props.type === 'secondary' ? style.secondary : ''} ${
     props.type && props.type === 'cta' ? style.cta : ''
   } ${!props.type ? style.primary : ''} ${props.type === 'secondary-dark' ? style.secondaryDark : ''} ${

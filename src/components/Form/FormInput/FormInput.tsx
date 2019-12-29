@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from './FormInput.module.css';
 import { useFormContext } from 'react-hook-form';
 
 interface InputProps {
   type: 'text' | 'email' | 'tel' | 'textarea' | 'selectbox';
+  autoSelect?: { key: string; value: string } | false;
+  disabled?: boolean;
   id: string;
   label: string;
   name: string;
@@ -16,8 +18,27 @@ interface InputProps {
 }
 
 const Input: React.SFC<InputProps> = props => {
-  const { id, type, label, name, errorMessage, required, regex, classString, selectBoxOptions, placeholder } = props;
-  const { register, errors } = useFormContext();
+  const {
+    id,
+    type,
+    label,
+    name,
+    errorMessage,
+    required,
+    regex,
+    classString,
+    selectBoxOptions,
+    placeholder,
+    disabled,
+  } = props;
+  const { register, errors, setValue } = useFormContext();
+
+  useEffect(() => {
+    const { autoSelect } = props;
+    if (autoSelect) {
+      setValue(autoSelect.key, autoSelect.value);
+    }
+  }, [props.autoSelect]);
 
   return (
     <div className={classString ? classString : ''}>
@@ -46,7 +67,13 @@ const Input: React.SFC<InputProps> = props => {
         )}
 
         {type === 'selectbox' && selectBoxOptions && (
-          <select name={name} id={id} className={style.selectBox} ref={register({ required, pattern: regex || /.*/ })}>
+          <select
+            disabled={disabled ? true : false}
+            name={name}
+            id={id}
+            className={style.selectBox}
+            ref={register({ required, pattern: regex || /.*/ })}
+          >
             {placeholder && <option value="">{placeholder}</option>}
             {selectBoxOptions.map((option, index) => (
               <option key={`dealer-${index}`} value={option.value}>
