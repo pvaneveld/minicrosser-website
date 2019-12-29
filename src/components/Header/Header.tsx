@@ -89,7 +89,7 @@ const Header: React.SFC<HeaderProps> = props => {
       </nav>
 
       <nav className={style.hamburgerContainer}>
-        <Link to="/" className={style.link}>
+        <Link to="/vind-uw-dealer" className={style.link}>
           vind uw dealer
         </Link>
         <Hamburger
