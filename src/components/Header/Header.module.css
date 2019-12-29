@@ -24,13 +24,14 @@
 }
 
 .hamburger-container {
+  position: relative;
   justify-self: end;
   display: flex;
   align-items: center;
 
   & .link {
+    margin-right: var(--space-xl);
     white-space: nowrap;
-    margin-right: var(--space-md);
   }
 }
 
