@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-md);
+}
+
+.accessory {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(var(--space-xl) * 6);
+}
+
+.accessory-image {
+  height: calc(var(--space-xl) * 5);
+}

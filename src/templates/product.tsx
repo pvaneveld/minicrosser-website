@@ -97,7 +97,7 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
           </LayoutHalfHero>
           <ScrollChevronDown id={pages[0].id} />
         </Page>
-        <Page id={pages[1].id} footerSpacing={true}>
+        <Page id={pages[1].id}>
           <LayoutTwoColumnHero fluid={product.productTwo.backgroundImage.childImageSharp.fluid}>
             <PageTwo title={product.productTwo.title} specifications={product.productTwo.specifications} />
           </LayoutTwoColumnHero>

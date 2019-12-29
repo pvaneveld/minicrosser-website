@@ -6,3 +6,7 @@
 .gray {
   background-color: var(--gray-3);
 }
+
+.black {
+  background-color: var(--color-gray-dark);
+}

@@ -6,12 +6,13 @@ interface LayoutFullHeroProps {
   children?: ReactNode;
   headerSpacing?: boolean;
   footerSpacing?: boolean;
+  classString?: string;
 }
 
 const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
-  const { headerSpacing, footerSpacing, children } = props;
+  const { headerSpacing, footerSpacing, children, classString } = props;
   return (
-    <div className={style.content}>
+    <div className={`${style.content} ${classString ? classString : ''}`}>
       {headerSpacing && <HeaderFooterSpacing headerSpacing={true} />}
       {children}
       {footerSpacing && <HeaderFooterSpacing footerSpacing={true} />}

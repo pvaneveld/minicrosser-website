@@ -6,14 +6,19 @@ import { useSelector } from 'react-redux';
 interface PageProps {
   children: ReactNode;
   id?: string;
-  background?: 'gray';
+  background?: 'gray' | 'black';
 }
 
 const Page: React.SFC<PageProps> = props => {
   const { background, id } = props;
 
   return (
-    <section id={id} className={`${style.page} ${background === 'gray' ? style.gray : ''}`}>
+    <section
+      id={id}
+      className={`${style.page} ${background === 'gray' ? style.gray : ''} ${
+        background === 'black' ? style.black : ''
+      }`}
+    >
       {props.children}
     </section>
   );
