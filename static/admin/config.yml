@@ -182,6 +182,98 @@ collections:
                   },
                 ],
             }
+      - file: 'src/pages/contact.md'
+        label: 'Contact formulier'
+        name: 'contact-form'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'contact-form' }
+          - { label: 'Titel', name: 'title', widget: 'string' }
+          - { label: 'Tekst verzendknop', name: 'buttonText', widget: 'string', default: 'verzenden' }
+          - {
+              label: 'Formuliervelden',
+              required: true,
+              name: 'formFields',
+              widget: 'object',
+              fields:
+                [
+                  {
+                    label: 'Voornaam',
+                    name: 'firstName',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Achteraam',
+                    name: 'surname',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Tussenvoegsel',
+                    name: 'prefix',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'E-mail',
+                    name: 'mail',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Telefoonnummer',
+                    name: 'phone',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Opmerkingen',
+                    name: 'remarks',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: true },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Pop up meldingen',
+                    name: 'popups',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Formulier verzonden pop up', name: 'successPopup', widget: 'string' },
+                        { label: 'Fout bij verzenden pop up', name: 'errorPopup', widget: 'string' },
+                      ],
+                  },
+                ],
+            }
 
   - name: 'products'
     label: 'Producten'

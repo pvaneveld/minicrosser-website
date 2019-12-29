@@ -2,20 +2,18 @@ import React from 'react';
 import ContentContainer from '../components/Layouts/ContentContainer/ContentContainer';
 import Layout from '../components/Layouts/Layout/Layout';
 import Page from '../components/SmoothScroll/Page/Page';
-import TestDriveForm from '../views/test-drive-form/test-drive-form';
+import ContactFormView from '../views/contact-form/contact-form';
 
-const TestDriveFormPage: React.SFC = ({ location }) => {
+const ContactForm: React.SFC = () => {
   return (
     <Layout theme={{ headerDark: true, footerDark: true }}>
       <Page background="gray">
         <ContentContainer headerSpacing={true} footerSpacing={true}>
-          <TestDriveForm
-            preselectedDealer={location.state && location.state.companyName ? location.state.companyName : ''}
-          />
+          <ContactFormView />
         </ContentContainer>
       </Page>
     </Layout>
   );
 };
 
-export default TestDriveFormPage;
+export default ContactForm;

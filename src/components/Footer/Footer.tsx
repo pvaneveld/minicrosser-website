@@ -27,11 +27,8 @@ const Footer: React.SFC<FooterProps> = props => {
   }, [footer]);
   return (
     <footer ref={footer} className={`${style.footer}${props.darkTheme ? ` ${style.dark}` : ''}`}>
-      <Link className={style.link} to="/">
-        Pagina-naam
-      </Link>
-      <Link className={style.link} to="/">
-        Pagina-naam
+      <Link className={style.link} to="/contact">
+        Contact
       </Link>
       <Link className={style.link} to="/">
         Pagina-naam

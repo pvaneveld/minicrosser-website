@@ -1,0 +1,54 @@
+.form {
+  padding-top: var(--page-spacing-md);
+  padding-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-fields-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: var(--form-width);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.form-field {
+  position: relative;
+  padding: var(--space-xs);
+}
+
+.first-name,
+.surname {
+  width: 40%;
+}
+
+.prefix {
+  width: 20%;
+}
+
+.mail,
+.phone {
+  width: 50%;
+}
+
+.remarks,
+.select {
+  width: 100%;
+}
+
+.submit {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (--viewport-sm) {
+  .form-field {
+    width: 100%;
+  }
+}
