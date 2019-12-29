@@ -99,39 +99,12 @@ const DealerLocator: React.SFC = () => {
       <div className={style.flexContainer}>
         <div className={style.dealerContainer}>
           <div className={style.dealerList}>
-            <Accordion title="test">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
-              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
-              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
-              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
-              magni aperiam ducimus a nulla tempore! Ipsum.
-            </Accordion>
-            <Accordion title="test">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
-              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
-              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
-              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
-              magni aperiam ducimus a nulla tempore! Ipsum.
-            </Accordion>
-            <Accordion title="test">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
-              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
-              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
-              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
-              magni aperiam ducimus a nulla tempore! Ipsum.
-            </Accordion>
-            <Accordion title="test">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque provident ducimus impedit voluptatum
-              quidem cumque aut, nam tenetur doloribus officiis. Iste cupiditate mollitia natus corporis enim placeat,
-              fuga facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque, accusantium
-              necessitatibus consequuntur architecto nam debitis tenetur eos similique atque animi, numquam repellat
-              magni aperiam ducimus a nulla tempore! Ipsum.
-            </Accordion>
             {dealerData &&
               dealerData.map((dealer, index) => {
                 const { companyName, zipCode, address, city, phone, mail, site, letter } = dealer;
                 return (
                   <Accordion
+                    scrollStateHandler={dealerId => setSelectedDealer(dealerId)}
                     opened={companyName === selectedDealer}
                     key={`dealer-${index}`}
                     title={

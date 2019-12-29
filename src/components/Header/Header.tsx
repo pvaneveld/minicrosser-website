@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu/MobileMenu';
 import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useDispatch } from 'react-redux';
-import { UPDATE_HEADER_MARGIN } from '../../state/types';
+import { updateHeaderMargin } from '../../state/actions';
 
 interface HeaderProps {
   darkTheme?: boolean;
@@ -63,10 +63,7 @@ const Header: React.SFC<HeaderProps> = props => {
   const headerHeightHandler = (): void => {
     const { current: currentHeader } = header;
     if (currentHeader) {
-      dispatch({
-        type: UPDATE_HEADER_MARGIN,
-        payload: currentHeader.getBoundingClientRect().height,
-      });
+      dispatch(updateHeaderMargin(currentHeader.getBoundingClientRect().height));
     }
   };
 

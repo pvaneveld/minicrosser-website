@@ -47,11 +47,7 @@ const Input: React.SFC<InputProps> = props => {
 
         {type === 'selectbox' && selectBoxOptions && (
           <select name={name} id={id} className={style.selectBox} ref={register({ required, pattern: regex || /.*/ })}>
-            {placeholder && (
-              <option value="" disabled selected>
-                {placeholder}
-              </option>
-            )}
+            {placeholder && <option value="">{placeholder}</option>}
             {selectBoxOptions.map((option, index) => (
               <option key={`dealer-${index}`} value={option.value}>
                 {option.text}

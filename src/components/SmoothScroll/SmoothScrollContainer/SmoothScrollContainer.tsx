@@ -4,7 +4,8 @@ import SmoothScrollNavigation from '../SmoothScrollNavigation/SmoothScrollNaviga
 import ScrollChevronUp from '../../ScrollChevrons/ScrollChevronUp/ScrollChevronUp';
 import style from './SmoothScrollContainer.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { Page, UPDATE_PAGES } from '../../../state/types';
+import { Page } from '../../../state/types';
+import { updatePages } from '../../../state/actions';
 
 interface SmoothScrollContainerProps {
   children: ReactNode;
@@ -86,10 +87,7 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
 
   useEffect(() => {
     updatActiveID(pages);
-    dispatch({
-      type: UPDATE_PAGES,
-      payload: pages,
-    });
+    dispatch(updatePages(pages));
   }, [pages]);
 
   useEffect(() => {

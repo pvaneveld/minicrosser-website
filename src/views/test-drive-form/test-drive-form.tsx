@@ -184,6 +184,7 @@ const TestDriveForm: React.SFC = () => {
             id={keys.dealer}
             label={dealer.label}
             required={dealer.required}
+            regex={textOnlyRegex}
             selectBoxOptions={getDealerOptionsData(dealerData)}
             placeholder={dealer.placeholder}
             classString={`${style.select} ${style.formField}`}

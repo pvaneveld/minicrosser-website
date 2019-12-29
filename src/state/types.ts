@@ -3,11 +3,13 @@
 export type Page = { id: string; title: string; inView: boolean }[];
 export type HeaderMargin = number;
 export type FooterMargin = number;
+export type PreselectedDealer = string;
 
 export interface AppState {
   pages: Page;
   headerMargin: HeaderMargin;
   footerMargin: FooterMargin;
+  preselectedDealer: PreselectedDealer;
 }
 
 // Actions
@@ -15,6 +17,7 @@ export interface AppState {
 export const UPDATE_PAGES = 'UPDATE_PAGES';
 export const UPDATE_HEADER_MARGIN = 'UPDATE_HEADER_MARGIN';
 export const UPDATE_FOOTER_MARGIN = 'UPDATE_FOOTER_MARGIN';
+export const SET_PRESELECTED_DEALER = 'SET_PRESELECTED_DEALER';
 
 export interface UpdatePagesAction {
   type: typeof UPDATE_PAGES;
@@ -30,5 +33,13 @@ export interface UpdateMarginFooterAction {
   type: typeof UPDATE_FOOTER_MARGIN;
   payload: FooterMargin;
 }
+export interface SetPreselectedDealer {
+  type: typeof SET_PRESELECTED_DEALER;
+  payload: PreselectedDealer;
+}
 
-export type AppActionTypes = UpdatePagesAction | UpdateMarginHeaderAction | UpdateMarginFooterAction;
+export type AppActionTypes =
+  | UpdatePagesAction
+  | UpdateMarginHeaderAction
+  | UpdateMarginFooterAction
+  | SetPreselectedDealer;

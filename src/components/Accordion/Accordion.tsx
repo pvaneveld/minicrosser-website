@@ -2,13 +2,14 @@ import React, { useState, useRef, ReactNode, useEffect } from 'react';
 import ChevronDown from '../../icons/chevron-down.svg';
 import style from './Accordion.module.css';
 import { connect } from 'http2';
+import { forEachTrailingCommentRange } from 'typescript';
 
 interface AccordionProps {
   title: ReactNode;
   children: ReactNode;
-  id?: string;
   classString?: string;
   opened?: boolean;
+  scrollStateHandler?: (openedId: string) => void;
 }
 
 const Accordion: React.SFC<AccordionProps> = props => {
@@ -27,15 +28,30 @@ const Accordion: React.SFC<AccordionProps> = props => {
     setRotateState(setActive === style.active ? style.accordionIcon : `${style.accordionIcon} ${style.rotate}`);
   };
 
-  useEffect(() => {
-    if (props.opened && accordion.current) {
+  const scrollAccordionInView = () => {
+    const { current: currentContent } = content;
+    accordion.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    currentContent.removeEventListener('transitionend', scrollAccordionInView, false);
+  };
+
+  const scrollIntoViewHandler = () => {
+    const { opened, scrollStateHandler } = props;
+    const { current: currentAccordion } = accordion;
+    const { current: currentContent } = content;
+
+    if (opened && currentAccordion && scrollStateHandler) {
       if (!openState) {
+        currentContent.addEventListener('transitionend', scrollAccordionInView, false);
         toggleAccordion();
-        accordion.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
       } else {
-        accordion.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        currentAccordion.scrollIntoView({ behavior: 'smooth', block: 'end' });
       }
+      scrollStateHandler('');
     }
+  };
+
+  useEffect(() => {
+    scrollIntoViewHandler();
   }, [props.opened]);
 
   const { classString, title } = props;

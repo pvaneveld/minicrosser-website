@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import style from './Footer.module.css';
 import { Link } from 'gatsby';
 import { useDispatch } from 'react-redux';
-import { UPDATE_FOOTER_MARGIN } from '../../state/types';
+import { updateFooterMargin } from '../../state/actions';
 
 interface FooterProps {
   darkTheme?: boolean;
@@ -15,10 +15,7 @@ const Footer: React.SFC<FooterProps> = props => {
   const footerHeightHandler = (): void => {
     const { current } = footer;
     if (footer) {
-      dispatch({
-        type: UPDATE_FOOTER_MARGIN,
-        payload: current.getBoundingClientRect().height,
-      });
+      dispatch(updateFooterMargin(current.getBoundingClientRect().height));
     }
   };
 
