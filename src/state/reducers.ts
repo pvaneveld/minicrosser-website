@@ -1,11 +1,4 @@
-import {
-  AppState,
-  AppActionTypes,
-  UPDATE_PAGES,
-  UPDATE_HEADER_MARGIN,
-  UPDATE_FOOTER_MARGIN,
-  SET_PRESELECTED_DEALER,
-} from './types';
+import { AppState, AppActionTypes, UPDATE_PAGES, UPDATE_HEADER_MARGIN, UPDATE_FOOTER_MARGIN } from './types';
 
 const initialState: AppState = {
   pages: [],
@@ -30,11 +23,6 @@ export const AppReducer = (state = initialState, action: AppActionTypes): AppSta
       return {
         ...state,
         ...{ footerMargin: action.payload },
-      };
-    case SET_PRESELECTED_DEALER:
-      return {
-        ...state,
-        ...{ preselectedDealer: action.payload },
       };
     default:
       return state;

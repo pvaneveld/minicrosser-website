@@ -33,13 +33,5 @@ export interface UpdateMarginFooterAction {
   type: typeof UPDATE_FOOTER_MARGIN;
   payload: FooterMargin;
 }
-export interface SetPreselectedDealer {
-  type: typeof SET_PRESELECTED_DEALER;
-  payload: PreselectedDealer;
-}
 
-export type AppActionTypes =
-  | UpdatePagesAction
-  | UpdateMarginHeaderAction
-  | UpdateMarginFooterAction
-  | SetPreselectedDealer;
+export type AppActionTypes = UpdatePagesAction | UpdateMarginHeaderAction | UpdateMarginFooterAction;

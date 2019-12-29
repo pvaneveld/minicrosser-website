@@ -10,8 +10,6 @@ import Button from '../../components/Buttons/Button/Button';
 import GoogleMapReact from 'google-map-react';
 import HeaderFooterSpacing from '../../components/Layouts/HeaderFooterSpacing/HeaderFooterSpacing';
 import Marker from '../../components/Marker/Marker';
-import { setPreselectedDealer } from '../../state/actions';
-import { useDispatch } from 'react-redux';
 import { navigate } from 'gatsby';
 
 const DealerLocator: React.SFC = () => {
@@ -20,8 +18,6 @@ const DealerLocator: React.SFC = () => {
   const center = { lat: 52.092876, lng: 5.10448 };
   const zoom = 7;
   const map = useRef(null);
-  const dispatch = useDispatch();
-
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
   const query = useStaticQuery(graphql`
@@ -39,6 +35,11 @@ const DealerLocator: React.SFC = () => {
               site
             }
           }
+        }
+      }
+      markdownRemark(frontmatter: { templateKey: { eq: "dealer-locator" } }) {
+        frontmatter {
+          buttonText
         }
       }
     }
@@ -62,6 +63,7 @@ const DealerLocator: React.SFC = () => {
       frontmatter: Omit<DealerData, 'lat' | 'long' | 'letter'>;
     };
   }
+
   const { edges: dealerArray } = query.allMarkdownRemark;
 
   const sanitizeDealerData = (dealerData: RawDealerData[]): Omit<DealerData, 'lat' | 'lng' | 'letter'>[] =>
@@ -90,7 +92,6 @@ const DealerLocator: React.SFC = () => {
   };
 
   const selectDealer = (companyName: string): void => {
-    // dispatch(setPreselectedDealer(companyName));
     navigate('/proefrit', {
       state: { companyName },
     });
@@ -144,7 +145,7 @@ const DealerLocator: React.SFC = () => {
                       </div>
 
                       <Button type="cta" clickHandler={() => selectDealer(companyName)}>
-                        Plan een proefrit
+                        {query.markdownRemark.frontmatter.buttonText}
                       </Button>
                     </div>
                   </Accordion>

@@ -14,6 +14,7 @@ collections:
         name: 'dealerLocator'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'dealer-locator' }
+          - { label: 'Plan proefrit button tekst', name: buttonText, widget: string }
       - file: 'src/pages/index.md'
         label: 'Home Page'
         name: 'index'
