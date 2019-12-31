@@ -123,13 +123,20 @@ collections:
                   { label: 'Navigatie titel', name: 'navigationTitle', widget: 'string' },
                   { label: 'Titel', name: 'title', widget: 'string' },
                   { label: 'Inleiding', name: 'intro', widget: 'markdown' },
-                  { label: 'Accessoires scherm 2', name: 'accessories', widget: 'list', allow_add: true, fields: [
-                    {label: 'Titel', name: 'title', widget: 'string'},
-                    {label: 'Afbeelding', name: 'accesoryImage', widget: 'image'},
-                    {label: 'Subtitel', label: 'subtitle', widget: 'string', required: false},
-                    {label: 'Tekst lees meer knop', label: 'buttonText', widget: 'string', default: 'Lees meer'},
-                    {label: 'Omschrijving', label: 'description', widget: 'markdown'},
-                  ]},
+                  {
+                    label: 'Accessoires scherm 2',
+                    name: 'accessories',
+                    widget: 'list',
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: 'Titel', name: 'title', widget: 'string' },
+                        { label: 'Afbeelding', name: 'accesoryImage', widget: 'image' },
+                        { label: 'Subtitel', name: 'subtitle', widget: 'string', required: false },
+                        { label: 'Tekst lees meer knop', name: 'buttonText', widget: 'string', default: 'Lees meer' },
+                        { label: 'Omschrijving', name: 'description', widget: 'markdown' },
+                      ],
+                  },
                 ],
             }
           - {
@@ -141,13 +148,20 @@ collections:
                   { label: 'Navigatie titel', name: 'navigationTitle', widget: 'string' },
                   { label: 'Titel', name: 'title', widget: 'string' },
                   { label: 'Inleiding', name: 'intro', widget: 'markdown' },
-                  { label: 'Accessoires scherm 3', name: 'accessories', widget: 'list', allow_add: true, fields: [
-                    {label: 'Titel', name: 'title', widget: 'string'},
-                    {label: 'Afbeelding', name: 'accesoryImage', widget: 'image'},
-                    {label: 'Subtitel', label: 'subtitle', widget: 'string', required: false},
-                    {label: 'Tekst lees meer knop', label: 'buttonText', widget: 'string', default: 'Lees meer'},
-                    {label: 'Omschrijving', label: 'description', widget: 'markdown'},
-                  ]},
+                  {
+                    label: 'Accessoires scherm 3',
+                    name: 'accessories',
+                    widget: 'list',
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: 'Titel', name: 'title', widget: 'string' },
+                        { label: 'Afbeelding', name: 'accesoryImage', widget: 'image' },
+                        { label: 'Subtitel', name: 'subtitle', widget: 'string', required: false },
+                        { label: 'Tekst lees meer knop', name: 'buttonText', widget: 'string', default: 'Lees meer' },
+                        { label: 'Omschrijving', name: 'description', widget: 'markdown' },
+                      ],
+                  },
                 ],
             }
       - file: 'src/pages/proefrit.md'
