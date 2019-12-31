@@ -1,4 +1,3 @@
 ---
 templateKey: configurator
-title: Disclaimer
 ---
