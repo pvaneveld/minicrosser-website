@@ -11,6 +11,7 @@ collections:
     files:
       - file: 'src/data/configurator/step-1.md'
         label: 'Configureren stap 1'
+        name: 'stepOne'
         fields:
           - { label: 'Title', name: 'titel', widget: 'hidden' }
   - name: 'pages'
