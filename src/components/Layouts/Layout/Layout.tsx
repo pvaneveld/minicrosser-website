@@ -14,6 +14,7 @@ interface LayoutProps {
     headerDark: boolean;
     footerDark: boolean;
   };
+  configurator?: boolean;
 }
 
 const Layout: React.SFC<LayoutProps> = props => {
@@ -21,8 +22,8 @@ const Layout: React.SFC<LayoutProps> = props => {
 
   return (
     <div className={style.layout}>
-      <Header darkTheme={headerDark} />
-      <Flag className={style.flag} />
+      <Header configurator={props.configurator} darkTheme={headerDark} />
+      {!props.configurator && <Flag className={style.flag} />}
       {props.children}
 
       <Footer darkTheme={footerDark} />

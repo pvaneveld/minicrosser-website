@@ -5,8 +5,9 @@
   left: 0;
   right: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-md) 0 var(--space-md);
   align-items: center;
 }
 

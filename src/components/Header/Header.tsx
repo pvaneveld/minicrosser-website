@@ -7,9 +7,11 @@ import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useDispatch } from 'react-redux';
 import { updateHeaderMargin } from '../../state/actions';
+import ConfiguratorNavigation from '../Configurator/Navigation/Navigation';
 
 interface HeaderProps {
   darkTheme?: boolean;
+  configurator?: boolean;
 }
 
 const Header: React.SFC<HeaderProps> = props => {
@@ -73,30 +75,46 @@ const Header: React.SFC<HeaderProps> = props => {
     return (): void => window.removeEventListener('resize', headerHeightHandler, false);
   }, [header]);
 
+  const headerPadding = {
+    paddingBottom: props.configurator ? '0px' : 'var(--space-md)',
+    display: props.configurator ? 'block' : 'flex',
+  };
+
   return (
-    <header ref={header} className={`${style.header}${props.darkTheme ? ` ${style.headerDark}` : ''}`}>
+    <header
+      ref={header}
+      style={headerPadding}
+      className={`${style.header}${props.darkTheme ? ` ${style.headerDark}` : ''}`}
+    >
       <Link to="/" className={style.logoContainer}>
         <figure>
           <Polymer className={style.logo} />
         </figure>
       </Link>
-      <nav className={style.linkContainer}>
-        {links.map((link, id) => (
-          <Link key={`link-${id}`} to={link.target} className={style.link}>
-            {link.name}
-          </Link>
-        ))}
-      </nav>
 
-      <nav className={style.hamburgerContainer}>
-        <Link to="/vind-uw-dealer" className={style.link}>
-          vind uw dealer
-        </Link>
-        <Hamburger
-          clickHandler={useCallback(() => setMenuOpen(menuOpen => (menuOpen = !menuOpen)), [setMenuOpen])}
-          isActive={menuOpen}
-        />
-      </nav>
+      {props.configurator ? (
+        <ConfiguratorNavigation />
+      ) : (
+        <>
+          <nav className={style.linkContainer}>
+            {links.map((link, id) => (
+              <Link key={`link-${id}`} to={link.target} className={style.link}>
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+
+          <nav className={style.hamburgerContainer}>
+            <Link to="/vind-uw-dealer" className={style.link}>
+              vind uw dealer
+            </Link>
+            <Hamburger
+              clickHandler={useCallback(() => setMenuOpen(menuOpen => (menuOpen = !menuOpen)), [setMenuOpen])}
+              isActive={menuOpen}
+            />
+          </nav>
+        </>
+      )}
       <MobileMenu links={links} isActive={menuOpen} />
     </header>
   );
