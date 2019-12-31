@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import SmoothScrollContainer from '../components/SmoothScroll/SmoothScrollContainer/SmoothScrollContainer';
 import AccessoriesPageOne from '../views/accessories/page-1/page-1';
 import AccessoriesPageTwo from '../views/accessories/page-2/page-2';
+import AccessoriesPageThree from '../views/accessories/page-3/page-3';
+import ScrollChevronDown from '../components/ScrollChevrons/ScrollChevronDown/ScrollChevronDown';
 
 const ContactForm: React.SFC = () => {
   const query = useStaticQuery(graphql`
@@ -62,13 +64,14 @@ const ContactForm: React.SFC = () => {
       <Layout theme={{ headerDark: true, footerDark: false }}>
         <Page id={pages[0].id}>
           <AccessoriesPageOne />
+          <ScrollChevronDown colorBlack={true} id={pages[0].id} />
         </Page>
         <Page id={pages[1].id} background="black">
           <AccessoriesPageTwo />
+          <ScrollChevronDown id={pages[1].id} />
         </Page>
-        <Page id={pages[2].id}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quaerat sed unde quis sint ab rerum error
-          dolorum culpa voluptate provident ad, nisi fugiat ut vel incidunt consequuntur! Consectetur, ratione!
+        <Page background="black" id={pages[2].id}>
+          <AccessoriesPageThree />
         </Page>
       </Layout>
     </SmoothScrollContainer>

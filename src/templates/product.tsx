@@ -95,12 +95,13 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
               buttonText={product.productOne.buttonText}
             />
           </LayoutHalfHero>
-          <ScrollChevronDown id={pages[0].id} />
+          <ScrollChevronDown colorBlack={true} id={pages[0].id} />
         </Page>
         <Page id={pages[1].id}>
           <LayoutTwoColumnHero fluid={product.productTwo.backgroundImage.childImageSharp.fluid}>
             <PageTwo title={product.productTwo.title} specifications={product.productTwo.specifications} />
           </LayoutTwoColumnHero>
+          <ScrollChevronDown id={pages[1].id} />
         </Page>
         <Page id={pages[2].id}>
           <PageThree title={product.productThree.title} buttons={product.productThree.buttons} />

@@ -6,6 +6,7 @@ import { Page } from '../../../state/types';
 
 interface ScrollChevronDownProps {
   id: string;
+  colorBlack?: boolean;
 }
 
 const ScrollChevronDown: React.SFC<ScrollChevronDownProps> = props => {
@@ -33,9 +34,11 @@ const ScrollChevronDown: React.SFC<ScrollChevronDownProps> = props => {
     }
   }, [pages]);
 
+  const { id, colorBlack } = props;
+
   return (
-    <button className={classes} onClick={(): void => handleClick(props.id)}>
-      <ChevronDown />
+    <button className={classes} onClick={(): void => handleClick(id)}>
+      <ChevronDown className={colorBlack ? style.black : ''} />
     </button>
   );
 };

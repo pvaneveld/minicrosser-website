@@ -2,7 +2,7 @@ import ContentContainer from '../../../components/Layouts/ContentContainer/Conte
 import Markdown from '../../../components/Markdown/Markdown';
 import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
-import style from './page-2.module.css';
+import style from './page-3.module.css';
 import AccesoryList from '../../../components/AccesoryList/AccesoryList';
 
 const AccessoriesPageTwo: React.SFC = () => {
@@ -10,7 +10,7 @@ const AccessoriesPageTwo: React.SFC = () => {
     query {
       markdownRemark(frontmatter: { templateKey: { eq: "accessories" } }) {
         frontmatter {
-          accessoriesTwo {
+          accessoriesThree {
             title
             intro
             accessories {
@@ -32,7 +32,7 @@ const AccessoriesPageTwo: React.SFC = () => {
     }
   `);
 
-  const { accessoriesTwo: content } = query.markdownRemark.frontmatter;
+  const { accessoriesThree: content } = query.markdownRemark.frontmatter;
 
   return (
     <ContentContainer classString={style.content}>

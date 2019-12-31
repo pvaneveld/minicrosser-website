@@ -1,0 +1,9 @@
+.content {
+  padding: var(--space-md);
+}
+
+.header {
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
