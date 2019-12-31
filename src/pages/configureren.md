@@ -1,0 +1,4 @@
+---
+templateKey: configurator
+title: Disclaimer
+---
