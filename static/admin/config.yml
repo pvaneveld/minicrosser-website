@@ -12,7 +12,7 @@ collections:
       - file: 'src/data/configurator/step-1.md'
         label: 'Configureren stap 1'
         fields:
-          - { label: 'Title' Key', name: 'titel', widget: 'hidden' }
+          - { label: 'Title', name: 'titel', widget: 'hidden' }
   - name: 'pages'
     label: 'Pages'
     files:
