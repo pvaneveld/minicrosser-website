@@ -1,13 +1,12 @@
 import React, { useState, useRef, ReactNode, useEffect } from 'react';
 import ChevronDown from '../../icons/chevron-down.svg';
 import style from './Accordion.module.css';
-import { connect } from 'http2';
-import { forEachTrailingCommentRange } from 'typescript';
 
 interface AccordionProps {
   title: ReactNode;
   children: ReactNode;
   classString?: string;
+  classStringContent?: string;
   opened?: boolean;
   scrollStateHandler?: (openedId: string) => void;
 }
