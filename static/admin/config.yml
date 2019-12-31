@@ -6,8 +6,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: Configurator
-    label: Configurator
+  - name: 'Configurator'
+    label: 'Configurator'
     files:
       - file: 'src/pages/configureren.md'
         fields:
