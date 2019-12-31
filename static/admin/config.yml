@@ -8,7 +8,6 @@ public_folder: /img
 collections:
   - name: 'Configurator'
     label: 'Configurator'
-    name: 'Configurator'
     files:
       - file: 'src/data/configurator/step-1.md'
         label: 'Configureren stap 1'
