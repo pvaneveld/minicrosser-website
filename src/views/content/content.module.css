@@ -1,0 +1,11 @@
+.container {
+  color: var(--color-text);
+  max-width: var(--form-width);
+  display: block;
+  margin: 0 auto;
+}
+
+.header {
+  margin: var(--space-md) 0 var(--space-sm) 0;
+  text-align: center;
+}

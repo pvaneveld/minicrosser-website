@@ -22,10 +22,6 @@
   margin-bottom: var(--space-md);
 }
 
-.link:last-of-type {
-  margin-right: 0;
-}
-
 @media (--viewport-sm) {
   .footer {
     flex-wrap: wrap;

@@ -30,12 +30,13 @@ const Footer: React.SFC<FooterProps> = props => {
       <Link className={style.link} to="/contact">
         Contact
       </Link>
-      <Link className={style.link} to="/">
-        Pagina-naam
+      <Link className={style.link} to="/privacy">
+        Privacy Policy
       </Link>
-      <Link className={style.link} to="/">
-        Pagina-naam
+      <Link className={style.link} to="/disclaimer">
+        Disclaimer
       </Link>
+      <span className={style.link}>Revamed &#169; 2020</span>
     </footer>
   );
 };

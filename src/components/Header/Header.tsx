@@ -97,7 +97,7 @@ const Header: React.SFC<HeaderProps> = props => {
           isActive={menuOpen}
         />
       </nav>
-      <MobileMenu isActive={menuOpen} />
+      <MobileMenu links={links} isActive={menuOpen} />
     </header>
   );
 };

@@ -3,6 +3,7 @@ import marked from 'marked';
 
 interface MarkdownProps {
   children: string;
+  classString?: string;
 }
 
 const Markdown: React.SFC<MarkdownProps> = props => {

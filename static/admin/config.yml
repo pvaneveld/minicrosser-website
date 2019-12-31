@@ -15,6 +15,20 @@ collections:
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'dealer-locator' }
           - { label: 'Plan proefrit button tekst', name: buttonText, widget: string }
+      - file: 'src/pages/privacy.md'
+        label: 'Privacy'
+        name: 'privacy'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'content-page' }
+          - { label: 'Titel', name: title, widget: string }
+          - { label: 'Tekst', name: text, widget: markdown }
+      - file: 'src/pages/disclaimer.md'
+        label: 'Disclaimer'
+        name: 'disclaimer'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'content-page' }
+          - { label: 'Titel', name: title, widget: string }
+          - { label: 'Tekst', name: text, widget: markdown }
       - file: 'src/pages/index.md'
         label: 'Home Page'
         name: 'index'
