@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactNode } from 'react';
 import style from './HeaderFooterSpacing.module.css';
 import { useSelector } from 'react-redux';
 

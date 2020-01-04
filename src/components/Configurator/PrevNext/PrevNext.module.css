@@ -1,0 +1,21 @@
+.button {
+  margin: var(--space-xs);
+  position: relative;
+  width: calc(var(--space-xxl) * 2.5);
+  & svg {
+    position: absolute;
+    fill: var(--color-white);
+  }
+}
+
+.button-next {
+  & svg {
+    right: var(--space-sm);
+  }
+}
+
+.button-prev {
+  & svg {
+    left: var(--space-sm);
+  }
+}

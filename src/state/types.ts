@@ -1,5 +1,7 @@
 // Reducers
 
+// App state
+
 export type Page = { id: string; title: string; inView: boolean }[];
 export type HeaderMargin = number;
 export type FooterMargin = number;
@@ -35,3 +37,20 @@ export interface UpdateMarginFooterAction {
 }
 
 export type AppActionTypes = UpdatePagesAction | UpdateMarginHeaderAction | UpdateMarginFooterAction;
+
+// Configurator state
+
+export type ConfiguratorPage = number;
+
+export interface configuratorState {
+  page: ConfiguratorPage;
+}
+
+export const CHANGE_CONFIGURATOR_PAGE = 'CHANGE_CONFIGURATOR_PAGE';
+
+export interface ChangeConfiguratorPage {
+  type: typeof CHANGE_CONFIGURATOR_PAGE;
+  payload: ConfiguratorPage;
+}
+
+export type ConfiguratorActionTypes = ChangeConfiguratorPage;

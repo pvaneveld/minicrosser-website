@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layouts/Layout/Layout';
 import Page from '../components/SmoothScroll/Page/Page';
+import PrevNext from '../components/Configurator/PrevNext/PrevNext';
 
 const Configurator: React.SFC = () => {
   return (
@@ -10,6 +11,7 @@ const Configurator: React.SFC = () => {
         dolorem voluptas expedita voluptate harum sunt aut sapiente? Harum deleniti quos sint nisi, repudiandae nesciunt
         quas!
       </Page>
+      <PrevNext />
     </Layout>
   );
 };

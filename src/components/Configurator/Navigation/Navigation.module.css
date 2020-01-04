@@ -1,3 +1,7 @@
+:root {
+  --nav-item-width: calc(var(--space-xxl) * 2);
+}
+
 .navigation {
   padding: var(--space-md) var(--space-md) 0 var(--space-md);
   display: flex;
@@ -22,6 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--transition-standard), color var(--transition-standard);
 
   & span {
     font-size: var(--text-md);
@@ -32,15 +37,46 @@
 .nav-item {
   padding-bottom: var(--space-md);
   text-align: center;
-  width: calc(var(--space-xxl) * 2);
+  width: var(--nav-item-width);
 }
 
 .indicator {
   position: absolute;
-  width: calc(var(--space-xxl) * 2);
+  width: var(--nav-item-width);
   border-bottom: 5px solid var(--color-orange);
   left: 0;
   bottom: -5px;
   transition: transform var(--transition-standard);
-  transform: translateX(calc(var(--space-xxl) * 2));
+}
+
+.nav-text {
+  transition: color var(--transition-standard);
+}
+
+.active {
+  & .nav-text {
+    color: var(--color-orange) !important;
+  }
+}
+
+@media (--viewport-md) {
+  :root {
+    --nav-item-width: calc(var(--space-xxl) * 1.5);
+  }
+}
+
+@media (--viewport-sm) {
+  :root {
+    --nav-item-width: var(--space-xl);
+  }
+  .nav-text {
+    display: none;
+  }
+
+  .active {
+    & .step-number {
+      background-color: var(--color-orange);
+      color: var(--color-white);
+    }
+  }
 }

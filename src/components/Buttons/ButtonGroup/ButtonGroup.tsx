@@ -12,6 +12,7 @@ const Button: React.SFC<ButtonGroupProps> = props => {
       {props.buttons.map((button, index) => (
         <ButtonComponent
           key={`button-${index}`}
+          classString={button.classString}
           type={button.type}
           link={button.link}
           target={button.target}

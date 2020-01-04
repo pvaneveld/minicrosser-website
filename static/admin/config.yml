@@ -13,7 +13,7 @@ collections:
         label: 'Configureren stap 1'
         name: 'stepOne'
         fields:
-          - { label: 'Title', name: 'titel', widget: 'hidden' }
+          - { label: 'Title', name: 'titel', widget: 'string' }
   - name: 'pages'
     label: 'Pages'
     files:
