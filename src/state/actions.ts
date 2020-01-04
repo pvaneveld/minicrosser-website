@@ -9,6 +9,8 @@ import {
   ConfiguratorActionTypes,
   CHANGE_CONFIGURATOR_PAGE,
   ConfiguratorPage,
+  UPDATE_CONFIGURATOR_SELECTION,
+  ConfiguratorSelection,
 } from './types';
 
 export const updatePages = (newPage: Page): AppActionTypes => ({
@@ -29,4 +31,9 @@ export const updateFooterMargin = (newMargin: FooterMargin): AppActionTypes => (
 export const changeConfiguratorPage = (newPage: ConfiguratorPage): ConfiguratorActionTypes => ({
   type: CHANGE_CONFIGURATOR_PAGE,
   payload: newPage,
+});
+
+export const updateConfiguratorSelection = (newSelection: ConfiguratorSelection): ConfiguratorActionTypes => ({
+  type: UPDATE_CONFIGURATOR_SELECTION,
+  payload: newSelection,
 });

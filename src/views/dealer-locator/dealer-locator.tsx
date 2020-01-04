@@ -107,7 +107,7 @@ const DealerLocator: React.SFC = () => {
 
   return (
     <div className={style.container}>
-      <HeaderFooterSpacing headerSpacing={true} />
+      {/* <HeaderFooterSpacing headerSpacing={true} />
       <div className={style.flexContainer}>
         <div className={style.dealerContainer}>
           <div className={style.dealerList}>
@@ -173,7 +173,7 @@ const DealerLocator: React.SFC = () => {
         </div>
       </div>
 
-      <HeaderFooterSpacing footerSpacing={true} />
+      <HeaderFooterSpacing footerSpacing={true} /> */}
     </div>
   );
 };

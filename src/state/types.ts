@@ -41,16 +41,24 @@ export type AppActionTypes = UpdatePagesAction | UpdateMarginHeaderAction | Upda
 // Configurator state
 
 export type ConfiguratorPage = number;
+export type ConfiguratorSelection = { category: string; name: string; price: number }[];
 
 export interface configuratorState {
   page: ConfiguratorPage;
+  selection: ConfiguratorSelection;
 }
 
 export const CHANGE_CONFIGURATOR_PAGE = 'CHANGE_CONFIGURATOR_PAGE';
+export const UPDATE_CONFIGURATOR_SELECTION = 'UPDATE_CONFIGURATOR_SELECTION';
 
 export interface ChangeConfiguratorPage {
   type: typeof CHANGE_CONFIGURATOR_PAGE;
   payload: ConfiguratorPage;
 }
 
-export type ConfiguratorActionTypes = ChangeConfiguratorPage;
+export interface UpdateConfiguratorSelection {
+  type: typeof UPDATE_CONFIGURATOR_SELECTION;
+  payload: ConfiguratorSelection;
+}
+
+export type ConfiguratorActionTypes = ChangeConfiguratorPage | UpdateConfiguratorSelection;

@@ -10,8 +10,8 @@ interface MobileMenuProps {
 const MobileMenu: React.SFC<MobileMenuProps> = props => {
   return (
     <div className={`${style.mobileMenu} ${props.isActive ? style.isActive : ''}`}>
-      {props.links.map(link => (
-        <Link className={style.link} to={link.target}>
+      {props.links.map((link, index) => (
+        <Link key={index} className={style.link} to={link.target}>
           {link.name}
         </Link>
       ))}

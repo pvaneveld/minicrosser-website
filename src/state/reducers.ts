@@ -7,6 +7,7 @@ import {
   configuratorState,
   ConfiguratorActionTypes,
   CHANGE_CONFIGURATOR_PAGE,
+  UPDATE_CONFIGURATOR_SELECTION,
 } from './types';
 
 const initialState: AppState = {
@@ -40,6 +41,7 @@ export const AppReducer = (state = initialState, action: AppActionTypes): AppSta
 
 const initialConfiguratorState: configuratorState = {
   page: 1,
+  selection: [],
 };
 
 export const configuratorReducer = (
@@ -51,6 +53,11 @@ export const configuratorReducer = (
       return {
         ...state,
         ...{ page: action.payload },
+      };
+    case UPDATE_CONFIGURATOR_SELECTION:
+      return {
+        ...state,
+        ...{ selection: action.payload },
       };
     default:
       return state;

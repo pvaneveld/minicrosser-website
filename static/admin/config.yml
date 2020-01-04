@@ -13,7 +13,22 @@ collections:
         label: 'Configureren stap 1'
         name: 'stepOne'
         fields:
-          - { label: 'Title', name: 'titel', widget: 'string' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-one' }
+          - {label: Paginatitel, name: title, widget: 'string' }
+          - {label: Categorienaam, name: category, widget: 'string' }
+          - {
+            label: 'Modellen',
+            name: 'models',
+            widget: 'list',
+            allow_add: true,
+            fields:
+              [
+                { label: 'Modelnaam', name: 'name', widget: 'string' },
+                { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                { label: 'Afbeelding', name: 'image', widget: 'image'},
+                { label: 'Omschrijving', name: 'description', widget: 'markdown' },
+              ],
+          },
   - name: 'pages'
     label: 'Pages'
     files:
