@@ -5,6 +5,7 @@
   transition: box-shadow var(--transition-standard);
   margin: 0 var(--space-md) var(--space-md) 0;
   display: flex;
+  color: var(--color-text);
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -46,4 +47,10 @@
 
 .is-active::before {
   transform: scale(1);
+}
+
+@media (--viewport-xs) {
+  .select-card {
+    margin-right: 0;
+  }
 }

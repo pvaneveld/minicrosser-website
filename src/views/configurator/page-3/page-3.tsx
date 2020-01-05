@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import style from './page-2.module.css';
+import style from './page-3.module.css';
 import { useStaticQuery, graphql } from 'gatsby';
 import ConfiguratorItem from '../../../components/Configurator/Item/Item';
 import SelectCard from '../../../components/Configurator/SelectCard/SelectCard';
 import SelectCardGrid from '../../../components/Configurator/SelectCard/Grid/Grid';
 
-const ConfiguratorPageTwo: React.SFC = () => {
-  const [activeColor, setActiveColor] = useState('');
+const ConfiguratorPageThree: React.SFC = () => {
+  const [activeHandling, setActiveHandling] = useState('');
 
   const query = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { templateKey: { eq: "configurator-two" } }) {
+      markdownRemark(frontmatter: { templateKey: { eq: "configurator-three" } }) {
         frontmatter {
           title
           category
-          colors {
+          handling {
             name
             price
             image {
@@ -36,20 +36,20 @@ const ConfiguratorPageTwo: React.SFC = () => {
     <div className={style.container}>
       <h2 className={style.header}>{content.title}</h2>
       <SelectCardGrid>
-        {content.colors.map((color, index) => (
+        {content.handling.map((handling, index) => (
           <ConfiguratorItem
             selectMultiple={false}
-            key={`color-${index}`}
-            name={color.name}
-            price={color.price}
+            key={`handling-${index}`}
+            name={handling.name}
+            price={handling.price}
             category={content.category}
-            isActiveCallback={color => setActiveColor(color)}
+            isActiveCallback={handling => setActiveHandling(handling)}
           >
             <SelectCard
-              isActive={activeColor === color.name}
-              fluid={color.image.childImageSharp.fluid}
-              name={color.name}
-              price={color.price}
+              isActive={activeHandling === handling.name}
+              fluid={handling.image.childImageSharp.fluid}
+              name={handling.name}
+              price={handling.price}
             />
           </ConfiguratorItem>
         ))}
@@ -58,4 +58,4 @@ const ConfiguratorPageTwo: React.SFC = () => {
   );
 };
 
-export default ConfiguratorPageTwo;
+export default ConfiguratorPageThree;

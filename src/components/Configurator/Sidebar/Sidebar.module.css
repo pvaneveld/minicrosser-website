@@ -1,12 +1,12 @@
 .sidebar {
   padding: var(--space-md);
   background: var(--color-gray-dark);
-  min-width: calc(var(--space-xxl) * 4);
+  width: calc(var(--space-xxl) * 4.5);
   color: var(--color-white);
 }
 
 .category {
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
 .category-title {
@@ -26,4 +26,10 @@
 .total-price {
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-white);
+}
+
+@media (--viewport-sm) {
+  .sidebar {
+    width: 100%;
+  }
 }

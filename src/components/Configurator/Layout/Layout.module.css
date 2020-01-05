@@ -6,3 +6,13 @@
 .content {
   flex: 1 1 auto;
 }
+
+@media (--viewport-md) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-bottom: var(--space-md);
+  }
+}

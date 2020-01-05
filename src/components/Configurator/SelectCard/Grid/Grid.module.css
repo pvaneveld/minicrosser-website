@@ -6,3 +6,10 @@
     display: flex;
   }
 }
+
+@media (--viewport-xs) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

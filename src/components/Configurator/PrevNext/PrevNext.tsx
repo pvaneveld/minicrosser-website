@@ -15,9 +15,9 @@ const PrevNext: React.SFC = () => {
   const prevClass = `${style.button} ${style.buttonPrev}`;
 
   return (
-    <>
+    <div className={style.container}>
       <Button classString={prevClass} clickHandler={() => dispatch(changeConfiguratorPage(currentPage - 1))} type="cta">
-        Vorige
+        <span>Vorige</span>
         <ArrowPrev />
       </Button>
       <Button
@@ -26,10 +26,10 @@ const PrevNext: React.SFC = () => {
         clickHandler={() => dispatch(changeConfiguratorPage(currentPage + 1))}
         type="cta"
       >
-        Volgende
+        <span>Volgende</span>
         <ArrowNext />
       </Button>
-    </>
+    </div>
   );
 };
 

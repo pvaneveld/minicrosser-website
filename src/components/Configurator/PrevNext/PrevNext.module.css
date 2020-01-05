@@ -19,3 +19,33 @@
     left: var(--space-sm);
   }
 }
+
+.container {
+  margin-top: var(--space-lg);
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: center;
+}
+
+@media (--viewport-xs) {
+  .container {
+  }
+
+  .button {
+    width: var(--space-xl);
+    height: var(--space-xl);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & svg {
+      left: 0;
+      position: relative;
+    }
+
+    & span {
+      display: none;
+    }
+  }
+}
