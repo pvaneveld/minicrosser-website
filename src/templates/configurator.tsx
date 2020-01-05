@@ -7,6 +7,8 @@ import ConfiguratorLayout from '../components/Configurator/Layout/Layout';
 import Sidebar from '../components/Configurator/Sidebar/Sidebar';
 import ConfiguratorPageTwo from '../views/configurator/page-2/page-2';
 import ConfiguratorPageThree from '../views/configurator/page-3/page-3';
+import ConfiguratorPageFour from '../views/configurator/page-4/page-4';
+import ConfiguratorPageFive from '../views/configurator/page-5/page-5';
 import { useStaticQuery, graphql } from 'gatsby';
 import { updateValidPages } from '../state/actions';
 
@@ -34,6 +36,11 @@ const Configurator: React.SFC = () => {
           category
         }
       }
+      four: markdownRemark(frontmatter: { templateKey: { eq: "configurator-four" } }) {
+        frontmatter {
+          category
+        }
+      }
     }
   `);
 
@@ -45,12 +52,12 @@ const Configurator: React.SFC = () => {
 
       const validUntil: number = currentSelection.reduce((acc, curr) => {
         const index = flattenedCategories.indexOf(curr.category);
-        if (index + 2 > acc) {
-          return index + 2;
+        if (currentPage > 4) {
+          return 6;
         }
 
-        if (currentPage === 5) {
-          return 6;
+        if (index + 2 > acc) {
+          return index + 2;
         }
 
         return currentPage;
@@ -62,7 +69,7 @@ const Configurator: React.SFC = () => {
 
   useEffect(() => {
     updateValidSteps();
-  }, [currentSelection]);
+  }, [currentSelection, currentPage]);
 
   return (
     <Layout theme={{ headerDark: true, footerDark: true }} configurator={true}>
@@ -72,6 +79,8 @@ const Configurator: React.SFC = () => {
           <ConfiguratorLayout sidebar={<Sidebar />}>
             {currentPage === 2 && <ConfiguratorPageTwo />}
             {currentPage === 3 && <ConfiguratorPageThree />}
+            {currentPage === 4 && <ConfiguratorPageFour />}
+            {currentPage === 5 && <ConfiguratorPageFive />}
           </ConfiguratorLayout>
         )}
       </Page>

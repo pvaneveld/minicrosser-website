@@ -14,78 +14,131 @@ collections:
         name: 'stepOne'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-one' }
-          - {label: Paginatitel, name: title, widget: 'string' }
-          - {label: Categorienaam, name: category, widget: 'string' }
+          - { label: Paginatitel, name: title, widget: 'string' }
+          - { label: Categorienaam, name: category, widget: 'string' }
           - {
-            label: 'Modellen',
-            name: 'models',
-            widget: 'list',
-            allow_add: true,
-            fields:
-              [
-                { label: 'Modelnaam', name: 'name', widget: 'string' },
-                { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
-                { label: 'Afbeelding', name: 'image', widget: 'image'},
-                { label: 'Omschrijving', name: 'description', widget: 'markdown' },
-              ],
-          },
+              label: 'Modellen',
+              name: 'models',
+              widget: 'list',
+              allow_add: true,
+              fields:
+                [
+                  { label: 'Modelnaam', name: 'name', widget: 'string' },
+                  { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                  { label: 'Afbeelding', name: 'image', widget: 'image' },
+                  { label: 'Omschrijving', name: 'description', widget: 'markdown' },
+                ],
+            }
       - file: 'src/data/configurator/step-2.md'
         label: 'Configureren stap 2'
         name: 'stepTwo'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-two' }
-          - {label: Paginatitel, name: title, widget: 'string' }
-          - {label: Categorienaam, name: category, widget: 'string' }
+          - { label: Paginatitel, name: title, widget: 'string' }
+          - { label: Categorienaam, name: category, widget: 'string' }
           - {
-            label: 'Kleuren',
-            name: 'colors',
-            widget: 'list',
-            allow_add: true,
-            fields:
-              [
-                { label: 'Naam van de kleur', name: 'name', widget: 'string' },
-                { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
-                { label: 'Afbeelding', name: 'image', widget: 'image'},
-              ],
-          },
+              label: 'Kleuren',
+              name: 'colors',
+              widget: 'list',
+              allow_add: true,
+              fields:
+                [
+                  { label: 'Naam van de kleur', name: 'name', widget: 'string' },
+                  { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                  { label: 'Afbeelding', name: 'image', widget: 'image' },
+                ],
+            }
       - file: 'src/data/configurator/step-3.md'
         label: 'Configureren stap 3'
         name: 'stepThree'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-three' }
-          - {label: Paginatitel, name: title, widget: 'string' }
-          - {label: Categorienaam, name: category, widget: 'string' }
+          - { label: Paginatitel, name: title, widget: 'string' }
+          - { label: Categorienaam, name: category, widget: 'string' }
           - {
-            label: 'Bediening',
-            name: 'handling',
-            widget: 'list',
-            allow_add: true,
-            fields:
-              [
-                { label: 'Naam bediening', name: 'name', widget: 'string' },
-                { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
-                { label: 'Afbeelding', name: 'image', widget: 'image'},
-              ],
-          },
-      - file: 'src/data/configurator/step-2.md'
-        label: 'Configureren stap 2'
-        name: 'stepTwo'
+              label: 'Bediening',
+              name: 'handling',
+              widget: 'list',
+              allow_add: true,
+              fields:
+                [
+                  { label: 'Naam bediening', name: 'name', widget: 'string' },
+                  { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                  { label: 'Afbeelding', name: 'image', widget: 'image' },
+                ],
+            }
+      - file: 'src/data/configurator/step-4.md'
+        label: 'Configureren stap 4'
+        name: 'stepFour'
         fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-two' }
-          - {label: Paginatitel, name: title, widget: 'string' }
-          - {label: Categorienaam, name: category, widget: 'string' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-four' }
+          - { label: Paginatitel, name: title, widget: 'string' }
+          - { label: Categorienaam, name: category, widget: 'string' }
           - {
-            label: 'Kleuren',
-            name: 'colors',
-            widget: 'list',
-            allow_add: true,
-            fields:
-              [
-                { label: 'Nama van de kleur', name: 'name', widget: 'string' },
-                { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
-                { label: 'Afbeelding', name: 'image', widget: 'image'},
-              ],
-          },
+              label: 'Zitsysteem',
+              name: 'seat',
+              widget: 'list',
+              allow_add: true,
+              fields:
+                [
+                  { label: 'Naam zitsysteem', name: 'name', widget: 'string' },
+                  { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                  { label: 'Afbeelding', name: 'image', widget: 'image' },
+                ],
+            }
+      - file: 'src/data/configurator/step-5.md'
+        label: 'Configureren stap 5'
+        name: 'stepFive'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-five' }
+          - {
+              label: 'Accesoires zitsysteem',
+              name: 'accessoriesSeat',
+              widget: object,
+              fields:
+                [
+                  {
+                    { label: Titel, name: title, widget: 'string' },
+                    { label: Categorienaam, name: category, widget: 'string' },
+                    {
+                      label: 'Accesoires Zitsysteem',
+                      name: 'accessoriesSeatList',
+                      widget: 'list',
+                      allow_add: true,
+                      fields:
+                        [
+                          { label: 'Naam accessoire', name: 'name', widget: 'string' },
+                          { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                          { label: 'Afbeelding', name: 'image', widget: 'image' },
+                        ],
+                    },
+                  },
+                ],
+            }
+          - {
+              label: 'Accessoires overig',
+              name: 'accessories',
+              widget: object,
+              fields:
+                [
+                  {
+                    { label: Titel, name: title, widget: 'string' },
+                    { label: Categorienaam, name: category, widget: 'string' },
+                    {
+                      label: 'Accessoires',
+                      name: 'accessoriesList',
+                      widget: 'list',
+                      allow_add: true,
+                      fields:
+                        [
+                          { label: 'Naam accessoire', name: 'name', widget: 'string' },
+                          { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                          { label: 'Afbeelding', name: 'image', widget: 'image' },
+                        ],
+                    },
+                  },
+                ],
+            }
   - name: 'pages'
     label: 'Pages'
     files:
