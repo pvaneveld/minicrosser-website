@@ -10,15 +10,18 @@ export interface ButtonProps {
   target?: string;
   submit?: boolean;
   classString?: string;
+  disabled?: boolean;
 }
 
 const Button: React.SFC<ButtonProps> = props => {
-  const { clickHandler, children, link, target, submit, classString, dataId } = props;
+  const { clickHandler, children, link, target, submit, classString, disabled } = props;
   const classNames = `${style.button} ${props.type && props.type === 'secondary' ? style.secondary : ''} ${
     props.type && props.type === 'cta' ? style.cta : ''
   } ${!props.type ? style.primary : ''} ${props.type === 'secondary-dark' ? style.secondaryDark : ''} ${
     classString ? classString : ''
   }`;
+
+  const setDisabled: boolean = disabled ? disabled : false;
 
   return (
     <React.Fragment>
@@ -27,7 +30,12 @@ const Button: React.SFC<ButtonProps> = props => {
           {children}
         </Link>
       ) : (
-        <button className={classNames} onClick={clickHandler} type={submit ? 'submit' : 'button'}>
+        <button
+          disabled={setDisabled}
+          className={classNames}
+          onClick={clickHandler}
+          type={submit ? 'submit' : 'button'}
+        >
           {children}
         </button>
       )}

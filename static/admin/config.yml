@@ -29,6 +29,25 @@ collections:
                 { label: 'Omschrijving', name: 'description', widget: 'markdown' },
               ],
           },
+      - file: 'src/data/configurator/step-2.md'
+        label: 'Configureren stap 2'
+        name: 'stepTwo'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-two' }
+          - {label: Paginatitel, name: title, widget: 'string' }
+          - {label: Categorienaam, name: category, widget: 'string' }
+          - {
+            label: 'Kleuren',
+            name: 'colors',
+            widget: 'list',
+            allow_add: true,
+            fields:
+              [
+                { label: 'Nama van de kleur', name: 'name', widget: 'string' },
+                { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                { label: 'Afbeelding', name: 'image', widget: 'image'},
+              ],
+          },
   - name: 'pages'
     label: 'Pages'
     files:

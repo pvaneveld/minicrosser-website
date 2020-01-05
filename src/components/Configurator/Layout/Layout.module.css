@@ -1,0 +1,8 @@
+.grid {
+  margin: var(--space-md) 0;
+  display: flex;
+}
+
+.content {
+  flex: 1 1 auto;
+}

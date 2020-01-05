@@ -9,6 +9,7 @@ import style from './PrevNext.module.css';
 const PrevNext: React.SFC = () => {
   const dispatch = useDispatch();
   const currentPage = useSelector((state: RootState) => state.configurator.page);
+  const validUntil = useSelector((state: RootState) => state.configurator.validUntil);
 
   const nextClass = `${style.button} ${style.buttonNext}`;
   const prevClass = `${style.button} ${style.buttonPrev}`;
@@ -19,7 +20,12 @@ const PrevNext: React.SFC = () => {
         Vorige
         <ArrowPrev />
       </Button>
-      <Button classString={nextClass} clickHandler={() => dispatch(changeConfiguratorPage(currentPage + 1))} type="cta">
+      <Button
+        disabled={currentPage >= validUntil}
+        classString={nextClass}
+        clickHandler={() => dispatch(changeConfiguratorPage(currentPage + 1))}
+        type="cta"
+      >
         Volgende
         <ArrowNext />
       </Button>

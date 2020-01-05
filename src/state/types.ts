@@ -41,15 +41,18 @@ export type AppActionTypes = UpdatePagesAction | UpdateMarginHeaderAction | Upda
 // Configurator state
 
 export type ConfiguratorPage = number;
-export type ConfiguratorSelection = { category: string; name: string; price: number }[];
+export type ConfiguratorSelection = { category: string; name: string; price: string }[];
+export type ValidUntil = number;
 
 export interface configuratorState {
   page: ConfiguratorPage;
   selection: ConfiguratorSelection;
+  validUntil: ValidUntil;
 }
 
 export const CHANGE_CONFIGURATOR_PAGE = 'CHANGE_CONFIGURATOR_PAGE';
 export const UPDATE_CONFIGURATOR_SELECTION = 'UPDATE_CONFIGURATOR_SELECTION';
+export const UPDATE_VALID_PAGES = 'UPDATE_VALID_PAGES';
 
 export interface ChangeConfiguratorPage {
   type: typeof CHANGE_CONFIGURATOR_PAGE;
@@ -61,4 +64,9 @@ export interface UpdateConfiguratorSelection {
   payload: ConfiguratorSelection;
 }
 
-export type ConfiguratorActionTypes = ChangeConfiguratorPage | UpdateConfiguratorSelection;
+export interface UpdateValidPages {
+  type: typeof UPDATE_VALID_PAGES;
+  payload: ValidUntil;
+}
+
+export type ConfiguratorActionTypes = ChangeConfiguratorPage | UpdateConfiguratorSelection | UpdateValidPages;

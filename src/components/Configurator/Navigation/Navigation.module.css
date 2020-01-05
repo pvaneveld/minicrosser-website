@@ -2,6 +2,13 @@
   --nav-item-width: calc(var(--space-xxl) * 2);
 }
 
+.nav-item[disabled] {
+  & .step-number {
+    background-color: var(--gray-4);
+    color: var(--color-white);
+  }
+}
+
 .navigation {
   padding: var(--space-md) var(--space-md) 0 var(--space-md);
   display: flex;

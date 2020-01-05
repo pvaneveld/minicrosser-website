@@ -8,7 +8,7 @@ interface ConfiguratorItemProps {
   price: number;
   selectMultiple: boolean;
   selectCallback?: () => void;
-  isActiveCallback: (active: boolean) => void;
+  isActiveCallback?: (itemName: string) => void;
   children: ReactNode;
   classString?: string;
 }
@@ -36,17 +36,26 @@ const ConfiguratorItem: React.SFC<ConfiguratorItemProps> = props => {
       );
     }
 
-    isActiveCallback(true);
+    isActiveCallback && isActiveCallback(name);
     selectCallback && selectCallback();
   };
 
   useEffect(() => {
-    const selected = currentSelection.find(item => item.name === name) ? true : false;
-    isActiveCallback(selected);
+    if (isActiveCallback) {
+      const selected = currentSelection.find(item => item.name === name) ? true : false;
+
+      if (selected) {
+        isActiveCallback(name);
+      }
+    }
   }, [currentSelection]);
 
   return (
-    <li className={props.classString ? props.classString : ''} onClick={updateSelection}>
+    <li
+      style={{ listStyleType: 'none' }}
+      onClick={updateSelection}
+      className={props.classString ? props.classString : ''}
+    >
       {children}
     </li>
   );

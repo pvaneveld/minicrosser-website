@@ -4,6 +4,11 @@
   width: calc(var(--space-xxl) * 3);
   text-transform: uppercase;
   text-align: center;
+  transition: background-color var(--transition-standard);
+}
+
+.button[disabled] {
+  background-color: var(--gray-4);
 }
 
 .primary {

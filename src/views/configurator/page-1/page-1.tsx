@@ -7,8 +7,12 @@ import ImageFluid from '../../../components/FluidImage/FluidImage';
 import Markdown from '../../../components/Markdown/Markdown';
 import Button from '../../../components/Buttons/Button/Button';
 import { toCurrency } from '../../../helpers/toCurrency';
+import { useDispatch } from 'react-redux';
+import { changeConfiguratorPage } from '../../../state/actions';
 
 const ConfiguratorPageOne: React.SFC = () => {
+  const dispatch = useDispatch();
+
   const query = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { templateKey: { eq: "configurator-one" } }) {
@@ -49,7 +53,7 @@ const ConfiguratorPageOne: React.SFC = () => {
               price={price}
               name={name}
               category={content.category}
-              isActiveCallback={active => console.log(active)}
+              selectCallback={() => dispatch(changeConfiguratorPage(2))}
               selectMultiple={false}
             >
               <>

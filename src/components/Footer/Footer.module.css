@@ -7,6 +7,7 @@
   padding: var(--space-md) var(--space-md) 0 var(--space-md);
   display: flex;
   justify-content: center;
+  z-index: 10;
 }
 
 .dark {
