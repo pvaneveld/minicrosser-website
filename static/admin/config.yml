@@ -97,21 +97,19 @@ collections:
               widget: object,
               fields:
                 [
+                  { label: Titel, name: title, widget: 'string' },
+                  { label: Categorienaam, name: category, widget: 'string' },
                   {
-                    { label: Titel, name: title, widget: 'string' },
-                    { label: Categorienaam, name: category, widget: 'string' },
-                    {
-                      label: 'Accesoires Zitsysteem',
-                      name: 'accessoriesSeatList',
-                      widget: 'list',
-                      allow_add: true,
-                      fields:
-                        [
-                          { label: 'Naam accessoire', name: 'name', widget: 'string' },
-                          { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
-                          { label: 'Afbeelding', name: 'image', widget: 'image' },
-                        ],
-                    },
+                    label: 'Accesoires Zitsysteem',
+                    name: 'accessoriesSeatList',
+                    widget: 'list',
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: 'Naam accessoire', name: 'name', widget: 'string' },
+                        { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                        { label: 'Afbeelding', name: 'image', widget: 'image' },
+                      ],
                   },
                 ],
             }
@@ -121,21 +119,19 @@ collections:
               widget: object,
               fields:
                 [
+                  { label: Titel, name: title, widget: 'string' },
+                  { label: Categorienaam, name: category, widget: 'string' },
                   {
-                    { label: Titel, name: title, widget: 'string' },
-                    { label: Categorienaam, name: category, widget: 'string' },
-                    {
-                      label: 'Accessoires',
-                      name: 'accessoriesList',
-                      widget: 'list',
-                      allow_add: true,
-                      fields:
-                        [
-                          { label: 'Naam accessoire', name: 'name', widget: 'string' },
-                          { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
-                          { label: 'Afbeelding', name: 'image', widget: 'image' },
-                        ],
-                    },
+                    label: 'Accessoires',
+                    name: 'accessoriesList',
+                    widget: 'list',
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: 'Naam accessoire', name: 'name', widget: 'string' },
+                        { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
+                        { label: 'Afbeelding', name: 'image', widget: 'image' },
+                      ],
                   },
                 ],
             }
