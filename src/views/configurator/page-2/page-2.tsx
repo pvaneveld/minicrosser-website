@@ -43,7 +43,7 @@ const ConfiguratorPageTwo: React.SFC = () => {
             name={color.name}
             price={color.price}
             category={content.category}
-            isActiveCallback={color => setActiveColor(color)}
+            isActiveCallback={color => (color.selected ? setActiveColor(color.name) : setActiveColor(''))}
           >
             <SelectCard
               isActive={activeColor === color.name}

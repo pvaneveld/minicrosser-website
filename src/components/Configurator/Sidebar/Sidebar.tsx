@@ -6,15 +6,15 @@ import { toCurrency } from '../../../helpers/toCurrency';
 const Sidebar: React.SFC = () => {
   const selectedItems = useSelector((state: RootState) => state.configurator.selection);
 
-  const sidebarContent: (string | { name: string; price: string }[])[][] = Object.entries(
+  const sidebarContent: string | { name: string; price: string }[] = Object.entries(
     selectedItems.reduce((acc, curr) => {
       const item = { price: curr.price, name: curr.name };
       if (acc[curr.category]) {
-        acc[curr.category].concat(item);
-        return acc;
+        acc[curr.category] = acc[curr.category].concat(item);
+      } else {
+        acc[curr.category] = [].concat(item);
       }
 
-      acc[curr.category] = [].concat(item);
       return acc;
     }, {}),
   );

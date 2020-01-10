@@ -17,6 +17,7 @@
 .selected-item {
   display: flex;
   justify-content: space-between;
+  line-height: 1.5;
 
   & span {
     flex-basis: auto;

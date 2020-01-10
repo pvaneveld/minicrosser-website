@@ -52,9 +52,15 @@ const ConfiguratorPageFive: React.SFC = () => {
   const { accessoriesSeat } = content;
   const { accessories } = content;
 
+  const selectHandler = (selectCallback, currentItems, item) => {
+    item.selected
+      ? selectCallback(currentItems.concat(item.name))
+      : selectCallback(currentItems.filter(currentItem => item.name !== currentItem));
+  };
+
   return (
     <div className={style.container}>
-      <h2 className={style.header}>{accessories.title}</h2>
+      <h2 className={style.header}>{accessoriesSeat.title}</h2>
       <SelectCardGrid>
         {accessoriesSeat.accessoriesSeatList.map((accessory, index) => (
           <ConfiguratorItem
@@ -63,11 +69,7 @@ const ConfiguratorPageFive: React.SFC = () => {
             name={accessory.name}
             price={accessory.price}
             category={accessoriesSeat.category}
-            isActiveCallback={accessory =>
-              setSeatAccessories(
-                !seatAccessories.includes(accessory) ? seatAccessories.concat(accessory) : seatAccessories,
-              )
-            }
+            isActiveCallback={item => selectHandler(setSeatAccessories, seatAccessories, item)}
           >
             <SelectCard
               isActive={seatAccessories.includes(accessory.name)}
@@ -79,7 +81,7 @@ const ConfiguratorPageFive: React.SFC = () => {
         ))}
       </SelectCardGrid>
 
-      <h2 className={style.header}>{accessoriesSeat.title}</h2>
+      <h2 className={style.header}>{accessories.title}</h2>
       <SelectCardGrid>
         {accessories.accessoriesList.map((accessory, index) => (
           <ConfiguratorItem
@@ -88,11 +90,7 @@ const ConfiguratorPageFive: React.SFC = () => {
             name={accessory.name}
             price={accessory.price}
             category={accessories.category}
-            isActiveCallback={accessory =>
-              setOtherAccessories(
-                !otherAccessories.includes(accessory) ? otherAccessories.concat(accessory) : otherAccessories,
-              )
-            }
+            isActiveCallback={item => selectHandler(setOtherAccessories, otherAccessories, item)}
           >
             <SelectCard
               isActive={otherAccessories.includes(accessory.name)}

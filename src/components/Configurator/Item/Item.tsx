@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateConfiguratorSelection } from '../../../state/actions';
 
@@ -8,7 +8,7 @@ interface ConfiguratorItemProps {
   price: number;
   selectMultiple: boolean;
   selectCallback?: () => void;
-  isActiveCallback?: (itemName: string) => void;
+  isActiveCallback?: (item: { selected: boolean; name: string }) => void;
   children: ReactNode;
   classString?: string;
 }
@@ -24,31 +24,38 @@ const ConfiguratorItem: React.SFC<ConfiguratorItemProps> = props => {
       name,
       price,
     };
-    if (selectMultiple) {
-      dispatch(updateConfiguratorSelection(currentSelection.filter(item => item.name !== name).concat(item)));
+
+    const isSelected = currentSelection.find(item => item.name === name) ? true : false;
+
+    if (isSelected) {
+      dispatch(updateConfiguratorSelection(currentSelection.filter(item => item.name !== name)));
+      isActiveCallback && isActiveCallback({ selected: false, name });
     } else {
-      dispatch(
-        updateConfiguratorSelection(
-          currentSelection.length
-            ? currentSelection.filter(item => item.category !== category && item.name !== name).concat(item)
-            : currentSelection.concat(item),
-        ),
-      );
+      if (selectMultiple) {
+        dispatch(updateConfiguratorSelection(currentSelection.concat(item)));
+      } else {
+        dispatch(
+          updateConfiguratorSelection(
+            currentSelection.length
+              ? currentSelection.filter(item => item.category !== category).concat(item)
+              : currentSelection.concat(item),
+          ),
+        );
+      }
+      isActiveCallback && isActiveCallback({ selected: true, name });
     }
 
-    isActiveCallback && isActiveCallback(name);
+    // setIsSelected(!isSelected);
+
+    // isActiveCallback && isActiveCallback(name);
     selectCallback && selectCallback();
   };
 
-  useEffect(() => {
-    if (isActiveCallback) {
-      const selected = currentSelection.find(item => item.name === name) ? true : false;
-
-      if (selected) {
-        isActiveCallback(name);
-      }
-    }
-  }, [currentSelection]);
+  // useEffect(() => {
+  //   if (isActiveCallback) {
+  //     isActiveCallback({isSelected, name});
+  //   }
+  // }, [currentSelection]);
 
   return (
     <li

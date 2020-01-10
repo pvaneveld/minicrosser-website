@@ -43,7 +43,9 @@ const ConfiguratorPageThree: React.SFC = () => {
             name={handling.name}
             price={handling.price}
             category={content.category}
-            isActiveCallback={handling => setActiveHandling(handling)}
+            isActiveCallback={handling =>
+              handling.selected ? setActiveHandling(handling.name) : setActiveHandling('')
+            }
           >
             <SelectCard
               isActive={activeHandling === handling.name}

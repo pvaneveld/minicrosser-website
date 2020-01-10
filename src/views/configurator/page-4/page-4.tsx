@@ -43,7 +43,7 @@ const ConfiguratorPageThree: React.SFC = () => {
             name={seat.name}
             price={seat.price}
             category={content.category}
-            isActiveCallback={seat => setActiveSeat(seat)}
+            isActiveCallback={seat => (seat.selected ? setActiveSeat(seat.name) : setActiveSeat(''))}
           >
             <SelectCard
               isActive={activeSeat === seat.name}
