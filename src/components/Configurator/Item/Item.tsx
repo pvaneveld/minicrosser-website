@@ -44,18 +44,14 @@ const ConfiguratorItem: React.SFC<ConfiguratorItemProps> = props => {
       }
       isActiveCallback && isActiveCallback({ selected: true, name });
     }
-
-    // setIsSelected(!isSelected);
-
-    // isActiveCallback && isActiveCallback(name);
     selectCallback && selectCallback();
   };
 
-  // useEffect(() => {
-  //   if (isActiveCallback) {
-  //     isActiveCallback({isSelected, name});
-  //   }
-  // }, [currentSelection]);
+  useEffect(() => {
+    if (isActiveCallback) {
+      isActiveCallback({ selected: currentSelection.find(item => item.name === name) ? true : false, name });
+    }
+  }, []);
 
   return (
     <li
