@@ -65,8 +65,6 @@ const Configurator: React.SFC = () => {
         return acc;
       }, 0);
 
-      console.log(`valid: ${validUntil}`);
-
       dispatch(updateValidPages(validUntil));
     }
   };

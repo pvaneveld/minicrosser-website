@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { ReactNode } from 'react';
 import 'typeface-roboto';
 import 'reset-css';
@@ -7,6 +7,7 @@ import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
 import Flag from '../../../icons/flag.svg';
 import style from './Layout.module.css';
+import { usePageHeight } from '../../../hooks/usePageHeight';
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,8 +19,8 @@ interface LayoutProps {
 }
 
 const Layout: React.SFC<LayoutProps> = props => {
+  usePageHeight();
   const { headerDark, footerDark } = props.theme;
-
   return (
     <div className={style.layout}>
       <Header configurator={props.configurator} darkTheme={headerDark} />

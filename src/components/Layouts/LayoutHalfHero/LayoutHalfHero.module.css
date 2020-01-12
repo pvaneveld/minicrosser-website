@@ -1,13 +1,15 @@
 .half-hero-container {
   min-height: 100vh;
   max-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
   grid-template-rows: 60% 40%;
   display: grid;
 }
 
 @media (--viewport-md) {
   .half-hero-container {
-    grid-template-rows: 100vh auto;
+    grid-template-rows: calc(var(--vh, 1vh) * 100) auto;
     max-height: inherit;
   }
 }
