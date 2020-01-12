@@ -2,7 +2,6 @@ import React, { ReactNode, useEffect } from 'react';
 import style from './Layout.module.css';
 import ContentContainer from '../../Layouts/ContentContainer/ContentContainer';
 import PrevNext from '../PrevNext/PrevNext';
-import { usePageHeight } from '../../../hooks/usePageHeight';
 
 interface ConfiguratorLayoutProps {
   children: ReactNode;
@@ -10,8 +9,6 @@ interface ConfiguratorLayoutProps {
   resetButton?: ReactNode;
 }
 const ConfiguratorLayout: React.SFC<ConfiguratorLayoutProps> = props => {
-  usePageHeight();
-
   return (
     <ContentContainer headerSpacing={true} footerSpacing={true}>
       <div className={style.grid}>
