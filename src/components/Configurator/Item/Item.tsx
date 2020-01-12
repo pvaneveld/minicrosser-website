@@ -47,12 +47,6 @@ const ConfiguratorItem: React.SFC<ConfiguratorItemProps> = props => {
     selectCallback && selectCallback();
   };
 
-  useEffect(() => {
-    if (isActiveCallback) {
-      isActiveCallback({ selected: currentSelection.find(item => item.name === name) ? true : false, name });
-    }
-  }, []);
-
   return (
     <li
       style={{ listStyleType: 'none' }}

@@ -53,15 +53,17 @@ const Configurator: React.SFC = () => {
       const validUntil: number = currentSelection.reduce((acc, curr) => {
         const index = flattenedCategories.indexOf(curr.category);
         if (currentPage > 4) {
-          return 6;
+          acc = 6;
+        } else if (index + 2 > acc) {
+          acc = index + 2;
+        } else if (acc < currentPage) {
+          acc = currentPage;
         }
 
-        if (index + 2 > acc) {
-          return index + 2;
-        }
-
-        return currentPage;
+        return acc;
       }, 0);
+
+      console.log(`valid: ${validUntil}`);
 
       dispatch(updateValidPages(validUntil));
     }

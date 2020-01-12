@@ -4,9 +4,13 @@ import { useStaticQuery, graphql } from 'gatsby';
 import ConfiguratorItem from '../../../components/Configurator/Item/Item';
 import SelectCard from '../../../components/Configurator/SelectCard/SelectCard';
 import SelectCardGrid from '../../../components/Configurator/SelectCard/Grid/Grid';
+import initialSelect from '../../../helpers/configuratorSelectedHistory';
+import { useSelector } from 'react-redux';
 
 const ConfiguratorPageThree: React.SFC = () => {
   const [activeSeat, setActiveSeat] = useState('');
+
+  const currentSelection = useSelector((state: RootState) => state.configurator.selection);
 
   const query = useStaticQuery(graphql`
     query {
@@ -31,6 +35,12 @@ const ConfiguratorPageThree: React.SFC = () => {
   `);
 
   const { frontmatter: content } = query.markdownRemark;
+
+  useEffect(() => {
+    if (currentSelection.length) {
+      initialSelect(currentSelection, content.category, false, setActiveSeat, ['']);
+    }
+  }, []);
 
   return (
     <div className={style.container}>
