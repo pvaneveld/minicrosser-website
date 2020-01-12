@@ -22,7 +22,7 @@ const ProductPageOneContent: React.SFC<ProductpageOneContentProps> = props => {
         </h1>
       </div>
 
-      <Button type="secondary-dark" link={true} target="/">
+      <Button type="secondary-dark" link={true} target="/configureren">
         {buttonText}
       </Button>
 

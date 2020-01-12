@@ -27,7 +27,7 @@ const HomepageOne: React.SFC = () => {
     {
       children: buttonPrimary,
       link: true,
-      target: '/',
+      target: '/configureren',
     },
     {
       type: 'secondary' as const,

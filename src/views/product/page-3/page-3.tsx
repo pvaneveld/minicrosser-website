@@ -8,7 +8,7 @@ const ProductPageThree: React.SFC<ProductPageThreeProps> = props => {
   const { title, buttons } = props;
   const { buttonPrimary: buttonTextPrimary, buttonSecondary: buttonTextSecondary } = buttons;
   const buttonProps = [
-    { children: buttonTextPrimary, link: true, target: '/' },
+    { children: buttonTextPrimary, link: true, target: '/configureren' },
     { children: buttonTextSecondary, type: 'secondary' as const, link: true, target: '/proefrit' },
   ];
   return (

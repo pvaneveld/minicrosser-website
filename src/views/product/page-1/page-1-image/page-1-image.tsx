@@ -23,7 +23,9 @@ const ProductPageOneImage: React.SFC<ProductpageOneImageProps> = props => {
           </li>
         ))}
         <li className={style.ctaButton}>
-          <Button>{buttonText}</Button>
+          <Button link={true} target="/configureren">
+            {buttonText}
+          </Button>
         </li>
       </ul>
     </>
