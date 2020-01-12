@@ -37,7 +37,7 @@ const ScrollChevronDown: React.SFC<ScrollChevronDownProps> = props => {
   const { id, colorBlack } = props;
 
   return (
-    <button className={classes} onClick={(): void => handleClick(id)}>
+    <button className={classes} onClick={(): void => handleClick(id)} aria-label="scroll omlaag">
       <ChevronDown className={colorBlack ? style.black : ''} />
     </button>
   );

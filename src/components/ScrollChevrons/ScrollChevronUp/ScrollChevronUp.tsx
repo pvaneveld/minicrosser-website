@@ -28,7 +28,7 @@ const ScrollChevronUp: React.SFC = () => {
   }, [pages]);
 
   return (
-    <button className={classes} onClick={handleClick}>
+    <button className={classes} onClick={handleClick} aria-label="scroll omhoog">
       <ChevronUp />
     </button>
   );

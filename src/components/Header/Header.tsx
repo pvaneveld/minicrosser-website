@@ -86,7 +86,7 @@ const Header: React.SFC<HeaderProps> = props => {
       style={headerPadding}
       className={`${style.header}${props.darkTheme ? ` ${style.headerDark}` : ''}`}
     >
-      <Link to="/" className={style.logoContainer}>
+      <Link to="/" className={style.logoContainer} aria-label="link naar de homepage">
         <figure>
           <Polymer className={style.logo} />
         </figure>
