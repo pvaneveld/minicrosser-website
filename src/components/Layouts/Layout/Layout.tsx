@@ -25,10 +25,10 @@ const Layout: React.SFC<LayoutProps> = props => {
   return (
     <>
       <Head />
-      <div className={style.layout} role="main">
+      <div className={style.layout}>
         <Header configurator={props.configurator} darkTheme={headerDark} />
         {!props.configurator && <Flag className={style.flag} />}
-        {props.children}
+        <div role="main">{props.children}</div>
 
         <Footer darkTheme={footerDark} />
       </div>

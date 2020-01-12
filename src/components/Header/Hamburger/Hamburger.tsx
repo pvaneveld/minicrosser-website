@@ -18,6 +18,7 @@ const Hamburger: React.SFC<HamburgerProps> = props => {
       onClick={props.clickHandler}
       className={`${style.hamburger} ${style.hamburgerSpring}${props.isActive ? ` ${style.isActive}` : ''}`}
       type="button"
+      araia-label="open en sluit menu"
     >
       <span className={style.hamburgerBox}>
         <span className={style.hamburgerInner}></span>
