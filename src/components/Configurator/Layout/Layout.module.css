@@ -7,6 +7,11 @@
   flex: 1 1 auto;
 }
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (--viewport-md) {
   .grid {
     flex-direction: column;
@@ -14,5 +19,13 @@
 
   .content {
     margin-bottom: var(--space-md);
+  }
+
+  .configuration {
+    order: 2;
+  }
+
+  .reset {
+    order: 1;
   }
 }

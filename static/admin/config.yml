@@ -135,6 +135,110 @@ collections:
                   },
                 ],
             }
+      - file: 'src/data/configurator/form.md'
+        label: 'Configureren stap 6 / formulier'
+        name: 'stepSix'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-form' }
+          - { label: 'Formulier titel', name: 'formTitle', widget: 'string' }
+          - { label: 'Formulier verzendknop', name: 'submitButton', widget: 'string' }
+          - { label: 'Knop opnieuw beginnen', name: 'restartButton', widget: 'string' }
+          - {
+              label: 'Formuliervelden',
+              required: true,
+              name: 'formFields',
+              widget: 'object',
+              fields:
+                [
+                  {
+                    label: 'Voornaam',
+                    name: 'firstName',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Achteraam',
+                    name: 'surname',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Tussenvoegsel',
+                    name: 'prefix',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'E-mail',
+                    name: 'mail',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Telefoonnummer',
+                    name: 'phone',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Postcode',
+                    name: 'zipcode',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Woonplaats',
+                    name: 'city',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Label', name: 'label', widget: 'string' },
+                        { label: 'Verplicht', name: 'required', widget: 'boolean', default: false },
+                        { label: 'Foutmelding', name: 'errorMessage', widget: 'string' },
+                      ],
+                  },
+                  {
+                    label: 'Pop up meldingen',
+                    name: 'popups',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Formulier verzonden pop up', name: 'successPopup', widget: 'string' },
+                        { label: 'Fout bij verzenden pop up', name: 'errorPopup', widget: 'string' },
+                      ],
+                  },
+                ],
+            }
   - name: 'pages'
     label: 'Pages'
     files:

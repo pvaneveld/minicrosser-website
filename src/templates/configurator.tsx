@@ -11,6 +11,8 @@ import ConfiguratorPageFour from '../views/configurator/page-4/page-4';
 import ConfiguratorPageFive from '../views/configurator/page-5/page-5';
 import { useStaticQuery, graphql } from 'gatsby';
 import { updateValidPages } from '../state/actions';
+import ConfiguratorForm from '../views/configurator/configurator-form/configurator-form';
+import ResetButton from '../components/Configurator/ResetButton/ResetButton';
 
 const Configurator: React.SFC = () => {
   const currentPage = useSelector((state: RootState) => state.configurator.page);
@@ -78,11 +80,12 @@ const Configurator: React.SFC = () => {
       <Page>
         {currentPage === 1 && <ConfiguratorPageOne />}
         {currentPage > 1 && (
-          <ConfiguratorLayout sidebar={<Sidebar />}>
+          <ConfiguratorLayout sidebar={<Sidebar />} resetButton={currentPage === 6 ? <ResetButton /> : null}>
             {currentPage === 2 && <ConfiguratorPageTwo />}
             {currentPage === 3 && <ConfiguratorPageThree />}
             {currentPage === 4 && <ConfiguratorPageFour />}
             {currentPage === 5 && <ConfiguratorPageFive />}
+            {currentPage === 6 && <ConfiguratorForm />}
           </ConfiguratorLayout>
         )}
       </Page>

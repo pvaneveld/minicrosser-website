@@ -1,0 +1,20 @@
+.button {
+  margin: var(--space-sm) auto;
+  width: 100%;
+}
+
+@media (--viewport-md) {
+  .button {
+    width: calc(var(--space-xxl) * 5);
+    display: block;
+    margin: 0 auto;
+    margin-top: calc(-1 * var(--space-md));
+    margin-bottom: var(--space-md);
+  }
+}
+
+@media (--viewport-sm) {
+  .button {
+    width: 100%;
+  }
+}
