@@ -9,17 +9,7 @@ import PageOne from '../views/home/page-1/page-1';
 import PageTwo from '../views/home/page-2/page-2';
 import PageThree from '../views/home/page-3/page-3';
 
-interface IndexPageProps {
-  data: {
-    markdownRemark: {
-      frontmatter: {
-        title: string;
-      };
-    };
-  };
-}
-
-const IndexPage: React.SFC<IndexPageProps> = () => {
+const IndexPage: React.SFC = () => {
   const query = useStaticQuery(graphql`
     query {
       data: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {

@@ -255,6 +255,14 @@ collections:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'content-page' }
           - { label: 'Titel', name: title, widget: string }
           - { label: 'Tekst', name: text, widget: markdown }
+      - file: 'src/pages/lees-meer.md'
+        label: 'readMore'
+        name: 'lees-meer'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'read-more' }
+          - { label: 'Titel', name: title, widget: string }
+          - { label: 'Afbeelding', name: backgroundImage, widget: image }
+          - { label: 'Tekst', name: text, widget: markdown }
       - file: 'src/pages/disclaimer.md'
         label: 'Disclaimer'
         name: 'disclaimer'

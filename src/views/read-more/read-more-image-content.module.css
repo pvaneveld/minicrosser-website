@@ -1,0 +1,28 @@
+.container {
+  padding: var(--space-md);
+  background: var(--color-gray-dark);
+  width: var(--form-width);
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  top: 20%;
+  display: none;
+
+  & h2 {
+    margin-bottom: var(--space-sm);
+    text-align: center;
+    color: var(--color-white);
+  }
+}
+
+@media (--viewport-sm) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (--viewport-md) {
+  .container {
+    display: block;
+  }
+}
