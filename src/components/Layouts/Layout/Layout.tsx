@@ -27,8 +27,10 @@ const Layout: React.SFC<LayoutProps> = props => {
       <Head />
       <div className={style.layout}>
         <Header configurator={props.configurator} darkTheme={headerDark} />
-        {!props.configurator && <Flag className={style.flag} />}
-        <div role="main">{props.children}</div>
+
+        <div role="main" aria-labelledby="main layout">
+          {props.children} {!props.configurator && <Flag className={style.flag} />}
+        </div>
 
         <Footer darkTheme={footerDark} />
       </div>

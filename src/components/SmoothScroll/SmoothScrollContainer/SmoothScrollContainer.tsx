@@ -100,7 +100,7 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
   }, [statePages]);
 
   return (
-    <div className={style.container}>
+    <div className={style.container} role="main" aria-labelledby="container for all page content">
       <ScrollChevronUp />
       <SmoothScrollNavigation clickHandler={(id: string): void => navButtonClickHandler(id)} pages={pages} />
       {props.children}

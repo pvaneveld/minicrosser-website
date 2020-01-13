@@ -9,7 +9,11 @@ interface MobileMenuProps {
 
 const MobileMenu: React.SFC<MobileMenuProps> = props => {
   return (
-    <div className={`${style.mobileMenu} ${props.isActive ? style.isActive : ''}`}>
+    <nav
+      className={`${style.mobileMenu} ${props.isActive ? style.isActive : ''}`}
+      role="navigation"
+      aria-labelledby="mobile navigation"
+    >
       {props.links.map((link, index) => (
         <Link key={index} className={style.link} to={link.target}>
           {link.name}
@@ -27,7 +31,7 @@ const MobileMenu: React.SFC<MobileMenuProps> = props => {
       <Link to="/privacy" className={style.link}>
         Privacybeleid
       </Link>
-    </div>
+    </nav>
   );
 };
 

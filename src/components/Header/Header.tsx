@@ -96,7 +96,7 @@ const Header: React.SFC<HeaderProps> = props => {
         <ConfiguratorNavigation />
       ) : (
         <>
-          <nav className={style.linkContainer}>
+          <nav className={style.linkContainer} role="navigation" aria-labelledby="main navigation desktop">
             {links.map((link, id) => (
               <Link key={`link-${id}`} to={link.target} className={style.link}>
                 {link.name}
@@ -104,7 +104,7 @@ const Header: React.SFC<HeaderProps> = props => {
             ))}
           </nav>
 
-          <nav className={style.hamburgerContainer}>
+          <nav className={style.hamburgerContainer} role="navigation" aria-labelledby="hamburger navigation">
             <Link to="/vind-uw-dealer" className={style.link}>
               vind uw dealer
             </Link>
