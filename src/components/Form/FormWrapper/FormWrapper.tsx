@@ -23,7 +23,7 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
   const onSubmit = async (data: object): Promise<any> => {
     setFormError(false);
     try {
-      await fetch(window.location.pathname, {
+      await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': formName, ...data }),
@@ -37,7 +37,7 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
     <FormContext {...methods}>
       <FormStatusBanner succesText={props.submitSuccessText} errorText={props.submitSuccessText} hasError={formError} />
 
-      <form name={formName} method="post" data-netlify="true" onSubmit={methods.handleSubmit(onSubmit)}>
+      <form name={formName} onSubmit={methods.handleSubmit(onSubmit)}>
         {children}
       </form>
     </FormContext>
