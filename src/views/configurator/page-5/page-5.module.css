@@ -1,3 +1,4 @@
 .header {
   margin-bottom: var(--space-md);
+  font-size: var(--text-xl);
 }

@@ -5,7 +5,8 @@
   text-align: center;
   color: var(--color-text);
 
-  & h2 {
+  & h1 {
+    font-size: var(--text-xxl);
     margin: var(--space-md) 0 var(--space-sm);
   }
 }

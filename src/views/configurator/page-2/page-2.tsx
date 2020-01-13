@@ -44,7 +44,7 @@ const ConfiguratorPageTwo: React.SFC = () => {
 
   return (
     <div className={style.container}>
-      <h2 className={style.header}>{content.title}</h2>
+      <h1 className={style.header}>{content.title}</h1>
       <SelectCardGrid>
         {content.colors.map((color, index) => (
           <ConfiguratorItem

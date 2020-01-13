@@ -70,7 +70,7 @@ const ConfiguratorPageFive: React.SFC = () => {
 
   return (
     <div className={style.container}>
-      <h2 className={style.header}>{accessoriesSeat.title}</h2>
+      <h1 className={style.header}>{accessoriesSeat.title}</h1>
       <SelectCardGrid>
         {accessoriesSeat.accessoriesSeatList.map((accessory, index) => (
           <ConfiguratorItem
@@ -91,7 +91,7 @@ const ConfiguratorPageFive: React.SFC = () => {
         ))}
       </SelectCardGrid>
 
-      <h2 className={style.header}>{accessories.title}</h2>
+      <h1 className={style.header}>{accessories.title}</h1>
       <SelectCardGrid>
         {accessories.accessoriesList.map((accessory, index) => (
           <ConfiguratorItem

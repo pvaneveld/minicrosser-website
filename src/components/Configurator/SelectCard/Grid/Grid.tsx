@@ -5,7 +5,7 @@ interface SelectCardGridProps {
   children: ReactNode;
 }
 const SelectCardGrid: React.SFC<SelectCardGridProps> = props => {
-  return <div className={style.grid}>{props.children}</div>;
+  return <ul className={style.grid}>{props.children}</ul>;
 };
 
 export default SelectCardGrid;

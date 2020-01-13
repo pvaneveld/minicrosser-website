@@ -11,6 +11,7 @@
 
 .category-title {
   color: var(--color-white);
+  font-size: var(--text-md);
   margin-bottom: var(--space-xs);
 }
 

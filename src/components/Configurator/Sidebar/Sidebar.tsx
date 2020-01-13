@@ -32,7 +32,7 @@ const Sidebar: React.SFC = () => {
 
           return (
             <li key={`category-${index}`} className={style.category}>
-              <h4 className={style.categoryTitle}>{category}</h4>
+              <h2 className={style.categoryTitle}>{category}</h2>
               <ul>
                 {items.map((item, index) => (
                   <li className={style.selectedItem} key={`item-${index}`}>

@@ -24,19 +24,20 @@ const Configurator: React.SFC = () => {
   return (
     <nav className={style.navigation}>
       <ul className={style.linkList}>
-        <span style={indicatorStyle} className={style.indicator}></span>
+        <li style={indicatorStyle} className={style.indicator}></li>
         {navData.map((item, index) => (
-          <button
-            disabled={index >= validUntil}
-            onClick={(): void => navigateToPage(index)}
-            key={`item-${index}`}
-            className={`${style.navItem} ${currentPage - 1 === index ? style.active : ''}`}
-          >
-            <div className={style.stepNumber}>
-              <span>{index + 1}</span>
-            </div>
-            <span className={style.navText}>{item}</span>
-          </button>
+          <li key={`item-${index}`}>
+            <button
+              disabled={index >= validUntil}
+              onClick={(): void => navigateToPage(index)}
+              className={`${style.navItem} ${currentPage - 1 === index ? style.active : ''}`}
+            >
+              <div className={style.stepNumber}>
+                <span>{index + 1}</span>
+              </div>
+              <span className={style.navText}>{item}</span>
+            </button>
+          </li>
         ))}
       </ul>
     </nav>

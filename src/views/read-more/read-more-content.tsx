@@ -12,7 +12,7 @@ const ReadMoreContent: React.SFC<ReadMoreContentProps> = props => {
 
   return (
     <div className={style.container}>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       <Markdown>{text}</Markdown>
     </div>
   );
