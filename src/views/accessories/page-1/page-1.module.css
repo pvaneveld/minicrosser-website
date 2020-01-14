@@ -9,9 +9,10 @@
 }
 
 .image-content {
-  background-color: var(--gray-10-opaque);
+  background-color: var(--color-gray-dark);
   padding: var(--space-sm);
   position: relative;
+  vertical-align: middle;
   left: 50%;
   transform: translateX(-50%);
   margin-top: var(--space-lg);

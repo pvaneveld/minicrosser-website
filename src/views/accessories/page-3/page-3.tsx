@@ -35,9 +35,11 @@ const AccessoriesPageTwo: React.SFC = () => {
   const { accessoriesThree: content } = query.markdownRemark.frontmatter;
 
   return (
-    <ContentContainer classString={style.content}>
+    <ContentContainer footerSpacing={true} classString={style.content}>
       <h1 className={style.header}>{content.title}</h1>
-      <Markdown>{content.intro}</Markdown>
+      <div className={style.intro}>
+        <Markdown>{content.intro}</Markdown>
+      </div>
       <AccesoryList accessories={content.accessories} />
     </ContentContainer>
   );

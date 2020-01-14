@@ -34,6 +34,18 @@
   --font-weight-bold: 600;
 }
 
+@media (--viewport-md) {
+  :root {
+    --text-base-size: 0.95em;
+  }
+}
+
+@media (--viewport-sm) {
+  :root {
+    --text-base-size: 0.9em;
+  }
+}
+
 body {
   font-size: var(--text-base-size);
   font-family: var(--font-primary);

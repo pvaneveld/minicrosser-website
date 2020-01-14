@@ -19,17 +19,17 @@ const AccesoryList: React.SFC<AccessoryListProps> = props => {
   {
     return (
       <div className={style.container}>
-        {props.accessories.map(accessory => {
+        {props.accessories.map((accessory, index) => {
           const { accesoryImage, title, description, buttonText } = accessory;
           return (
-            <div className={style.accessory}>
+            <div key={`accessory-${index}`} className={style.accessory}>
               <div className={style.accessoryImage}>
                 <FluidImage positionAbsolute={false} fluid={accesoryImage.childImageSharp.fluid} />
               </div>
               <Accordion classString={style.accordion} title={<span className={style.accessoryTitle}>{title}</span>}>
                 <div className={style.accordionContent}>
                   {description}
-                  <Button classString={style.button} link={true} target="/configureren">
+                  <Button type="secondary-dark" classString={style.button} link={true} target="/configureren">
                     {buttonText}
                   </Button>
                 </div>

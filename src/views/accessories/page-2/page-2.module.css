@@ -1,9 +1,23 @@
 .content {
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-md) calc(var(--space-md) * 3) var(--space-md);
 }
 
 .header {
+  margin-top: var(--space-sm);
   color: var(--color-white);
   text-align: center;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.intro {
+  max-width: var(--content-block-width);
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (--viewport-md) {
+  .content {
+    padding: var(--space-md);
+  }
 }

@@ -4,11 +4,10 @@
   border-radius: 5px;
   padding: var(--space-sm);
   color: var(--color-text);
-  z-index: 20;
-  position: absolute;
-  margin: 0 auto;
-  transform: translate(-50%, 0);
-  bottom: var(--space-xxl);
+  z-index: 4;
+  max-width: 90%;
+  top: calc(var(--space-xxl) * 2);
+  position: fixed;
   display: none;
 }
 
@@ -34,6 +33,7 @@
     opacity: 1;
     transform: translateY(0);
   }
+
   100% {
     opacity: 0;
     transform: translateY(calc(var(--space-sm) * -1));

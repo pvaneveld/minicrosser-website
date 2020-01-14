@@ -1,18 +1,19 @@
 .container {
   display: flex;
   justify-content: space-between;
-  margin-top: var(--space-md);
+  margin-top: var(--space-xl);
 }
 
 .accessory {
   flex-grow: 0;
   flex-shrink: 0;
-  flex-basis: calc(var(--space-xl) * 6);
+  flex-basis: calc(var(--space-xl) * 5);
   margin: var(--space-sm);
 }
 
 .accessory-image {
   height: calc(var(--space-xl) * 5);
+  border: 2px solid var(--color-white);
 }
 
 .accessory-title {
@@ -21,13 +22,13 @@
 
 .accordion {
   & svg {
-    fill: var(--color-white);
+    fill: var(--color-gray-dark);
   }
 }
 .accordion,
 .accordion-content {
-  color: var(--color-white) !important;
-  background-color: var(--color-gray-dark) !important;
+  color: var(--color-text) !important;
+  background-color: var(--color-white) !important;
   padding: var(--space-sm);
 }
 
@@ -37,7 +38,7 @@
 
 .button {
   display: block;
-  margin: var(--space-sm) auto;
+  margin: var(--space-sm) auto 0 auto;
   max-width: 70%;
   text-align: center;
 }

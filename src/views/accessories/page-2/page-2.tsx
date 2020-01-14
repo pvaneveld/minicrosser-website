@@ -37,7 +37,9 @@ const AccessoriesPageTwo: React.SFC = () => {
   return (
     <ContentContainer classString={style.content}>
       <h1 className={style.header}>{content.title}</h1>
-      <Markdown>{content.intro}</Markdown>
+      <div className={style.intro}>
+        <Markdown>{content.intro}</Markdown>
+      </div>
       <AccesoryList accessories={content.accessories} />
     </ContentContainer>
   );

@@ -1,6 +1,6 @@
 .container {
   color: var(--color-text);
-  max-width: var(--form-width);
+  max-width: var(--content-block-width);
   display: block;
   margin: 0 auto;
 }

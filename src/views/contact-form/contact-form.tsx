@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import FormWrapper from '../../components/Form/FormWrapper/FormWrapper';
 import FormInput from '../../components/Form/FormInput/FormInput';

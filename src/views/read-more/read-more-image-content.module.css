@@ -1,7 +1,7 @@
 .container {
   padding: var(--space-md);
   background: var(--color-gray-dark);
-  width: var(--form-width);
+  width: var(--content-block-width);
   position: relative;
   display: block;
   margin: 0 auto;
