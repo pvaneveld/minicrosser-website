@@ -99,6 +99,12 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
     }
   }, [statePages]);
 
+  useEffect(async () => {
+    if (!('scrollBehavior' in document.documentElement.style)) {
+      await import('scroll-behavior-polyfill');
+    }
+  }, []);
+
   return (
     <div className={style.container}>
       <ScrollChevronUp />
