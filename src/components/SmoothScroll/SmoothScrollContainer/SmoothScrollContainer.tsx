@@ -99,9 +99,9 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
     }
   }, [statePages]);
 
-  useEffect(async () => {
+  useEffect(() => {
     if (!('scrollBehavior' in document.documentElement.style)) {
-      await import('scroll-behavior-polyfill');
+      import('scroll-behavior-polyfill');
     }
   }, []);
 
