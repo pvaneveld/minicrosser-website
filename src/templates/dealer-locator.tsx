@@ -1,5 +1,4 @@
 import React from 'react';
-import ContentContainer from '../components/Layouts/ContentContainer/ContentContainer';
 import Layout from '../components/Layouts/Layout/Layout';
 import Page from '../components/SmoothScroll/Page/Page';
 import DealerLocatorView from '../views/dealer-locator/dealer-locator';

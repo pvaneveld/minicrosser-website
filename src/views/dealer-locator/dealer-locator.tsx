@@ -13,7 +13,7 @@ import Marker from '../../components/Marker/Marker';
 import { navigate } from 'gatsby';
 
 const DealerLocator: React.SFC = () => {
-  const [dealerData, setdealerData] = useState<DealerData[] | null>(null);
+  const [dealerData, setDealerData] = useState<DealerData[] | null>(null);
   const [selectedDealer, setSelectedDealer] = useState('');
   const center = { lat: 52.092876, lng: 5.10448 };
   const zoom = 7;
@@ -74,21 +74,47 @@ const DealerLocator: React.SFC = () => {
     const addressPromises = dealers.map(async dealer => {
       const address = `address=${dealer.address}, ${dealer.city}, ${dealer.zipCode}`.replace(/\s/g, '+');
       const key = `key=${process.env.GATSBY_MAPS_API_KEY}`;
-      const response = await fetch([urlBase, ...[address, key].join('&')].join(''));
+      const response = await fetch([urlBase, ...[address, 'key=123'].join('&')].join(''));
       const jsonResponse = await response.json();
-      return { ...dealer, ...jsonResponse.results[0].geometry.location };
+      return { ...dealer, ...jsonResponse.results[0]?.geometry?.location };
     });
 
     return await Promise.all(addressPromises);
   };
 
   const enrichDealerHandler = async () => {
-    const withLatLng = await enrichLatLong(sanitizeDealerData(dealerArray));
-    const withLetter = withLatLng.map((dealer, index: number): DealerData[] => ({
-      ...dealer,
-      ...{ letter: alphabet[index] },
-    }));
-    setdealerData(withLetter);
+    // const withLatLng = await enrichLatLong(sanitizeDealerData(dealerArray));
+    const withLatLng = [
+      {
+        companyName: 'De Graaf Mobiliteit & Welzijn',
+        zipCode: '1718 MJ',
+        address: 'Westerboekelweg 11c',
+        city: 'Hoogwoud',
+        phone: '0226-355546',
+        mail: 'info@degraafmobiliteit.nl',
+        site: 'www.degraafmobiliteit.nl',
+        lat: 52.7154695,
+        lng: 4.9275989,
+      },
+      {
+        companyName: 'Jeremiasse',
+        zipCode: '4421 JB',
+        address: 'Jufferswegje 12',
+        city: 'Kapelle',
+        phone: '0113-211274',
+        mail: 'sales@jeremiasse.nl',
+        site: 'www.jeremiasse.nl',
+        lat: 51.47608169999999,
+        lng: 3.9659845,
+      },
+    ];
+
+    setDealerData(
+      withLatLng.map((dealer, index: number) => ({
+        ...dealer,
+        ...{ letter: alphabet[index] },
+      })),
+    );
   };
 
   const selectDealer = (companyName: string): void => {
@@ -107,7 +133,7 @@ const DealerLocator: React.SFC = () => {
 
   return (
     <div className={style.container}>
-      {/* <HeaderFooterSpacing headerSpacing={true} />
+      <HeaderFooterSpacing headerSpacing={true} />
       <div className={style.flexContainer}>
         <div className={style.dealerContainer}>
           <div className={style.dealerList}>
@@ -173,7 +199,7 @@ const DealerLocator: React.SFC = () => {
         </div>
       </div>
 
-      <HeaderFooterSpacing footerSpacing={true} /> */}
+      <HeaderFooterSpacing footerSpacing={true} />
     </div>
   );
 };
