@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from '../components/Layouts/Layout/Layout';
 import Page from '../components/SmoothScroll/Page/Page';
 import { useStaticQuery, graphql } from 'gatsby';
