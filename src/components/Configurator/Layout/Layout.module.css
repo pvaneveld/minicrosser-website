@@ -8,6 +8,7 @@
 }
 
 .sidebar {
+  margin-top: var(--space-md);
   margin-left: var(--space-md);
   display: flex;
   flex-direction: column;

@@ -2,3 +2,9 @@
   margin-bottom: var(--space-md);
   font-size: var(--text-xl);
 }
+
+@media (--viewport-md) {
+  .header {
+    text-align: center;
+  }
+}

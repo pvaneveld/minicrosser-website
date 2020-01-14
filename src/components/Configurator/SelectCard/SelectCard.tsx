@@ -16,8 +16,10 @@ const SelectCard: React.SFC<SelectCardProps> = props => {
       <div className={style.image}>
         <FluidImage positionAbsolute={false} fluid={props.fluid} />
       </div>
-      <span className={style.name}>{props.name}</span>
-      {parseInt(props.price) > 0 && <span className={style.price}>{toCurrency(parseFloat(props.price))}</span>}
+      <div className={style.infoContainer}>
+        <span className={style.name}>{props.name}</span>
+        {parseInt(props.price) > 0 && <span className={style.price}>{toCurrency(parseFloat(props.price))}</span>}
+      </div>
     </button>
   );
 };

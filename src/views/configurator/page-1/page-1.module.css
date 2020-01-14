@@ -20,7 +20,7 @@
   flex: 0 1 320px;
   margin: var(--space-sm);
   color: var(--color-text);
-  padding: var(--space-sm) var(--space-sm) calc(var(--space-xl) + var(--space-sm)) var(--space-sm);
+  padding: var(--space-sm) var(--space-sm) calc(var(--space-xl) + var(--space-md)) var(--space-sm);
   box-shadow: var(--box-shadow-md);
   transition: box-shadow var(--transition-standard);
 }
@@ -83,4 +83,10 @@
 
 .content-container {
   width: 100% !important;
+}
+
+@media (--viewport-md) {
+  .image {
+    height: 200px;
+  }
 }

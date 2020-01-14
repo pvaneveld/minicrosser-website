@@ -51,6 +51,25 @@
 
 @media (--viewport-xs) {
   .select-card {
+    height: calc(var(--space-xxl) * 1.1);
     margin-right: 0;
+    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+
+  .image {
+    align-self: center;
+    background: var(--gray-10-opaque-light);
+    margin-bottom: 0;
+    flex: 0 0 calc(100% / 3);
+  }
+
+  .info-container {
+    padding: var(--space-sm);
+    flex: 0 0 calc((100% / 3) * 2);
+    display: flex;
+    justify-content: space-between;
   }
 }

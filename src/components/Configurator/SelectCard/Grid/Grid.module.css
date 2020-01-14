@@ -13,3 +13,9 @@
     align-items: center;
   }
 }
+
+@media (--viewport-md) {
+  .grid {
+    justify-content: center;
+  }
+}
