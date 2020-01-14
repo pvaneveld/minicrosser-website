@@ -7,6 +7,7 @@ interface FormWrapperProps {
   children: ReactNode;
   submitSuccessText: string;
   submitFailText: string;
+  lambdaFunctionName?: string;
 }
 
 const FormWrapper: React.SFC<FormWrapperProps> = props => {
@@ -23,11 +24,20 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
   const onSubmit = async (data: object): Promise<any> => {
     setFormError(false);
     try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': formName, ...data }),
-      });
+      const { lambdaFunctionName: lambda } = props;
+
+      if (lambda) {
+        await fetch(`/.netlify/functions/${lambda}`, {
+          method: 'POST',
+          body: JSON.stringify({ ...data }),
+        });
+      } else {
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({ 'form-name': formName, ...data }),
+        });
+      }
     } catch (error) {
       setFormError(true);
     }

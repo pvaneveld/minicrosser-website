@@ -189,7 +189,7 @@ const DealerLocator: React.SFC = () => {
               resetBoundsOnResize={true}
             >
               {dealerData &&
-                dealerData.map((dealer, index) => (
+                dealerData.map(dealer => (
                   <Marker key={dealer.companyName} lat={dealer.lat} lng={dealer.lng}>
                     {dealer.letter}
                   </Marker>

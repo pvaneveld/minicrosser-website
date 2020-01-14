@@ -79,6 +79,7 @@ const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
             frontmatter {
               companyName
               city
+              mail
             }
           }
         }
@@ -95,14 +96,15 @@ const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
       frontmatter: {
         companyName: string;
         city: string;
+        mail: string;
       };
     };
   }
 
   const getDealerOptionsData = (dealerData: DealerData[]): { value: string; text: string }[] =>
     dealerData.reduce((acc, curr) => {
-      const { city, companyName } = curr.node.frontmatter;
-      return acc.concat({ value: companyName, text: `${companyName} | ${city}` });
+      const { city, companyName, mail } = curr.node.frontmatter;
+      return acc.concat({ value: JSON.stringify({ companyName, mail }), text: `${companyName} | ${city}` });
     }, []);
 
   const keys: TestDriveForm = {
@@ -121,6 +123,7 @@ const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
   return (
     <div className={style.form}>
       <FormWrapper
+        lambdaFunctionName="contact-dealer"
         formName="proefrit-formulier"
         submitSuccessText={popups.successPopup}
         submitFailText={popups.errorPopup}
