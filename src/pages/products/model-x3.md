@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X3
 productOne:
-  backgroundImage: /img/harley-davidson-wc95vfqvrys-unsplash.jpg
+  backgroundImage: /img/_mg_3551-2.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
@@ -23,7 +23,7 @@ productOne:
     mainTitle: De sterkste motor in de markt
     subtitle: Performance
 productTwo:
-  backgroundImage: /img/x2-4w-zijkant.png
+  backgroundImage: /img/3w-voorkant-vrijstaand.png
   navigationTitle: Specificaties
   specifications:
     - description: 175 kg
@@ -56,3 +56,4 @@ productThree:
   navigationTitle: Ervaar Model X3
   title: Ervaar Model-X3
 ---
+
