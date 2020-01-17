@@ -87,7 +87,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/img/chair.jpeg`,
+        icon: `src/img/favicon.png`,
         icons: [
           {
             src: `/favicons/android-icon-36x36.png`,
