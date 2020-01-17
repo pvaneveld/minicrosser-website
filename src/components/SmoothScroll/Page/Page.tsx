@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ReactNode } from 'react';
 import style from './Page.module.css';
-import { useSelector } from 'react-redux';
 
 interface PageProps {
   children: ReactNode;
@@ -12,6 +11,9 @@ interface PageProps {
 const Page: React.SFC<PageProps> = props => {
   const { background, id } = props;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section
       id={id}

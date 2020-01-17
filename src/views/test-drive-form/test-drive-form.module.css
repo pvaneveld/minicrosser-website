@@ -14,7 +14,7 @@
 
 .header {
   text-align: center;
-  margin: var(--space-md) auto;
+  margin: var(--space-sm) auto;
 }
 
 .form-field {

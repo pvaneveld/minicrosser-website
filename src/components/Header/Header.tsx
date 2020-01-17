@@ -8,6 +8,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { useDispatch } from 'react-redux';
 import { updateHeaderMargin } from '../../state/actions';
 import ConfiguratorNavigation from '../Configurator/Navigation/Navigation';
+import LogoDesktop from './../../icons/logo-dekstop.svg';
+import LogoMobile from './../../icons/logo-mobile.svg';
 
 interface HeaderProps {
   darkTheme?: boolean;
@@ -88,7 +90,8 @@ const Header: React.SFC<HeaderProps> = props => {
     >
       <Link to="/" className={style.logoContainer} aria-label="link naar de homepage">
         <figure>
-          <Polymer className={style.logo} />
+          <LogoDesktop className={style.logoDesktop} />
+          <LogoMobile className={style.logoMobile} />
         </figure>
       </Link>
 

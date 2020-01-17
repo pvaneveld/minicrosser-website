@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ReactNode } from 'react';
 import 'typeface-roboto';
 import 'reset-css';
@@ -22,6 +22,12 @@ interface LayoutProps {
 const Layout: React.SFC<LayoutProps> = props => {
   usePageHeight();
   const { headerDark, footerDark } = props.theme;
+
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
   return (
     <>
       <Head />

@@ -15,8 +15,16 @@
   background-color: var(--color-gray-dark);
 }
 
-.logo {
-  fill: var(--color-white);
+.logo-desktop {
+  width: calc(var(--space-md) * 7);
+  height: auto;
+  display: block;
+}
+
+.logo-mobile {
+  width: calc(var(--space-md) * 2);
+  height: auto;
+  display: none;
 }
 
 .link {
@@ -37,7 +45,9 @@
 }
 
 .link-container {
-  justify-self: center;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
 
   & .link {
     margin-right: var(--space-xl);
@@ -48,8 +58,16 @@
   }
 }
 
-@media (--viewport-sm) {
+@media (--viewport-md) {
   .link-container {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+
+  .logo-desktop {
     display: none;
   }
 }
