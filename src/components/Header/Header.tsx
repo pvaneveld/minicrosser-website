@@ -77,15 +77,16 @@ const Header: React.SFC<HeaderProps> = props => {
     return (): void => window.removeEventListener('resize', headerHeightHandler, false);
   }, [header]);
 
-  const headerPadding = {
+  const headerStyle = {
     paddingBottom: props.configurator ? '0px' : 'var(--space-md)',
     display: props.configurator ? 'block' : 'flex',
+    position: props.configurator ? 'fixed' : 'absolute',
   };
 
   return (
     <header
       ref={header}
-      style={headerPadding}
+      style={headerStyle}
       className={`${style.header}${props.darkTheme ? ` ${style.headerDark}` : ''}`}
     >
       <Link to="/" className={style.logoContainer} aria-label="link naar de homepage">
