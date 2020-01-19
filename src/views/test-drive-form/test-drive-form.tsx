@@ -17,7 +17,10 @@ interface TestDriveForm {
 }
 
 interface TestDriveFormProps {
-  preselectedDealer: string;
+  preselectedDealer?: {
+    companyName: string;
+    mail: string;
+  };
 }
 
 const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
@@ -117,8 +120,10 @@ const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
     dealer: 'dealer',
   };
 
-  const getTitle = (preselectedDealer: string): string =>
-    preselectedDealer ? formContent.titleDealerPreselected.replace('$dealer$', preselectedDealer) : formContent.title;
+  const getTitle = (preselectedDealer: { companyName: string }): string =>
+    preselectedDealer
+      ? formContent.titleDealerPreselected.replace('$dealer$', preselectedDealer.companyName)
+      : formContent.title;
 
   return (
     <div className={style.form}>
@@ -191,7 +196,7 @@ const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
             errorMessage={remarks.errorMessage}
           />
           <FormInput
-            autoSelect={preselectedDealer ? { key: keys.dealer, value: preselectedDealer } : false}
+            autoSelect={preselectedDealer ? { key: keys.dealer, value: JSON.stringify(preselectedDealer) } : false}
             disabled={preselectedDealer ? true : false}
             name={keys.dealer}
             type="selectbox"

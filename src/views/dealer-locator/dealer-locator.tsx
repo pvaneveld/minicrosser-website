@@ -117,9 +117,9 @@ const DealerLocator: React.SFC = () => {
     );
   };
 
-  const selectDealer = (companyName: string): void => {
+  const selectDealer = (companyName: string, mail: string): void => {
     navigate('/proefrit', {
-      state: { companyName },
+      state: { companyName, mail },
     });
   };
 
@@ -174,7 +174,7 @@ const DealerLocator: React.SFC = () => {
                         </a>
                       </div>
 
-                      <Button type="cta" clickHandler={() => selectDealer(companyName)}>
+                      <Button type="cta" clickHandler={() => selectDealer(companyName, mail)}>
                         {query.markdownRemark.frontmatter.buttonText}
                       </Button>
                     </div>

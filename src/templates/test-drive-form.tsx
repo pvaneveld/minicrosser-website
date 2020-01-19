@@ -10,7 +10,11 @@ const TestDriveFormPage: React.SFC = ({ location }) => {
       <Page background="gray">
         <ContentContainer headerSpacing={true} footerSpacing={true}>
           <TestDriveForm
-            preselectedDealer={location.state && location.state.companyName ? location.state.companyName : ''}
+            preselectedDealer={
+              location.state && location.state.companyName && location.state.mail
+                ? { companyName: location.state.companyName, mail: location.state.mail }
+                : ''
+            }
           />
         </ContentContainer>
       </Page>
