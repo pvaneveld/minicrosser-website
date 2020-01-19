@@ -67,20 +67,22 @@ const Input: React.SFC<InputProps> = props => {
         )}
 
         {type === 'selectbox' && selectBoxOptions && (
-          <select
-            disabled={disabled ? true : false}
-            name={name}
-            id={id}
-            className={style.selectBox}
-            ref={register({ required, pattern: regex || /.*/ })}
-          >
-            {placeholder && <option value="">{placeholder}</option>}
-            {selectBoxOptions.map((option, index) => (
-              <option key={`dealer-${index}`} value={option.value}>
-                {option.text}
-              </option>
-            ))}
-          </select>
+          <div className="select-wrapper">
+            <select
+              disabled={disabled ? true : false}
+              name={name}
+              id={id}
+              className={style.selectBox}
+              ref={register({ required, pattern: regex || /.*/ })}
+            >
+              {placeholder && <option value="">{placeholder}</option>}
+              {selectBoxOptions.map((option, index) => (
+                <option key={`dealer-${index}`} value={option.value}>
+                  {option.text}
+                </option>
+              ))}
+            </select>
+          </div>
         )}
       </label>
       {errorMessage && <span className={`${style.error} ${errors[name] ? style.showError : ''}`}>{errorMessage}</span>}

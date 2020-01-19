@@ -1,0 +1,18 @@
+select {
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  padding-right: var(--space-md);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '\25BC';
+  position: absolute;
+  right: var(--space-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text);
+}

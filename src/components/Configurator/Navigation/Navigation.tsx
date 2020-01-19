@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeConfiguratorPage } from '../../../state/actions';
 
 const Configurator: React.SFC = () => {
-  const navData: string[] = ['model', 'kleur', 'bediening', 'zitsysteem', 'accessoires', 'uw minicrosser'];
+  const navData: string[] = ['Model', 'Kleur', 'Bediening', 'Zitsysteem', 'Accessoires', 'Uw Minicrosser'];
   const currentPage = useSelector((state: RootState) => state.configurator.page);
 
   const validUntil = useSelector((state: RootState) => state.configurator.validUntil);
