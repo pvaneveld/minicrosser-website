@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  border-color: red;
   overflow: hidden;
 }
 
@@ -52,16 +51,16 @@
 @media (--viewport-xs) {
   .select-card {
     height: calc(var(--space-xxl) * 1.1);
-    margin-right: 0;
-    width: 100vw;
+    margin-right: var(--space-md);
+    margin-left: var(--space-md);
     flex-direction: row;
     align-items: center;
     padding: 0;
+    width: 100%;
   }
 
   .image {
     align-self: center;
-    background: var(--gray-10-opaque-light);
     margin-bottom: 0;
     flex: 0 0 calc(100% / 3);
   }
@@ -71,5 +70,6 @@
     flex: 0 0 calc((100% / 3) * 2);
     display: flex;
     justify-content: space-between;
+    border-left: 1px solid var(--color-orange);
   }
 }

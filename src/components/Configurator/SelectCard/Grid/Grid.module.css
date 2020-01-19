@@ -11,6 +11,11 @@
   .grid {
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+  }
+
+  .grid li {
+    width: 100%;
   }
 }
 

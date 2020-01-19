@@ -51,7 +51,6 @@ const Configurator: React.SFC = () => {
       const flattenedCategories: string[] = Object.values(categories).map(
         (item: { frontmatter: { category: string } }) => item.frontmatter.category,
       );
-
       const validUntil: number = currentSelection.reduce((acc, curr) => {
         const index = flattenedCategories.indexOf(curr.category);
         if (currentPage > 4) {
@@ -66,6 +65,8 @@ const Configurator: React.SFC = () => {
       }, 0);
 
       dispatch(updateValidPages(validUntil));
+    } else {
+      dispatch(updateValidPages(1));
     }
   };
 
