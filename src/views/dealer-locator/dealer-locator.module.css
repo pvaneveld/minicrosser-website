@@ -70,6 +70,10 @@
   margin-right: var(--space-md);
 }
 
+.dealer-link {
+  color: var(--color-text);
+}
+
 @media (--viewport-md) {
   .flex-container {
     flex-direction: column;

@@ -92,7 +92,7 @@ const DealerLocator: React.SFC = () => {
         city: 'Hoogwoud',
         phone: '0226-355546',
         mail: 'info@degraafmobiliteit.nl',
-        site: 'www.degraafmobiliteit.nl',
+        site: 'https://www.degraafmobiliteit.nl',
         lat: 52.7154695,
         lng: 4.9275989,
       },
@@ -163,11 +163,15 @@ const DealerLocator: React.SFC = () => {
                       </div>
                       <div className={style.dealerInfoRow}>
                         <Mail className={style.dealerIcon} />
-                        {mail}
+                        <a className={style.dealerLink} href={`mailto:${mail}`} target="_blank">
+                          {mail}
+                        </a>
                       </div>
                       <div className={style.dealerInfoRow}>
                         <Website className={style.dealerIcon} />
-                        {site}
+                        <a className={style.dealerLink} href={site} target="_blank">
+                          {site}
+                        </a>
                       </div>
 
                       <Button type="cta" clickHandler={() => selectDealer(companyName)}>

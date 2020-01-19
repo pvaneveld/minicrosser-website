@@ -36,7 +36,9 @@ const Footer: React.SFC<FooterProps> = props => {
       <Link className={style.link} to="/disclaimer">
         Disclaimer
       </Link>
-      <span className={style.link}>Revamed &#169; 2020</span>
+      <a href="https://www.revamed.com/" target="_blank" className={style.link}>
+        Revamed &#169; 2020
+      </a>
     </footer>
   );
 };
