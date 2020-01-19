@@ -31,8 +31,9 @@ const ReadMorePage: React.SFC = () => {
       <Page>
         <LayoutHalfHero
           headerSpacing={true}
+          footerSpacing={true}
+          remainSplitView={true}
           fluid={content.backgroundImage.childImageSharp.fluid}
-          imageContent={<ReadMoreImageContent title={content.title} text={content.text} />}
         >
           <ReadMoreContent title={content.title} text={content.text} />
         </LayoutHalfHero>
