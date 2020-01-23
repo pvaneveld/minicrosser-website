@@ -23,7 +23,7 @@ productOne:
     mainTitle: De sterkste motor in de markt
     subtitle: Performance
 productTwo:
-  backgroundImage: /img/3w-voorkant-vrijstaand.png
+  backgroundImage: /img/3w-voorkant-vrijstaand-ii.png
   navigationTitle: Specificaties
   specifications:
     - description: 175 kg
