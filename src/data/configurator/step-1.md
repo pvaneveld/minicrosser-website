@@ -9,7 +9,7 @@ models:
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo con- **sequat**. Duis aute irure dolor in dolore magna aliqua. Ut
       enim ad
-    image: /img/x2-3w-zijkant-.png
+    image: /img/_1010169.jpg
     name: X2 3W
     price: 6841
   - description: >-
