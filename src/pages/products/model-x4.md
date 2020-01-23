@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X4
 productOne:
-  backgroundImage: /img/dit-is-mc-lees-meer.jpg
+  backgroundImage: /img/dji_0022.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
