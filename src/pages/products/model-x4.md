@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X2 4W
 productOne:
-  backgroundImage: /img/dji_0022.jpg
+  backgroundImage: /img/_mg_3554-2.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
