@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X2 HD
 productOne:
-  backgroundImage: /img/4w-ii.jpg
+  backgroundImage: /img/_mg_3530-2-ii.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
