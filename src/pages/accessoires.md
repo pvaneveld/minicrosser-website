@@ -1,7 +1,7 @@
 ---
 templateKey: accessories
 accessoriesOne:
-  backgroundImage: /img/_mg_3362.jpg
+  backgroundImage: /img/_mg_3412.jpg
   navigationTitle: Accessoires
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
