@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X2 Plus
 productOne:
-  backgroundImage: /img/dji_0042.jpg
+  backgroundImage: /img/_mg_3569-2.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
