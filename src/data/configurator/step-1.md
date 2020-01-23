@@ -22,8 +22,8 @@ models:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam,
-    image: /img/x2-4w-zijkant.png
-    name: XPLUS
+    image: /img/x2-3w-zijkant-.png
+    name: X2 PLUS
     price: 6841
   - description: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
