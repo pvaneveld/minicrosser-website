@@ -47,13 +47,13 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model X3
+    mainTitle: Model X2 3W
     subtitle: Specificaties
 productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model X3
-  title: Ervaar Model-X3
+  navigationTitle: Ervaar Model X2 3W
+  title: Ervaar Model-X2 3W
 ---
 
