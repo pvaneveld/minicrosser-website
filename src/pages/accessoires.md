@@ -1,7 +1,7 @@
 ---
 templateKey: accessories
 accessoriesOne:
-  backgroundImage: /img/_mg_3562-2.jpg
+  backgroundImage: /img/dit-is-mc-lees-meer.jpg
   navigationTitle: Accessoires
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
