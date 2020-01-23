@@ -47,13 +47,13 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model X4
+    mainTitle: Model X2 4W
     subtitle: Specificaties
 productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model X4
-  title: Ervaar Model-X4
+  navigationTitle: Ervaar Model X2 4W
+  title: Ervaar Model-X2 4W
 ---
 
