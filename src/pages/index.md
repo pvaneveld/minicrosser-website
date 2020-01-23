@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 homeOne:
-  backgroundImage: /img/meer-mc.jpg
+  backgroundImage: /img/bewerkte-foto-website-1-.jpg
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
