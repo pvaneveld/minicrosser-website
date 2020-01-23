@@ -1,6 +1,6 @@
 ---
 templateKey: product
-productName: Model X4
+productName: Model X2 4W
 productOne:
   backgroundImage: /img/dji_0022.jpg
   buttonText: Configureren
@@ -11,7 +11,7 @@ productOne:
       title: Key feature 2
     - description: kogelvrij glas
       title: Key feature 3
-  navigationTitle: Model X4
+  navigationTitle: Model X2 4W
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
     por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
