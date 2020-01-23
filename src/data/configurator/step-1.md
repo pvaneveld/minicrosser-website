@@ -30,7 +30,7 @@ models:
       tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam,
     image: /img/x2-4w-zijkant.png
-    name: XHD
+    name: X2 HD
     price: 6841
 ---
 
