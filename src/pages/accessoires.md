@@ -9,7 +9,7 @@ accessoriesOne:
   title: Accessoires
 accessoriesTwo:
   accessories:
-    - accesoryImage: /img/x2-3w-kinderzitje-ii.png
+    - accesoryImage: /img/kinderzitje-ii.jpg
       buttonText: Configureer
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
