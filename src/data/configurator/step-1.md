@@ -16,7 +16,7 @@ models:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tem- liqua. Ut enim ad
     image: /img/x2-4w-zijkant.png
-    name: X4
+    name: X2 4W
     price: 6841
   - description: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
