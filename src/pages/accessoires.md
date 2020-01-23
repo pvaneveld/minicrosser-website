@@ -40,7 +40,7 @@ accessoriesTwo:
   title: Veiligheid
 accessoriesThree:
   accessories:
-    - accesoryImage: /img/3w-voorkant-vrijstaand.png
+    - accesoryImage: /img/img_1841.jpg
       buttonText: Configureer
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -48,7 +48,7 @@ accessoriesThree:
         veniam
       subtitle: Subitel
       title: Accesoire 1
-    - accesoryImage: /img/3w-voorkant-vrijstaand.png
+    - accesoryImage: /img/img_1840.jpg
       buttonText: Configureer
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -56,7 +56,7 @@ accessoriesThree:
         veniam
       subtitle: Subitel
       title: Accesoire 2
-    - accesoryImage: /img/3w-voorkant-vrijstaand.png
+    - accesoryImage: /img/img_1845.jpg
       buttonText: Configureer
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
