@@ -12,12 +12,12 @@ homeTwo:
   buttons:
     buttonPrimary: Proefrit
     buttonSecondary: Vind uw dealer
-  navigationTitle: Ontdek Minicrosser
-  title: Ontdek Minicrosser
+  navigationTitle: Ontdek Minicrosser X2
+  title: Ontdek Minicrosser X2
 homeThree:
-  backgroundImage: /img/dit-is-mc-lees-meer.jpg
+  backgroundImage: /img/sleutelhanger.jpg
   buttonPrimary: Lees meer
-  navigationTitle: Dit is Minicrosser
-  title: Dit is Minicrosser
+  navigationTitle: Dit is Minicrosser X2
+  title: Dit is Minicrosser X2
 ---
 
