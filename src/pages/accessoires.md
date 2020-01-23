@@ -9,14 +9,14 @@ accessoriesOne:
   title: Accessoires
 accessoriesTwo:
   accessories:
-    - accesoryImage: /img/3w-voorkant-vrijstaand.png
+    - accesoryImage: /img/x2-3w-kinderzitje-ii.png
       buttonText: Configureer
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam
       subtitle: Subitel
-      title: Accesoire 1
+      title: Kinderzitje
     - accesoryImage: /img/3w-voorkant-vrijstaand.png
       buttonText: Configureer
       description: >-
