@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X3
 productOne:
-  backgroundImage: /img/_mg_3551-2.jpg
+  backgroundImage: /img/dji_0042.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
