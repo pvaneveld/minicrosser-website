@@ -17,7 +17,7 @@ accessoriesTwo:
         veniam
       subtitle: Subitel
       title: Kinderzitje
-    - accesoryImage: /img/3w-voorkant-vrijstaand.png
+    - accesoryImage: /img/img_1803.jpg
       buttonText: Configureer
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -25,7 +25,7 @@ accessoriesTwo:
         veniam
       subtitle: Subitel
       title: Accesoire 2
-    - accesoryImage: /img/3w-voorkant-vrijstaand.png
+    - accesoryImage: /img/img_1988.jpg
       buttonText: Configureer
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
