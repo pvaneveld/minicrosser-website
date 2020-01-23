@@ -5,8 +5,8 @@ homeOne:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Minicrosser X
-  title: Minicrosser X
+  navigationTitle: Minicrosser X2
+  title: Minicrosser X2
 homeTwo:
   backgroundImage: /img/_mg_3551-2.jpg
   buttons:
@@ -17,7 +17,7 @@ homeTwo:
 homeThree:
   backgroundImage: /img/dit-is-mc-lees-meer.jpg
   buttonPrimary: Lees meer
-  navigationTitle: Dit is minicrosser
-  title: Dit is minicrosser
+  navigationTitle: Dit is Minicrosser
+  title: Dit is Minicrosser
 ---
 
