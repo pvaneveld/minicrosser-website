@@ -6,7 +6,7 @@ colors:
   - image: /img/img_2032.jpg
     name: anthracite-black
     price: 0
-  - image: /img/x2-4w-zijkant.png
+  - image: /img/img_1790.jpg
     name: sunset-orange
     price: 0
 ---
