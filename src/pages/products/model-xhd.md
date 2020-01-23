@@ -1,8 +1,8 @@
 ---
 templateKey: product
-productName: Model XHD
+productName: Model X2 HD
 productOne:
-  backgroundImage: /img/meer-mc.jpg
+  backgroundImage: /img/dji_0032.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
@@ -11,7 +11,7 @@ productOne:
       title: Key feature 2
     - description: kogelvrij glas
       title: Key feature 3
-  navigationTitle: Model XHD
+  navigationTitle: Model X2 HD
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
     por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
