@@ -2,11 +2,11 @@
 templateKey: accessories
 accessoriesOne:
   backgroundImage: /img/_mg_3562-2.jpg
-  navigationTitle: Accesoires
+  navigationTitle: Accessoires
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
     por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-  title: Accesoires
+  title: Accessoires
 accessoriesTwo:
   accessories:
     - accesoryImage: /img/3w-voorkant-vrijstaand.png
