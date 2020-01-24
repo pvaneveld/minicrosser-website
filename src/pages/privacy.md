@@ -9,12 +9,16 @@ text: >-
   na uw toestemming.
 
 
+
+
   **Uw gegevens**\
 
   RevaMed zal uw persoonlijke gegevens niet aan derden verkopen en zal deze
   uitsluitend aan derden ter beschikking stellen die zijn betrokken bij het
   uitvoeren van uw bestelling. Onze werknemers en de door ons ingeschakelde
-  derden zijn verplicht om de vertrouwelijkheid van uw gegevens te respecteren.
+  derden zijn verplicht om de vertrouwelijkheid van uw gegevens te respecteren
+
+
 
 
   **Uw privacy rechten**\
@@ -23,6 +27,8 @@ text: >-
   inzage van uw persoonsgegevens, het recht om correctie of verwijdering van uw
   persoonsgegevens te vragen en het recht om gegevens over te (laten) dragen.
   Voor vragen over uw rechten kunt u contact met ons opnemen.
+
+
 
 
   **Cookies**\
