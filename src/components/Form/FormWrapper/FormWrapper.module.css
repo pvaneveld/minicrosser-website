@@ -1,0 +1,9 @@
+.header {
+  margin: var(--space-sm) auto var(--space-xs) auto;
+  text-align: center;
+}
+
+.succes-text {
+  opacity: 0;
+  position: absolute;
+}

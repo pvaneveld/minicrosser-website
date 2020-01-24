@@ -78,8 +78,13 @@ const ContactForm: React.SFC = () => {
 
   return (
     <div className={style.form}>
-      <FormWrapper formName="contact-form" submitSuccessText={popups.successPopup} submitFailText={popups.errorPopup}>
-        <h1 className={style.header}>{formContent.title}</h1>
+      <FormWrapper
+        title={formContent.title}
+        formName="contact-form"
+        submitSuccessText={popups.successPopup}
+        submitFailText={popups.errorPopup}
+      >
+        {/* <h1 className={style.header}>{formContent.title}</h1> */}
         <div className={style.formFieldsContainer}>
           <FormInput
             name={keys.firstName}

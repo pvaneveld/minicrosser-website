@@ -1,6 +1,8 @@
 import React, { ReactNode, useState } from 'react';
 import useForm, { FormContext } from 'react-hook-form';
 import FormStatusBanner from '../FormStatusBanner/FormStatusBanner';
+import { CSSTransition } from 'react-transition-group';
+import style from './FormWrapper.module.css';
 
 interface FormWrapperProps {
   formName: string;
@@ -8,12 +10,14 @@ interface FormWrapperProps {
   submitSuccessText: string;
   submitFailText: string;
   lambdaFunctionName?: string;
+  title?: string;
 }
 
 const FormWrapper: React.SFC<FormWrapperProps> = props => {
   const { children, formName } = props;
   const methods = useForm();
   const [formError, setFormError] = useState(false);
+  const [formVisible, setFormVisible] = useState(true);
 
   const encode = (data: object): string => {
     return Object.keys(data)
@@ -38,6 +42,7 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
           body: encode({ 'form-name': formName, ...data }),
         });
       }
+      setFormVisible(false);
     } catch (error) {
       setFormError(true);
     }
@@ -45,11 +50,25 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
 
   return (
     <FormContext {...methods}>
-      <FormStatusBanner succesText={props.submitSuccessText} errorText={props.submitSuccessText} hasError={formError} />
-
-      <form name={formName} onSubmit={methods.handleSubmit(onSubmit)}>
-        {children}
-      </form>
+      {/* <FormStatusBanner succesText={props.submitSuccessText} errorText={props.submitSuccessText} hasError={formError} /> */}
+      <CSSTransition classNames="title" in={formVisible} enter={false} exit={true} unmountOnExit={true} timeout={1000}>
+        <h1 className={style.header}>{props.title}</h1>
+      </CSSTransition>
+      <CSSTransition classNames="succes-text" in={!formVisible} enter={true} exit={false} timeout={1000}>
+        <h1 className={`${style.header} ${style.succesText}`}>{props.submitSuccessText}</h1>
+      </CSSTransition>
+      <CSSTransition
+        classNames="form-animation"
+        in={formVisible}
+        enter={false}
+        exit={true}
+        unmountOnExit={true}
+        timeout={1000}
+      >
+        <form name={formName} onSubmit={methods.handleSubmit(onSubmit)}>
+          {children}
+        </form>
+      </CSSTransition>
     </FormContext>
   );
 };
