@@ -11,6 +11,8 @@ text: >-
 
 
 
+
+
   **Uw gegevens**\
 
   RevaMed zal uw persoonlijke gegevens niet aan derden verkopen en zal deze
@@ -21,12 +23,16 @@ text: >-
 
 
 
+
+
   **Uw privacy rechten**\
 
   Onder de AVG (Algemene verordening gegevensbescherming ) heeft u het recht op
   inzage van uw persoonsgegevens, het recht om correctie of verwijdering van uw
   persoonsgegevens te vragen en het recht om gegevens over te (laten) dragen.
   Voor vragen over uw rechten kunt u contact met ons opnemen.
+
+
 
 
 
