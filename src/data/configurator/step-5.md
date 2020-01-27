@@ -23,6 +23,15 @@ accessoriesSeat:
     - image: /img/smartphone-houder.jpg
       name: Houder voor smartphone
       price: 279.47
+    - image: /img/no-image-available.jpg
+      name: 'Tas, bevestigd onder armsteun links of rechts'
+      price: 108.17
+    - image: /img/elektrisch-ihv-stoelkolom.jpg
+      name: 'Elektrisch, in hoogte verstelbare stoelkolom (15 cm)'
+      price: 991.56
+    - image: /img/elektrische-stoelslede.jpg
+      name: Elektrische stoelslede (15 cm)
+      price: 1532.42
   category: Accessoires zitting
   title: Accessoires zitting
 accessories:
