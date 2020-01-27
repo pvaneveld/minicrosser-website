@@ -17,6 +17,12 @@ accessoriesSeat:
     - image: /img/no-image-available.jpg
       name: 'Zijsteun 10 x 30 cm, bevestigd links of rechts'
       price: 442.69
+    - image: /img/bekerhouder.jpg
+      name: Bekerhouder
+      price: 135.21
+    - image: /img/smartphone-houder.jpg
+      name: Houder voor smartphone
+      price: 279.47
   category: Accessoires zitting
   title: Accessoires zitting
 accessories:
