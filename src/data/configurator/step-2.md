@@ -3,10 +3,10 @@ templateKey: configurator-two
 title: Kies uw kleur
 category: Kleur
 colors:
-  - image: /img/img_2032.jpg
+  - image: /img/kleur-antraciet.jpg
     name: anthracite-black
     price: 0
-  - image: /img/img_1790.jpg
+  - image: /img/kleur-oranje.jpg
     name: sunset-orange
     price: 0
 ---
