@@ -60,15 +60,51 @@ accessories:
     - image: /img/spiegel-rechts.jpg
       name: 'Spiegel, rechts'
       price: 27.04
-    - image: /img/x2-4w-zijkant.png
-      name: Vijf extra wielen
-      price: 30.5
-    - image: /img/x2-4w-zijkant.png
-      name: Een jaar extra garantie
-      price: 30.5
-    - image: /img/x2-4w-zijkant.png
-      name: Een extra scootmobiel
-      price: 30.5
+    - image: /img/no-image-available.jpg
+      name: 'Spiegel, links'
+      price: 27.04
+    - image: /img/no-image-available.jpg
+      name: 'Spiegel verlengset per kant, 10 cm (per stuk)'
+      price: 36.05
+    - image: /img/no-image-available.jpg
+      name: Houder voor rolstoel (max. 20 kg)
+      price: 748.18
+    - image: /img/no-image-available.jpg
+      name: Houder voor rollator (max. 20 kg)
+      price: 387.61
+    - image: /img/no-image-available.jpg
+      name: Houder voor golftas (max. 20 kg)
+      price: 495.79
+    - image: /img/no-image-available.jpg
+      name: 'Stokhouder (2 stokken) compleet, bevestigd aan C-rail'
+      price: 72.13
+    - image: /img/no-image-available.jpg
+      name: 'Stokhouder (2 stokken) compleet, bevestigd aan Ergo2 stoel'
+      price: 108.17
+    - image: /img/no-image-available.jpg
+      name: 'Stokhouder (vierpoot), bevestigd aan achterkant frame'
+      price: 431.55
+    - image: /img/no-image-available.jpg
+      name: 'Anti-diefstalmodule, hellingshoek- en temperatuurmeter'
+      price: 145.61
+    - image: /img/no-image-available.jpg
+      name: 'Accubakdeksel vergroot, anthracite-black'
+      price: 58.83
+    - image: /img/no-image-available.jpg
+      name: 'Accubakdeksel vergroot, sunset-orange'
+      price: 59.68
+    - image: /img/no-image-available.jpg
+      name: 'Achterwiel voor verhogen topsnelheid 18 km/u, per stuk'
+      price: 180
+    - image: /img/no-image-available.jpg
+      name: Sensor voor snelheidsreductie in bochten voor model X2 3W
+      price: 116.11
+    - image: /img/no-image-available.jpg
+      name: 'Voetplaatverbreder (model X2 3W), links bevestigd'
+      price: 322.35
+    - image: /img/no-image-available.jpg
+      name: 'Voetplaatverbreder (model X2 3W), rechts bevestigd'
+      price: 322.35
   category: Overige accessoires
   title: Accessoires
 ---
