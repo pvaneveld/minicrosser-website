@@ -4,7 +4,7 @@ title: Kies uw model
 category: Model
 models:
   - description: |-
-      **Functionele en fenomenaal comfortabele driewielscootmobiel**\
+      **Functionele en fenomenaal comfortabele driewielscootmobiel**
 
       Voor een ongekende rij-ervaring
 
