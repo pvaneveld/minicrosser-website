@@ -8,9 +8,9 @@ accessoriesSeat:
     - image: /img/verstelbare-hoofdsteun-ii.jpg
       name: Verstelbare hoofdsteun
       price: 135.21
-    - image: /img/x2-4w-zijkant.png
-      name: Gouden vering
-      price: 30.5
+    - image: /img/mc-sele.jpg
+      name: Veiligheidsgordel
+      price: 90.14
   category: Accessoires zitting
   title: Accessoires zitting
 accessories:
