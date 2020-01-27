@@ -4,16 +4,19 @@ title: Kies uw bediening
 category: Bediening
 handling:
   - image: /img/no_image_available.png
-    name: Gas links
-    price: 10
-  - image: /img/x2-4w-zijkant.png
-    name: Gas rechts
-    price: 20
-  - image: /img/x2-4w-zijkant.png
-    name: Gas onder
-    price: 30.5
-  - image: /img/x2-4w-zijkant.png
-    name: Full gass
+    name: Draaigas links
+    price: 313.08
+  - image: /img/no_image_available.png
+    name: Draaigas rechts
+    price: 285.3
+  - image: /img/no_image_available.png
+    name: Voetgas wig/wag
+    price: 367.1
+  - image: /img/no_image_available.png
+    name: Extra wig/wag bediening links
+    price: 212.55
+  - image: /img/no_image_available.png
+    name: Wig/wag bediening links
     price: 0
 ---
 
