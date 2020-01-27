@@ -11,6 +11,9 @@ accessoriesSeat:
     - image: /img/mc-sele.jpg
       name: Veiligheidsgordel
       price: 90.14
+    - image: /img/advarselstrekant_0810.jpg
+      name: Gevarendriehoek
+      price: 153.24
   category: Accessoires zitting
   title: Accessoires zitting
 accessories:
