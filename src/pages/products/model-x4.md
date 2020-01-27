@@ -30,19 +30,19 @@ productTwo:
       title: Max gebruikersgewicht
     - description: 30-70 km
       title: Actieradius
-    - description: 3 meter
+    - description: 140 cm
       title: Totale lengte
     - description: 109 cm
       title: Totale hoogte
-    - description: '132,5 cm'
+    - description: 165 cm
       title: Draaicirkel
-    - description: 120 km/u
+    - description: 15 km/u (optioneel 18 km/u)
       title: Max snelheid
     - description: 700 Watt
       title: Motor
-    - description: 68cm
+    - description: 68 cm
       title: Totale breedte
-    - description: 151 kg
+    - description: 168 kg
       title: Gewicht
     - description: 11 cm
       title: Hoogte voetplateau
