@@ -45,9 +45,9 @@ accessoriesSeat:
   title: Accessoires zitting
 accessories:
   accessoriesList:
-    - image: /img/x2-4w-zijkant.png
-      name: Dikke banden
-      price: 500
+    - image: /img/kinderzitje.jpg
+      name: Kinderzitje
+      price: 1065.17
     - image: /img/x2-4w-zijkant.png
       name: Stuurbekrachtiging
       price: 20
