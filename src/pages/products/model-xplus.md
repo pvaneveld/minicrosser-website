@@ -26,21 +26,21 @@ productTwo:
   backgroundImage: /img/3w-voorkant-vrijstaand.png
   navigationTitle: Specificaties
   specifications:
-    - description: 175 kg
+    - description: 200 kg
       title: Max gebruikersgewicht
     - description: 30-70 km
       title: Actieradius
-    - description: 3 meter
+    - description: 134 cm
       title: Totale lengte
     - description: 109 cm
       title: Totale hoogte
-    - description: '132,5 cm'
+    - description: 134 cm
       title: Draaicirkel
-    - description: 120 km/u
+    - description: 15 km/u
       title: Max snelheid
     - description: 700 Watt
       title: Motor
-    - description: 68cm
+    - description: 68 cm
       title: Totale breedte
     - description: 151 kg
       title: Gewicht
