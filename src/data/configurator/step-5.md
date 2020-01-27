@@ -14,6 +14,9 @@ accessoriesSeat:
     - image: /img/veiligheidsdriehoek.jpg
       name: Gevarendriehoek
       price: 153.24
+    - image: /img/no-image-available.jpg
+      name: 'Zijsteun 10 x 30 cm, bevestigd links of rechts'
+      price: 442.69
   category: Accessoires zitting
   title: Accessoires zitting
 accessories:
