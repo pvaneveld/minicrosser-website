@@ -2,16 +2,16 @@
 templateKey: configurator-five
 accessoriesSeat:
   accessoriesSeatList:
-    - image: /img/img_7261.jpg
+    - image: /img/mand-achter.jpg
       name: 'Mand achter, universeel, 34 - 70 cm'
       price: 153.24
-    - image: /img/verstelbare-hoofdsteun-ii.jpg
+    - image: /img/verstelbare-hoofdsteun.jpg
       name: Verstelbare hoofdsteun
       price: 135.21
-    - image: /img/mc-sele.jpg
+    - image: /img/veiligheidsgordel.jpg
       name: Veiligheidsgordel
       price: 90.14
-    - image: /img/advarselstrekant_0810.jpg
+    - image: /img/veiligheidsdriehoek.jpg
       name: Gevarendriehoek
       price: 153.24
   category: Accessoires zitting
