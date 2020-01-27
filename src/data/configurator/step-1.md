@@ -4,10 +4,10 @@ title: Kies uw model
 category: Model
 models:
   - description: |-
-      Functionele en fenomenaal comfortabele driewielscootmobiel
-      voor een ongekende rij ervaring.
+      **Functionele en fenomenaal comfortabele driewielscootmobiel**
+      Voor een ongekende rij-ervaring
 
-      __\
+      \
       _Exclusief accu en oplader_
     image: /img/_1010169.jpg
     name: X2 3W
