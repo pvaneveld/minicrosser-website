@@ -14,7 +14,7 @@ accessoriesSeat:
     - image: /img/veiligheidsdriehoek.jpg
       name: Gevarendriehoek
       price: 153.24
-    - image: /img/no-image-available.jpg
+    - image: /img/zijsteun.jpg
       name: 'Zijsteun 10 x 30 cm, bevestigd links of rechts'
       price: 442.69
     - image: /img/bekerhouder.jpg
@@ -48,18 +48,18 @@ accessories:
     - image: /img/kinderzitje.jpg
       name: Kinderzitje
       price: 1065.17
-    - image: /img/x2-4w-zijkant.png
-      name: Stuurbekrachtiging
-      price: 20
-    - image: /img/x2-4w-zijkant.png
-      name: Opgevoerde motor
-      price: 30.5
-    - image: /img/x2-4w-zijkant.png
-      name: Gouden verf
-      price: 500
-    - image: /img/x2-4w-zijkant.png
-      name: Spoiler
-      price: 20
+    - image: /img/no-image-available.jpg
+      name: Anti-kiep
+      price: 270.41
+    - image: /img/windscherm.jpg
+      name: Windscherm
+      price: 531.83
+    - image: /img/no-image-available.jpg
+      name: Extra windscherm voor wegnemen rijwind
+      price: 236.51
+    - image: /img/spiegel-rechts.jpg
+      name: 'Spiegel, rechts'
+      price: 27.04
     - image: /img/x2-4w-zijkant.png
       name: Vijf extra wielen
       price: 30.5
