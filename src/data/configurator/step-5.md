@@ -32,6 +32,15 @@ accessoriesSeat:
     - image: /img/elektrische-stoelslede.jpg
       name: Elektrische stoelslede (15 cm)
       price: 1532.42
+    - image: /img/elektrische-rughoekverstelling.jpg
+      name: Elektrische rughoekverstelling
+      price: 1601.95
+    - image: /img/no-image-available.jpg
+      name: Elektrische kantelverstelling (10 graden)
+      price: 1941.6
+    - image: /img/elektrische-draaibare-stoelkolom.jpg
+      name: Elektrisch draaibare stoelkolom
+      price: 1941.6
   category: Accessoires zitting
   title: Accessoires zitting
 accessories:
