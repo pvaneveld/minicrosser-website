@@ -3,7 +3,7 @@ templateKey: configurator-four
 title: Kies uw zitting
 category: Zitting
 seat:
-  - image: /img/img_1841.jpg
+  - image: /img/ergo2-sitz-35-cm-breite-1507-1022.jpg
     name: 'Ergo 2 stoel ZB 35 cm, met armsteunen, zonder hoofdsteun'
     price: 1155.09
   - image: /img/ergo2-sitz-40-cm-breite-1507-1401.jpg
