@@ -3,7 +3,12 @@ templateKey: configurator-one
 title: Kies uw model
 category: Model
 models:
-  - description: "Functionele en fenomenaal comfortabele driewielscootmobiel\r voor een ongekende rij ervaring.\n\n_Exclusief accu en oplader_"
+  - description: |-
+      Functionele en fenomenaal comfortabele driewielscootmobiel
+      voor een ongekende rij ervaring.
+
+      __\
+      _Exclusief accu en oplader_
     image: /img/_1010169.jpg
     name: X2 3W
     price: 7456.69
