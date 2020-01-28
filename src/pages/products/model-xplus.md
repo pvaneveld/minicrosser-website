@@ -47,7 +47,7 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model xplus
+    mainTitle: Model X2 Plus
     subtitle: Specificaties
 productThree:
   buttons:
