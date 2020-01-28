@@ -1,6 +1,6 @@
 ---
 templateKey: product
-productName: Model X2 Plus
+productName: Model X2 PLUS
 productOne:
   backgroundImage: /img/_mg_3544-2-ii.jpg
   buttonText: Configureren
@@ -11,7 +11,7 @@ productOne:
       title: Key feature 2
     - description: kogelvrij glas
       title: Key feature 3
-  navigationTitle: Model X2 Plus
+  navigationTitle: Model X2 PLUS
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
     por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -47,13 +47,13 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model X2 Plus
+    mainTitle: Model X2 PLUS
     subtitle: Specificaties
 productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model xplus
-  title: Ervaar Model-xplus
+  navigationTitle: Ervaar Model X2 PLUS
+  title: Ervaar Model X2 PLUS
 ---
 
