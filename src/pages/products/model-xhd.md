@@ -53,7 +53,7 @@ productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model XHD
-  title: Ervaar Model-XHD
+  navigationTitle: Ervaar Model X2 HD
+  title: Ervaar Model X2 HD
 ---
 
