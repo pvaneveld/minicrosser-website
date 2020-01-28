@@ -47,7 +47,7 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model XHD
+    mainTitle: 'Model X2 HD '
     subtitle: Specificaties
 productThree:
   buttons:
