@@ -1,7 +1,7 @@
 ---
 templateKey: configurator-two
 title: Kies uw framekleur
-category: Kleur
+category: Framekleur
 colors:
   - image: /img/kleur-antraciet.jpg
     name: anthracite-black
