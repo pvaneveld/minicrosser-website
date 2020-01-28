@@ -1,6 +1,6 @@
 ---
 templateKey: configurator-two
-title: Kies uw kleur
+title: Kies uw framekleur
 category: Kleur
 colors:
   - image: /img/kleur-antraciet.jpg
