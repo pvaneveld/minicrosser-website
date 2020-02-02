@@ -15,6 +15,8 @@
   --transition-standard: var(--transition-lg) var(--transition-cubic-standard);
 }
 
+/* form animation */
+
 .form-animation-exit {
   opacity: 1;
   transform: translateX(0);
@@ -25,6 +27,8 @@
   transition-duration: var(--transition-xl);
   transition-timing-function: var(--transition-cubic-leave);
 }
+
+/* title exit */
 
 .title-exit {
   opacity: 1;
@@ -38,16 +42,15 @@
   transition-timing-function: var(--transition-cubic-leave);
 }
 
-.succes-text-enter {
+/* show text */
+
+.show-text-enter {
   opacity: 0;
 }
-.succes-text-enter-active,
-succes-text-enter-done {
-  opacity: 1 !important;
-  transition: opacity 200ms;
+.show-text-enter-active,
+.show-text-enter-done {
+  transition: opacity calc(var(--transition-xxl) * 1.5);
+  transform: translateX(0);
   transition-delay: calc(var(--transition-xl) * 2);
-}
-
-.succes-text-enter-done {
-  opacity: 1;
+  opacity: 1 !important;
 }

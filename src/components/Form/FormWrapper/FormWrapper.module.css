@@ -1,6 +1,8 @@
 .header {
   margin: var(--space-sm) auto var(--space-xs) auto;
   text-align: center;
+  max-width: var(--content-block-width);
+  text-align: center;
 }
 
 .succes-text {

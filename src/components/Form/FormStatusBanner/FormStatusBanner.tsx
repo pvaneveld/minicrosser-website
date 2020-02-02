@@ -1,27 +1,16 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import style from './FormStatusBanner.module.css';
-import { useFormContext } from 'react-hook-form';
 import InfoBanner from '../../InfoBanner/InfoBanner';
 
 interface FormStatusBannerProps {
-  succesText: string;
   errorText: string;
   hasError: boolean;
 }
 
 const FormStatusBanner: React.SFC<FormStatusBannerProps> = props => {
-  const { formState } = useFormContext();
   const [bannerText, setBannerText] = useState('');
   const [bannerVisible, setBannerVisible] = useState(false);
   const [classString, setClasstring] = useState('');
-
-  const showSuccesBanner = (): void => {
-    if (formState.isValid) {
-      setBannerText(props.succesText);
-      setClasstring(style.valid);
-      setBannerVisible(true);
-    }
-  };
 
   const showErrorBanner = (): void => {
     setBannerText(props.errorText);
@@ -33,10 +22,6 @@ const FormStatusBanner: React.SFC<FormStatusBannerProps> = props => {
     setClasstring(style.neutral);
     setBannerVisible(false);
   };
-
-  useEffect(() => {
-    showSuccesBanner();
-  }, [formState.submitCount]);
 
   useEffect(() => {
     if (props.hasError) {

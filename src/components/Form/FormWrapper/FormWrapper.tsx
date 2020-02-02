@@ -50,13 +50,15 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
 
   return (
     <FormContext {...methods}>
-      {/* <FormStatusBanner succesText={props.submitSuccessText} errorText={props.submitSuccessText} hasError={formError} /> */}
+      <FormStatusBanner hasError={formError} errorText={props.submitFailText} />
+
       <CSSTransition classNames="title" in={formVisible} enter={false} exit={true} unmountOnExit={true} timeout={1000}>
         <h1 className={style.header}>{props.title}</h1>
       </CSSTransition>
-      <CSSTransition classNames="succes-text" in={!formVisible} enter={true} exit={false} timeout={1000}>
+      <CSSTransition classNames="show-text" in={!formVisible} enter={true} exit={false} timeout={1000}>
         <h1 className={`${style.header} ${style.succesText}`}>{props.submitSuccessText}</h1>
       </CSSTransition>
+
       <CSSTransition
         classNames="form-animation"
         in={formVisible}
