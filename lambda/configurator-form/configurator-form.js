@@ -1,11 +1,13 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 
 const SibApiV3Sdk = require('sib-api-v3-sdk');
+const atob = require('atob');
+const Blob = require('cross-blob');
 
 exports.handler = async (event, context) => {
   // https://developers.sendinblue.com/reference#sendtransacemail
   try {
-    const { firstName, surname, prefix, dealer, phone, mail } = JSON.parse(event.body);
+    const { firstName, surname, prefix, dealer, phone, mail, pdf } = JSON.parse(event.body);
     const { mail: dealerMail, companyName: dealerName } = JSON.parse(dealer);
     const templateId = 10;
 
@@ -24,6 +26,8 @@ exports.handler = async (event, context) => {
       ],
     };
 
+    const name = `${firstName}${prefix ? ' ' + prefix : ''} ${surname}`;
+
     const defaultClient = SibApiV3Sdk.ApiClient.instance;
 
     // Configure API key authorization: api-key
@@ -32,16 +36,45 @@ exports.handler = async (event, context) => {
 
     const apiInstance = new SibApiV3Sdk.SMTPApi();
 
-    const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
+    const sendSmtpEmail = new SibApiV3Sdk.SendEmail();
+    sendSmtpEmail.htmlContent = `
+      <h1>Configuratie-aanvraag van ${name}</h1>
 
-    sendSmtpEmail.templateId = templateId;
+      <table>
+        <tr>
+          <td>
+            Telefoonnummer
+          </td>
+          <td>
+            ${phone}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mail
+          </td>
+          <td>
+            ${mail}
+          </td>
+        </tr>
+      </table>
+    `; // SendSmtpEmail | Values to send a transactional emai // SendSmtpEmail | Values to send a transactional email
+    sendSmtpEmail.sender = {
+      name: 'Mincrosser',
+      email: 'mincrosser@info.com',
+    };
+    sendSmtpEmail.subject = `Minicrosser configuratie van ${name}`;
     sendSmtpEmail.cc = mailInfo.cc;
     sendSmtpEmail.to = mailInfo.to;
-
+    sendSmtpEmail.attachment = [
+      {
+        content: pdf,
+        name: 'test.pdf',
+      },
+    ];
     sendSmtpEmail.params = { firstName, surname, prefix, dealer, phone, mail, dealerMail, dealerName };
 
-    // await apiInstance.sendTransacEmail(sendSmtpEmail);
-
+    await apiInstance.sendTransacEmail(sendSmtpEmail);
     return {
       statusCode: 200,
       body: 'Done!',

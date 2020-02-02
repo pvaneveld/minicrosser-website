@@ -31,6 +31,7 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
       const { lambdaFunctionName: lambda } = props;
 
       if (lambda) {
+        console.log(data);
         await fetch(`/.netlify/functions/${lambda}`, {
           method: 'POST',
           body: JSON.stringify({ ...data }),

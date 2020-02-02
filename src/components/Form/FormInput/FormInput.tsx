@@ -3,18 +3,19 @@ import style from './FormInput.module.css';
 import { useFormContext } from 'react-hook-form';
 
 interface InputProps {
-  type: 'text' | 'email' | 'tel' | 'textarea' | 'selectbox';
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'selectbox' | 'hidden';
   autoSelect?: { key: string; value: string } | false;
   disabled?: boolean;
   id: string;
-  label: string;
+  label?: string;
   name: string;
   errorMessage?: string;
   regex?: RegExp;
-  required: boolean;
+  required?: boolean;
   classString?: string;
   selectBoxOptions?: { value: string; text: string }[];
   placeholder?: string;
+  value?: any;
 }
 
 const Input: React.SFC<InputProps> = props => {
@@ -30,6 +31,7 @@ const Input: React.SFC<InputProps> = props => {
     selectBoxOptions,
     placeholder,
     disabled,
+    value,
   } = props;
   const { register, errors, setValue } = useFormContext();
 
@@ -64,6 +66,10 @@ const Input: React.SFC<InputProps> = props => {
             className={style.input}
             ref={register({ required, pattern: regex || /.*/ })}
           />
+        )}
+
+        {type === 'hidden' && (
+          <input name={name} id={id} type="hidden" value={value} ref={register({ required: true })} />
         )}
 
         {type === 'selectbox' && selectBoxOptions && (

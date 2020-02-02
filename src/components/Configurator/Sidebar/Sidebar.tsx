@@ -2,27 +2,12 @@ import React, { ReactNode } from 'react';
 import style from './Sidebar.module.css';
 import { useSelector } from 'react-redux';
 import { toCurrency } from '../../../helpers/toCurrency';
+import { parseSidebarConfig, parseTotalPrice } from '../../../../helpers/parseConfiguration';
 
 const Sidebar: React.SFC = () => {
   const selectedItems = useSelector((state: RootState) => state.configurator.selection);
 
-  const sidebarContent: string | { name: string; price: string }[] = Object.entries(
-    selectedItems.reduce((acc, curr) => {
-      const item = { price: curr.price, name: curr.name };
-      if (acc[curr.category]) {
-        acc[curr.category] = acc[curr.category].concat(item);
-      } else {
-        acc[curr.category] = [].concat(item);
-      }
-
-      return acc;
-    }, {}),
-  );
-
-  const totalPrice = toCurrency(
-    selectedItems.reduce((acc, curr) => acc + parseFloat(curr.price), 0),
-    false,
-  );
+  const sidebarContent: string | { name: string; price: string }[] = parseSidebarConfig(selectedItems);
 
   return (
     <div className={style.sidebar}>
@@ -44,7 +29,7 @@ const Sidebar: React.SFC = () => {
             </li>
           );
         })}
-        <li className={style.totalPrice}>{totalPrice}</li>
+        <li className={style.totalPrice}>{parseTotalPrice(selectedItems)}</li>
       </ul>
     </div>
   );
