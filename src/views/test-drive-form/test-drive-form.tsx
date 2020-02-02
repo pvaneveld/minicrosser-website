@@ -5,6 +5,7 @@ import FormInput from '../../components/Form/FormInput/FormInput';
 import Button from '../../components/Buttons/Button/Button';
 import style from './test-drive-form.module.css';
 import { regexLibrary } from '../../../utils/regex';
+import { getDealerOptionsData } from '../../../helpers/dealerOptions';
 
 interface TestDriveForm {
   firstName: string;
@@ -94,21 +95,6 @@ const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
   const { firstName, prefix, surname, mail, phone, remarks, dealer, popups } = formContent.formFields;
   const { textOnly: textOnlyRegex, mail: mailRegex, phone: phoneRegex } = regexLibrary;
   const { edges: dealerData } = query.dealers;
-  interface DealerData {
-    node: {
-      frontmatter: {
-        companyName: string;
-        city: string;
-        mail: string;
-      };
-    };
-  }
-
-  const getDealerOptionsData = (dealerData: DealerData[]): { value: string; text: string }[] =>
-    dealerData.reduce((acc, curr) => {
-      const { city, companyName, mail } = curr.node.frontmatter;
-      return acc.concat({ value: JSON.stringify({ companyName, mail }), text: `${companyName} | ${city}` });
-    }, []);
 
   const keys: TestDriveForm = {
     firstName: 'firstName',

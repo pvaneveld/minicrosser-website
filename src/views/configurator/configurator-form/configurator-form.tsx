@@ -5,6 +5,7 @@ import FormInput from '../../../components/Form/FormInput/FormInput';
 import Button from '../../../components/Buttons/Button/Button';
 import style from './configurator-form.module.css';
 import { regexLibrary } from '../../../../utils/regex';
+import { getDealerOptionsData } from '../../../../helpers/dealerOptions';
 
 interface ConfiguratorForm {
   firstName: string;
@@ -14,6 +15,7 @@ interface ConfiguratorForm {
   phone: string;
   zipcode: string;
   city: string;
+  dealer: string;
 }
 
 const ConfiguratorForm: React.SFC = () => {
@@ -66,12 +68,24 @@ const ConfiguratorForm: React.SFC = () => {
           }
         }
       }
+      dealers: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "dealers" } } }) {
+        edges {
+          node {
+            frontmatter {
+              companyName
+              city
+              mail
+            }
+          }
+        }
+      }
     }
   `);
 
   const { frontmatter: formContent } = query.formData;
   const { firstName, prefix, surname, mail, phone, zipcode, city, popups } = formContent.formFields;
   const { textOnly: textOnlyRegex, mail: mailRegex, phone: phoneRegex, zipcode: zipcodeRegex } = regexLibrary;
+  const { edges: dealerData } = query.dealers;
 
   const keys: ConfiguratorForm = {
     firstName: 'firstName',
@@ -81,6 +95,7 @@ const ConfiguratorForm: React.SFC = () => {
     phone: 'phone',
     zipcode: 'zipcode',
     city: 'city',
+    dealer: 'dealer',
   };
 
   return (
@@ -143,24 +158,16 @@ const ConfiguratorForm: React.SFC = () => {
             errorMessage={phone.errorMessage}
           />
           <FormInput
-            name={keys.zipcode}
-            type="text"
-            id={keys.zipcode}
-            label={zipcode.label}
-            required={zipcode.required}
-            regex={zipcodeRegex}
-            classString={`${style.zipcode} ${style.formField}`}
-            errorMessage={zipcode.errorMessage}
-          />
-          <FormInput
-            name={keys.city}
-            type="text"
-            id={keys.city}
-            label={city.label}
-            required={city.required}
+            name={keys.dealer}
+            type="selectbox"
+            id={keys.dealer}
+            label="Selecteer een dealer"
+            required={true}
             regex={textOnlyRegex}
-            classString={`${style.city} ${style.formField}`}
-            errorMessage={city.errorMessage}
+            selectBoxOptions={getDealerOptionsData(dealerData)}
+            placeholder="Selecteer een dealer"
+            classString={`${style.select} ${style.formField}`}
+            errorMessage="selecteer een dealer"
           />
           <Button type="cta" link={false} submit={true} classString={`${style.submit} ${style.formField}}`}>
             {formContent.submitButton}
