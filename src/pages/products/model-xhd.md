@@ -1,8 +1,8 @@
 ---
 templateKey: product
-productName: Model XHD
+productName: Model X2 HD
 productOne:
-  backgroundImage: /img/meer-mc.jpg
+  backgroundImage: /img/_mg_3376.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
@@ -11,7 +11,7 @@ productOne:
       title: Key feature 2
     - description: kogelvrij glas
       title: Key feature 3
-  navigationTitle: Model XHD
+  navigationTitle: Model X2 HD
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
     por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -23,37 +23,37 @@ productOne:
     mainTitle: De sterkste motor in de markt
     subtitle: Performance
 productTwo:
-  backgroundImage: /img/3w-voorkant-vrijstaand.png
+  backgroundImage: /img/4w-voorkant-vrijstaand-ii.png
   navigationTitle: Specificaties
   specifications:
-    - description: 175 kg
+    - description: 250 kg
       title: Max gebruikersgewicht
     - description: 30-70 km
       title: Actieradius
-    - description: 3 meter
+    - description: 140 cm
       title: Totale lengte
     - description: 109 cm
       title: Totale hoogte
-    - description: '132,5 cm'
+    - description: 165 cm
       title: Draaicirkel
-    - description: 120 km/u
+    - description: 10 km/u
       title: Max snelheid
     - description: 700 Watt
       title: Motor
-    - description: 68cm
+    - description: 68 cm
       title: Totale breedte
-    - description: 151 kg
+    - description: 168 kg
       title: Gewicht
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model XHD
+    mainTitle: 'Model X2 HD '
     subtitle: Specificaties
 productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model XHD
-  title: Ervaar Model-XHD
+  navigationTitle: Ervaar Model X2 HD
+  title: Ervaar Model X2 HD
 ---
 

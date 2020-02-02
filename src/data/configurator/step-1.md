@@ -3,30 +3,35 @@ templateKey: configurator-one
 title: Kies uw model
 category: Model
 models:
-  - name: X3
-    price: 6841
-    image: /img/x2-4w-zijkant.png
-    description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
-      por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con-
-      **sequat**. Duis aute irure dolor in dolore magna aliqua. Ut enim ad
-  - name: X4
-    price: 6841
-    image: /img/x2-4w-zijkant.png
-    description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
-      liqua. Ut enim ad
-  - name: XPLUS
-    price: 6841
-    image: /img/x2-4w-zijkant.png
-    description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
-      por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  - name: XHD
-    price: 6841
-    image: /img/x2-4w-zijkant.png
-    description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
-      por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  - description: |-
+      **Functionele en fenomenaal comfortabele driewielscootmobiel**
+
+      Voor een ongekende rij-ervaring
+
+      \
+      _Exclusief accu en oplader_
+    image: /img/_1010169.jpg
+    name: X2 3W
+    price: 7456.69
+  - description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tem- liqua. Ut enim ad
+    image: /img/img_1755-med-skygge.jpg
+    name: X2 4W
+    price: 8361.39
+  - description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam,
+    image: /img/_1010169.jpg
+    name: X2 PLUS
+    price: 9402.34
+  - description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam,
+    image: /img/img_1755-med-skygge.jpg
+    name: X2 HD
+    price: 10063.97
 ---
+

@@ -4,35 +4,40 @@ formTitle: Uw gegevens
 submitButton: Laat een dealer contact met mij opnemen
 restartButton: Nieuwe configuratie starten
 formFields:
+  city:
+    errorMessage: Voer alstublieft een geldige woonplaats in
+    label: Woonplaats
+    required: true
   firstName:
-    errorMessage: Voeg alsjeblieft een geldige voornaam in
+    errorMessage: Voeg alstublieft een geldige voornaam in
     label: Voornaam
     required: true
   mail:
-    errorMessage: Voer alsjeblieft een geldig e-mailadres in
+    errorMessage: Voer alstublieft een geldig e-mailadres in
     label: E-mail
     required: true
   phone:
-    errorMessage: Voer alsjeblieft een geldig telefoonnummer in
+    errorMessage: Voer alstublieft een geldig telefoonnummer in
     label: Telefoonnummer
     required: true
+  popups:
+    errorPopup: >-
+      Sorry, er ging iets mis bij het versturen van het formulier. Probeer het
+      later nog eens.
+    successPopup: >-
+      Dank u wel, het formulier is verzonden. Wij nemen zo snel mogelijk contact
+      met u op.
   prefix:
-    errorMessage: Voer alsjeblieft een geldig tussenvoegsel in
+    errorMessage: Voer alstublieft een geldig tussenvoegsel in
     label: Tussenvoegsel
     required: false
-  zipcode:
-    errorMessage: Voer alsjeblieft een geldige postcode in
-    label: Postcode
-    required: true
-  city:
-    errorMessage: Voer alsjeblieft een geldige woonplaats in
-    label: Woonplaats
-    required: true
   surname:
-    errorMessage: Voer alsjeblieft een geldige achternaam in
+    errorMessage: Voer alstublieft een geldige achternaam in
     label: Achternaam
     required: true
-  popups:
-    errorPopup: Sorry, er ging iets mis bij het versturen van het formulier. Probeer het later nog eens.
-    successPopup: Dankuwel, het formulier is verzonden. Wij nemen zo snel mogelijk contact met u op.
+  zipcode:
+    errorMessage: Voer alstublieft een geldige postcode in
+    label: Postcode
+    required: true
 ---
+

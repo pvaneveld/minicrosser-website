@@ -1,8 +1,8 @@
 ---
 templateKey: product
-productName: Model xplus
+productName: Model X2 PLUS
 productOne:
-  backgroundImage: /img/meer-mc.jpg
+  backgroundImage: /img/_mg_3544-2-ii.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
@@ -11,7 +11,7 @@ productOne:
       title: Key feature 2
     - description: kogelvrij glas
       title: Key feature 3
-  navigationTitle: Model xplus
+  navigationTitle: Model X2 PLUS
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
     por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -26,34 +26,34 @@ productTwo:
   backgroundImage: /img/3w-voorkant-vrijstaand.png
   navigationTitle: Specificaties
   specifications:
-    - description: 175 kg
+    - description: 200 kg
       title: Max gebruikersgewicht
     - description: 30-70 km
       title: Actieradius
-    - description: 3 meter
+    - description: 134 cm
       title: Totale lengte
     - description: 109 cm
       title: Totale hoogte
-    - description: '132,5 cm'
+    - description: 134 cm
       title: Draaicirkel
-    - description: 120 km/u
+    - description: 15 km/u
       title: Max snelheid
     - description: 700 Watt
       title: Motor
-    - description: 68cm
+    - description: 68 cm
       title: Totale breedte
     - description: 151 kg
       title: Gewicht
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model xplus
+    mainTitle: Model X2 PLUS
     subtitle: Specificaties
 productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model xplus
-  title: Ervaar Model-xplus
+  navigationTitle: Ervaar Model X2 PLUS
+  title: Ervaar Model X2 PLUS
 ---
 

@@ -1,23 +1,23 @@
 ---
 templateKey: index-page
 homeOne:
-  backgroundImage: /img/meer-mc.jpg
+  backgroundImage: /img/bewerkte-foto-website-1-.jpg
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Minicrosser X
-  title: Minicrosser X
+  navigationTitle: Minicrosser X2
+  title: Minicrosser X2
 homeTwo:
   backgroundImage: /img/_mg_3551-2.jpg
   buttons:
     buttonPrimary: Proefrit
     buttonSecondary: Vind uw dealer
-  navigationTitle: Ontdek Minicrosser
-  title: Ontdek Minicrosser
+  navigationTitle: Ontdek Minicrosser X2
+  title: Ontdek Minicrosser X2
 homeThree:
-  backgroundImage: /img/dit-is-mc-lees-meer.jpg
+  backgroundImage: /img/sleutelhanger.jpg
   buttonPrimary: Lees meer
-  navigationTitle: Dit is minicrosser
-  title: Dit is minicrosser
+  navigationTitle: Dit is Minicrosser X2
+  title: Dit is Minicrosser X2
 ---
 

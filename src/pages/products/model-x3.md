@@ -1,8 +1,8 @@
 ---
 templateKey: product
-productName: Model X3
+productName: Model X2 3W
 productOne:
-  backgroundImage: /img/_mg_3551-2.jpg
+  backgroundImage: /img/_mg_3532-2.jpg
   buttonText: Configureren
   keyFeatures:
     - description: hij is super snel
@@ -11,7 +11,7 @@ productOne:
       title: Key feature 2
     - description: kogelvrij glas
       title: Key feature 3
-  navigationTitle: Model X3
+  navigationTitle: Model X2 3W
   text: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
     por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -30,30 +30,30 @@ productTwo:
       title: Max gebruikersgewicht
     - description: 30-70 km
       title: Actieradius
-    - description: 3 meter
+    - description: 134 cm
       title: Totale lengte
     - description: 109 cm
       title: Totale hoogte
     - description: '132,5 cm'
       title: Draaicirkel
-    - description: 120 km/u
+    - description: 15 km/u (optioneel 18 km/u)
       title: Max snelheid
     - description: 700 Watt
       title: Motor
-    - description: 68cm
+    - description: 68 cm
       title: Totale breedte
     - description: 151 kg
       title: Gewicht
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model X3
+    mainTitle: Model X2 3W
     subtitle: Specificaties
 productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model X3
-  title: Ervaar Model-X3
+  navigationTitle: Ervaar Model X2 3W
+  title: Ervaar Model X2 3W
 ---
 
