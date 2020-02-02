@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 import style from './FormWrapper.module.css';
 
 interface FormWrapperProps {
-  formName: string;
+  formName?: string;
   children: ReactNode;
   submitSuccessText: string;
   submitFailText: string;

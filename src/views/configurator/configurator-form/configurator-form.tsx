@@ -86,7 +86,7 @@ const ConfiguratorForm: React.SFC = () => {
   return (
     <div className={style.form}>
       <FormWrapper
-        formName="configurator-form"
+        lambdaFunctionName="configurator-form"
         submitSuccessText={popups.successPopup}
         submitFailText={popups.errorPopup}
       >

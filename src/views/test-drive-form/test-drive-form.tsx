@@ -128,8 +128,7 @@ const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
   return (
     <div className={style.form}>
       <FormWrapper
-        lambdaFunctionName="contact-dealer"
-        formName="proefrit-formulier"
+        lambdaFunctionName="test-drive-form"
         submitSuccessText={popups.successPopup}
         submitFailText={popups.errorPopup}
       >

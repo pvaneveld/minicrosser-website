@@ -5,15 +5,15 @@ const SibApiV3Sdk = require('sib-api-v3-sdk');
 exports.handler = async (event, context) => {
   // https://developers.sendinblue.com/reference#sendtransacemail
   try {
-    const { firstName, surname, dealer, phone } = JSON.parse(event.body);
-    const { mail: dealerMail, companyName } = JSON.parse(dealer);
-    const templateId = 9;
+    const { firstName, surname, prefix, dealer, phone, mail } = JSON.parse(event.body);
+    const { mail: dealerMail, companyName: dealerName } = JSON.parse(dealer);
+    const templateId = 10;
 
     const mailInfo = {
       to: [
         {
           email: 'vaneveld.paul@gmail.com',
-          name: companyName,
+          name: dealerName,
         },
       ],
       cc: [
@@ -37,13 +37,14 @@ exports.handler = async (event, context) => {
     sendSmtpEmail.templateId = templateId;
     sendSmtpEmail.cc = mailInfo.cc;
     sendSmtpEmail.to = mailInfo.to;
-    sendSmtpEmail.params = { firstName, surname };
 
-    await apiInstance.sendTransacEmail(sendSmtpEmail);
+    sendSmtpEmail.params = { firstName, surname, prefix, dealer, phone, mail, dealerMail, dealerName };
+
+    // await apiInstance.sendTransacEmail(sendSmtpEmail);
 
     return {
       statusCode: 200,
-      body: mail,
+      body: 'Done!',
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,
