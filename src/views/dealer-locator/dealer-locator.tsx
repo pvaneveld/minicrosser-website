@@ -56,6 +56,7 @@ const DealerLocator: React.SFC = () => {
     lat: number;
     lng: number;
     letter: string;
+    id: string;
   }
 
   interface RawDealerData {
@@ -84,6 +85,7 @@ const DealerLocator: React.SFC = () => {
 
   const enrichDealerHandler = async () => {
     // const withLatLng = await enrichLatLong(sanitizeDealerData(dealerArray));
+    // withLatLng.sort((a, b) => (a.companyName > b.companyName ? 1 : -1)).map(dealer => ({ ...dealer, ...{ id: Math.floor(Math.random() * 100).toString() } }));;
     const withLatLng = [
       {
         companyName: 'De Graaf Mobiliteit & Welzijn',
@@ -107,7 +109,20 @@ const DealerLocator: React.SFC = () => {
         lat: 51.47608169999999,
         lng: 3.9659845,
       },
-    ];
+      {
+        companyName: 'A',
+        zipCode: '4421 JB',
+        address: 'Jufferswegje 12',
+        city: 'Kapelle',
+        phone: '0113-211274',
+        mail: 'sales@jeremiasse.nl',
+        site: 'www.jeremiasse.nl',
+        lat: 51.47608169999999,
+        lng: 2.9659845,
+      },
+    ]
+      .sort((a, b) => (a.companyName > b.companyName ? 1 : -1))
+      .map(dealer => ({ ...dealer, ...{ id: Math.floor(Math.random() * 100).toString() } }));
 
     setDealerData(
       withLatLng.map((dealer, index: number) => ({
@@ -124,6 +139,7 @@ const DealerLocator: React.SFC = () => {
   };
 
   const handleMarkerClick = (companyName: string): void => {
+    console.log(companyName);
     setSelectedDealer(companyName);
   };
 
@@ -139,11 +155,11 @@ const DealerLocator: React.SFC = () => {
           <div className={style.dealerList}>
             {dealerData &&
               dealerData.map((dealer, index) => {
-                const { companyName, zipCode, address, city, phone, mail, site, letter } = dealer;
+                const { companyName, id, zipCode, address, city, phone, mail, site, letter } = dealer;
                 return (
                   <Accordion
                     scrollStateHandler={dealerId => setSelectedDealer(dealerId)}
-                    opened={companyName === selectedDealer}
+                    opened={id === selectedDealer}
                     key={`dealer-${index}`}
                     title={
                       <div className={style.accordionTitle}>
@@ -193,8 +209,8 @@ const DealerLocator: React.SFC = () => {
               resetBoundsOnResize={true}
             >
               {dealerData &&
-                dealerData.map(dealer => (
-                  <Marker key={dealer.companyName} lat={dealer.lat} lng={dealer.lng}>
+                dealerData.map((dealer, index) => (
+                  <Marker key={`${dealer.id}`} lat={dealer.lat} lng={dealer.lng}>
                     {dealer.letter}
                   </Marker>
                 ))}
