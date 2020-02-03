@@ -17,7 +17,7 @@ interface LayoutFullHeroProps {
 
 const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
   const inlineStyle = {
-    gridTemplateRows: props.remainSplitView ? '60% auto' : 'calc(var(--vh, 1vh) * 100) auto',
+    gridTemplateRows: props.remainSplitView ? '60% auto' : '',
   };
 
   return (
