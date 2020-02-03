@@ -1,8 +1,18 @@
 .sidebar {
   padding: var(--space-md);
-  background: var(--color-gray-dark);
+  border: 1px solid var(--color-gray-dark);
+  box-shadow: var(--box-shadow-md);
   width: calc(var(--space-xxl) * 4.5);
-  color: var(--color-white);
+  color: var(--color-text);
+}
+
+.item-list {
+  margin-bottom: var(--space-md);
+}
+
+.tax-disclaimer {
+  font-size: var(--text-sm);
+  color: var(--gray-6);
 }
 
 .category {
@@ -10,7 +20,8 @@
 }
 
 .category-title {
-  color: var(--color-white);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bolder);
   font-size: var(--text-md);
   margin-bottom: var(--space-xs);
 }

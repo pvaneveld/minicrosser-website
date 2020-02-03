@@ -11,7 +11,7 @@ const Sidebar: React.SFC = () => {
 
   return (
     <div className={style.sidebar}>
-      <ul>
+      <ul className={style.itemList}>
         {sidebarContent.map((content, index) => {
           const [category, items] = content;
 
@@ -31,6 +31,7 @@ const Sidebar: React.SFC = () => {
         })}
         <li className={style.totalPrice}>{parseTotalPrice(selectedItems)}</li>
       </ul>
+      <span className={style.taxDisclaimer}>De vermelde prijzen zijn inclusief BTW</span>
     </div>
   );
 };
