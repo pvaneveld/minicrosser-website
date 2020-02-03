@@ -19,7 +19,8 @@
 
 .header {
   text-align: center;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
+  margin-top: 0;
 }
 
 .form-field {

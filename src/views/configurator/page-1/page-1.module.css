@@ -1,5 +1,5 @@
 .page-title {
-  margin: var(--space-md) auto;
+  margin: var(--space-md) auto var(--space-sm) auto;
   text-align: center;
 }
 
@@ -17,10 +17,10 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  flex: 0 1 320px;
+  flex: 0 1 300px;
   margin: var(--space-sm);
   color: var(--color-text);
-  padding: var(--space-sm) var(--space-sm) calc(var(--space-xl) + var(--space-md)) var(--space-sm);
+  padding: var(--space-sm) var(--space-sm) calc(var(--space-xl) + var(--space-lg)) var(--space-sm);
   box-shadow: var(--box-shadow-md);
   transition: box-shadow var(--transition-standard);
 }
@@ -33,6 +33,7 @@
 .header {
   display: flex;
   justify-content: center;
+  margin-bottom: var(--space-sm);
 
   & h2 {
     text-transform: uppercase;
@@ -69,15 +70,16 @@
 }
 
 .image {
-  height: 300px;
+  height: 250px;
   width: 100%;
+  margin-bottom: var(--space-sm);
 }
 
 .button {
   position: absolute;
   margin-top: auto;
   left: 50%;
-  bottom: var(--space-sm);
+  bottom: var(--space-md);
   transform: translateX(-50%);
 }
 

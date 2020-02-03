@@ -11,6 +11,7 @@ interface FormWrapperProps {
   submitFailText: string;
   lambdaFunctionName?: string;
   title?: string;
+  classStringHeader?: string;
 }
 
 const FormWrapper: React.SFC<FormWrapperProps> = props => {
@@ -54,7 +55,7 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
       <FormStatusBanner hasError={formError} errorText={props.submitFailText} />
 
       <CSSTransition classNames="title" in={formVisible} enter={false} exit={true} unmountOnExit={true} timeout={1000}>
-        <h1 className={style.header}>{props.title}</h1>
+        <h1 className={`${style.header} ${props.classStringHeader}`}>{props.title}</h1>
       </CSSTransition>
       <CSSTransition classNames="show-text" in={!formVisible} enter={true} exit={false} timeout={1000}>
         <h1 className={`${style.header} ${style.succesText}`}>{props.submitSuccessText}</h1>

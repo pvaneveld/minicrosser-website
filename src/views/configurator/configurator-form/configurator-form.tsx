@@ -144,8 +144,9 @@ const ConfiguratorForm: React.SFC = () => {
         lambdaFunctionName="configurator-form"
         submitSuccessText={popups.successPopup}
         submitFailText={popups.errorPopup}
+        classStringHeader={style.header}
+        title={formContent.formTitle}
       >
-        <h1 className={style.header}>{formContent.formTitle}</h1>
         <div className={style.formFieldsContainer}>
           <FormInput
             name={keys.firstName}

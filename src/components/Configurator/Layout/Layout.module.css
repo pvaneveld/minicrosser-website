@@ -1,5 +1,5 @@
 .grid {
-  margin: var(--space-md) 0;
+  margin: var(--space-lg) 0;
   display: flex;
 }
 
@@ -8,7 +8,6 @@
 }
 
 .sidebar {
-  margin-top: var(--space-md);
   margin-left: var(--space-md);
   display: flex;
   flex-direction: column;
