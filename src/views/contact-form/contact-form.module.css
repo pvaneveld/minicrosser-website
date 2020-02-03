@@ -13,7 +13,7 @@
 }
 
 .header {
-  margin: var(--space-sm) auto;
+  margin: var(--space-sm) auto var(--space-md) auto;
   text-align: center;
 }
 

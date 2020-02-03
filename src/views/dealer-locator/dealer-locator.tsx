@@ -139,7 +139,6 @@ const DealerLocator: React.SFC = () => {
   };
 
   const handleMarkerClick = (companyName: string): void => {
-    console.log(companyName);
     setSelectedDealer(companyName);
   };
 

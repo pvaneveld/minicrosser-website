@@ -6,6 +6,7 @@ import SelectCard from '../../../components/Configurator/SelectCard/SelectCard';
 import SelectCardGrid from '../../../components/Configurator/SelectCard/Grid/Grid';
 import initialSelect from '../../../helpers/configuratorSelectedHistory';
 import { useSelector } from 'react-redux';
+import { Link } from 'gatsby';
 
 const ConfiguratorPageThree: React.SFC = () => {
   const [activeSeat, setActiveSeat] = useState('');
@@ -64,6 +65,10 @@ const ConfiguratorPageThree: React.SFC = () => {
           </ConfiguratorItem>
         ))}
       </SelectCardGrid>
+
+      <Link className={style.link} to="/accessoires#accesories-3">
+        Lees meer over onze zittingen
+      </Link>
     </div>
   );
 };

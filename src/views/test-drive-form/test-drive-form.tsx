@@ -117,8 +117,9 @@ const TestDriveForm: React.SFC<TestDriveFormProps> = props => {
         lambdaFunctionName="test-drive-form"
         submitSuccessText={popups.successPopup}
         submitFailText={popups.errorPopup}
+        title={getTitle(preselectedDealer)}
+        classStringHeader={style.header}
       >
-        <h1 className={style.header}>{getTitle(preselectedDealer)}</h1>
         <div className={style.formFieldsContainer}>
           <FormInput
             name={keys.firstName}

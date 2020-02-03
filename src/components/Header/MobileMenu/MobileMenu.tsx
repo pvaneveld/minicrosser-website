@@ -22,6 +22,9 @@ const MobileMenu: React.SFC<MobileMenuProps> = props => {
       <Link to="/vind-uw-dealer" className={style.link}>
         Vind uw dealer
       </Link>
+      <Link to="/configureren" className={style.link}>
+        Configureren
+      </Link>
       <Link to="/accessoires" className={style.link}>
         Accessoires
       </Link>

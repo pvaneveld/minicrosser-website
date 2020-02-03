@@ -11,6 +11,7 @@ const Sidebar: React.SFC = () => {
 
   return (
     <div className={style.sidebar}>
+      <h3 className={style.header}>Uw Minicrosser</h3>
       <ul className={style.itemList}>
         {sidebarContent.map((content, index) => {
           const [category, items] = content;

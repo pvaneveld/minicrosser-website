@@ -7,6 +7,10 @@
   color: var(--color-text);
 }
 
+.header {
+  margin-bottom: var(--space-sm);
+}
+
 .item-list {
   margin-bottom: var(--space-md);
 }
