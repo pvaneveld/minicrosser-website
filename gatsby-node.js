@@ -63,7 +63,6 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions }) =>
   actions.setWebpackConfig({
     module: {
       loaders: [
-        ...loaders,
         { enforce: 'post', test: /fontkit[\/\\]index.js$/, loader: 'transform?brfs' },
         { enforce: 'post', test: /unicode-properties[\/\\]index.js$/, loader: 'transform?brfs' },
         { enforce: 'post', test: /linebreak[\/\\]src[\/\\]linebreaker.js/, loader: 'transform?brfs' },
