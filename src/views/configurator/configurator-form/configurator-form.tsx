@@ -7,7 +7,7 @@ import style from './configurator-form.module.css';
 import { regexLibrary } from '../../../../utils/regex';
 import { getDealerOptionsData } from '../../../../helpers/dealerOptions';
 import { useSelector } from 'react-redux';
-const pdfMake = require('pdfmake');
+import pdfMake from 'pdfmake';
 import { parseSidebarConfig, parseTotalPrice } from '../../../../helpers/parseConfiguration';
 import { toCurrency } from '../../../helpers/toCurrency';
 
