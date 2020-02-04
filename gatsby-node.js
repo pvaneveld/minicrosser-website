@@ -58,21 +58,3 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
-
-exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions }) => {
-  actions.setWebpackConfig({
-    module: {
-      loaders: [
-        { enforce: 'post', test: /fontkit[\/\\]index.js$/, loader: 'transform?brfs' },
-        { enforce: 'post', test: /unicode-properties[\/\\]index.js$/, loader: 'transform?brfs' },
-        { enforce: 'post', test: /linebreak[\/\\]src[\/\\]linebreaker.js/, loader: 'transform?brfs' },
-      ],
-    },
-    plugins: [
-      plugins.define({
-        __DEVELOPMENT__:
-          stage === `develop` || stage === `develop-html` || stage === `build-javascript` || stage === `build-html`,
-      }),
-    ],
-  });
-};

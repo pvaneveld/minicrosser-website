@@ -7,9 +7,12 @@ import style from './configurator-form.module.css';
 import { regexLibrary } from '../../../../utils/regex';
 import { getDealerOptionsData } from '../../../../helpers/dealerOptions';
 import { useSelector } from 'react-redux';
-import pdfMake from 'pdfmake';
 import { parseSidebarConfig, parseTotalPrice } from '../../../../helpers/parseConfiguration';
 import { toCurrency } from '../../../helpers/toCurrency';
+
+var pdfMake = require('pdfmake/build/pdfmake.js');
+var pdfFonts = require('pdfmake/build/vfs_fonts.js');
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 interface ConfiguratorForm {
   firstName: string;
