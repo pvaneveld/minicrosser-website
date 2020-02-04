@@ -1,15 +1,12 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 
 const SibApiV3Sdk = require('sib-api-v3-sdk');
-const atob = require('atob');
-const Blob = require('cross-blob');
 
 exports.handler = async (event, context) => {
   // https://developers.sendinblue.com/reference#sendtransacemail
   try {
     const { firstName, surname, prefix, dealer, phone, mail, pdf } = JSON.parse(event.body);
     const { mail: dealerMail, companyName: dealerName } = JSON.parse(dealer);
-    const templateId = 10;
 
     const mailInfo = {
       to: [
