@@ -5,19 +5,19 @@ homeOne:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Minicrosser X2
-  title: Minicrosser X2
+  navigationTitle: Minicrosser X
+  title: Minicrosser X
 homeTwo:
   backgroundImage: /img/_mg_3551-2.jpg
   buttons:
     buttonPrimary: Proefrit
     buttonSecondary: Vind uw dealer
-  navigationTitle: Ontdek Minicrosser X2
-  title: Ontdek Minicrosser X2
+  navigationTitle: Ontdek Minicrosser X
+  title: Ontdek Minicrosser X
 homeThree:
   backgroundImage: /img/sleutelhanger.jpg
   buttonPrimary: Lees meer
-  navigationTitle: Dit is Minicrosser X2
-  title: Dit is Minicrosser X2
+  navigationTitle: Dit is Minicrosser X
+  title: Dit is Minicrosser X
 ---
 
