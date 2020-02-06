@@ -28,7 +28,12 @@ models:
     image: /img/_1010169.jpg
     name: X plus
     price: 9402.34
-  - description: "**“Top of the class” Heavy Duty scootmobiel (250 kg)** \r\n\n\r\n\n_Exclusief accu en oplader_"
+  - description: |-
+      **“Top of the class” Heavy Duty scootmobiel (250 kg)** 
+
+
+
+      _Exclusief accu en oplader_
     image: /img/img_1755-med-skygge.jpg
     name: X HD
     price: 10063.97
