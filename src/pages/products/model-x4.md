@@ -1,27 +1,26 @@
 ---
 templateKey: product
-productName: Model X2 4W
+productName: Model X4
 productOne:
   backgroundImage: /img/_mg_3371.jpg
   buttonText: Configureren
   keyFeatures:
-    - description: hij is super snel
-      title: Key feature 1
-    - description: De wereld rond op 1 accu
-      title: Key feature 2
-    - description: kogelvrij glas
-      title: Key feature 3
-  navigationTitle: Model X2 4W
+    - description: maximum bereik
+      title: 70 km
+    - description: topsnelheid
+      title: 15 of 18 km/u
+    - description: high performance LED
+      title: 560 lumen
+  navigationTitle: Model X4
   text: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
-    por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con-
-    **sequat**. Duis aute irure dolor in dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco dolore magna aliqua. Ut enim ad
-    minim veniam, quis nostrud exercitation ullamco
+    Dankzij de zorgvuldig ontwikkelde wielophanging is het rijgedrag van de
+    Minicrosser X4 veilig en zelfverzekerd. Daarnaast biedt de Minicrosser X4
+    met de onafhankelijk geveerde en volgens het Ackermann-principe werkende
+    wielophanging onder alle omstandigheden optimale grip en stabiliteit. De X4
+    brengt u veilig en in alle comfort naar uw bestemming.
   title:
-    mainTitle: De sterkste motor in de markt
-    subtitle: Performance
+    mainTitle: 'Uniek: dubbele wishbone, vering en demping'
+    subtitle: Wielophanging
 productTwo:
   backgroundImage: /img/4w-voorkant-vrijstaand-ii.png
   navigationTitle: Specificaties
