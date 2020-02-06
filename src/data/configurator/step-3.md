@@ -1,22 +1,22 @@
 ---
 templateKey: configurator-three
-title: Kies uw bediening
+title: Selecteer de gasbediening
 category: Bediening
 handling:
   - image: /img/no-image-available.jpg
-    name: Draaigas links
-    price: 313.08
+    name: 'Wig/wag bediening links of rechts (gratis) '
+    price: 0
   - image: /img/no-image-available.jpg
-    name: Draaigas rechts
-    price: 285.3
-  - image: /img/no-image-available.jpg
-    name: Voetgas wig/wag
-    price: 367.1
-  - image: /img/no-image-available.jpg
-    name: Extra wig/wag bediening links
+    name: Extra wig/wag bediening links of rechts (meerprijs)
     price: 212.55
   - image: /img/no-image-available.jpg
-    name: Wig/wag bediening links
+    name: Draaigashendel rechts (meerprijs)
+    price: 0
+  - image: /img/no-image-available.jpg
+    name: 'Draaigashendel links (meerprijs) '
+    price: 0
+  - image: /img/no-image-available.jpg
+    name: Gaspedaal wig/wag links of rechts (meerprijs)
     price: 0
 ---
 
