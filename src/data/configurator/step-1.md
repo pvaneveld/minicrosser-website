@@ -4,34 +4,33 @@ title: Kies uw model
 category: Model
 models:
   - description: |-
-      **Functionele en fenomenaal comfortabele driewielscootmobiel**
-
-      Voor een ongekende rij-ervaring
+      **Fenomenaal comfortabele allrounder (175 kg)**
 
       \
       _Exclusief accu en oplader_
     image: /img/_1010169.jpg
-    name: X2 3W
+    name: X3
     price: 7456.69
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tem- liqua. Ut enim ad
+  - description: |-
+      **Buitengewoon stabiel en comfortabel (175 kg)**
+
+
+
+      _Exclusief accu en oplader_
     image: /img/img_1755-med-skygge.jpg
-    name: X2 4W
+    name: X4
     price: 8361.39
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam,
+  - description: |-
+      **Wendbare en stabiele Heavy Duty scootmobiel (200 kg)**
+
+      \
+      _Exclusief accu en oplader_
     image: /img/_1010169.jpg
-    name: X2 PLUS
+    name: X plus
     price: 9402.34
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam,
+  - description: "**“Top of the class” Heavy Duty scootmobiel (250 kg)** \r\n\n\r\n\n_Exclusief accu en oplader_"
     image: /img/img_1755-med-skygge.jpg
-    name: X2 HD
+    name: X HD
     price: 10063.97
 ---
 
