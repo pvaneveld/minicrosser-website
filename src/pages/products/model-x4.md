@@ -46,7 +46,7 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model X2 4W
+    mainTitle: Model X4
     subtitle: Specificaties
 productThree:
   buttons:
