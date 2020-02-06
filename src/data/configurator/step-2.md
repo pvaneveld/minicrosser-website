@@ -1,13 +1,13 @@
 ---
 templateKey: configurator-two
-title: Kies uw framekleur
+title: Selecteer de kleur
 category: Framekleur
 colors:
   - image: /img/kleur-antraciet.jpg
-    name: anthracite-black
+    name: anthracite-black (meerprijs)
     price: 0
   - image: /img/kleur-oranje.jpg
-    name: sunset-orange
+    name: sunset-orange (gratis)
     price: 0
 ---
 
