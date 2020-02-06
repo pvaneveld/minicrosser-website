@@ -1,6 +1,6 @@
 ---
 templateKey: read-more
-title: Dit is Minicrosser X
+title: Dit is Minicrosser
 backgroundImage: /img/dit-is-mc-lees-meer.jpg
 text: >-
   De combinatie van een ambachtelijke bouwkwaliteit, unieke opties en een
