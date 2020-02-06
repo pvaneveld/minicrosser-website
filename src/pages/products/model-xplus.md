@@ -1,27 +1,26 @@
 ---
 templateKey: product
-productName: Model X2 PLUS
+productName: Model X plus
 productOne:
   backgroundImage: /img/_mg_3544-2-ii.jpg
   buttonText: Configureren
   keyFeatures:
-    - description: hij is super snel
-      title: Key feature 1
-    - description: De wereld rond op 1 accu
-      title: Key feature 2
-    - description: kogelvrij glas
-      title: Key feature 3
-  navigationTitle: Model X2 PLUS
+    - description: 'compacte draaicirkel '
+      title: '132,5 cm'
+    - description: extreem lage instap
+      title: 11 cm
+    - description: maximale belasting
+      title: 200 kg
+  navigationTitle: Model X plus
   text: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
-    por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con-
-    **sequat**. Duis aute irure dolor in dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco dolore magna aliqua. Ut enim ad
-    minim veniam, quis nostrud exercitation ullamco
+    Ondanks zijn compacte afmetingen en uitzonderlijke wendbaarheid, heeft de
+    Minicrosser X plus toch een indrukwekkend draagvermogen van 200 kg. Daarmee
+    is de Minicrosser X plus bij uitstek geschikt voor de meest veeleisende
+    zware bestuurders. De X plus brengt u veilig en in alle comfort naar uw
+    bestemming.
   title:
-    mainTitle: De sterkste motor in de markt
-    subtitle: Performance
+    mainTitle: De wendbare HD scootmobiel van Minicrosser kwaliteit
+    subtitle: Draagvermogen
 productTwo:
   backgroundImage: /img/3w-voorkant-vrijstaand.png
   navigationTitle: Specificaties
@@ -47,13 +46,13 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model X2 PLUS
+    mainTitle: Model X plus
     subtitle: Specificaties
 productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model X2 PLUS
-  title: Ervaar Model X2 PLUS
+  navigationTitle: Ervaar Model X plus
+  title: Ervaar Model X plus
 ---
 
