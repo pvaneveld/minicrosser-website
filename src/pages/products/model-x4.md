@@ -6,7 +6,7 @@ productOne:
   buttonText: Configureren
   keyFeatures:
     - description: maximum bereik
-      title: 70 km
+      title: '70 km    '
     - description: topsnelheid
       title: 15 of 18 km/u
     - description: high performance LED
