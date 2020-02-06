@@ -1,27 +1,26 @@
 ---
 templateKey: product
-productName: Model X2 HD
+productName: Model X HD
 productOne:
   backgroundImage: /img/_mg_3376.jpg
   buttonText: Configureren
   keyFeatures:
-    - description: hij is super snel
-      title: Key feature 1
-    - description: De wereld rond op 1 accu
-      title: Key feature 2
-    - description: kogelvrij glas
-      title: Key feature 3
-  navigationTitle: Model X2 HD
+    - description: 'maximum snelheid '
+      title: 10 km/u
+    - description: extreem lage instap
+      title: 11 cm
+    - description: maximale belasting
+      title: 250 kg
+  navigationTitle: Model X HD
   text: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem-
-    por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con-
-    **sequat**. Duis aute irure dolor in dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco dolore magna aliqua. Ut enim ad
-    minim veniam, quis nostrud exercitation ullamco
+    De Minicrosser X HD is er voor wie het maximale uit zijn scootmobiel wil
+    halen. Dankzij een zorgvuldig ontwikkeld chassis en uitgekiende
+    stuurinrichting is het rijgedrag van de Minicrosser X HD veilig en
+    zelfverzekerd. Onder alle omstandigheden beschikt u over de enorm krachtige
+    motor, zodat u vlot en in alle comfort naar uw bestemming te brengen.
   title:
-    mainTitle: De sterkste motor in de markt
-    subtitle: Performance
+    mainTitle: De stabiele HD scootmobiel van Minicrosser kwaliteit
+    subtitle: Draagvermogen
 productTwo:
   backgroundImage: /img/4w-voorkant-vrijstaand-ii.png
   navigationTitle: Specificaties
@@ -47,7 +46,7 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: 'Model X2 HD '
+    mainTitle: 'Model X HD '
     subtitle: Specificaties
 productThree:
   buttons:
