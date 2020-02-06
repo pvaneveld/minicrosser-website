@@ -46,10 +46,10 @@ accessoriesThree:
       buttonText: Configureer
       description: >-
         Bijzonder comfortabel en standaard op de Minicrosser X; de volledig op
-        uw maat gemaakte Ergo 2 stoel. Uiteraard standaard draaibaar en voorzien
+        uw maat gemaakte ERGO2 stoel. Uiteraard standaard draaibaar en voorzien
         van stoelslede.
       subtitle: Subitel
-      title: Ergo 2 stoel
+      title: ERGO2 stoel
     - accesoryImage: /img/img_1840.jpg
       buttonText: Configureer
       description: >-
