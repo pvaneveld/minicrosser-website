@@ -20,7 +20,7 @@ accessoriesTwo:
         waarschuwt ook wanneer uw scootmobiel te scheef dreigt te gaan.
       subtitle: Subitel
       title: Alarmmodule
-    - accesoryImage: /img/img_1803.jpg
+    - accesoryImage: /img/kinderzitje-ii.jpg
       buttonText: Configureer
       description: >-
         Voor wie gezellig met zijn (klein)kind de wereld wil verkennen is er
@@ -42,7 +42,7 @@ accessoriesTwo:
   title: Veiligheid
 accessoriesThree:
   accessories:
-    - accesoryImage: /img/img_1841.jpg
+    - accesoryImage: /img/ergo2-.jpg
       buttonText: Configureer
       description: >-
         Bijzonder comfortabel en standaard op de Minicrosser X; de volledig op
@@ -50,7 +50,7 @@ accessoriesThree:
         van stoelslede.
       subtitle: Subitel
       title: ERGO2 stoel
-    - accesoryImage: /img/img_1840.jpg
+    - accesoryImage: /img/golftas-ii.jpg
       buttonText: Configureer
       description: >-
         Heerlijk vrijuit golfen zonder hulp van een Caddie? Neem uw clubs
@@ -58,7 +58,7 @@ accessoriesThree:
         golftassen.
       subtitle: Subitel
       title: Houder voor golftas
-    - accesoryImage: /img/img_1845.jpg
+    - accesoryImage: /img/windscherm.jpg
       buttonText: Configureer
       description: >-
         Op scooters is het inmiddels een fashionstatement en nu ook verkrijgbaar
