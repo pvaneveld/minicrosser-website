@@ -77,7 +77,7 @@ accessoriesSeat:
     - image: /img/img_1803.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage links'
       price: 0
-    - image: /img/img_1803.jpg
+    - image: /img/voetplaatverbreder.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage rechts'
       price: 0
   category: Met welke opties wilt u uw Minicrosser compleet maken?
