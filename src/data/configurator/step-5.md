@@ -59,7 +59,7 @@ accessoriesSeat:
     - image: /img/no-image-available.jpg
       name: 'Houder voor rollator, montage achterzijde'
       price: -1
-    - image: /img/no-image-available.jpg
+    - image: /img/golftas.jpg
       name: 'Houder voor golftas, montage achterzijde'
       price: 0
     - image: /img/no-image-available.jpg
@@ -74,7 +74,7 @@ accessoriesSeat:
     - image: /img/no-image-available.jpg
       name: Sensor voor snelheidsreductie in bochten
       price: 124.4
-    - image: /img/img_1803.jpg
+    - image: /img/voetplaatverbreder.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage links'
       price: 0
     - image: /img/voetplaatverbreder.jpg
