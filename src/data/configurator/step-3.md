@@ -11,12 +11,12 @@ handling:
     price: 212.55
   - image: /img/no-image-available.jpg
     name: Draaigashendel rechts (meerprijs)
-    price: 0
+    price: 285.3
   - image: /img/no-image-available.jpg
     name: 'Draaigashendel links (meerprijs) '
-    price: 0
+    price: 285.3
   - image: /img/no-image-available.jpg
     name: Gaspedaal wig/wag links of rechts (meerprijs)
-    price: 0
+    price: 367.1
 ---
 
