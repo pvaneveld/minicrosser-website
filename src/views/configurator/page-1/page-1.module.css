@@ -70,7 +70,7 @@
 }
 
 .image {
-  height: 250px;
+  min-height: 300px;
   width: 100%;
   margin-bottom: var(--space-sm);
 }
