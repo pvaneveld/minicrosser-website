@@ -19,7 +19,7 @@ const ConfiguratorLayout: React.SFC<ConfiguratorLayoutProps> = props => {
     <ContentContainer headerSpacing={true} footerSpacing={true}>
       <div className={style.grid}>
         <div className={style.content}>
-          {props.children} {!props.resetButton && <PrevNext />}
+          {props.children} {!props.resetButton && <PrevNext classString={style.prevNext} />}
         </div>
         <div className={style.sidebar}>
           <div className={style.configuration}>{props.sidebar}</div>

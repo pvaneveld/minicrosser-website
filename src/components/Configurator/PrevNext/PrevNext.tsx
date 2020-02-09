@@ -6,7 +6,11 @@ import ArrowNext from '../../../icons/arrow_forward.svg';
 import ArrowPrev from '../../../icons/arrow_back.svg';
 import style from './PrevNext.module.css';
 
-const PrevNext: React.SFC = () => {
+interface PrevNextProps {
+  classString?: string;
+}
+
+const PrevNext: React.SFC<PrevNextProps> = props => {
   const dispatch = useDispatch();
   const currentPage = useSelector((state: RootState) => state.configurator.page);
   const validUntil = useSelector((state: RootState) => state.configurator.validUntil);
@@ -15,7 +19,7 @@ const PrevNext: React.SFC = () => {
   const prevClass = `${style.button} ${style.buttonPrev}`;
 
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${props.classString ? props.classString : ''}`}>
       <Button classString={prevClass} clickHandler={() => dispatch(changeConfiguratorPage(currentPage - 1))} type="cta">
         <span>Vorige</span>
         <ArrowPrev />

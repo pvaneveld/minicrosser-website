@@ -4,6 +4,8 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   flex: 1 1 auto;
 }
 
@@ -39,5 +41,10 @@
 @media (--viewport-sm) {
   .sidebar {
     width: 100%;
+  }
+
+  .prev-next {
+    order: -1;
+    margin-top: 0 !important;
   }
 }
