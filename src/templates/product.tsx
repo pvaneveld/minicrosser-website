@@ -80,17 +80,12 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
           <LayoutHalfHero
             headerSpacing={true}
             fluid={product.productOne.backgroundImage.childImageSharp.fluid}
-            imageContent={
-              <PageOneImage
-                title={product.productName}
-                keyFeatures={product.productOne.keyFeatures}
-                buttonText={product.productOne.buttonText}
-              />
-            }
+            imageContent={<PageOneImage title={product.productName} buttonText={product.productOne.buttonText} />}
           >
             <PageOneContent
               title={product.productOne.title}
               text={product.productOne.text}
+              keyFeatures={product.productOne.keyFeatures}
               buttonText={product.productOne.buttonText}
             />
           </LayoutHalfHero>
