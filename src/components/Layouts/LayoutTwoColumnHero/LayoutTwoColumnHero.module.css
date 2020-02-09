@@ -43,6 +43,13 @@
   height: 800px;
 }
 
+.image-horizontal {
+  & .image {
+    width: 600px;
+    height: 720px;
+  }
+}
+
 @media (--viewport-md) {
   .grid,
   .image-right .grid {
@@ -62,6 +69,13 @@
     height: 500px;
   }
 
+  .image-horizontal {
+    & .image {
+      height: 500px;
+      width: 400px;
+    }
+  }
+  .image-right .image-container,
   .image-container {
     align-self: flex-end;
     justify-content: center;

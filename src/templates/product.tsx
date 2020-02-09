@@ -102,6 +102,7 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
             fluid={product.productThree.backgroundImage.childImageSharp.fluid}
             background="white"
             imageRight={true}
+            imageHorizontal={true}
           >
             <PageThree title={product.productThree.title} buttons={product.productThree.buttons} />
           </LayoutTwoColumnHero>

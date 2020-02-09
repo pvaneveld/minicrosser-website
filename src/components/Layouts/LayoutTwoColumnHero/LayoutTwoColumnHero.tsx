@@ -9,6 +9,7 @@ interface LayoutTwoColumnHeroProps {
   children?: ReactNode;
   background?: string;
   imageRight?: boolean;
+  aspectRatioHorizontal?: boolean;
 }
 
 const LayoutTwoColumnHero: React.SFC<LayoutTwoColumnHeroProps> = props => {
@@ -16,8 +17,9 @@ const LayoutTwoColumnHero: React.SFC<LayoutTwoColumnHeroProps> = props => {
 
   const backgroundClass = background && background === 'white' ? style.backgroundWhite : '';
   const imageRightClass = imageRight ? style.imageRight : '';
+  const aspectRatioHorizontal = imageRight ? style.imageHorizontal : '';
   return (
-    <div className={`${style.container} ${backgroundClass} ${imageRightClass}`}>
+    <div className={`${style.container} ${backgroundClass} ${imageRightClass} ${aspectRatioHorizontal}`}>
       <div className={style.grid}>
         <div className={style.imageContainer}>
           <div className={style.image}>
