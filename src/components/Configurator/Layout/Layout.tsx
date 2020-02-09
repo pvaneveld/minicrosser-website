@@ -2,6 +2,7 @@ import React, { ReactNode, useEffect } from 'react';
 import style from './Layout.module.css';
 import ContentContainer from '../../Layouts/ContentContainer/ContentContainer';
 import PrevNext from '../PrevNext/PrevNext';
+import { useSelector } from 'react-redux';
 
 interface ConfiguratorLayoutProps {
   children: ReactNode;
@@ -9,6 +10,11 @@ interface ConfiguratorLayoutProps {
   resetButton?: ReactNode;
 }
 const ConfiguratorLayout: React.SFC<ConfiguratorLayoutProps> = props => {
+  const currentPage = useSelector((state: RootState) => state.configurator.page);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
   return (
     <ContentContainer headerSpacing={true} footerSpacing={true}>
       <div className={style.grid}>
