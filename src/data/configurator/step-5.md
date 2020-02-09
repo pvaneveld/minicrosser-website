@@ -83,7 +83,10 @@ accessoriesSeat:
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
 accessories:
-  accessoriesList: []
+  accessoriesList:
+    - image: /img/3w-voorkant-vrijstaand-ii.png
+      name: 'Mand achter, universeel, 34 - 70 cm'
+      price: 153
   category: Accessoires
   title: Accessoires
 ---
