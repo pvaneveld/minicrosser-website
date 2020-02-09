@@ -121,7 +121,7 @@ export const pageQuery = graphql`
         productOne {
           backgroundImage {
             childImageSharp {
-              fluid(maxWidth: 1200) {
+              fluid(maxWidth: 2500) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -141,7 +141,7 @@ export const pageQuery = graphql`
         productTwo {
           backgroundImage {
             childImageSharp {
-              fluid(maxWidth: 1200) {
+              fluid(maxWidth: 2500) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -159,7 +159,7 @@ export const pageQuery = graphql`
         productThree {
           backgroundImage {
             childImageSharp {
-              fluid(maxWidth: 1200) {
+              fluid(maxWidth: 2500) {
                 ...GatsbyImageSharpFluid
               }
             }

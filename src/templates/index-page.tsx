@@ -19,7 +19,7 @@ const IndexPage: React.SFC = () => {
             navigationTitle
             backgroundImage {
               childImageSharp {
-                fluid(maxWidth: 1200) {
+                fluid(maxWidth: 2500) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -30,7 +30,7 @@ const IndexPage: React.SFC = () => {
             navigationTitle
             backgroundImage {
               childImageSharp {
-                fluid(maxWidth: 1200) {
+                fluid(maxWidth: 2500) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -41,7 +41,7 @@ const IndexPage: React.SFC = () => {
             navigationTitle
             backgroundImage {
               childImageSharp {
-                fluid(maxWidth: 1200) {
+                fluid(maxWidth: 2500) {
                   ...GatsbyImageSharpFluid
                 }
               }
