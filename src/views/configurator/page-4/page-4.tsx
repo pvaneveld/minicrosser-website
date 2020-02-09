@@ -66,9 +66,9 @@ const ConfiguratorPageThree: React.SFC = () => {
         ))}
       </SelectCardGrid>
 
-      <Link className={style.link} to="/accessoires#accesories-3">
+      <a className={style.link} href="/accessoires?id=accesories-3" target="_blank">
         Lees meer over onze zittingen
-      </Link>
+      </a>
     </div>
   );
 };

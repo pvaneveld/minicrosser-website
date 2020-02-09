@@ -64,7 +64,7 @@ const ConfiguratorPageOne: React.SFC = () => {
                   </h2>
                   <span className={style.modelPrice}>
                     <span>vanaf</span>
-                    <span className={style.price}>{toCurrency(price, true)}</span>
+                    <span className={style.price}>{toCurrency(price, false)}</span>
                   </span>
                 </header>
 
