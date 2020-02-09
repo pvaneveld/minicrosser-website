@@ -27,7 +27,7 @@ const ReadMorePage: React.SFC = () => {
   const { frontmatter: content } = query.markdownRemark;
 
   return (
-    <Layout theme={{ headerDark: false, footerDark: true }}>
+    <Layout theme={{ headerDark: true, footerDark: true }}>
       <Page>
         <LayoutHalfHero
           headerSpacing={true}
