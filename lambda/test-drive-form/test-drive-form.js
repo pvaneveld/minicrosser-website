@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
   try {
     const { firstName, surname, prefix, dealer, phone, mail } = JSON.parse(event.body);
     const { mail: dealerMail, companyName: dealerName } = JSON.parse(dealer);
-    const templateId = 10;
+    const templateId = 2;
 
     const mailInfo = {
       to: [
@@ -21,6 +21,10 @@ exports.handler = async (event, context) => {
           email: 'vaneveld.paul@gmail.com',
           name: 'Minicrosser',
         },
+        {
+          email: 'lvanzonneveld@revamed.com',
+          name: 'De specht',
+        },
       ],
     };
 
@@ -28,7 +32,7 @@ exports.handler = async (event, context) => {
 
     // Configure API key authorization: api-key
     const apiKey = defaultClient.authentications['api-key'];
-    apiKey.apiKey = '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';
+    apiKey.apiKey = process.env.SEND_IN_BLUE_API_KEY;
 
     const apiInstance = new SibApiV3Sdk.SMTPApi();
 
@@ -40,7 +44,7 @@ exports.handler = async (event, context) => {
 
     sendSmtpEmail.params = { firstName, surname, prefix, dealer, phone, mail, dealerMail, dealerName };
 
-    // await apiInstance.sendTransacEmail(sendSmtpEmail);
+    await apiInstance.sendTransacEmail(sendSmtpEmail);
 
     return {
       statusCode: 200,
