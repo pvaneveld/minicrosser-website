@@ -12,7 +12,6 @@ const Head: React.SFC = () => {
       <meta name="google" content="notranslate" />
 
       <title>Minicrosser</title>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js" defer></script>
       <html lang="nl" />
     </Helmet>
   );

@@ -49,10 +49,10 @@ productTwo:
     mainTitle: Model X3
     subtitle: Specificaties
 productThree:
+  backgroundImage: /img/3w-voorkant-vrijstaand.png
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
   navigationTitle: Ervaar Model X3
   title: Ervaar Model X3
 ---
-

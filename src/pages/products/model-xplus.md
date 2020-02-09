@@ -49,10 +49,10 @@ productTwo:
     mainTitle: Model X plus
     subtitle: Specificaties
 productThree:
+  backgroundImage: /img/3w-voorkant-vrijstaand.png
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
   navigationTitle: Ervaar Model X plus
   title: Ervaar Model X plus
 ---
-

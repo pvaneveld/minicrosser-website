@@ -49,10 +49,10 @@ productTwo:
     mainTitle: 'Model X HD '
     subtitle: Specificaties
 productThree:
+  backgroundImage: /img/3w-voorkant-vrijstaand.png
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
   navigationTitle: Ervaar Model X HD
   title: Ervaar Model X HD
 ---
-

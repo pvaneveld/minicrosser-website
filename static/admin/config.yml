@@ -672,6 +672,7 @@ collections:
           fields:
             [
               { label: 'Titel', name: 'title', widget: 'string' },
+              { label: 'Achtergrond afbeelding', name: 'backgroundImage', widget: 'image' },
               { label: 'Navigatie titel', name: 'navigationTitle', widget: 'string' },
               {
                 label: ' Buttons',

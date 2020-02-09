@@ -3,7 +3,7 @@ import style from './Button.module.css';
 import { Link } from 'gatsby';
 
 export interface ButtonProps {
-  type?: 'secondary' | 'cta' | 'secondary-dark';
+  type?: 'secondary' | 'cta' | 'secondary-dark' | 'primary-dark';
   clickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
   link?: boolean;
@@ -19,7 +19,7 @@ const Button: React.SFC<ButtonProps> = props => {
     props.type && props.type === 'cta' ? style.cta : ''
   } ${!props.type ? style.primary : ''} ${props.type === 'secondary-dark' ? style.secondaryDark : ''} ${
     classString ? classString : ''
-  }`;
+  } ${props.type === 'primary-dark' ? `${style.primary} ${style.primaryDark}` : ''}`;
 
   const setDisabled: boolean = disabled ? disabled : false;
 

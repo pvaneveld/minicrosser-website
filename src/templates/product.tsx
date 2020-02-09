@@ -98,7 +98,13 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
           <ScrollChevronDown id={pages[1].id} />
         </Page>
         <Page id={pages[2].id}>
-          <PageThree title={product.productThree.title} buttons={product.productThree.buttons} />
+          <LayoutTwoColumnHero
+            fluid={product.productThree.backgroundImage.childImageSharp.fluid}
+            background="white"
+            imageRight={true}
+          >
+            <PageThree title={product.productThree.title} buttons={product.productThree.buttons} />
+          </LayoutTwoColumnHero>
         </Page>
       </Layout>
     </SmoothScrollContainer>
@@ -151,6 +157,13 @@ export const pageQuery = graphql`
           }
         }
         productThree {
+          backgroundImage {
+            childImageSharp {
+              fluid(maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           title
           navigationTitle
           buttons {

@@ -49,10 +49,10 @@ productTwo:
     mainTitle: Model X4
     subtitle: Specificaties
 productThree:
+  backgroundImage: /img/3w-voorkant-vrijstaand.png
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
   navigationTitle: Ervaar Model X2 4W
   title: Ervaar Model X2 4W
 ---
-
