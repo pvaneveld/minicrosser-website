@@ -29,7 +29,12 @@ const AccessoriesPageOne: React.SFC = () => {
   const { accessoriesOne: content } = query.markdownRemark.frontmatter;
 
   return (
-    <LayoutHalfHero headerSpacing={true} fluid={content.backgroundImage.childImageSharp.fluid} remainSplitView={true}>
+    <LayoutHalfHero
+      customRowHeight={70}
+      headerSpacing={true}
+      fluid={content.backgroundImage.childImageSharp.fluid}
+      remainSplitView={true}
+    >
       <ContentContainer classString={style.contentContainer}>
         <h1>{content.title}</h1>
         <Markdown>{content.text}</Markdown>

@@ -2,7 +2,7 @@
   padding: 0 0 var(--space-lg) 0;
   display: grid;
   grid-gap: var(--space-md);
-  grid-template-columns: 4fr 8fr;
+  grid-template-columns: 5fr 7fr;
   grid-template-rows: auto;
   grid-template-areas:
     'header text'

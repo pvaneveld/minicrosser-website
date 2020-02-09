@@ -32,7 +32,7 @@ const Sidebar: React.SFC = () => {
         })}
         <li className={style.totalPrice}>{parseTotalPrice(selectedItems)}</li>
       </ul>
-      <span className={style.taxDisclaimer}>De vermelde prijzen zijn inclusief BTW</span>
+      <span className={style.taxDisclaimer}>De vermelde prijzen zijn inclusief BTW en exclusief accu en oplader</span>
     </div>
   );
 };

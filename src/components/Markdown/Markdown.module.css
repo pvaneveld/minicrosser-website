@@ -2,4 +2,8 @@
   & p {
     margin-bottom: var(--space-md);
   }
+
+  & em {
+    font-style: italic;
+  }
 }

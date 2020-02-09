@@ -1,12 +1,12 @@
 .select-card {
   width: calc(var(--space-xxl) * 2.5);
-  box-shadow: var(--box-shadow-md);
+
+  /* box-shadow: var(--box-shadow-md); */
   transition: box-shadow var(--transition-standard);
   margin: 0 var(--space-md) var(--space-md) 0;
   display: flex;
   color: var(--color-text);
   flex-direction: column;
-  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -33,8 +33,10 @@
 }
 
 .image {
-  width: calc(var(--space-xxl) * 2.5);
+  min-width: calc(var(--space-xxl) * 2.5);
+  height: calc(var(--space-xxl) * 2.5);
   margin-bottom: var(--space-sm);
+  border: 1px solid var(--gray-6);
 }
 
 .price {
@@ -43,15 +45,20 @@
   color: var(--color-orange);
 }
 
+.name {
+  text-align: left;
+}
+
 .is-active::before {
   transform: scale(1);
 }
 
 .info-container {
-  padding: var(--space-md);
+  padding: 0 var(--space-xs) var(--space-xs);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   height: 100%;
 }
 
@@ -65,9 +72,11 @@
     text-align: left;
     padding: 0;
     width: 100%;
+    border: 1px solid var(--gray-6);
   }
 
   .image {
+    min-width: inherit;
     position: absolute;
     width: 80px;
     top: 0;

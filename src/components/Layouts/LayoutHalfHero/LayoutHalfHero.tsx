@@ -13,11 +13,13 @@ interface LayoutFullHeroProps {
   headerSpacing?: boolean;
   remainSplitView?: boolean;
   footerSpacing?: boolean;
+  customRowHeight?: number;
 }
 
 const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
+  const { customRowHeight } = props;
   const inlineStyle = {
-    gridTemplateRows: props.remainSplitView ? '60% auto' : '',
+    gridTemplateRows: props.remainSplitView ? `${customRowHeight ? `${customRowHeight.toString()}%` : '60%'} auto` : '',
   };
 
   return (
