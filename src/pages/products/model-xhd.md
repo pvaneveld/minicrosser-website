@@ -26,7 +26,7 @@ productOne:
     mainTitle: De stabiele HD scootmobiel van Minicrosser kwaliteit
     subtitle: Draagvermogen
 productTwo:
-  backgroundImage: /img/4w-voorkant-vrijstaand-ii.png
+  backgroundImage: /img/4w-voorkant-vrijstaand-iii.png
   navigationTitle: Specificaties
   specifications:
     - description: 250 kg
