@@ -16,8 +16,11 @@ productOne:
     Ondanks zijn compacte afmetingen en uitzonderlijke wendbaarheid, heeft de
     Minicrosser X plus toch een indrukwekkend draagvermogen van 200 kg. Daarmee
     is de Minicrosser X plus bij uitstek geschikt voor de meest veeleisende
-    zware bestuurders. De X plus brengt u veilig en in alle comfort naar uw
-    bestemming.
+    zware bestuurders. \
+
+    \
+
+    De X plus brengt u veilig en in alle comfort naar uw bestemming.
   title:
     mainTitle: De wendbare HD scootmobiel van Minicrosser kwaliteit
     subtitle: Draagvermogen
