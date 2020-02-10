@@ -10,7 +10,7 @@ accessoriesSeat:
       price: 90.14
     - image: /img/no-image-available.jpg
       name: Veiligheidsgordel met oprolautomaat
-      price: 0
+      price: 153.24
     - image: /img/gevarendriehoek.jpg
       name: 'Gevarendriehoek, voor bevestiging achterzijde comfortstoel'
       price: 153.24
@@ -64,7 +64,7 @@ accessoriesSeat:
       price: 108.17
     - image: /img/no-image-available.jpg
       name: Alarmmodule met hellingshoekmeter
-      price: 0
+      price: 145.61
     - image: /img/no-image-available.jpg
       name: 'Verhogen van maximale snelheid van 15 km/uur naar 18 km/uur '
       price: 360.9
