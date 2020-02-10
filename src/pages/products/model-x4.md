@@ -25,7 +25,7 @@ productOne:
     mainTitle: 'Uniek: dubbele wishbone, vering en demping'
     subtitle: Wielophanging
 productTwo:
-  backgroundImage: /img/4w-voorkant-vrijstaand-ii.png
+  backgroundImage: /img/4w-voorkant-vrijstaand-iii.png
   navigationTitle: Specificaties
   specifications:
     - description: 175 kg
