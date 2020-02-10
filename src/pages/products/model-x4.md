@@ -16,8 +16,11 @@ productOne:
     Dankzij de zorgvuldig ontwikkelde wielophanging is het rijgedrag van de
     Minicrosser X4 veilig en zelfverzekerd. Daarnaast biedt de Minicrosser X4
     met de onafhankelijk geveerde en volgens het Ackermann-principe werkende
-    wielophanging onder alle omstandigheden optimale grip en stabiliteit. De X4
-    brengt u veilig en in alle comfort naar uw bestemming.
+    wielophanging onder alle omstandigheden optimale grip en stabiliteit. \
+
+    \
+
+    De X4 brengt u veilig en in alle comfort naar uw bestemming.
   title:
     mainTitle: 'Uniek: dubbele wishbone, vering en demping'
     subtitle: Wielophanging
