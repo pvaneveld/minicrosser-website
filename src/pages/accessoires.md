@@ -4,10 +4,13 @@ accessoriesOne:
   backgroundImage: /img/_mg_3412-ii.jpg
   navigationTitle: Accessoires
   text: >-
-    De Minicrosser X modellen zijn in de basis al fenomenaal, maar het zijn de
-    unieke opties en accessoires die deze scootmobielen ongeëvenaard maken. Wat
-    denkt u bijvoorbeeld van een volledig elektrisch verstelbare stoel?  Of een
-    alarmsysteem om uw waardevolle bezit te beschermen? Stuk voor stuk
+    **De Minicrosser X modellen zijn in de basis al fenomenaal, maar het zijn de
+    unieke opties en accessoires die deze scootmobielen ongeëvenaard maken**. \
+
+    \
+
+    Wat denkt u bijvoorbeeld van een volledig elektrisch verstelbare stoel?  Of
+    een alarmsysteem om uw waardevolle bezit te beschermen? Stuk voor stuk
     accessoires waarmee wordt benadrukt dat u met een exclusieve scootmobiel
     onderweg bent.
   title: Accessoires
