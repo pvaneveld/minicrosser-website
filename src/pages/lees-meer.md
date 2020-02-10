@@ -9,8 +9,6 @@ text: >-
 
   \
 
-  \
-
   De Minicrosser X scootmobielen bieden niet alleen een ongekende rijervaring,
   maar zijn met het indrukwekkende design en moderne kleurstelling nadrukkelijk
   aanwezig op de weg. De Minicrosser X is er voor wie alleen de beste

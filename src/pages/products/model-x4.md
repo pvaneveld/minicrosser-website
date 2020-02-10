@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X4
 productOne:
-  backgroundImage: /img/_mg_3371.jpg
+  backgroundImage: /img/_mg_3377.jpg
   buttonText: Configureren
   keyFeatures:
     - description: maximum bereik
@@ -14,15 +14,18 @@ productOne:
   navigationTitle: Model X4
   text: >-
     Dankzij de zorgvuldig ontwikkelde wielophanging is het rijgedrag van de
-    Minicrosser X4 veilig en zelfverzekerd. Daarnaast biedt de Minicrosser X4
-    met de onafhankelijk geveerde en volgens het Ackermann-principe werkende
-    wielophanging onder alle omstandigheden optimale grip en stabiliteit. De X4
-    brengt u veilig en in alle comfort naar uw bestemming.
+    **Minicrosser X4** veilig en zelfverzekerd. Daarnaast biedt de X4 met de
+    onafhankelijk geveerde en volgens het Ackermann-principe werkende
+    wielophanging onder alle omstandigheden optimale grip en stabiliteit. \
+
+    \
+
+    De X4 brengt u veilig en in alle comfort naar uw bestemming.
   title:
     mainTitle: 'Uniek: dubbele wishbone, vering en demping'
     subtitle: Wielophanging
 productTwo:
-  backgroundImage: /img/4w-voorkant-vrijstaand-ii.png
+  backgroundImage: /img/4w-voorkant-vrijstaand-iii.png
   navigationTitle: Specificaties
   specifications:
     - description: 175 kg
@@ -49,7 +52,7 @@ productTwo:
     mainTitle: Model X4
     subtitle: Specificaties
 productThree:
-  backgroundImage: /img/X2_3W_zijkant_II.png
+  backgroundImage: /img/x2-4w-zijkant.png
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit

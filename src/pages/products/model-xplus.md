@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X plus
 productOne:
-  backgroundImage: /img/_mg_3544-2-ii.jpg
+  backgroundImage: /img/detail-iii.jpg
   buttonText: Configureren
   keyFeatures:
     - description: 'compacte draaicirkel '
@@ -14,10 +14,13 @@ productOne:
   navigationTitle: Model X plus
   text: >-
     Ondanks zijn compacte afmetingen en uitzonderlijke wendbaarheid, heeft de
-    Minicrosser X plus toch een indrukwekkend draagvermogen van 200 kg. Daarmee
-    is de Minicrosser X plus bij uitstek geschikt voor de meest veeleisende
-    zware bestuurders. De X plus brengt u veilig en in alle comfort naar uw
-    bestemming.
+    **Minicrosser X plus** toch een indrukwekkend draagvermogen van 200 kg.
+    Daarmee is de Minicrosser X plus bij uitstek geschikt voor de meest
+    veeleisende zware bestuurders. \
+
+    \
+
+    De X plus brengt u veilig en in alle comfort naar uw bestemming.
   title:
     mainTitle: De wendbare HD scootmobiel van Minicrosser kwaliteit
     subtitle: Draagvermogen

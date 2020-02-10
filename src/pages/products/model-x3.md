@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X3
 productOne:
-  backgroundImage: /img/_mg_3532-2.jpg
+  backgroundImage: /img/detail-ii.jpg
   buttonText: Configureren
   keyFeatures:
     - description: 'compacte draaicirkel '
@@ -13,11 +13,14 @@ productOne:
       title: 15 of 18 km/u
   navigationTitle: Model X3
   text: >-
-    De Minicrosser X3 is met zijn zeer krachtige motor de ultieme scootmobiel
-    waarmee u gaat waar u wilt. U rijdt met het grootste vertrouwen net zo
-    eenvoudig door de stad als over lastige paden in het bos, terwijl u aan
-    wendbaarheid niet hoeft in te leveren. De X3 brengt u vlot en in alle
-    comfort naar uw bestemming.
+    De **Minicrosser X3** is met zijn zeer krachtige motor de ultieme
+    scootmobiel waarmee u gaat waar u wilt. U rijdt met het grootste vertrouwen
+    net zo eenvoudig door de stad als over lastige paden in het bos, terwijl u
+    aan wendbaarheid niet hoeft in te leveren. \
+
+    \
+
+    De X3 brengt u vlot en in alle comfort naar uw bestemming.
   title:
     mainTitle: De sterkste motor in de markt
     subtitle: Performance

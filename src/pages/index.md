@@ -8,7 +8,7 @@ homeOne:
   navigationTitle: Minicrosser X
   title: Minicrosser X
 homeTwo:
-  backgroundImage: /img/_mg_3551-2.jpg
+  backgroundImage: /img/_mg_3551-2-ii.jpg
   buttons:
     buttonPrimary: Proefrit
     buttonSecondary: Vind uw dealer

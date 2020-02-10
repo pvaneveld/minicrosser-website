@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X HD
 productOne:
-  backgroundImage: /img/_mg_3376.jpg
+  backgroundImage: /img/_mg_3393.jpg
   buttonText: Configureren
   keyFeatures:
     - description: 'maximum snelheid '
@@ -13,16 +13,20 @@ productOne:
       title: 250 kg
   navigationTitle: Model X HD
   text: >-
-    De Minicrosser X HD is er voor wie het maximale uit zijn scootmobiel wil
+    De **Minicrosser X HD** is er voor wie het maximale uit zijn scootmobiel wil
     halen. Dankzij een zorgvuldig ontwikkeld chassis en uitgekiende
     stuurinrichting is het rijgedrag van de Minicrosser X HD veilig en
-    zelfverzekerd. Onder alle omstandigheden beschikt u over de enorm krachtige
-    motor, zodat u vlot en in alle comfort naar uw bestemming te brengen.
+    zelfverzekerd. \
+
+    \
+
+    Onder alle omstandigheden beschikt u over de enorm krachtige motor, zodat u
+    vlot en in alle comfort naar uw bestemming te brengen.
   title:
     mainTitle: De stabiele HD scootmobiel van Minicrosser kwaliteit
     subtitle: Draagvermogen
 productTwo:
-  backgroundImage: /img/4w-voorkant-vrijstaand-ii.png
+  backgroundImage: /img/4w-voorkant-vrijstaand-iii.png
   navigationTitle: Specificaties
   specifications:
     - description: 250 kg
@@ -49,7 +53,7 @@ productTwo:
     mainTitle: 'Model X HD '
     subtitle: Specificaties
 productThree:
-  backgroundImage: /img/X2_3W_zijkant_II.png
+  backgroundImage: /img/x2-4w-zijkant.png
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit

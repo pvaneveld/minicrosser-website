@@ -2,9 +2,6 @@
 templateKey: configurator-five
 accessoriesSeat:
   accessoriesSeatList:
-    - image: /img/mand-achter.jpg
-      name: 'Mand achter, universeel, 34 - 70 cm'
-      price: 153.24
     - image: /img/verstelbare-hoofdsteun.jpg
       name: Verstelbare hoofdsteun
       price: 135.21
@@ -13,8 +10,8 @@ accessoriesSeat:
       price: 90.14
     - image: /img/no-image-available.jpg
       name: Veiligheidsgordel met oprolautomaat
-      price: 0
-    - image: /img/veiligheidsdriehoek.jpg
+      price: 153.24
+    - image: /img/gevarendriehoek.jpg
       name: 'Gevarendriehoek, voor bevestiging achterzijde comfortstoel'
       price: 153.24
     - image: /img/bekerhouder.jpg
@@ -32,54 +29,54 @@ accessoriesSeat:
     - image: /img/elektrische-rughoekverstelling.jpg
       name: Elektrische rughoekverstelling
       price: 1601.95
-    - image: /img/no-image-available.jpg
+    - image: /img/elektrische-draaikolom.jpg
       name: Elektrisch draaibare stoelkolom
       price: 1941.6
     - image: /img/kinderzitje.jpg
       name: 'Kinderzitje met frame, montage achterzijde (anti-kiep set verplicht)'
       price: 1065.17
-    - image: /img/no-image-available.jpg
+    - image: /img/anti-kiep.jpg
       name: Anti-kiep set
-      price: -1
+      price: 270.41
     - image: /img/no-image-available.jpg
       name: 'Windscherm voor wegnemen rijwind, montage bovenzijde stuurkolom'
-      price: 0
+      price: 531.83
     - image: /img/no-image-available.jpg
       name: 'Windscherm voor wegnemen rijwind, montage achter boodschappenmand'
-      price: 0
+      price: 237
     - image: /img/no-image-available.jpg
       name: Spiegel links
-      price: -1
+      price: 27.04
     - image: /img/spiegel-rechts.jpg
       name: Spiegel rechts
-      price: 0
+      price: 27.04
     - image: /img/no-image-available.jpg
       name: 'Houder voor rolstoel, montage achterzijde'
-      price: 0
-    - image: /img/no-image-available.jpg
+      price: 748.18
+    - image: /img/rollatorhouder.jpg
       name: 'Houder voor rollator, montage achterzijde'
-      price: -1
+      price: 387.61
     - image: /img/golftas.jpg
       name: 'Houder voor golftas, montage achterzijde'
-      price: 0
-    - image: /img/no-image-available.jpg
+      price: 495.79
+    - image: /img/stokhouder.jpg
       name: 'Stokhouder voor 2 elleboogkrukken of wandelstokken, montage achterzijde'
-      price: 0
+      price: 108.17
     - image: /img/no-image-available.jpg
       name: Alarmmodule met hellingshoekmeter
-      price: 0
+      price: 145.61
     - image: /img/no-image-available.jpg
       name: 'Verhogen van maximale snelheid van 15 km/uur naar 18 km/uur '
       price: 360.9
     - image: /img/no-image-available.jpg
       name: Sensor voor snelheidsreductie in bochten
-      price: 124.4
+      price: 116.11
     - image: /img/voetplaatverbreder.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage links'
-      price: 0
+      price: 322.35
     - image: /img/voetplaatverbreder.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage rechts'
-      price: 0
+      price: 322.35
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
 accessories:
