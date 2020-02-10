@@ -53,7 +53,7 @@ accessoriesSeat:
     - image: /img/no-image-available.jpg
       name: 'Houder voor rolstoel, montage achterzijde'
       price: 0
-    - image: /img/no-image-available.jpg
+    - image: /img/rollatorhouder.jpg
       name: 'Houder voor rollator, montage achterzijde'
       price: -1
     - image: /img/golftas.jpg
