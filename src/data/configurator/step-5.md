@@ -37,31 +37,31 @@ accessoriesSeat:
       price: 1065.17
     - image: /img/no-image-available.jpg
       name: Anti-kiep set
-      price: -1
+      price: 270.41
     - image: /img/no-image-available.jpg
       name: 'Windscherm voor wegnemen rijwind, montage bovenzijde stuurkolom'
-      price: 0
+      price: 531.83
     - image: /img/no-image-available.jpg
       name: 'Windscherm voor wegnemen rijwind, montage achter boodschappenmand'
-      price: 0
+      price: 237
     - image: /img/no-image-available.jpg
       name: Spiegel links
-      price: -1
+      price: 27.04
     - image: /img/spiegel-rechts.jpg
       name: Spiegel rechts
-      price: 0
+      price: 27.04
     - image: /img/no-image-available.jpg
       name: 'Houder voor rolstoel, montage achterzijde'
-      price: 0
+      price: 748.18
     - image: /img/rollatorhouder.jpg
       name: 'Houder voor rollator, montage achterzijde'
-      price: -1
+      price: 387.61
     - image: /img/golftas.jpg
       name: 'Houder voor golftas, montage achterzijde'
-      price: 0
+      price: 495.79
     - image: /img/stokhouder.jpg
       name: 'Stokhouder voor 2 elleboogkrukken of wandelstokken, montage achterzijde'
-      price: 0
+      price: 108.17
     - image: /img/no-image-available.jpg
       name: Alarmmodule met hellingshoekmeter
       price: 0
@@ -70,13 +70,13 @@ accessoriesSeat:
       price: 360.9
     - image: /img/no-image-available.jpg
       name: Sensor voor snelheidsreductie in bochten
-      price: 124.4
+      price: 116.11
     - image: /img/voetplaatverbreder.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage links'
-      price: 0
+      price: 322.35
     - image: /img/voetplaatverbreder.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage rechts'
-      price: 0
+      price: 322.35
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
 accessories:
