@@ -13,10 +13,10 @@ productOne:
       title: 15 of 18 km/u
   navigationTitle: Model X3
   text: >-
-    De Minicrosser X3 is met zijn zeer krachtige motor de ultieme scootmobiel
-    waarmee u gaat waar u wilt. U rijdt met het grootste vertrouwen net zo
-    eenvoudig door de stad als over lastige paden in het bos, terwijl u aan
-    wendbaarheid niet hoeft in te leveren. \
+    De **Minicrosser X3** is met zijn zeer krachtige motor de ultieme
+    scootmobiel waarmee u gaat waar u wilt. U rijdt met het grootste vertrouwen
+    net zo eenvoudig door de stad als over lastige paden in het bos, terwijl u
+    aan wendbaarheid niet hoeft in te leveren. \
 
     \
 
