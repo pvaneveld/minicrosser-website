@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X plus
 productOne:
-  backgroundImage: /img/_mg_3400.jpg
+  backgroundImage: /img/detail-iii.jpg
   buttonText: Configureren
   keyFeatures:
     - description: 'compacte draaicirkel '
