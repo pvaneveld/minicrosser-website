@@ -11,7 +11,7 @@ accessoriesSeat:
     - image: /img/no-image-available.jpg
       name: Veiligheidsgordel met oprolautomaat
       price: 0
-    - image: /img/veiligheidsdriehoek.jpg
+    - image: /img/gevarendriehoek.jpg
       name: 'Gevarendriehoek, voor bevestiging achterzijde comfortstoel'
       price: 153.24
     - image: /img/bekerhouder.jpg
@@ -59,7 +59,7 @@ accessoriesSeat:
     - image: /img/golftas.jpg
       name: 'Houder voor golftas, montage achterzijde'
       price: 0
-    - image: /img/no-image-available.jpg
+    - image: /img/stokhouder-voor-krukken.jpg
       name: 'Stokhouder voor 2 elleboogkrukken of wandelstokken, montage achterzijde'
       price: 0
     - image: /img/no-image-available.jpg
