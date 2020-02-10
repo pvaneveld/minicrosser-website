@@ -13,18 +13,19 @@ interface LayoutFullHeroProps {
   headerSpacing?: boolean;
   remainSplitView?: boolean;
   footerSpacing?: boolean;
-  customRowHeight?: number;
+  customRowHeight?: 'seventy';
 }
 
 const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
-  const { customRowHeight } = props;
-  const inlineStyle = {
-    gridTemplateRows: props.remainSplitView ? `${customRowHeight ? `${customRowHeight.toString()}%` : '60%'} auto` : '',
-  };
+  const { customRowHeight, remainSplitView } = props;
+
+  const remainSplitViewClass = remainSplitView ? style.remainSplitView : '';
+
+  const customHeightClass = customRowHeight ? style.customHeightSeventy : '';
 
   return (
     <>
-      <div style={inlineStyle} className={style.halfHeroContainer}>
+      <div className={`${style.halfHeroContainer} ${remainSplitViewClass} ${customHeightClass}`}>
         <div className={style.imageContainer}>
           <FluidImage fluid={props.fluid} alt={props.alt} positionAbsolute={false} />
           <div className={style.imageContent}>

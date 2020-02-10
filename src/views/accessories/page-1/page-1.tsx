@@ -30,7 +30,7 @@ const AccessoriesPageOne: React.SFC = () => {
 
   return (
     <LayoutHalfHero
-      customRowHeight={70}
+      customRowHeight="seventy"
       headerSpacing={true}
       fluid={content.backgroundImage.childImageSharp.fluid}
       remainSplitView={true}

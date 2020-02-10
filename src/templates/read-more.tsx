@@ -33,6 +33,7 @@ const ReadMorePage: React.SFC = () => {
           headerSpacing={true}
           footerSpacing={true}
           remainSplitView={true}
+          customRowHeight="seventy"
           fluid={content.backgroundImage.childImageSharp.fluid}
         >
           <ReadMoreContent title={content.title} text={content.text} />
