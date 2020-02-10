@@ -59,7 +59,7 @@ accessoriesSeat:
     - image: /img/golftas.jpg
       name: 'Houder voor golftas, montage achterzijde'
       price: 0
-    - image: /img/stokhouder-voor-krukken.jpg
+    - image: /img/stokhouder.jpg
       name: 'Stokhouder voor 2 elleboogkrukken of wandelstokken, montage achterzijde'
       price: 0
     - image: /img/no-image-available.jpg
