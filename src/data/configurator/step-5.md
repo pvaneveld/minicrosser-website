@@ -35,7 +35,7 @@ accessoriesSeat:
     - image: /img/kinderzitje.jpg
       name: 'Kinderzitje met frame, montage achterzijde (anti-kiep set verplicht)'
       price: 1065.17
-    - image: /img/no-image-available.jpg
+    - image: /img/anti-kiep.jpg
       name: Anti-kiep set
       price: 270.41
     - image: /img/no-image-available.jpg
