@@ -4,9 +4,8 @@ title: Kies uw model
 category: Model
 models:
   - description: |-
-      **Fenomenaal comfortabele allrounder (175 kg)**
-
-      \
+      **Fenomenaal comfortabele allrounder (175 kg)**\
+      __\
       _Exclusief accu en oplader_
     image: /img/_1010169.jpg
     name: X3
