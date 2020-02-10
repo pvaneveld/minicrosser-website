@@ -13,7 +13,7 @@ accessoriesOne:
   title: Accessoires
 accessoriesTwo:
   accessories:
-    - accesoryImage: /img/kinderzitje-ii.jpg
+    - accesoryImage: /img/no-image-available.jpg
       buttonText: Configureer
       description: >-
         Deze module beschermt niet alleen uw kostbare bezit tegen diefstal, maar
@@ -27,7 +27,7 @@ accessoriesTwo:
         exclusief voor Minicrosser X een veilig kinderzitje beschikbaar.
       subtitle: Subitel
       title: Kinderzitje
-    - accesoryImage: /img/img_1988.jpg
+    - accesoryImage: /img/no-image-available.jpg
       buttonText: Configureer
       description: >-
         Met deze accessoire zorgt u ervoor dat uw Minicrosser automatisch
