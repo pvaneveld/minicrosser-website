@@ -16,8 +16,12 @@ productOne:
     De Minicrosser X HD is er voor wie het maximale uit zijn scootmobiel wil
     halen. Dankzij een zorgvuldig ontwikkeld chassis en uitgekiende
     stuurinrichting is het rijgedrag van de Minicrosser X HD veilig en
-    zelfverzekerd. Onder alle omstandigheden beschikt u over de enorm krachtige
-    motor, zodat u vlot en in alle comfort naar uw bestemming te brengen.
+    zelfverzekerd. \
+
+    \
+
+    Onder alle omstandigheden beschikt u over de enorm krachtige motor, zodat u
+    vlot en in alle comfort naar uw bestemming te brengen.
   title:
     mainTitle: De stabiele HD scootmobiel van Minicrosser kwaliteit
     subtitle: Draagvermogen
