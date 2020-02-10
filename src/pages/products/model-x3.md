@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X3
 productOne:
-  backgroundImage: /img/dji_0042.jpg
+  backgroundImage: /img/_mg_3373.jpg
   buttonText: Configureren
   keyFeatures:
     - description: 'compacte draaicirkel '
