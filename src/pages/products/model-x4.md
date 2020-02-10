@@ -52,7 +52,7 @@ productTwo:
     mainTitle: Model X4
     subtitle: Specificaties
 productThree:
-  backgroundImage: /img/X2_3W_zijkant_II.png
+  backgroundImage: /img/x2-4w-zijkant.png
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
