@@ -14,8 +14,8 @@ productOne:
   navigationTitle: Model X4
   text: >-
     Dankzij de zorgvuldig ontwikkelde wielophanging is het rijgedrag van de
-    Minicrosser X4 veilig en zelfverzekerd. Daarnaast biedt de Minicrosser X4
-    met de onafhankelijk geveerde en volgens het Ackermann-principe werkende
+    **Minicrosser X4** veilig en zelfverzekerd. Daarnaast biedt de Minicrosser
+    X4 met de onafhankelijk geveerde en volgens het Ackermann-principe werkende
     wielophanging onder alle omstandigheden optimale grip en stabiliteit. \
 
     \
