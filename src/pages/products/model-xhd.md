@@ -13,7 +13,7 @@ productOne:
       title: 250 kg
   navigationTitle: Model X HD
   text: >-
-    De Minicrosser X HD is er voor wie het maximale uit zijn scootmobiel wil
+    De **Minicrosser X HD** is er voor wie het maximale uit zijn scootmobiel wil
     halen. Dankzij een zorgvuldig ontwikkeld chassis en uitgekiende
     stuurinrichting is het rijgedrag van de Minicrosser X HD veilig en
     zelfverzekerd. \
