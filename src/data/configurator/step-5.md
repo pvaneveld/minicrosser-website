@@ -2,9 +2,6 @@
 templateKey: configurator-five
 accessoriesSeat:
   accessoriesSeatList:
-    - image: /img/mand-achter.jpg
-      name: 'Mand achter, universeel, 34 - 70 cm'
-      price: 153.24
     - image: /img/verstelbare-hoofdsteun.jpg
       name: Verstelbare hoofdsteun
       price: 135.21
