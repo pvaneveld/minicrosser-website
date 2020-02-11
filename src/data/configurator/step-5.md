@@ -71,10 +71,10 @@ accessoriesSeat:
     - image: /img/no-image-available.jpg
       name: Sensor voor snelheidsreductie in bochten
       price: 116.11
-    - image: /img/voetplaatverbreder.jpg
+    - image: /img/no-image-available.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage links'
       price: 322.35
-    - image: /img/voetplaatverbreder.jpg
+    - image: /img/no-image-available.jpg
       name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage rechts'
       price: 322.35
   category: Met welke opties wilt u uw Minicrosser compleet maken?
