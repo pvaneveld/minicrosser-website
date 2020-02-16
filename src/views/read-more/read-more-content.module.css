@@ -3,6 +3,7 @@
   margin: 0 auto;
   text-align: center;
   color: var(--color-text);
+  padding-bottom: var(--component-padding);
 
   & h1 {
     font-size: var(--text-xxl);

@@ -36,8 +36,11 @@ const Footer: React.SFC<FooterProps> = props => {
       <Link className={style.link} to="/disclaimer">
         Disclaimer
       </Link>
-      <a href="https://www.revamed.com/" target="_blank" className={style.link}>
+      <a href="https://www.revamed.com/" target="_blank" rel="noreferrer noopener" className={style.link}>
         Revamed &#169; 2020
+      </a>
+      <a className={style.link} href="tel:088-1100111" target="_blank" rel="noreferrer noopener">
+        088-1100111
       </a>
     </footer>
   );
