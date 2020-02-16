@@ -1,5 +1,4 @@
 .container {
-  max-width: var(--content-block-width);
   display: block;
   margin: 0 auto;
   text-align: center;
