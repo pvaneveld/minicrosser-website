@@ -1,7 +1,7 @@
 ---
 templateKey: configurator-five
-accessoriesSeat:
-  accessoriesSeatList:
+accessories:
+  accessoriesList:
     - image: /img/verstelbare-hoofdsteun.jpg
       name: Verstelbare hoofdsteun
       price: 135.21
@@ -79,12 +79,4 @@ accessoriesSeat:
       price: 322.35
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
-accessories:
-  accessoriesList:
-    - image: /img/3w-voorkant-vrijstaand-ii.png
-      name: 'Mand achter, universeel, 34 - 70 cm'
-      price: 153
-  category: Accessoires
-  title: Accessoires
 ---
-

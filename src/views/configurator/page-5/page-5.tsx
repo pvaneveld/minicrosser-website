@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux';
 import initialSelect from '../../../helpers/configuratorSelectedHistory';
 
 const ConfiguratorPageFive: React.SFC = () => {
-  const [seatAccessories, setSeatAccessories] = useState([]);
   const [otherAccessories, setOtherAccessories] = useState([]);
   const currentSelection = useSelector((state: RootState) => state.configurator.selection);
 
@@ -16,21 +15,6 @@ const ConfiguratorPageFive: React.SFC = () => {
     query {
       markdownRemark(frontmatter: { templateKey: { eq: "configurator-five" } }) {
         frontmatter {
-          accessoriesSeat {
-            title
-            category
-            accessoriesSeatList {
-              name
-              price
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 350) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
           accessories {
             title
             category
@@ -52,7 +36,6 @@ const ConfiguratorPageFive: React.SFC = () => {
   `);
 
   const { frontmatter: content } = query.markdownRemark;
-  const { accessoriesSeat } = content;
   const { accessories } = content;
 
   const selectHandler = (selectCallback, currentItems, item) => {
@@ -63,34 +46,12 @@ const ConfiguratorPageFive: React.SFC = () => {
 
   useEffect(() => {
     if (currentSelection.length) {
-      initialSelect(currentSelection, accessoriesSeat.category, true, setSeatAccessories, seatAccessories);
       initialSelect(currentSelection, accessories.category, true, setOtherAccessories, otherAccessories);
     }
   }, []);
 
   return (
     <div className={style.container}>
-      <h1 className={style.header}>{accessoriesSeat.title}</h1>
-      <SelectCardGrid>
-        {accessoriesSeat.accessoriesSeatList.map((accessory, index) => (
-          <ConfiguratorItem
-            selectMultiple={true}
-            key={`seat-accessory-${index}`}
-            name={accessory.name}
-            price={accessory.price}
-            category={accessoriesSeat.category}
-            isActiveCallback={item => selectHandler(setSeatAccessories, seatAccessories, item)}
-          >
-            <SelectCard
-              isActive={seatAccessories.includes(accessory.name)}
-              fluid={accessory.image.childImageSharp.fluid}
-              name={accessory.name}
-              price={accessory.price}
-            />
-          </ConfiguratorItem>
-        ))}
-      </SelectCardGrid>
-
       <h1 className={style.header}>{accessories.title}</h1>
       <SelectCardGrid>
         {accessories.accessoriesList.map((accessory, index) => (

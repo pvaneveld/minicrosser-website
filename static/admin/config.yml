@@ -92,29 +92,7 @@ collections:
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-five' }
           - {
-              label: 'Accesoires zitsysteem',
-              name: 'accessoriesSeat',
-              widget: object,
-              fields:
-                [
-                  { label: Titel, name: title, widget: 'string' },
-                  { label: Categorienaam, name: category, widget: 'string' },
-                  {
-                    label: 'Accesoires Zitsysteem',
-                    name: 'accessoriesSeatList',
-                    widget: 'list',
-                    allow_add: true,
-                    fields:
-                      [
-                        { label: 'Naam accessoire', name: 'name', widget: 'string' },
-                        { label: 'Prijs', name: 'price', widget: 'number', valueType: 'float' },
-                        { label: 'Afbeelding', name: 'image', widget: 'image' },
-                      ],
-                  },
-                ],
-            }
-          - {
-              label: 'Accessoires overig',
+              label: 'Accessoires',
               name: 'accessories',
               widget: object,
               fields:
