@@ -33,7 +33,7 @@ const HomePageTwo: React.SFC = () => {
       type: 'secondary' as const,
       link: true,
       children: buttonSecondary,
-      target: '/',
+      target: '/vind-uw-dealer',
     },
   ];
 

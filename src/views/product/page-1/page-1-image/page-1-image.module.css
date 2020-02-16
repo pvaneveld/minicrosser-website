@@ -2,6 +2,7 @@
   margin-top: var(--space-md);
   color: var(--color-white);
   text-align: center;
+  display: none;
 }
 
 .sub-header {

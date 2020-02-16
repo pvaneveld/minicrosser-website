@@ -6,7 +6,6 @@ import style from './SmoothScrollContainer.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Page } from '../../../state/types';
 import { updatePages } from '../../../state/actions';
-import { element } from 'prop-types';
 
 interface SmoothScrollContainerProps {
   children: ReactNode;
@@ -103,17 +102,6 @@ const SmoothScrollContainer: FunctionComponent<SmoothScrollContainerProps> = pro
   useEffect(() => {
     if (!('scrollBehavior' in document.documentElement.style)) {
       import('scroll-behavior-polyfill');
-    }
-
-    const url = new URL(window.location.href);
-    const searchParams = new URLSearchParams(url.search);
-
-    if (searchParams.has('id')) {
-      const scrollTarget = document.querySelector(`#${searchParams.get('id')}`);
-
-      if (scrollTarget) {
-        scrollTarget.scrollIntoView();
-      }
     }
   }, []);
 

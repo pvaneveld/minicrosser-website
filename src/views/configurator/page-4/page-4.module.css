@@ -3,11 +3,6 @@
   margin-bottom: var(--space-md);
 }
 
-.link {
-  color: var(--gray-10);
-  text-decoration: underline;
-}
-
 @media (--viewport-md) {
   .header {
     text-align: center;
