@@ -25,12 +25,10 @@ const ProductPageOneContent: React.SFC<ProductpageOneContentProps> = props => {
         ))}
       </ul>
       <div className={style.container}>
-        <div className={style.headerContainer}>
-          <h1>
-            <span className={style.subtitle}>{subtitle}</span>
-            {mainTitle}
-          </h1>
-        </div>
+        <header className={style.headerContainer}>
+          <span className={style.subtitle}>{subtitle}</span>
+          <h1>{mainTitle}</h1>
+        </header>
 
         <Button type="secondary-dark" link={true} target="/configureren">
           {buttonText}
