@@ -14,10 +14,11 @@ interface LayoutFullHeroProps {
   remainSplitView?: boolean;
   footerSpacing?: boolean;
   customRowHeight?: 'seventy';
+  classNames?: string;
 }
 
 const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
-  const { customRowHeight, remainSplitView } = props;
+  const { customRowHeight, remainSplitView, classNames } = props;
 
   const remainSplitViewClass = remainSplitView ? style.remainSplitView : '';
 
@@ -25,7 +26,11 @@ const LayoutFullHero: React.SFC<LayoutFullHeroProps> = props => {
 
   return (
     <>
-      <div className={`${style.halfHeroContainer} ${remainSplitViewClass} ${customHeightClass}`}>
+      <div
+        className={`${style.halfHeroContainer} ${remainSplitViewClass} ${customHeightClass} ${
+          classNames ? classNames : null
+        }`}
+      >
         <div className={style.imageContainer}>
           <FluidImage fluid={props.fluid} alt={props.alt} positionAbsolute={false} />
           <div className={style.imageContent}>
