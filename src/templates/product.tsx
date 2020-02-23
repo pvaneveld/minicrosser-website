@@ -78,6 +78,7 @@ const Product: React.SFC<ProductPropTypes> = ({ data }) => {
       <Layout theme={{ headerDark: true, footerDark: true }}>
         <Page id={pages[0].id}>
           <LayoutHalfHero
+            customRowHeight="seventy"
             headerSpacing={true}
             fluid={product.productOne.backgroundImage.childImageSharp.fluid}
             imageContent={<PageOneImage title={product.productName} buttonText={product.productOne.buttonText} />}
