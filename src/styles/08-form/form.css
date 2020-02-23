@@ -11,6 +11,7 @@ select {
 .select-wrapper::after {
   content: '\25BC';
   position: absolute;
+  pointer-events: none;
   right: var(--space-sm);
   top: 50%;
   transform: translateY(-50%);
