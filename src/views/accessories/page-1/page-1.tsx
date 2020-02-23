@@ -30,6 +30,7 @@ const AccessoriesPageOne: React.SFC = () => {
 
   return (
     <LayoutHalfHero
+      classNames={style.layoutHalfHero}
       customRowHeight="seventy"
       headerSpacing={true}
       fluid={content.backgroundImage.childImageSharp.fluid}

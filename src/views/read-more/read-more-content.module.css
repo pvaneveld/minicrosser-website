@@ -4,6 +4,7 @@
   text-align: center;
   color: var(--color-text);
   padding-bottom: var(--component-padding);
+  max-width: var(--content-block-width);
 
   & h1 {
     font-size: var(--text-xxl);

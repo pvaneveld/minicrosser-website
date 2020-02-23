@@ -3,7 +3,14 @@
   padding-top: var(--space-md);
   padding-bottom: var(--space-md);
   color: var(--color-text);
+  text-align: center;
+  max-width: var(--content-block-width);
+
   & h1 {
     text-align: center;
   }
+}
+
+.layout-half-hero {
+  padding-bottom: var(--space-lg);
 }
