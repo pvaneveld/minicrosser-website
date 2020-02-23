@@ -44,6 +44,7 @@
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-white);
   font-weight: var(--font-weight-bold);
+  text-align: right;
 }
 
 @media (--viewport-sm) {
