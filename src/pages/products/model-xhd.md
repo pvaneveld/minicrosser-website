@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X HD
 productOne:
-  backgroundImage: /img/_mg_3393.jpg
+  backgroundImage: /img/2.jpg
   buttonText: Configureren
   keyFeatures:
     - description: 'maximum snelheid '
