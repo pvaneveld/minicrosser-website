@@ -44,10 +44,10 @@ accessories:
     - image: /img/no-image-available.jpg
       name: 'Windscherm voor wegnemen rijwind, montage achter boodschappenmand'
       price: 237
-    - image: /img/no-image-available.jpg
+    - image: /img/naamloos-5-links.jpg
       name: Spiegel links
       price: 27.04
-    - image: /img/spiegel-rechts.jpg
+    - image: /img/_mg_3851-rechts.jpg
       name: Spiegel rechts
       price: 27.04
     - image: /img/no-image-available.jpg
@@ -80,3 +80,4 @@ accessories:
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
 ---
+
