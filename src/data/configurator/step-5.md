@@ -8,7 +8,7 @@ accessories:
     - image: /img/veiligheidsgordel.jpg
       name: Veiligheidsgordel
       price: 90.14
-    - image: /img/no-image-available.jpg
+    - image: /img/veiligheidsgordel.jpg
       name: Veiligheidsgordel met oprolautomaat
       price: 153.24
     - image: /img/gevarendriehoek.jpg
@@ -38,19 +38,16 @@ accessories:
     - image: /img/anti-kiep.jpg
       name: Anti-kiep set
       price: 270.41
-    - image: /img/no-image-available.jpg
+    - image: /img/windscherm.jpg
       name: 'Windscherm voor wegnemen rijwind, montage bovenzijde stuurkolom'
       price: 531.83
-    - image: /img/no-image-available.jpg
-      name: 'Windscherm voor wegnemen rijwind, montage achter boodschappenmand'
-      price: 237
     - image: /img/naamloos-5-links.jpg
       name: Spiegel links
       price: 27.04
     - image: /img/_mg_3851-rechts.jpg
       name: Spiegel rechts
       price: 27.04
-    - image: /img/no-image-available.jpg
+    - image: /img/rollatorhouder.jpg
       name: 'Houder voor rolstoel, montage achterzijde'
       price: 748.18
     - image: /img/rollatorhouder.jpg
