@@ -52,7 +52,7 @@ accessoriesThree:
         uw maat gemaakte ERGO2 stoel. Uiteraard standaard draaibaar en voorzien
         van stoelslede.
       subtitle: Subitel
-      title: ERGO2 stoel
+      title: Ergo 2 stoel
     - accesoryImage: /img/golftas-ii.jpg
       buttonText: Configureer
       description: >-
