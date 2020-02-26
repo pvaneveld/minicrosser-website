@@ -16,7 +16,7 @@ accessoriesOne:
   title: Accessoires
 accessoriesTwo:
   accessories:
-    - accesoryImage: /img/alarmmodule.jpg
+    - accesoryImage: /img/alarm-module.jpg
       buttonText: Configureer
       description: >-
         Deze module beschermt niet alleen uw kostbare bezit tegen diefstal, maar
