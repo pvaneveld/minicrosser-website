@@ -30,7 +30,7 @@ accessoriesTwo:
         exclusief voor Minicrosser X een veilig kinderzitje beschikbaar.
       subtitle: Subitel
       title: Kinderzitje
-    - accesoryImage: /img/bochtreductie.jpg
+    - accesoryImage: /img/reductie.jpg
       buttonText: Configureer
       description: >-
         Met deze accessoire zorgt u ervoor dat uw Minicrosser automatisch
