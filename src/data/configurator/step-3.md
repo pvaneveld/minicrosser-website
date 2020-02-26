@@ -3,7 +3,7 @@ templateKey: configurator-three
 title: Selecteer de gasbediening
 category: Bediening
 handling:
-  - image: /img/no-image-available.jpg
+  - image: /img/_mg_3858-vrij.jpg
     name: 'Wig/wag bediening links of rechts (inbegrepen) '
     price: 0
   - image: /img/no-image-available.jpg
