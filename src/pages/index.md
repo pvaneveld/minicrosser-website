@@ -15,7 +15,7 @@ homeTwo:
   navigationTitle: Ontdek Minicrosser X
   title: Ontdek Minicrosser X
 homeThree:
-  backgroundImage: /img/sleutelhanger.jpg
+  backgroundImage: /img/hanger.jpg
   buttonPrimary: Lees meer
   navigationTitle: Dit is Minicrosser X
   title: Dit is Minicrosser X
