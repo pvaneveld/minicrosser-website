@@ -2,7 +2,7 @@
 templateKey: product
 productName: Model X4
 productOne:
-  backgroundImage: /img/2.jpg
+  backgroundImage: /img/3.jpg
   buttonText: Configureren
   keyFeatures:
     - description: maximum bereik
