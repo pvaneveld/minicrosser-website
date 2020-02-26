@@ -65,7 +65,7 @@ accessories:
     - image: /img/no-image-available.jpg
       name: 'Verhogen van maximale snelheid van 15 km/uur naar 18 km/uur '
       price: 360.9
-    - image: /img/no-image-available.jpg
+    - image: /img/alarm-module.jpg
       name: Sensor voor snelheidsreductie in bochten
       price: 116.11
     - image: /img/no-image-available.jpg
