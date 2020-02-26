@@ -1,6 +1,6 @@
 ---
 templateKey: configurator-four
-title: Selecteer de zitbreedte van de ERGO2 stoel
+title: Selecteer de zitbreedte van de Ergo 2 stoel
 category: Zitting
 seat:
   - image: /img/35cm.jpg
