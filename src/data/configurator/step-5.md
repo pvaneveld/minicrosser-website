@@ -59,21 +59,15 @@ accessories:
     - image: /img/stokhouder.jpg
       name: 'Stokhouder voor 2 elleboogkrukken of wandelstokken, montage achterzijde'
       price: 108.17
-    - image: /img/no-image-available.jpg
+    - image: /img/alarm-module.jpg
       name: Alarmmodule met hellingshoekmeter
       price: 145.61
     - image: /img/no-image-available.jpg
       name: 'Verhogen van maximale snelheid van 15 km/uur naar 18 km/uur '
       price: 360.9
-    - image: /img/alarm-module.jpg
+    - image: /img/reductie.jpg
       name: Sensor voor snelheidsreductie in bochten
       price: 116.11
-    - image: /img/no-image-available.jpg
-      name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage links'
-      price: 322.35
-    - image: /img/no-image-available.jpg
-      name: 'Voetplaatverbreder voor Minicrosser X3 en X plus, montage rechts'
-      price: 322.35
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
 ---
