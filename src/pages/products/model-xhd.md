@@ -23,7 +23,7 @@ productOne:
     Onder alle omstandigheden beschikt u over de enorm krachtige motor, zodat u
     vlot en in alle comfort naar uw bestemming te brengen.
   title:
-    mainTitle: Zorgvuldig ontwikkeld chassis
+    mainTitle: Volledig versterkt frame
     subtitle: Draagvermogen
 productTwo:
   backgroundImage: /img/4w-voorkant-vrijstaand-iii.png
