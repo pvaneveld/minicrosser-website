@@ -22,7 +22,7 @@ productOne:
 
     De X plus brengt u veilig en in alle comfort naar uw bestemming.
   title:
-    mainTitle: De wendbare HD scootmobiel van Minicrosser kwaliteit
+    mainTitle: Uitzonderlijk wendbare uitvoering
     subtitle: Draagvermogen
 productTwo:
   backgroundImage: /img/3w-voorkant-vrijstaand.png
