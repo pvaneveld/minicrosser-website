@@ -22,7 +22,7 @@ productOne:
 
     De X4 brengt u veilig en in alle comfort naar uw bestemming.
   title:
-    mainTitle: 'Uniek: dubbele wishbone, vering en demping'
+    mainTitle: Optimale grip en stabiliteit
     subtitle: Wielophanging
 productTwo:
   backgroundImage: /img/4w-voorkant-vrijstaand-iii.png
