@@ -22,7 +22,7 @@ productOne:
 
     De X plus brengt u veilig en in alle comfort naar uw bestemming.
   title:
-    mainTitle: Uitzonderlijk wendbare uitvoering
+    mainTitle: Uitzonderlijk wendbaar
     subtitle: Draagvermogen
 productTwo:
   backgroundImage: /img/3w-voorkant-vrijstaand.png
