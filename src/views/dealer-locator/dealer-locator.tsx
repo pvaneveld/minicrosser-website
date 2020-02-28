@@ -75,7 +75,7 @@ const DealerLocator: React.SFC = () => {
     const addressPromises = dealers.map(async dealer => {
       const address = `address=${dealer.address}, ${dealer.city}, ${dealer.zipCode}`.replace(/\s/g, '+');
       const key = `key=${process.env.GATSBY_MAPS_API_KEY}`;
-      const response = await fetch([urlBase, ...[address, 'key=123'].join('&')].join(''));
+      const response = await fetch([urlBase, ...[address, `key=${key}`].join('&')].join(''));
       const jsonResponse = await response.json();
       return { ...dealer, ...jsonResponse.results[0]?.geometry?.location };
     });
@@ -84,48 +84,13 @@ const DealerLocator: React.SFC = () => {
   };
 
   const enrichDealerHandler = async () => {
-    // const withLatLng = await enrichLatLong(sanitizeDealerData(dealerArray));
-    // withLatLng.sort((a, b) => (a.companyName > b.companyName ? 1 : -1)).map(dealer => ({ ...dealer, ...{ id: Math.floor(Math.random() * 100).toString() } }));;
-    const withLatLng = [
-      {
-        companyName: 'De Graaf Mobiliteit & Welzijn',
-        zipCode: '1718 MJ',
-        address: 'Westerboekelweg 11c',
-        city: 'Hoogwoud',
-        phone: '0226-355546',
-        mail: 'info@degraafmobiliteit.nl',
-        site: 'https://www.degraafmobiliteit.nl',
-        lat: 52.7154695,
-        lng: 4.9275989,
-      },
-      {
-        companyName: 'Jeremiasse',
-        zipCode: '4421 JB',
-        address: 'Jufferswegje 12',
-        city: 'Kapelle',
-        phone: '0113-211274',
-        mail: 'sales@jeremiasse.nl',
-        site: 'www.jeremiasse.nl',
-        lat: 51.47608169999999,
-        lng: 3.9659845,
-      },
-      {
-        companyName: 'A',
-        zipCode: '4421 JB',
-        address: 'Jufferswegje 12',
-        city: 'Kapelle',
-        phone: '0113-211274',
-        mail: 'sales@jeremiasse.nl',
-        site: 'www.jeremiasse.nl',
-        lat: 51.47608169999999,
-        lng: 2.9659845,
-      },
-    ]
+    const withLatLng = await enrichLatLong(sanitizeDealerData(dealerArray));
+    const withId = withLatLng
       .sort((a, b) => (a.companyName > b.companyName ? 1 : -1))
-      .map(dealer => ({ ...dealer, ...{ id: Math.floor(Math.random() * 100).toString() } }));
+      .map(dealer => ({ ...dealer, ...{ id: Math.floor(Math.random() * 100 * Math.random() * 100).toString() } }));
 
     setDealerData(
-      withLatLng.map((dealer, index: number) => ({
+      withId.map((dealer, index: number) => ({
         ...dealer,
         ...{ letter: alphabet[index] },
       })),
@@ -170,6 +135,7 @@ const DealerLocator: React.SFC = () => {
                     <div className={style.dealerInformation}>
                       <div className={style.dealerInfoRow}>
                         <Address className={style.dealerIcon} />
+                        {id}
                         {address} | {zipCode} | {city}
                       </div>
                       <div className={style.dealerInfoRow}>
@@ -178,13 +144,18 @@ const DealerLocator: React.SFC = () => {
                       </div>
                       <div className={style.dealerInfoRow}>
                         <Mail className={style.dealerIcon} />
-                        <a className={style.dealerLink} href={`mailto:${mail}`} target="_blank">
+                        <a
+                          className={style.dealerLink}
+                          href={`mailto:${mail}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           {mail}
                         </a>
                       </div>
                       <div className={style.dealerInfoRow}>
                         <Website className={style.dealerIcon} />
-                        <a className={style.dealerLink} href={site} target="_blank">
+                        <a className={style.dealerLink} href={site} target="_blank" rel="noopener noreferrer">
                           {site}
                         </a>
                       </div>
