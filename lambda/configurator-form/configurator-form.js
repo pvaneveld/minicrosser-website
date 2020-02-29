@@ -11,14 +11,14 @@ exports.handler = async (event, context) => {
     const mailInfo = {
       to: [
         {
-          email: 'vaneveld.paul@gmail.com',
+          email: dealerMail,
           name: dealerName,
         },
       ],
       cc: [
         {
-          email: 'vaneveld.paul@gmail.com',
-          name: 'Minicrosser',
+          email: 'info@revamed.com',
+          name: 'Revamed',
         },
       ],
     };
@@ -48,8 +48,8 @@ exports.handler = async (event, context) => {
       <br />Tel. 088-1100 111
     `; // SendSmtpEmail | Values to send a transactional emai // SendSmtpEmail | Values to send a transactional email
     sendSmtpEmail.sender = {
-      name: 'Mincrosser',
-      email: 'mincrosser@info.com',
+      name: 'Revamed',
+      email: 'info@revamed.com',
     };
     sendSmtpEmail.subject = `Minicrosser configuratie van ${name}`;
     sendSmtpEmail.cc = mailInfo.cc;

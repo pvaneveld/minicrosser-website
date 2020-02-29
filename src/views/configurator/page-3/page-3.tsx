@@ -8,9 +8,15 @@ import { useSelector } from 'react-redux';
 import initialSelect from '../../../helpers/configuratorSelectedHistory';
 
 const ConfiguratorPageThree: React.SFC = () => {
-  const [activeHandling, setActiveHandling] = useState('');
+  const [activeHandling, setActiveHandling] = useState([]);
 
   const currentSelection = useSelector((state: RootState) => state.configurator.selection);
+
+  const selectHandler = (selectCallback, currentItems, item) => {
+    item.selected
+      ? selectCallback(currentItems.concat(item.name))
+      : selectCallback(currentItems.filter(currentItem => item.name !== currentItem));
+  };
 
   const query = useStaticQuery(graphql`
     query {
@@ -48,17 +54,15 @@ const ConfiguratorPageThree: React.SFC = () => {
       <SelectCardGrid>
         {content.handling.map((handling, index) => (
           <ConfiguratorItem
-            selectMultiple={false}
+            selectMultiple={true}
             key={`handling-${index}`}
             name={handling.name}
             price={handling.price}
             category={content.category}
-            isActiveCallback={handling =>
-              handling.selected ? setActiveHandling(handling.name) : setActiveHandling('')
-            }
+            isActiveCallback={item => selectHandler(setActiveHandling, activeHandling, item)}
           >
             <SelectCard
-              isActive={activeHandling === handling.name}
+              isActive={activeHandling.includes(handling.name)}
               fluid={handling.image.childImageSharp.fluid}
               name={handling.name}
               price={handling.price}

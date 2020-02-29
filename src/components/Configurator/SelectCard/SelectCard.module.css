@@ -35,6 +35,7 @@
 .image {
   min-width: calc(var(--space-xxl) * 2.5);
   height: calc(var(--space-xxl) * 2.5);
+  min-height: calc(var(--space-xxl) * 2.5);
   margin-bottom: var(--space-sm);
   border: 1px solid var(--gray-6);
 }
