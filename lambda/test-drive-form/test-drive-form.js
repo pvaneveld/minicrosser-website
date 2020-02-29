@@ -54,7 +54,6 @@ exports.handler = async (event, context) => {
       // isBase64Encoded: true,
     };
   } catch (err) {
-    console.log(err);
     return { statusCode: 500, body: err.toString() };
   }
 };

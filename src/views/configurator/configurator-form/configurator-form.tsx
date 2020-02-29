@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import FormWrapper from '../../../components/Form/FormWrapper/FormWrapper';
 import FormInput from '../../../components/Form/FormInput/FormInput';
@@ -6,13 +6,6 @@ import Button from '../../../components/Buttons/Button/Button';
 import style from './configurator-form.module.css';
 import { regexLibrary } from '../../../../utils/regex';
 import { getDealerOptionsData } from '../../../../helpers/dealerOptions';
-import { useSelector } from 'react-redux';
-import { parseSidebarConfig, parseTotalPrice } from '../../../../helpers/parseConfiguration';
-import { toCurrency } from '../../../helpers/toCurrency';
-
-var pdfMake = require('pdfmake/build/pdfmake.js');
-var pdfFonts = require('pdfmake/build/vfs_fonts.js');
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 interface ConfiguratorForm {
   firstName: string;
@@ -102,44 +95,8 @@ const ConfiguratorForm: React.SFC = () => {
     surname: 'surname',
     mail: 'mail',
     phone: 'phone',
-    zipcode: 'zipcode',
-    city: 'city',
     dealer: 'dealer',
   };
-
-  const selectedItems = useSelector((state: RootState) => state.configurator.selection);
-
-  const renderConfigurationPDF = (): void => {
-    var docDefinition = {
-      content: [
-        { text: 'Minicrosser configuratie', fontSize: 25, bold: true, margin: [0, 0, 0, 20] },
-        ...parseSidebarConfig(selectedItems).reduce((acc, curr) => {
-          const [title, items] = curr;
-          return acc.concat(
-            { text: title, bold: true, margin: [0, 10, 0, 5] },
-            items.reduce((acc, curr) => {
-              if (!acc.ul) {
-                acc.ul = [];
-              }
-              acc.ul.push(`${curr.name} (${toCurrency(curr.price)})`);
-
-              return acc;
-            }, {}),
-          );
-        }, []),
-        { text: `Totale prijs: ${parseTotalPrice(selectedItems)}`, bold: true, margin: [0, 20] },
-      ],
-    };
-
-    const pdfDocGenerator = pdfMake.createPdf(docDefinition);
-    pdfDocGenerator.getBase64(data => {
-      setpdfBlob(data);
-    });
-  };
-
-  useEffect(() => {
-    renderConfigurationPDF();
-  }, []);
 
   return (
     <div className={style.form}>
@@ -214,7 +171,6 @@ const ConfiguratorForm: React.SFC = () => {
             errorMessage="selecteer een dealer"
           />
 
-          <FormInput name="pdf" id="pdf" type="hidden" value={pdfBlob} />
           <Button type="cta" link={false} submit={true} classString={`${style.submit} ${style.formField}}`}>
             {formContent.submitButton}
           </Button>

@@ -3,6 +3,8 @@ import useForm, { FormContext } from 'react-hook-form';
 import FormStatusBanner from '../FormStatusBanner/FormStatusBanner';
 import { CSSTransition } from 'react-transition-group';
 import style from './FormWrapper.module.css';
+import { getConfiguratorPdf } from '../../../../helpers/getConfiguratorPdf';
+import { useSelector } from 'react-redux';
 
 interface FormWrapperProps {
   formName?: string;
@@ -19,6 +21,7 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
   const methods = useForm();
   const [formError, setFormError] = useState(false);
   const [formVisible, setFormVisible] = useState(true);
+  const selectedItems = useSelector((state: RootState) => state.configurator.selection);
 
   const encode = (data: object): string => {
     return Object.keys(data)
@@ -26,17 +29,37 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
       .join('&');
   };
 
-  const onSubmit = async (data: object): Promise<any> => {
+  const onSubmit = async (data: {
+    firstName: string;
+    surname: string;
+    prefix: string;
+    phone: string;
+    mail: string;
+  }): Promise<any> => {
     setFormError(false);
     try {
       const { lambdaFunctionName: lambda } = props;
 
       if (lambda) {
-        console.log(data);
-        await fetch(`/.netlify/functions/${lambda}`, {
-          method: 'POST',
-          body: JSON.stringify({ ...data }),
-        });
+        let dataCopy = { ...data };
+        if (lambda === 'configurator-form') {
+          const { firstName, surname, prefix, phone, mail } = dataCopy;
+
+          await getConfiguratorPdf({ firstName, surname, prefix, phone, mail, zipcode, city }, selectedItems).getBase64(
+            async data => {
+              dataCopy = { ...dataCopy, ...{ pdf: data } };
+              await fetch(`/.netlify/functions/${lambda}`, {
+                method: 'POST',
+                body: JSON.stringify({ ...dataCopy }),
+              });
+            },
+          );
+        } else {
+          await fetch(`/.netlify/functions/${lambda}`, {
+            method: 'POST',
+            body: JSON.stringify({ ...dataCopy }),
+          });
+        }
       } else {
         await fetch('/', {
           method: 'POST',

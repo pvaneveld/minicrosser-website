@@ -29,32 +29,23 @@ exports.handler = async (event, context) => {
 
     // Configure API key authorization: api-key
     const apiKey = defaultClient.authentications['api-key'];
-    apiKey.apiKey = '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';
+    apiKey.apiKey = apiKey.apiKey = process.env.SEND_IN_BLUE_API_KEY;
 
     const apiInstance = new SibApiV3Sdk.SMTPApi();
 
     const sendSmtpEmail = new SibApiV3Sdk.SendEmail();
     sendSmtpEmail.htmlContent = `
-      <h1>Configuratie-aanvraag van ${name}</h1>
-
-      <table>
-        <tr>
-          <td>
-            Telefoonnummer
-          </td>
-          <td>
-            ${phone}
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Mail
-          </td>
-          <td>
-            ${mail}
-          </td>
-        </tr>
-      </table>
+      Beste Minicrosser dealer,
+      <br />
+      <br />
+      Via <a href="http://www.minicrosser.nl/" target="_blank">minicrosser.nl</a> is er een configurator samengesteld van de Minicrosser X. De klantgegevens en de samengestelde configurator zijn bijgevoegd.
+      <br />
+      <br />
+      Hierbij het verzoek om binnen 1 werkdag contact op te nemen met de aanvrager om een eventuele vervolgafspraak in te plannen.
+      <br />
+      <br />
+      Team RevaMed
+      <br />Tel. 088-1100 111
     `; // SendSmtpEmail | Values to send a transactional emai // SendSmtpEmail | Values to send a transactional email
     sendSmtpEmail.sender = {
       name: 'Mincrosser',
@@ -66,7 +57,7 @@ exports.handler = async (event, context) => {
     sendSmtpEmail.attachment = [
       {
         content: pdf,
-        name: 'test.pdf',
+        name: `aanvraag-minicrosser-${surname}.pdf`,
       },
     ];
     sendSmtpEmail.params = { firstName, surname, prefix, dealer, phone, mail, dealerMail, dealerName };
@@ -75,9 +66,6 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       body: 'Done!',
-      // // more keys you can return:
-      // headers: { "headerName": "headerValue", ... },
-      // isBase64Encoded: true,
     };
   } catch (err) {
     console.log(err);
