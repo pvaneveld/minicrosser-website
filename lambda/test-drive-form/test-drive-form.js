@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
   try {
     const { firstName, surname, prefix, dealer, phone, mail } = JSON.parse(event.body);
     const { mail: dealerMail, companyName: dealerName } = JSON.parse(dealer);
-    const templateId = 2;
+    const templateId = 3;
 
     const mailInfo = {
       to: [
@@ -17,10 +17,6 @@ exports.handler = async (event, context) => {
         },
       ],
       cc: [
-        {
-          email: 'vaneveld.paul@gmail.com',
-          name: 'Minicrosser',
-        },
         {
           email: 'lvanzonneveld@revamed.com',
           name: 'De specht',
