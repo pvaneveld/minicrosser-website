@@ -43,11 +43,18 @@
 
 .submit {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto var(--space-md) auto;
 }
 
 @media (--viewport-sm) {
   .form-field {
     width: 100%;
   }
+}
+
+.company-info {
+  text-align: center;
+  font-size: var(--text-sm);
+  width: 100%;
+  color: var(--color-text);
 }

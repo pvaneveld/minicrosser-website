@@ -149,6 +149,10 @@ const ContactForm: React.SFC = () => {
           <Button type="cta" link={false} submit={true} classString={`${style.submit} ${style.formField}}`}>
             {formContent.buttonText}
           </Button>
+
+          <span className={style.companyInfo}>
+            Minicrosser.nl is onderdeel van RevaMed B.V. Eckertstraat 1 8263 CB Kampen
+          </span>
         </div>
       </FormWrapper>
     </div>
