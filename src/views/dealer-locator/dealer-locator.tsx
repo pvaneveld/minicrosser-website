@@ -75,7 +75,7 @@ const DealerLocator: React.SFC = () => {
     const addressPromises = dealers.map(async dealer => {
       const address = `address=${dealer.address}, ${dealer.city}, ${dealer.zipCode}`.replace(/\s/g, '+');
       const key = `key=${process.env.GATSBY_MAPS_API_KEY}`;
-      const response = await fetch([urlBase, ...[address, `key=${key}`].join('&')].join(''));
+      const response = await fetch([urlBase, ...[address, `${key}`].join('&')].join(''));
       const jsonResponse = await response.json();
       return { ...dealer, ...jsonResponse.results[0]?.geometry?.location };
     });
