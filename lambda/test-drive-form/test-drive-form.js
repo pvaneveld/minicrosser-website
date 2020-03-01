@@ -12,14 +12,14 @@ exports.handler = async (event, context) => {
     const mailInfo = {
       to: [
         {
-          email: 'vaneveld.paul@gmail.com',
+          email: dealerMail,
           name: dealerName,
         },
       ],
       cc: [
         {
-          email: 'lvanzonneveld@revamed.com',
-          name: 'De specht',
+          email: 'info@revamed.com',
+          name: 'Revamed',
         },
       ],
     };
