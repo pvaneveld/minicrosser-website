@@ -151,7 +151,12 @@ const ContactForm: React.SFC = () => {
           </Button>
 
           <span className={style.companyInfo}>
-            Minicrosser.nl is onderdeel van RevaMed B.V. Eckertstraat 1 8263 CB Kampen
+            Minicrosser.nl is onderdeel van RevaMed B.V.
+            <br />
+            <br />
+            Eckertstraat 1<br />
+            <br />
+            8263 CB Kampen
           </span>
         </div>
       </FormWrapper>
