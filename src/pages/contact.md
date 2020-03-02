@@ -1,6 +1,6 @@
 ---
 templateKey: contact-form
-title: Waarmee kunnen wij u helpen
+title: Waarmee kunnen wij helpen?
 buttonText: Verzenden
 formFields:
   firstName:
