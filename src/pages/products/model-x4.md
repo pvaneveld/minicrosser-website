@@ -9,18 +9,15 @@ productOne:
       title: '70 km    '
     - description: topsnelheid
       title: 15 of 18 km/u
-    - description: high performance LED
+    - description: LED verlichting
       title: 560 lumen
   navigationTitle: Model X4
   text: >-
     Dankzij de zorgvuldig ontwikkelde wielophanging is het rijgedrag van de
     **Minicrosser X4** veilig en zelfverzekerd. Daarnaast biedt de X4 met de
     onafhankelijk geveerde en volgens het Ackermann-principe werkende
-    wielophanging onder alle omstandigheden optimale grip en stabiliteit. \
-
-    \
-
-    De X4 brengt u veilig en in alle comfort naar uw bestemming.
+    wielophanging onder alle omstandigheden optimale grip en stabiliteit. De X4
+    brengt u veilig en in alle comfort naar uw bestemming.
   title:
     mainTitle: Optimale grip en stabiliteit
     subtitle: Wielophanging
