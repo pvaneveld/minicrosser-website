@@ -16,13 +16,10 @@ productOne:
     De **Minicrosser X3** is met zijn zeer krachtige motor de ultieme
     scootmobiel waarmee u gaat waar u wilt. U rijdt met het grootste vertrouwen
     net zo eenvoudig door de stad als over lastige paden in het bos, terwijl u
-    aan wendbaarheid niet hoeft in te leveren. \
-
-    \
-
-    De X3 brengt u vlot en in alle comfort naar uw bestemming.
+    aan wendbaarheid niet hoeft in te leveren. De X3 brengt u vlot en in alle
+    comfort naar uw bestemming.
   title:
-    mainTitle: De sterkste motor in de markt
+    mainTitle: Sterkste motor in de markt
     subtitle: Performance
 productTwo:
   backgroundImage: /img/3w-voorkant-vrijstaand.png
