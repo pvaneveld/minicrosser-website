@@ -2,9 +2,6 @@
 templateKey: configurator-five
 accessories:
   accessoriesList:
-    - image: /img/verstelbare-hoofdsteun.jpg
-      name: Verstelbare hoofdsteun
-      price: 135.21
     - image: /img/veiligheidsgordel.jpg
       name: Veiligheidsgordel
       price: 90.14
