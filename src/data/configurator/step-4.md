@@ -5,21 +5,21 @@ category: Zitting
 seat:
   - image: /img/35cm.jpg
     name: 'Ergo 2 comfortstoel in 35 cm zitbreedte, draaibaar'
-    price: 1155.09
+    price: 73.09
   - name: 'Ergo 2 comfortstoel in 40 cm zitbreedte, draaibaar'
-    price: 1126.77
+    price: 45.06
     image: /img/45-cm.jpg
   - image: /img/45-cm.jpg
-    name: 'Ergo 2 comfortstoel in 45 cm zitbreedte, draaibaar'
-    price: 1081.71
+    name: 'Ergo 2 comfortstoel in 45 cm zitbreedte, draaibaar (inbegrepen)'
+    price: 0
   - image: /img/50-cm.jpg
     name: 'Ergo 2 comfortstoel in 50 cm zitbreedte, draaibaar'
-    price: 1171.85
+    price: 90.16
   - image: /img/60-cm.jpg
     name: 'Ergo 2 comfortstoel Heavy Duty in 60 cm zitbreedte, draaibaar'
-    price: 2249.02
+    price: 1167.31
   - image: /img/70-cm.jpg
     name: 'Ergo 2 comfortstoel Heavy Duty in 70 cm zitbreedte, draaibaar'
-    price: 2577.6
+    price: 1495.89
 ---
 
