@@ -8,7 +8,7 @@ seat:
     price: 1155.09
   - image: /img/45-cm.jpg
     name: 'Ergo 2 comfortstoel in 45 cm zitbreedte, draaibaar'
-    price: 1126.77
+    price: 1081.71
   - image: /img/50-cm.jpg
     name: 'Ergo 2 comfortstoel in 50 cm zitbreedte, draaibaar'
     price: 1171.85
