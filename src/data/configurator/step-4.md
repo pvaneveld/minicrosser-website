@@ -18,5 +18,8 @@ seat:
   - image: /img/70-cm.jpg
     name: 'Ergo 2 comfortstoel Heavy Duty in 70 cm zitbreedte, draaibaar'
     price: 2577.6
+  - name: 'Ergo 2 comfortstoel in 40 cm zitbreedte, draaibaar'
+    price: 1126.77
+    image: /img/45-cm.jpg
 ---
 
