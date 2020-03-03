@@ -23,7 +23,7 @@ models:
       _Prijs is exclusief accu en oplader_
     image: /img/_1010169.jpg
     name: X plus
-    price: 9402.34
+    price: 10619.26
   - description: |-
       **“Top of the class” Heavy Duty scootmobiel (250 kg)** \
       \
