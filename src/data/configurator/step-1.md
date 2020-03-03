@@ -16,7 +16,7 @@ models:
       _Prijs is exclusief accu en oplader_
     image: /img/img_1755-med-skygge.jpg
     name: X4
-    price: 8361.39
+    price: 9578.31
   - description: |-
       **Wendbare en stabiele Heavy Duty scootmobiel (200 kg)**\
       \
