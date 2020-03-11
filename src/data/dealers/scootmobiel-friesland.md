@@ -6,6 +6,6 @@ zipCode: 8521 MG
 city: Sint Nicolaasga
 phone: 0513-419669
 mail: info@scootmobiel.frl
-site: www.scootmobiel.frl
+site: 'https://www.scootmobiel.frl'
 ---
 
