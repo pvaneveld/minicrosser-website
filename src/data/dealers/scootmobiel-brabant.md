@@ -6,6 +6,6 @@ zipCode: 5462 EC
 city: Veghel
 phone: 0413-413452
 mail: info@scootmobielenbrabant.nl
-site: www.scootmobielenbrabant.nl
+site: 'https://www.scootmobielenbrabant.nl'
 ---
 
