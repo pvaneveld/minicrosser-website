@@ -6,5 +6,6 @@ zipCode: 4421 JB
 city: Kapelle
 phone: 0113-211274
 mail: sales@jeremiasse.nl
-site: www.jeremiasse.nl
+site: 'https://www.jeremiasse.nl'
 ---
+
