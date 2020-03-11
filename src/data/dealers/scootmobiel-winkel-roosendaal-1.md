@@ -6,6 +6,6 @@ zipCode: 4703 GH
 city: Roosendaal
 phone: 0165-820983
 mail: info@descootmobielwinkel.nl
-site: www.descootmobielwinkel.nl
+site: 'https://www.descootmobielwinkel.nl'
 ---
 
