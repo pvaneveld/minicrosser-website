@@ -6,6 +6,6 @@ zipCode: 8075 AZ
 city: Elspeet
 phone: 0577 459 896
 mail: info@dezorgschuur.nl
-site: www.dezorgschuur.nl
+site: 'https://www.dezorgschuur.nl'
 ---
 
