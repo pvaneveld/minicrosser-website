@@ -6,5 +6,6 @@ zipCode: 1718 MJ
 city: Hoogwoud
 phone: 0226-355546
 mail: info@degraafmobiliteit.nl
-site: www.degraafmobiliteit.nl
+site: 'https://www.degraafmobiliteit.nl'
 ---
+
