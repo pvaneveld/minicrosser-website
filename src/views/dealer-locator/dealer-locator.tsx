@@ -135,12 +135,13 @@ const DealerLocator: React.SFC = () => {
                     <div className={style.dealerInformation}>
                       <div className={style.dealerInfoRow}>
                         <Address className={style.dealerIcon} />
-                        {id}
                         {address} | {zipCode} | {city}
                       </div>
                       <div className={style.dealerInfoRow}>
                         <Phone className={style.dealerIcon} />
-                        {phone}
+                        <a className={style.dealerLink} href={`tel:${phone}`} rel="noopener noreferrer">
+                          {phone}
+                        </a>
                       </div>
                       <div className={style.dealerInfoRow}>
                         <Mail className={style.dealerIcon} />
@@ -155,7 +156,7 @@ const DealerLocator: React.SFC = () => {
                       </div>
                       <div className={style.dealerInfoRow}>
                         <Website className={style.dealerIcon} />
-                        <a className={style.dealerLink} href={site} target="_blank" rel="noopener noreferrer">
+                        <a className={style.dealerLink} href={site} target="_blank">
                           {site}
                         </a>
                       </div>
