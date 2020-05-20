@@ -64,7 +64,7 @@ accessories:
       price: 360.9
     - image: /img/reductie.jpg
       name: Sensor voor snelheidsreductie in bochten
-      price: 116.11
+      price: 152.18
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
 ---
