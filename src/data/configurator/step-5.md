@@ -65,6 +65,9 @@ accessories:
     - image: /img/reductie.jpg
       name: Sensor voor snelheidsreductie in bochten
       price: 152.18
+    - name: 'Stokhouder (2 stokken), montage achterzijde'
+      price: 72.13
+      image: /img/stokhouder-stoel.jpg
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
 ---
