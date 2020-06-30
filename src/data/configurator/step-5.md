@@ -54,8 +54,8 @@ accessories:
       name: 'Houder voor golftas, montage achterzijde'
       price: 495.79
     - image: /img/stokhouder.jpg
-      name: 'Stokhouder voor 2 elleboogkrukken of wandelstokken, montage achterzijde'
-      price: 108.17
+      name: 'Stokhouder (vierpoot), montage achterzijde'
+      price: 431.55
     - image: /img/alarm-module.jpg
       name: Alarmmodule met hellingshoekmeter
       price: 145.61
