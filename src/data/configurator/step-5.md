@@ -56,6 +56,9 @@ accessories:
     - image: /img/stokhouder.jpg
       name: 'Stokhouder (vierpoot), montage achterzijde'
       price: 431.55
+    - name: 'Stokhouder (2 stokken), montage achterzijde'
+      price: 72.13
+      image: /img/stokhouder-stoel.jpg
     - image: /img/alarm-module.jpg
       name: Alarmmodule met hellingshoekmeter
       price: 145.61
@@ -65,9 +68,9 @@ accessories:
     - image: /img/reductie.jpg
       name: Sensor voor snelheidsreductie in bochten
       price: 152.18
-    - name: 'Stokhouder (2 stokken), montage achterzijde'
-      price: 72.13
-      image: /img/stokhouder-stoel.jpg
+    - name: 'Mandje, montage stoel'
+      image: /img/kurv.jpg
+      price: 153.24
   category: Met welke opties wilt u uw Minicrosser compleet maken?
   title: Accessoires
 ---
