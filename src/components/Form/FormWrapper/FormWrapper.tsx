@@ -45,15 +45,13 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
         if (lambda === 'configurator-form') {
           const { firstName, surname, prefix, phone, mail } = dataCopy;
 
-          await getConfiguratorPdf({ firstName, surname, prefix, phone, mail, zipcode, city }, selectedItems).getBase64(
-            async data => {
-              dataCopy = { ...dataCopy, ...{ pdf: data } };
-              await fetch(`/.netlify/functions/${lambda}`, {
-                method: 'POST',
-                body: JSON.stringify({ ...dataCopy }),
-              });
-            },
-          );
+          await getConfiguratorPdf({ firstName, surname, prefix, phone, mail }, selectedItems).getBase64(async data => {
+            dataCopy = { ...dataCopy, ...{ pdf: data } };
+            await fetch(`/.netlify/functions/${lambda}`, {
+              method: 'POST',
+              body: JSON.stringify({ ...dataCopy }),
+            });
+          });
         } else {
           await fetch(`/.netlify/functions/${lambda}`, {
             method: 'POST',
@@ -69,6 +67,7 @@ const FormWrapper: React.SFC<FormWrapperProps> = props => {
       }
       setFormVisible(false);
     } catch (error) {
+      console.log(error);
       setFormError(true);
     }
   };
