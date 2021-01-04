@@ -8,6 +8,6 @@ colors:
     price: 0
   - image: /img/kleur-antraciet.jpg
     name: Anthracite Black
-    price: 168.95
+    price: 172.3
 ---
 
