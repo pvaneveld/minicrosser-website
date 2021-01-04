@@ -8,15 +8,15 @@ handling:
     price: 0
   - image: /img/_mg_3858-vrij-extra.jpg
     name: Extra wig/wag bediening links of rechts
-    price: 212.55
+    price: 216.76
   - image: /img/draaigas-rechts.jpg
     name: Draaigashendel rechts
-    price: 285.3
+    price: 290.95
   - image: /img/draaigas-links.jpg
     name: Draaigashendel links
-    price: 285.3
+    price: 290.95
   - image: /img/gaspedaal.jpg
     name: 'Gaspedaal wig/wag links of rechts '
-    price: 367.1
+    price: 374.37
 ---
 
