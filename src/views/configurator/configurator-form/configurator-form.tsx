@@ -24,6 +24,7 @@ const ConfiguratorForm: React.SFC = () => {
       formData: markdownRemark(frontmatter: { templateKey: { eq: "configurator-form" } }) {
         frontmatter {
           formTitle
+          buttonPrefix
           submitButton
           formFields {
             firstName {
@@ -170,7 +171,7 @@ const ConfiguratorForm: React.SFC = () => {
             classString={`${style.select} ${style.formField}`}
             errorMessage="selecteer een dealer"
           />
-
+          <span className={style.buttonPrefix}>{formContent.buttonPrefix}</span>
           <Button type="cta" link={false} submit={true} classString={`${style.submit} ${style.formField}}`}>
             {formContent.submitButton}
           </Button>

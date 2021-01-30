@@ -119,6 +119,7 @@ collections:
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'configurator-form' }
           - { label: 'Formulier titel', name: 'formTitle', widget: 'string' }
+          - { label: 'Tekst boven verzendknop', name: 'buttonPrefix', widget: 'string' }
           - { label: 'Formulier verzendknop', name: 'submitButton', widget: 'string' }
           - { label: 'Knop opnieuw beginnen', name: 'restartButton', widget: 'string' }
           - {

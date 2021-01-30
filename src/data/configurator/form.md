@@ -1,6 +1,7 @@
 ---
 templateKey: configurator-form
 formTitle: Uw gegevens
+buttonPrefix: De samengestelde configurator wordt naar de geselecteerde dealer gestuurd. Deze neemt zo snel mogelijk contact met u op.
 submitButton: Laat een dealer contact met mij opnemen
 restartButton: Nieuwe configuratie starten
 formFields:
@@ -40,4 +41,3 @@ formFields:
     label: Postcode
     required: true
 ---
-

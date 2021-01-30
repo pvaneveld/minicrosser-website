@@ -54,6 +54,15 @@
   width: 100%;
 }
 
+.buttonPrefix {
+  display: block;
+  margin: 0 auto;
+  max-width: 30em;
+  margin-top: var(--space-md);
+  color: var(--gray-6);
+  text-align: center;
+}
+
 @media (--viewport-sm) {
   .form-field {
     width: 100%;
