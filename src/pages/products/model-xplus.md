@@ -14,8 +14,8 @@ productOne:
   navigationTitle: Model X plus
   text: >-
     Ondanks zijn compacte afmetingen en uitzonderlijke wendbaarheid, heeft de
-    **Minicrosser X plus** toch een indrukwekkend draagvermogen van 200 kg.
-    Daarmee is de Minicrosser X plus bij uitstek geschikt voor de meest
+    **Mini Crosser X plus** toch een indrukwekkend draagvermogen van 200 kg.
+    Daarmee is de Mini Crosser X plus bij uitstek geschikt voor de meest
     veeleisende zware bestuurders. \
 
     \
@@ -56,7 +56,7 @@ productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model X plus
-  title: Ervaar Model X plus
+  navigationTitle: Ervaar model X plus
+  title: Ervaar model X plus
 ---
 
