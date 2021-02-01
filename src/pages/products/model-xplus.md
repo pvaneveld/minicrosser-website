@@ -1,6 +1,6 @@
 ---
 templateKey: product
-productName: Model X plus
+productName: Model X Plus
 productOne:
   backgroundImage: /img/4.jpg
   buttonText: Configureren
@@ -11,16 +11,16 @@ productOne:
       title: 11 cm
     - description: maximale belasting
       title: 200 kg
-  navigationTitle: Model X plus
+  navigationTitle: Model X Plus
   text: >-
     Ondanks zijn compacte afmetingen en uitzonderlijke wendbaarheid, heeft de
-    **Mini Crosser X plus** toch een indrukwekkend draagvermogen van 200 kg.
-    Daarmee is de Mini Crosser X plus bij uitstek geschikt voor de meest
+    **Mini Crosser X Plus** toch een indrukwekkend draagvermogen van 200 kg.
+    Daarmee is de Mini Crosser X Plus bij uitstek geschikt voor de meest
     veeleisende zware bestuurders. \
 
     \
 
-    De X plus brengt u veilig en in alle comfort naar uw bestemming.
+    De X Plus brengt u veilig en in alle comfort naar uw bestemming.
   title:
     mainTitle: Uitzonderlijk wendbaar
     subtitle: Draagvermogen
@@ -49,14 +49,14 @@ productTwo:
     - description: 11 cm
       title: Hoogte voetplateau
   title:
-    mainTitle: Model X plus
+    mainTitle: Model X Plus
     subtitle: Specificaties
 productThree:
   backgroundImage: /img/X2_3W_zijkant_II.png
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar model X plus
-  title: Ervaar model X plus
+  navigationTitle: Ervaar model X Plus
+  title: Ervaar model X Plus
 ---
 
