@@ -14,7 +14,7 @@ productOne:
   navigationTitle: Model X4
   text: >-
     Dankzij de zorgvuldig ontwikkelde wielophanging is het rijgedrag van de
-    **Minicrosser X4** veilig en zelfverzekerd. Daarnaast biedt de X4 met de
+    **Mini Crosser X4** veilig en zelfverzekerd. Daarnaast biedt de X4 met de
     onafhankelijk geveerde en volgens het Ackermann-principe werkende
     wielophanging onder alle omstandigheden optimale grip en stabiliteit. De X4
     brengt u veilig en in alle comfort naar uw bestemming.
@@ -53,7 +53,7 @@ productThree:
   buttons:
     buttonPrimary: Configureren
     buttonSecondary: Proefrit
-  navigationTitle: Ervaar Model X2 4W
-  title: Ervaar Model X2 4W
+  navigationTitle: Ervaar model X2 4W
+  title: Ervaar model X2 4W
 ---
 
