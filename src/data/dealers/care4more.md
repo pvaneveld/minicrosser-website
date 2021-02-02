@@ -6,6 +6,6 @@ zipCode: 9204 KH
 city: Drachten
 phone: 0512-513650
 mail: info@care4more.nl
-site: 'https://www.vare4more.nl'
+site: 'https://www.care4more.nl'
 ---
 
