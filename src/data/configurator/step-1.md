@@ -9,7 +9,7 @@ models:
       _Prijs is exclusief accu en oplader_
     image: /img/_1010169.jpg
     name: X3
-    price: 8845.35
+    price: 8845
   - description: |-
       **Buitengewoon stabiel en comfortabel (175 kg)**\
       \
