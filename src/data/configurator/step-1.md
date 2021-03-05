@@ -30,6 +30,6 @@ models:
       _Prijs is exclusief accu en oplader_
     image: /img/img_1755-med-skygge.jpg
     name: X HD
-    price: 11504.25
+    price: 11504
 ---
 
